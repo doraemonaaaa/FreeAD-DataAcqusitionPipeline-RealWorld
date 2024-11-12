@@ -1,0 +1,6 @@
+[31mCMake Error at CMakeLists.txt:17 (rosidl_get_typesupport_target):
+  rosidl_get_typesupport_target Function invoked with incorrect arguments for
+  function named: rosidl_get_typesupport_target
+
+[0m
+gmake: *** [Makefile:226: cmake_check_build_system] Error 1

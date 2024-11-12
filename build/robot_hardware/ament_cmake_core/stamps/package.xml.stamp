@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>robot_hardware</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="future@todo.todo">future</maintainer>
+  <license>TODO: License declaration</license>
+
+  <!-- 构建工具依赖 -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <!-- 构建依赖 -->
+  <build_depend>rclcpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>rosidl_default_generators </build_depend>
+  
+
+  <!-- 运行依赖 -->
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <!-- 测试依赖 -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- 将 member_of_group 放置在 export 之前 -->
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <!-- 导出信息 -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,6 @@
+{
+  "package_name": "robot_hardware",
+  "non_idl_tuples": [
+    "/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware:msg/HardwareData.msg"
+  ]
+}

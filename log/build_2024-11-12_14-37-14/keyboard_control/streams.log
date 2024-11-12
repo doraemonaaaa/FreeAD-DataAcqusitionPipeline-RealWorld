@@ -1,0 +1,41 @@
+[0.010s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/keyboard_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/keyboard_control -- -j24 -l24
+[0.039s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.294s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.327s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.330s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.338s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.349s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.360s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.393s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.395s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.487s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.531s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.575s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.575s] -- Configured cppcheck include dirs: 
+[0.575s] -- Configured cppcheck exclude dirs and/or files: 
+[0.575s] -- Added test 'lint_cmake' to check CMake code style
+[0.576s] -- Added test 'uncrustify' to check C / C++ code style
+[0.576s] -- Configured uncrustify additional arguments: 
+[0.576s] -- Added test 'xmllint' to check XML markup files
+[0.576s] -- Configuring done
+[0.578s] -- Generating done
+[0.579s] -- Build files have been written to: /home/future/Documents/pengyh/RobotAD_ws/build/keyboard_control
+[0.599s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/keyboard_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/keyboard_control -- -j24 -l24
+[0.646s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/keyboard_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble /usr/bin/cmake --install /home/future/Documents/pengyh/RobotAD_ws/build/keyboard_control
+[0.660s] -- Install configuration: ""
+[0.661s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/ament_index/resource_index/package_run_dependencies/keyboard_control
+[0.661s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/ament_index/resource_index/parent_prefix_path/keyboard_control
+[0.662s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/environment/ament_prefix_path.sh
+[0.662s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/environment/ament_prefix_path.dsv
+[0.662s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/environment/path.sh
+[0.663s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/environment/path.dsv
+[0.663s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/local_setup.bash
+[0.664s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/local_setup.sh
+[0.664s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/local_setup.zsh
+[0.664s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/local_setup.dsv
+[0.664s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/package.dsv
+[0.664s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/ament_index/resource_index/packages/keyboard_control
+[0.664s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/cmake/keyboard_controlConfig.cmake
+[0.664s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/cmake/keyboard_controlConfig-version.cmake
+[0.665s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/package.xml
+[0.667s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/keyboard_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble /usr/bin/cmake --install /home/future/Documents/pengyh/RobotAD_ws/build/keyboard_control
