@@ -1,0 +1,21 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable keyboard_control_node[0m
+[100%] Built target keyboard_control_node
+-- Install configuration: ""
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/lib/keyboard_control/keyboard_control_node
+-- Set runtime path of "/home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/lib/keyboard_control/keyboard_control_node" to ""
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/ament_index/resource_index/package_run_dependencies/keyboard_control
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/ament_index/resource_index/parent_prefix_path/keyboard_control
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/environment/ament_prefix_path.sh
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/environment/path.sh
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/environment/path.dsv
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/local_setup.bash
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/local_setup.sh
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/local_setup.zsh
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/local_setup.dsv
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/package.dsv
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/ament_index/resource_index/packages/keyboard_control
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/cmake/keyboard_controlConfig.cmake
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/cmake/keyboard_controlConfig-version.cmake
+-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/package.xml

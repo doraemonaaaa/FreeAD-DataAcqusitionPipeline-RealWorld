@@ -1,0 +1,250 @@
+[0.000000] (-) TimerEvent: {}
+[0.000359] (-) JobUnselected: {'identifier': 'keyboard_control'}
+[0.000893] (-) JobUnselected: {'identifier': 'serial_comm'}
+[0.000996] (robot_hardware) JobQueued: {'identifier': 'robot_hardware', 'dependencies': OrderedDict()}
+[0.001076] (robot_hardware) JobStarted: {'identifier': 'robot_hardware'}
+[0.015222] (robot_hardware) JobProgress: {'identifier': 'robot_hardware', 'progress': 'cmake'}
+[0.017160] (robot_hardware) JobProgress: {'identifier': 'robot_hardware', 'progress': 'build'}
+[0.017299] (robot_hardware) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware', '--', '-j24', '-l24'], 'cwd': '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'future'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/future/Documents/Robot/nav_ws/install/rslidar_msg/lib:/home/future/Documents/Robot/nav_ws/install/pointcloud_to_laserscan/lib:/home/future/Documents/Robot/nav_ws/install/nav2_social_costmap_plugin/lib:/home/future/Documents/Robot/nav_ws/install/diff_control/lib:/home/future/Documents/VIW-FUSION/install/camera_models/lib:/home/future/Documents/people_tracker/install/people_msgs/lib:/home/future/Documents/people_tracker/install/leg_tracker_ros2/lib:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib'), ('HOME', '/home/future'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/future/Documents/pengyh/RobotAD_ws/src'), ('TERM_PROGRAM_VERSION', '1.95.1'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1549'), ('SYSTEMD_EXEC_PID', '1832'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '331300'), ('COLCON_PREFIX_PATH', '/home/future/Documents/Robot/nav_ws/install:/home/future/Documents/VIW-FUSION/install:/home/future/Documents/people_tracker/install:/home/future/Documents/Navigation/interface_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'future'), ('JOURNAL_STREAM', '8:17007'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'future'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/future/.local/bin:/home/future/Documents/VIW-FUSION/install/global_fusion/bin:/home/future/Documents/VIW-FUSION/install/camera_models/bin:/opt/ros/humble/bin:/home/future/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/future:@/tmp/.ICE-unix/1805,unix/future:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '7a1ba33c4c1f44ac979c358b75863625'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-fbb74b9cb4.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/rslidar_sdk:/home/future/Documents/Robot/nav_ws/install/rslidar_msg:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/robot_locate:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/pointcloud_to_laserscan:/home/future/Documents/Robot/nav_ws/install/nav2_social_costmap_plugin:/home/future/Documents/Robot/nav_ws/install/miiboo_imu:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/home/future/Documents/Robot/nav_ws/install/diff_control:/home/future/Documents/VIW-FUSION/install/vins:/home/future/Documents/VIW-FUSION/install/loop_fusion:/home/future/Documents/VIW-FUSION/install/global_fusion:/home/future/Documents/VIW-FUSION/install/camera_models:/home/future/Documents/people_tracker/install/people_msgs:/home/future/Documents/people_tracker/install/leg_tracker_ros2:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/future/Documents/Robot/nav_ws/install/show_urdf/lib/python3.10/site-packages:/home/future/Documents/Robot/nav_ws/install/serial_bridge/lib/python3.10/site-packages:/home/future/Documents/Robot/nav_ws/install/rslidar_msg/local/lib/python3.10/dist-packages:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/home/future/Documents/Robot/nav_ws/install/remove_obstacle/lib/python3.10/site-packages:/home/future/Documents/Robot/nav_ws/install/keyboard_control/lib/python3.10/site-packages:/home/future/Documents/people_tracker/install/people_msgs/local/lib/python3.10/dist-packages:/home/future/Documents/people_tracker/install/leg_tracker_ros2/local/lib/python3.10/dist-packages:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/future/Documents/Robot/nav_ws/install/rslidar_sdk:/home/future/Documents/Robot/nav_ws/install/rslidar_msg:/home/future/Documents/Robot/nav_ws/install/robot_locate:/home/future/Documents/Robot/nav_ws/install/pointcloud_to_laserscan:/home/future/Documents/Robot/nav_ws/install/nav2_social_costmap_plugin:/home/future/Documents/Robot/nav_ws/install/miiboo_imu:/home/future/Documents/Robot/nav_ws/install/diff_control:/home/future/Documents/VIW-FUSION/install/vins:/home/future/Documents/VIW-FUSION/install/loop_fusion:/home/future/Documents/VIW-FUSION/install/global_fusion:/home/future/Documents/VIW-FUSION/install/camera_models:/home/future/Documents/people_tracker/install/people_msgs:/home/future/Documents/people_tracker/install/leg_tracker_ros2:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble')]), 'shell': False}
+[0.099605] (-) TimerEvent: {}
+[0.156445] (robot_hardware) StdoutLine: {'line': b'[  9%] Built target robot_hardware__rosidl_generator_c\n'}
+[0.162166] (robot_hardware) StdoutLine: {'line': b'[ 12%] Built target robot_hardware__cpp\n'}
+[0.190248] (robot_hardware) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_robot_hardware\n'}
+[0.199767] (-) TimerEvent: {}
+[0.200354] (robot_hardware) StdoutLine: {'line': b'[ 21%] Built target robot_hardware__rosidl_typesupport_c\n'}
+[0.200937] (robot_hardware) StdoutLine: {'line': b'[ 30%] Built target robot_hardware__rosidl_typesupport_introspection_c\n'}
+[0.203077] (robot_hardware) StdoutLine: {'line': b'[ 42%] Built target robot_hardware__rosidl_typesupport_fastrtps_c\n'}
+[0.203478] (robot_hardware) StdoutLine: {'line': b'[ 48%] Built target robot_hardware__rosidl_typesupport_introspection_cpp\n'}
+[0.207365] (robot_hardware) StdoutLine: {'line': b'[ 63%] Built target robot_hardware__rosidl_typesupport_fastrtps_cpp\n'}
+[0.207747] (robot_hardware) StdoutLine: {'line': b'[ 66%] Built target robot_hardware__rosidl_typesupport_cpp\n'}
+[0.245374] (robot_hardware) StdoutLine: {'line': b'[ 66%] Built target robot_hardware\n'}
+[0.261506] (robot_hardware) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target hardware_manager\x1b[0m\n'}
+[0.265268] (robot_hardware) StdoutLine: {'line': b'[ 69%] Built target robot_hardware__py\n'}
+[0.280467] (robot_hardware) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o\x1b[0m\n'}
+[0.289570] (robot_hardware) StdoutLine: {'line': b'[ 78%] Built target robot_hardware__rosidl_generator_py\n'}
+[0.299948] (-) TimerEvent: {}
+[0.310123] (robot_hardware) StdoutLine: {'line': b'[ 90%] Built target robot_hardware__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.310280] (robot_hardware) StdoutLine: {'line': b'[ 90%] Built target robot_hardware__rosidl_typesupport_introspection_c__pyext\n'}
+[0.310596] (robot_hardware) StdoutLine: {'line': b'[ 96%] Built target robot_hardware__rosidl_typesupport_c__pyext\n'}
+[0.400031] (-) TimerEvent: {}
+[0.491586] (robot_hardware) StdoutLine: {'line': b'running egg_info\n'}
+[0.492061] (robot_hardware) StdoutLine: {'line': b'writing robot_hardware.egg-info/PKG-INFO\n'}
+[0.492217] (robot_hardware) StdoutLine: {'line': b'writing dependency_links to robot_hardware.egg-info/dependency_links.txt\n'}
+[0.492319] (robot_hardware) StdoutLine: {'line': b'writing top-level names to robot_hardware.egg-info/top_level.txt\n'}
+[0.494538] (robot_hardware) StdoutLine: {'line': b"reading manifest file 'robot_hardware.egg-info/SOURCES.txt'\n"}
+[0.494877] (robot_hardware) StdoutLine: {'line': b"writing manifest file 'robot_hardware.egg-info/SOURCES.txt'\n"}
+[0.500133] (-) TimerEvent: {}
+[0.517824] (robot_hardware) StdoutLine: {'line': b'[ 96%] Built target ament_cmake_python_build_robot_hardware_egg\n'}
+[0.600289] (-) TimerEvent: {}
+[0.700786] (-) TimerEvent: {}
+[0.801105] (-) TimerEvent: {}
+[0.901401] (-) TimerEvent: {}
+[1.001700] (-) TimerEvent: {}
+[1.102027] (-) TimerEvent: {}
+[1.202576] (-) TimerEvent: {}
+[1.302948] (-) TimerEvent: {}
+[1.403216] (-) TimerEvent: {}
+[1.503468] (-) TimerEvent: {}
+[1.603720] (-) TimerEvent: {}
+[1.703980] (-) TimerEvent: {}
+[1.804333] (-) TimerEvent: {}
+[1.904741] (-) TimerEvent: {}
+[2.005143] (-) TimerEvent: {}
+[2.105440] (-) TimerEvent: {}
+[2.205736] (-) TimerEvent: {}
+[2.306031] (-) TimerEvent: {}
+[2.406344] (-) TimerEvent: {}
+[2.506767] (-) TimerEvent: {}
+[2.607167] (-) TimerEvent: {}
+[2.707507] (-) TimerEvent: {}
+[2.808054] (-) TimerEvent: {}
+[2.908488] (-) TimerEvent: {}
+[3.008777] (-) TimerEvent: {}
+[3.109146] (-) TimerEvent: {}
+[3.209505] (-) TimerEvent: {}
+[3.310002] (-) TimerEvent: {}
+[3.410353] (-) TimerEvent: {}
+[3.510593] (-) TimerEvent: {}
+[3.610866] (-) TimerEvent: {}
+[3.711186] (-) TimerEvent: {}
+[3.811495] (-) TimerEvent: {}
+[3.911797] (-) TimerEvent: {}
+[4.012136] (-) TimerEvent: {}
+[4.112544] (-) TimerEvent: {}
+[4.212843] (-) TimerEvent: {}
+[4.313310] (-) TimerEvent: {}
+[4.413609] (-) TimerEvent: {}
+[4.514042] (-) TimerEvent: {}
+[4.614328] (-) TimerEvent: {}
+[4.714677] (-) TimerEvent: {}
+[4.814927] (-) TimerEvent: {}
+[4.915189] (-) TimerEvent: {}
+[5.015505] (-) TimerEvent: {}
+[5.115813] (-) TimerEvent: {}
+[5.216048] (-) TimerEvent: {}
+[5.316341] (-) TimerEvent: {}
+[5.416577] (-) TimerEvent: {}
+[5.516794] (-) TimerEvent: {}
+[5.617107] (-) TimerEvent: {}
+[5.717370] (-) TimerEvent: {}
+[5.817618] (-) TimerEvent: {}
+[5.917987] (-) TimerEvent: {}
+[6.018218] (-) TimerEvent: {}
+[6.118446] (-) TimerEvent: {}
+[6.218781] (-) TimerEvent: {}
+[6.319312] (-) TimerEvent: {}
+[6.419546] (-) TimerEvent: {}
+[6.519769] (-) TimerEvent: {}
+[6.620131] (-) TimerEvent: {}
+[6.720736] (-) TimerEvent: {}
+[6.821207] (-) TimerEvent: {}
+[6.921455] (-) TimerEvent: {}
+[7.021747] (-) TimerEvent: {}
+[7.122315] (-) TimerEvent: {}
+[7.222737] (-) TimerEvent: {}
+[7.323066] (-) TimerEvent: {}
+[7.353397] (robot_hardware) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable hardware_manager\x1b[0m\n'}
+[7.423251] (-) TimerEvent: {}
+[7.523854] (-) TimerEvent: {}
+[7.624354] (-) TimerEvent: {}
+[7.725026] (-) TimerEvent: {}
+[7.825725] (-) TimerEvent: {}
+[7.926509] (-) TimerEvent: {}
+[8.027010] (-) TimerEvent: {}
+[8.127413] (-) TimerEvent: {}
+[8.227766] (-) TimerEvent: {}
+[8.247767] (robot_hardware) StdoutLine: {'line': b'[100%] Built target hardware_manager\n'}
+[8.263962] (robot_hardware) CommandEnded: {'returncode': 0}
+[8.327932] (-) TimerEvent: {}
+[8.410888] (robot_hardware) JobProgress: {'identifier': 'robot_hardware', 'progress': 'install'}
+[8.428084] (-) TimerEvent: {}
+[8.436614] (robot_hardware) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware'], 'cwd': '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'future'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/future/Documents/Robot/nav_ws/install/rslidar_msg/lib:/home/future/Documents/Robot/nav_ws/install/pointcloud_to_laserscan/lib:/home/future/Documents/Robot/nav_ws/install/nav2_social_costmap_plugin/lib:/home/future/Documents/Robot/nav_ws/install/diff_control/lib:/home/future/Documents/VIW-FUSION/install/camera_models/lib:/home/future/Documents/people_tracker/install/people_msgs/lib:/home/future/Documents/people_tracker/install/leg_tracker_ros2/lib:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib'), ('HOME', '/home/future'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/future/Documents/pengyh/RobotAD_ws/src'), ('TERM_PROGRAM_VERSION', '1.95.1'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1549'), ('SYSTEMD_EXEC_PID', '1832'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '331300'), ('COLCON_PREFIX_PATH', '/home/future/Documents/Robot/nav_ws/install:/home/future/Documents/VIW-FUSION/install:/home/future/Documents/people_tracker/install:/home/future/Documents/Navigation/interface_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'future'), ('JOURNAL_STREAM', '8:17007'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'future'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/future/.local/bin:/home/future/Documents/VIW-FUSION/install/global_fusion/bin:/home/future/Documents/VIW-FUSION/install/camera_models/bin:/opt/ros/humble/bin:/home/future/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/future:@/tmp/.ICE-unix/1805,unix/future:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '7a1ba33c4c1f44ac979c358b75863625'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-fbb74b9cb4.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/rslidar_sdk:/home/future/Documents/Robot/nav_ws/install/rslidar_msg:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/robot_locate:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/pointcloud_to_laserscan:/home/future/Documents/Robot/nav_ws/install/nav2_social_costmap_plugin:/home/future/Documents/Robot/nav_ws/install/miiboo_imu:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/home/future/Documents/Robot/nav_ws/install/diff_control:/home/future/Documents/VIW-FUSION/install/vins:/home/future/Documents/VIW-FUSION/install/loop_fusion:/home/future/Documents/VIW-FUSION/install/global_fusion:/home/future/Documents/VIW-FUSION/install/camera_models:/home/future/Documents/people_tracker/install/people_msgs:/home/future/Documents/people_tracker/install/leg_tracker_ros2:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/future/Documents/Robot/nav_ws/install/show_urdf/lib/python3.10/site-packages:/home/future/Documents/Robot/nav_ws/install/serial_bridge/lib/python3.10/site-packages:/home/future/Documents/Robot/nav_ws/install/rslidar_msg/local/lib/python3.10/dist-packages:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/home/future/Documents/Robot/nav_ws/install/remove_obstacle/lib/python3.10/site-packages:/home/future/Documents/Robot/nav_ws/install/keyboard_control/lib/python3.10/site-packages:/home/future/Documents/people_tracker/install/people_msgs/local/lib/python3.10/dist-packages:/home/future/Documents/people_tracker/install/leg_tracker_ros2/local/lib/python3.10/dist-packages:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/future/Documents/Robot/nav_ws/install/rslidar_sdk:/home/future/Documents/Robot/nav_ws/install/rslidar_msg:/home/future/Documents/Robot/nav_ws/install/robot_locate:/home/future/Documents/Robot/nav_ws/install/pointcloud_to_laserscan:/home/future/Documents/Robot/nav_ws/install/nav2_social_costmap_plugin:/home/future/Documents/Robot/nav_ws/install/miiboo_imu:/home/future/Documents/Robot/nav_ws/install/diff_control:/home/future/Documents/VIW-FUSION/install/vins:/home/future/Documents/VIW-FUSION/install/loop_fusion:/home/future/Documents/VIW-FUSION/install/global_fusion:/home/future/Documents/VIW-FUSION/install/camera_models:/home/future/Documents/people_tracker/install/people_msgs:/home/future/Documents/people_tracker/install/leg_tracker_ros2:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble')]), 'shell': False}
+[8.459216] (robot_hardware) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.460162] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/ament_index/resource_index/rosidl_interfaces/robot_hardware\n'}
+[8.460356] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware\n'}
+[8.460630] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg\n'}
+[8.460837] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/hardware_data.h\n'}
+[8.461010] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/rosidl_generator_c__visibility_control.h\n'}
+[8.461166] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail\n'}
+[8.461403] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__functions.c\n'}
+[8.461633] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__functions.h\n'}
+[8.461896] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__struct.h\n'}
+[8.462029] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__type_support.h\n'}
+[8.462190] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/environment/library_path.sh\n'}
+[8.462323] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/environment/library_path.dsv\n'}
+[8.462507] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/librobot_hardware__rosidl_generator_c.so\n'}
+[8.462730] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware\n'}
+[8.462861] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg\n'}
+[8.463032] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[8.463163] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail\n'}
+[8.463289] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__rosidl_typesupport_fastrtps_c.h\n'}
+[8.463756] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_fastrtps_c.so\n'}
+[8.464262] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware\n'}
+[8.464473] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg\n'}
+[8.464671] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/hardware_data.hpp\n'}
+[8.464829] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail\n'}
+[8.465079] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__struct.hpp\n'}
+[8.465209] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__builder.hpp\n'}
+[8.465331] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__traits.hpp\n'}
+[8.465500] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware\n'}
+[8.465663] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg\n'}
+[8.465794] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[8.465963] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail\n'}
+[8.466087] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[8.466249] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/dds_fastrtps\n'}
+[8.466392] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_fastrtps_cpp.so\n'}
+[8.466586] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware\n'}
+[8.466870] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg\n'}
+[8.467168] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail\n'}
+[8.467297] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__type_support.c\n'}
+[8.467437] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__rosidl_typesupport_introspection_c.h\n'}
+[8.467567] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[8.467685] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_introspection_c.so\n'}
+[8.467805] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_c.so\n'}
+[8.467927] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware\n'}
+[8.468052] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg\n'}
+[8.468171] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail\n'}
+[8.468285] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__type_support.cpp\n'}
+[8.468422] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[8.468545] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_introspection_cpp.so\n'}
+[8.468670] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_cpp.so\n'}
+[8.468789] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/environment/pythonpath.sh\n'}
+[8.468902] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/environment/pythonpath.dsv\n'}
+[8.469021] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware-0.0.0-py3.10.egg-info\n'}
+[8.469142] (robot_hardware) StdoutLine: {'line': b'-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[8.469259] (robot_hardware) StdoutLine: {'line': b'-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[8.469386] (robot_hardware) StdoutLine: {'line': b'-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[8.469516] (robot_hardware) StdoutLine: {'line': b'-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[8.469632] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware\n'}
+[8.469753] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/librobot_hardware__rosidl_generator_py.so\n'}
+[8.469871] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_c.c\n'}
+[8.469992] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.470120] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg\n'}
+[8.470240] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg/_hardware_data_s.c\n'}
+[8.470358] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg/_hardware_data.py\n'}
+[8.470498] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg/__init__.py\n'}
+[8.470617] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.470745] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[8.470865] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.470987] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[8.471099] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/__init__.py\n'}
+[8.523888] (robot_hardware) StdoutLine: {'line': b"Listing '/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware'...\n"}
+[8.524062] (robot_hardware) StdoutLine: {'line': b"Listing '/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg'...\n"}
+[8.527845] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.528045] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.528098] (-) TimerEvent: {}
+[8.528261] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.528443] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/librobot_hardware__rosidl_generator_py.so\n'}
+[8.528550] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/msg/HardwareData.idl\n'}
+[8.528599] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/msg/HardwareData.msg\n'}
+[8.528639] (robot_hardware) StdoutLine: {'line': b'-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/robot_hardware/hardware_manager\n'}
+[8.533733] (robot_hardware) StdoutLine: {'line': b'-- Set runtime path of "/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/robot_hardware/hardware_manager" to ""\n'}
+[8.533973] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include\n'}
+[8.534014] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware\n'}
+[8.534060] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/HardwareData.hpp\n'}
+[8.534105] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/msg/msg\n'}
+[8.534146] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/msg/msg/HardwareData.msg\n'}
+[8.534193] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/ament_index/resource_index/package_run_dependencies/robot_hardware\n'}
+[8.534237] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/ament_index/resource_index/parent_prefix_path/robot_hardware\n'}
+[8.534273] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/environment/ament_prefix_path.sh\n'}
+[8.534306] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/environment/ament_prefix_path.dsv\n'}
+[8.534340] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/environment/path.sh\n'}
+[8.534373] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/environment/path.dsv\n'}
+[8.534440] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/local_setup.bash\n'}
+[8.534474] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/local_setup.sh\n'}
+[8.534506] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/local_setup.zsh\n'}
+[8.534538] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/local_setup.dsv\n'}
+[8.534570] (robot_hardware) StdoutLine: {'line': b'-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/package.dsv\n'}
+[8.534615] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/ament_index/resource_index/packages/robot_hardware\n'}
+[8.534648] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_generator_cExport.cmake\n'}
+[8.534680] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_generator_cExport-noconfig.cmake\n'}
+[8.534730] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[8.534762] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[8.534811] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_generator_cppExport.cmake\n'}
+[8.534843] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[8.534874] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[8.534918] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_introspection_cExport.cmake\n'}
+[8.534990] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[8.535033] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_cExport.cmake\n'}
+[8.535080] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[8.535130] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[8.535161] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[8.535192] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_cppExport.cmake\n'}
+[8.535222] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[8.535267] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_generator_pyExport.cmake\n'}
+[8.535295] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_generator_pyExport-noconfig.cmake\n'}
+[8.535322] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/rosidl_cmake-extras.cmake\n'}
+[8.535350] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[8.535384] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[8.535414] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[8.535441] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[8.535467] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[8.535495] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[8.535522] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/robot_hardwareConfig.cmake\n'}
+[8.535550] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake/robot_hardwareConfig-version.cmake\n'}
+[8.535578] (robot_hardware) StdoutLine: {'line': b'-- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/package.xml\n'}
+[8.537172] (robot_hardware) CommandEnded: {'returncode': 0}
+[8.628270] (-) TimerEvent: {}
+[8.729039] (-) TimerEvent: {}
+[8.756777] (robot_hardware) JobEnded: {'identifier': 'robot_hardware', 'rc': 0}
+[8.759339] (-) EventReactorShutdown: {}

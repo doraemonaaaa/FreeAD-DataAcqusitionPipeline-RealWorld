@@ -1,7 +1,7 @@
 set(_AMENT_PACKAGE_NAME "keyboard_control")
 set(keyboard_control_VERSION "0.0.0")
 set(keyboard_control_MAINTAINER "future <future@todo.todo>")
-set(keyboard_control_BUILD_DEPENDS "rclcpp" "std_msgs")
+set(keyboard_control_BUILD_DEPENDS "robot_hardware" "rclcpp" "std_msgs")
 set(keyboard_control_BUILDTOOL_DEPENDS "ament_cmake")
 set(keyboard_control_BUILD_EXPORT_DEPENDS "rclcpp" "std_msgs")
 set(keyboard_control_BUILDTOOL_EXPORT_DEPENDS )

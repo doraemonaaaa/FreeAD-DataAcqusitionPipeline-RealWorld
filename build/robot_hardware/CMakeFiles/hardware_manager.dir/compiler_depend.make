@@ -665,7 +665,6 @@ CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o: /home/future/Documen
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/include/robot_hardware/HardwareData.hpp \
   rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp \
   rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__struct.hpp \
   rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__builder.hpp \
@@ -679,8 +678,6 @@ rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__builder.hpp:
 rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__struct.hpp:
 
 rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp:
-
-/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/include/robot_hardware/HardwareData.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp:
 

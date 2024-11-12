@@ -1,3 +1,4 @@
+/home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/lib/keyboard_control/keyboard_control_node
 /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/ament_index/resource_index/package_run_dependencies/keyboard_control
 /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/ament_index/resource_index/parent_prefix_path/keyboard_control
 /home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control/share/keyboard_control/environment/ament_prefix_path.sh
