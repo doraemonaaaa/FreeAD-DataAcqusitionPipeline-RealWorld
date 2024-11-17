@@ -1,0 +1,41 @@
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:10:17:[m[K [01;31m[Kerror: [m[K‘[01m[Khardware_interface::return_type RobotHardwareInterface::configure(const hardware_interface::HardwareInfo&)[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+   10 |     return_type [01;31m[Kconfigure[m[K(const hardware_interface::HardwareInfo &info) override {
+      |                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:41:17:[m[K [01;31m[Kerror: [m[K‘[01m[Khardware_interface::return_type RobotHardwareInterface::start()[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+   41 |     return_type [01;31m[Kstart[m[K() override {
+      |                 [01;31m[K^~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:46:17:[m[K [01;31m[Kerror: [m[K‘[01m[Khardware_interface::return_type RobotHardwareInterface::stop()[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+   46 |     return_type [01;31m[Kstop[m[K() override {
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:51:17:[m[K [01;31m[Kerror: [m[K‘[01m[Khardware_interface::return_type RobotHardwareInterface::read()[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+   51 |     return_type [01;31m[Kread[m[K() override {
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:58:17:[m[K [01;31m[Kerror: [m[K‘[01m[Khardware_interface::return_type RobotHardwareInterface::write()[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+   58 |     return_type [01;31m[Kwrite[m[K() override {
+      |                 [01;31m[K^~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:[m[K In member function ‘[01m[Khardware_interface::return_type RobotHardwareInterface::configure(const hardware_interface::HardwareInfo&)[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:11:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kconfigure[m[K’ is not a member of ‘[01m[Khardware_interface::SystemInterface[m[K’
+   11 |         if (hardware_interface::SystemInterface::[01;31m[Kconfigure[m[K(info) != return_type::OK) {
+      |                                                  [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp:57[m[K,
+                 from [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader.hpp:55[m[K,
+                 from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_list_macros.hpp:40[m[K,
+                 from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:72[m[K:
+/opt/ros/humble/include/class_loader/class_loader/meta_object.hpp: In instantiation of ‘[01m[KB* class_loader::impl::MetaObject<C, B>::create() const [with C = RobotHardwareInterface; B = hardware_interface::SystemInterface][m[K’:
+[01m[K/opt/ros/humble/include/class_loader/class_loader/meta_object.hpp:216:7:[m[K   required from here
+[01m[K/opt/ros/humble/include/class_loader/class_loader/meta_object.hpp:218:12:[m[K [01;31m[Kerror: [m[Kinvalid new-expression of abstract class type ‘[01m[KRobotHardwareInterface[m[K’
+  218 |     return [01;31m[Knew C[m[K;
+      |            [01;31m[K^~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:8:7:[m[K [01;36m[Knote: [m[K  because the following virtual functions are pure within ‘[01m[KRobotHardwareInterface[m[K’:
+    8 | class [01;36m[KRobotHardwareInterface[m[K : public hardware_interface::SystemInterface {
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/hardware_interface/system_interface.hpp:175:23:[m[K [01;36m[Knote: [m[K    ‘[01m[Kvirtual hardware_interface::return_type hardware_interface::SystemInterface::read(const rclcpp::Time&, const rclcpp::Duration&)[m[K’
+  175 |   virtual return_type [01;36m[Kread[m[K(const rclcpp::Time & time, const rclcpp::Duration & period) = 0;
+      |                       [01;36m[K^~~~[m[K
+[01m[K/opt/ros/humble/include/hardware_interface/system_interface.hpp:186:23:[m[K [01;36m[Knote: [m[K    ‘[01m[Kvirtual hardware_interface::return_type hardware_interface::SystemInterface::write(const rclcpp::Time&, const rclcpp::Duration&)[m[K’
+  186 |   virtual return_type [01;36m[Kwrite[m[K(const rclcpp::Time & time, const rclcpp::Duration & period) = 0;
+      |                       [01;36m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/robot_hardware_interface.dir/build.make:76: CMakeFiles/robot_hardware_interface.dir/src/robot_hardware_interface.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:594: CMakeFiles/robot_hardware_interface.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

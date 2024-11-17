@@ -1,0 +1,1 @@
+/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera/ament_cmake_core/usb_cameraConfig.cmake

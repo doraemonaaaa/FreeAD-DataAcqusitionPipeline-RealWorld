@@ -1,0 +1,37 @@
+[0.012s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware -- -j24 -l24
+[0.032s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.333s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.344s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.430s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.436s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.450s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.479s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.516s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.604s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.608s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.926s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.022s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.106s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[1.150s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.171s] -- Found hardware_interface: 2.43.1 (/opt/ros/humble/share/hardware_interface/cmake)
+[1.297s] -- Found controller_manager: 2.43.1 (/opt/ros/humble/share/controller_manager/cmake)
+[1.320s] -- Found ros2_control: 2.43.1 (/opt/ros/humble/share/ros2_control/cmake)
+[1.590s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.092s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.446s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.505s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.569s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.569s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.569s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.667s] [31mCMake Error at /opt/ros/humble/share/pluginlib/cmake/pluginlib_export_plugin_description_file.cmake:84 (message):
+[2.667s]   Given plugin description file
+[2.667s]   '/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/robot_hardware_interface.xml'
+[2.667s]   does not exist
+[2.668s] Call Stack (most recent call first):
+[2.668s]   CMakeLists.txt:46 (pluginlib_export_plugin_description_file)
+[2.668s] 
+[2.668s] [0m
+[2.668s] -- Configuring incomplete, errors occurred!
+[2.668s] See also "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/CMakeFiles/CMakeOutput.log".
+[2.681s] gmake: *** [Makefile:788: cmake_check_build_system] Error 1
+[2.683s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware -- -j24 -l24

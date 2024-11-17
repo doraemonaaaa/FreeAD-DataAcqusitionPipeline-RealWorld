@@ -73,15 +73,15 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: CMakeFiles
 CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/future/Documents/pengyh/RobotAD_ws/src/keyboard_control/src/keyboard_control_node.cpp
 CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: CMakeFiles/keyboard_control_node.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/future/Documents/pengyh/RobotAD_ws/build/keyboard_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o -MF CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o.d -o CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o -c /home/future/Documents/pengyh/RobotAD_ws/src/keyboard_control/src/keyboard_control_node.cpp
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o -MF CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o.d -o CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o -c /home/future/Documents/pengyh/RobotAD_ws/src/keyboard_control/src/keyboard_control_node.cpp
 
 CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/future/Documents/pengyh/RobotAD_ws/src/keyboard_control/src/keyboard_control_node.cpp > CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.i
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/future/Documents/pengyh/RobotAD_ws/src/keyboard_control/src/keyboard_control_node.cpp > CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.i
 
 CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/future/Documents/pengyh/RobotAD_ws/src/keyboard_control/src/keyboard_control_node.cpp -o CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.s
+	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/future/Documents/pengyh/RobotAD_ws/src/keyboard_control/src/keyboard_control_node.cpp -o CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.s
 
 # Object files for target keyboard_control_node
 keyboard_control_node_OBJECTS = \

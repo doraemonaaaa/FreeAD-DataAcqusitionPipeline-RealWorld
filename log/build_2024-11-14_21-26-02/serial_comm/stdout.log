@@ -1,0 +1,20 @@
+[35m[1mConsolidate compiler generated dependencies of target serial_node[0m
+[100%] Built target serial_node
+-- Install configuration: ""
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/lib/serial_comm/serial_node
+-- Set runtime path of "/home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/lib/serial_comm/serial_node" to ""
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/ament_index/resource_index/package_run_dependencies/serial_comm
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/ament_index/resource_index/parent_prefix_path/serial_comm
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/environment/ament_prefix_path.sh
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/environment/ament_prefix_path.dsv
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/environment/path.sh
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/environment/path.dsv
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/local_setup.bash
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/local_setup.sh
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/local_setup.zsh
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/local_setup.dsv
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/package.dsv
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/ament_index/resource_index/packages/serial_comm
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/cmake/serial_commConfig.cmake
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/cmake/serial_commConfig-version.cmake
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/package.xml

@@ -1,0 +1,8 @@
+source;share/usb_camera/hook/cmake_prefix_path.ps1
+source;share/usb_camera/hook/cmake_prefix_path.dsv
+source;share/usb_camera/hook/cmake_prefix_path.sh
+source;share/usb_camera/local_setup.bash
+source;share/usb_camera/local_setup.dsv
+source;share/usb_camera/local_setup.ps1
+source;share/usb_camera/local_setup.sh
+source;share/usb_camera/local_setup.zsh

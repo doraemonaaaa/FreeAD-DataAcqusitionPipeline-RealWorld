@@ -1,0 +1,27 @@
+[0.025s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera -- -j24 -l24
+[0.083s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.364s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.380s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.412s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.416s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.436s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.463s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.501s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.583s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.588s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.863s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.950s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.026s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[1.157s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
+[1.157s]   ament_package_xml() package name 'usb_camera' in '/package.xml' does not
+[1.157s]   match current PROJECT_NAME 'usb_camera_node'.  You must call project() with
+[1.157s]   the same package name before.
+[1.157s] Call Stack (most recent call first):
+[1.157s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[1.157s]   CMakeLists.txt:17 (ament_package)
+[1.157s] 
+[1.157s] [0m
+[1.157s] -- Configuring incomplete, errors occurred!
+[1.157s] See also "/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera/CMakeFiles/CMakeOutput.log".
+[1.163s] gmake: *** [Makefile:267: cmake_check_build_system] Error 1
+[1.164s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera -- -j24 -l24

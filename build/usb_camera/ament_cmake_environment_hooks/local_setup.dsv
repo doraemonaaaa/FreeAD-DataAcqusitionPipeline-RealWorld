@@ -1,0 +1,2 @@
+source;share/usb_camera/environment/ament_prefix_path.sh
+source;share/usb_camera/environment/path.sh

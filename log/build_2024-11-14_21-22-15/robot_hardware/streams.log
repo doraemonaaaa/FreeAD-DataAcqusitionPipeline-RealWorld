@@ -1,0 +1,46 @@
+[0.011s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble /usr/bin/cmake /home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware
+[0.087s] -- The C compiler identification is GNU 12.3.0
+[0.207s] -- The CXX compiler identification is GNU 12.3.0
+[0.227s] -- Detecting C compiler ABI info
+[0.427s] -- Detecting C compiler ABI info - done
+[0.447s] -- Check for working C compiler: /usr/bin/gcc-12 - skipped
+[0.448s] -- Detecting C compile features
+[0.449s] -- Detecting C compile features - done
+[0.457s] -- Detecting CXX compiler ABI info
+[0.668s] -- Detecting CXX compiler ABI info - done
+[0.690s] -- Check for working CXX compiler: /usr/bin/g++-12 - skipped
+[0.691s] -- Detecting CXX compile features
+[0.692s] -- Detecting CXX compile features - done
+[0.703s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.996s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.130s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.258s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[1.351s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.356s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.362s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.373s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.386s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.422s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.426s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.555s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.607s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.676s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.704s] -- Looking for pthread.h
+[1.796s] -- Looking for pthread.h - found
+[1.796s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.976s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.979s] -- Found Threads: TRUE  
+[2.086s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.351s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.619s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.731s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.750s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.753s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.774s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.774s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.774s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.774s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.788s] -- Found PythonExtra: .so  
+[2.841s] -- Configuring done
+[2.867s] -- Generating done
+[2.869s] -- Build files have been written to: /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware

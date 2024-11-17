@@ -1,0 +1,25 @@
+[0.011s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera -- -j24 -l24
+[0.114s] [ 50%] [32mBuilding CXX object CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o[0m
+[4.183s] [100%] [32m[1mLinking CXX executable usb_camera_node[0m
+[4.559s] [100%] Built target usb_camera_node
+[4.571s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera -- -j24 -l24
+[4.601s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera
+[4.607s] -- Install configuration: ""
+[4.607s] -- Execute custom install script
+[4.607s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/lib/usb_camera/usb_camera_node
+[4.607s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/ament_index/resource_index/package_run_dependencies/usb_camera
+[4.607s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/ament_index/resource_index/parent_prefix_path/usb_camera
+[4.607s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/environment/ament_prefix_path.sh
+[4.607s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/environment/ament_prefix_path.dsv
+[4.607s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/environment/path.sh
+[4.608s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/environment/path.dsv
+[4.608s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/local_setup.bash
+[4.608s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/local_setup.sh
+[4.608s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/local_setup.zsh
+[4.608s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/local_setup.dsv
+[4.608s] -- Symlinking: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/package.dsv
+[4.615s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/ament_index/resource_index/packages/usb_camera
+[4.615s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/cmake/usb_cameraConfig.cmake
+[4.615s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/cmake/usb_cameraConfig-version.cmake
+[4.615s] -- Up-to-date symlink: /home/future/Documents/pengyh/RobotAD_ws/install/usb_camera/share/usb_camera/package.xml
+[4.617s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera

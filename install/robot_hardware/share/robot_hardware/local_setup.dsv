@@ -1,4 +1,1 @@
-source;share/robot_hardware/environment/ament_prefix_path.sh
-source;share/robot_hardware/environment/library_path.sh
-source;share/robot_hardware/environment/path.sh
-source;share/robot_hardware/environment/pythonpath.sh
+/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/ament_cmake_environment_hooks/local_setup.dsv

@@ -16,7 +16,7 @@ set(_robot_hardware_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT robot_hardware_FIND_QUIETLY)
-  message(STATUS "Found robot_hardware: 0.0.0 (${robot_hardware_DIR})")
+  message(STATUS "Found robot_hardware: 0.0.1 (${robot_hardware_DIR})")
 endif()
 
 # warn when using a deprecated package

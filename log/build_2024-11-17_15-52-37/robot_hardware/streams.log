@@ -1,0 +1,46 @@
+[0.010s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware -- -j24 -l24
+[0.046s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware_interface[0m
+[0.055s] [  8%] Built target robot_hardware__rosidl_generator_c
+[0.056s] [ 11%] Built target robot_hardware__cpp
+[0.060s] [ 11%] Built target ament_cmake_python_symlink_robot_hardware
+[0.064s] [ 14%] [32mBuilding CXX object CMakeFiles/robot_hardware_interface.dir/src/robot_hardware_interface.cpp.o[0m
+[0.072s] [ 22%] Built target robot_hardware__rosidl_typesupport_c
+[0.072s] [ 31%] Built target robot_hardware__rosidl_typesupport_cpp
+[0.073s] [ 40%] Built target robot_hardware__rosidl_typesupport_fastrtps_cpp
+[0.073s] [ 48%] Built target robot_hardware__rosidl_typesupport_fastrtps_c
+[0.073s] [ 57%] Built target robot_hardware__rosidl_typesupport_introspection_c
+[0.073s] [ 65%] Built target robot_hardware__rosidl_typesupport_introspection_cpp
+[0.094s] [ 65%] Built target robot_hardware
+[0.114s] [ 68%] Built target robot_hardware__py
+[0.130s] [ 74%] Built target robot_hardware__rosidl_generator_py
+[0.148s] [ 80%] Built target robot_hardware__rosidl_typesupport_fastrtps_c__pyext
+[0.149s] [ 85%] Built target robot_hardware__rosidl_typesupport_c__pyext
+[0.150s] [ 91%] Built target robot_hardware__rosidl_typesupport_introspection_c__pyext
+[0.253s] running egg_info
+[0.253s] writing robot_hardware.egg-info/PKG-INFO
+[0.254s] writing dependency_links to robot_hardware.egg-info/dependency_links.txt
+[0.254s] writing top-level names to robot_hardware.egg-info/top_level.txt
+[0.256s] reading manifest file 'robot_hardware.egg-info/SOURCES.txt'
+[0.256s] writing manifest file 'robot_hardware.egg-info/SOURCES.txt'
+[0.280s] [ 91%] Built target ament_cmake_python_build_robot_hardware_egg
+[1.842s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:10:17:[m[K [01;31m[Kerror: [m[Kconflicting return type specified for ‘[01m[Kvirtual hardware_interface::return_type RobotHardwareInterface::on_init(const hardware_interface::HardwareInfo&)[m[K’
+[1.842s]    10 |     return_type [01;31m[Kon_init[m[K(const hardware_interface::HardwareInfo &info) override {
+[1.842s]       |                 [01;31m[K^~~~~~~[m[K
+[1.842s] In file included from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:1[m[K:
+[1.842s] [01m[K/opt/ros/humble/include/hardware_interface/system_interface.hpp:98:26:[m[K [01;36m[Knote: [m[Koverridden function is ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::SystemInterface::on_init(const hardware_interface::HardwareInfo&)[m[K’
+[1.842s]    98 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info)
+[1.842s]       |                          [01;36m[K^~~~~~~[m[K
+[1.842s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:36:17:[m[K [01;31m[Kerror: [m[K‘[01m[Khardware_interface::return_type RobotHardwareInterface::start()[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+[1.842s]    36 |     return_type [01;31m[Kstart[m[K() override {
+[1.843s]       |                 [01;31m[K^~~~~[m[K
+[1.843s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:41:17:[m[K [01;31m[Kerror: [m[K‘[01m[Khardware_interface::return_type RobotHardwareInterface::stop()[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+[1.843s]    41 |     return_type [01;31m[Kstop[m[K() override {
+[1.843s]       |                 [01;31m[K^~~~[m[K
+[1.843s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type RobotHardwareInterface::on_init(const hardware_interface::HardwareInfo&)[m[K’:
+[1.843s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:10:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kinfo[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.843s]    10 |     return_type on_init([01;35m[Kconst hardware_interface::HardwareInfo &info[m[K) override {
+[1.843s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[2.226s] gmake[2]: *** [CMakeFiles/robot_hardware_interface.dir/build.make:76: CMakeFiles/robot_hardware_interface.dir/src/robot_hardware_interface.cpp.o] Error 1
+[2.226s] gmake[1]: *** [CMakeFiles/Makefile2:594: CMakeFiles/robot_hardware_interface.dir/all] Error 2
+[2.226s] gmake: *** [Makefile:146: all] Error 2
+[2.228s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware -- -j24 -l24

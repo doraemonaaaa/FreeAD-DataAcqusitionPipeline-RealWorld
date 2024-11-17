@@ -1,1 +1,1 @@
-from robot_hardware.msg._hardware_data import HardwareData  # noqa: F401
+/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/msg/__init__.py

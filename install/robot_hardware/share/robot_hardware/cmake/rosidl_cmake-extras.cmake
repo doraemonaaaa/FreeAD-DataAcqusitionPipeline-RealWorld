@@ -1,4 +1,1 @@
-# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
-
-set(robot_hardware_IDL_FILES "msg/HardwareData.idl")
-set(robot_hardware_INTERFACE_FILES "msg/HardwareData.msg")
+/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_cmake/rosidl_cmake-extras.cmake

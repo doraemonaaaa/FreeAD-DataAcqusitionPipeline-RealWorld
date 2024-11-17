@@ -1,0 +1,1 @@
+/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/__init__.py

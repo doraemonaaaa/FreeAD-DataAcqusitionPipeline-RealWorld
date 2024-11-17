@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/librobot_hardware_interface.so" "TARGETS" "robot_hardware_interface" "LIBRARY_DESTINATION" "lib")

@@ -1,0 +1,19 @@
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:[m[K In constructor ‘[01m[KUsbCameraNode::UsbCameraNode()[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:19:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid usb_cam::UsbCam::init_device()[m[K’ is private within this context
+   19 |         [01;31m[Kusb_cam_->init_device()[m[K;
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:4[m[K:
+[01m[K/opt/ros/humble/include/usb_cam/usb_cam.hpp:386:8:[m[K [01;36m[Knote: [m[Kdeclared private here
+  386 |   void [01;36m[Kinit_device[m[K();
+      |        [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:22:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass usb_cam::UsbCam[m[K’ has no member named ‘[01m[Kis_device_open[m[K’
+   22 |         if (!usb_cam_->[01;31m[Kis_device_open[m[K())
+      |                        [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:[m[K In member function ‘[01m[Kvoid UsbCameraNode::publish_image()[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:39:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass usb_cam::UsbCam[m[K’ has no member named ‘[01m[Kget_image_data[m[K’; did you mean ‘[01m[Kget_image_width[m[K’?
+   39 |         if (usb_cam_->[01;31m[Kget_image_data[m[K(image_data))  // 获取图像数据
+      |                       [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                       [32m[Kget_image_width[m[K
+gmake[2]: *** [CMakeFiles/usb_camera_node.dir/build.make:76: CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/usb_camera_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

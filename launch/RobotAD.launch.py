@@ -3,11 +3,26 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     return LaunchDescription([
+        # Node(
+        #     package='robot_hardware',
+        #     executable='hardware_manager',
+        #     name='hardware_manager',
+        #     output='screen'
+        # ),
         Node(
-            package='robot_hardware',
-            executable='hardware_manager',
-            name='hardware_manager',
-            output='screen'
+            package="controller_manager",
+            executable="ros2_control_node",
+            output="screen",
+            parameters=[
+                {"robot_description": "src/robot_hardware/robot.rdf"},
+                "src/robot_hardware/diff_drive_controller.yaml"
+            ]
+        ),
+        Node(
+            package="controller_manager",
+            executable="spawner",
+            arguments=["diff_drive_controller"],
+            output="screen",
         ),
         # Node(
         #     package='keyboard_control',

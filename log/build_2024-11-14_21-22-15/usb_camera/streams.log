@@ -1,0 +1,57 @@
+[0.009s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble /usr/bin/cmake /home/future/Documents/pengyh/RobotAD_ws/src/usb_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/future/Documents/pengyh/RobotAD_ws/install/usb_camera
+[0.087s] -- The C compiler identification is GNU 12.3.0
+[0.202s] -- The CXX compiler identification is GNU 12.3.0
+[0.222s] -- Detecting C compiler ABI info
+[0.421s] -- Detecting C compiler ABI info - done
+[0.443s] -- Check for working C compiler: /usr/bin/gcc-12 - skipped
+[0.444s] -- Detecting C compile features
+[0.445s] -- Detecting C compile features - done
+[0.453s] -- Detecting CXX compiler ABI info
+[0.679s] -- Detecting CXX compiler ABI info - done
+[0.699s] -- Check for working CXX compiler: /usr/bin/g++-12 - skipped
+[0.700s] -- Detecting CXX compile features
+[0.701s] -- Detecting CXX compile features - done
+[0.711s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.996s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.135s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.262s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[1.349s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.354s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.360s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.370s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.382s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.417s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.420s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.551s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.605s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.670s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.698s] -- Looking for pthread.h
+[1.789s] -- Looking for pthread.h - found
+[1.790s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.968s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.972s] -- Found Threads: TRUE  
+[2.077s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.118s] -- Found image_transport: 3.1.9 (/opt/ros/humble/share/image_transport/cmake)
+[2.148s] -- Found usb_cam: 0.8.1 (/opt/ros/humble/share/usb_cam/cmake)
+[2.210s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.299s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.300s] -- Configured cppcheck include dirs: 
+[2.300s] -- Configured cppcheck exclude dirs and/or files: 
+[2.300s] -- Added test 'lint_cmake' to check CMake code style
+[2.301s] -- Added test 'uncrustify' to check C / C++ code style
+[2.301s] -- Configured uncrustify additional arguments: 
+[2.302s] -- Added test 'xmllint' to check XML markup files
+[2.304s] -- Configuring done
+[2.319s] -- Generating done
+[2.321s] -- Build files have been written to: /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera
+[2.333s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble /usr/bin/cmake /home/future/Documents/pengyh/RobotAD_ws/src/usb_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/future/Documents/pengyh/RobotAD_ws/install/usb_camera
+[2.334s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera -- -j24 -l24
+[2.388s] [ 50%] [32mBuilding CXX object CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o[0m
+[2.512s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:4:10:[m[K [01;31m[Kfatal error: [m[Kusb_cam/usb_cam.h: No such file or directory
+[2.512s]     4 | #include [01;31m[K<usb_cam/usb_cam.h>[m[K
+[2.512s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.512s] compilation terminated.
+[2.523s] gmake[2]: *** [CMakeFiles/usb_camera_node.dir/build.make:76: CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o] Error 1
+[2.523s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/usb_camera_node.dir/all] Error 2
+[2.523s] gmake: *** [Makefile:146: all] Error 2
+[2.526s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera -- -j24 -l24

@@ -1,0 +1,23 @@
+[0.010s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera -- -j24 -l24
+[0.046s] [35m[1mConsolidate compiler generated dependencies of target usb_camera_node[0m
+[0.057s] [ 50%] [32mBuilding CXX object CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o[0m
+[1.882s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:[m[K In constructor ‘[01m[KUsbCameraNode::UsbCameraNode()[m[K’:
+[1.882s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:19:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid usb_cam::UsbCam::init_device()[m[K’ is private within this context
+[1.882s]    19 |         [01;31m[Kusb_cam_->init_device()[m[K;
+[1.882s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[1.882s] In file included from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:4[m[K:
+[1.882s] [01m[K/opt/ros/humble/include/usb_cam/usb_cam.hpp:386:8:[m[K [01;36m[Knote: [m[Kdeclared private here
+[1.882s]   386 |   void [01;36m[Kinit_device[m[K();
+[1.882s]       |        [01;36m[K^~~~~~~~~~~[m[K
+[1.882s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:22:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass usb_cam::UsbCam[m[K’ has no member named ‘[01m[Kis_device_open[m[K’
+[1.882s]    22 |         if (!usb_cam_->[01;31m[Kis_device_open[m[K())
+[1.882s]       |                        [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.888s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:[m[K In member function ‘[01m[Kvoid UsbCameraNode::publish_image()[m[K’:
+[1.888s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:39:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass usb_cam::UsbCam[m[K’ has no member named ‘[01m[Kget_image_data[m[K’; did you mean ‘[01m[Kget_image_width[m[K’?
+[1.888s]    39 |         if (usb_cam_->[01;31m[Kget_image_data[m[K(image_data))  // 获取图像数据
+[1.888s]       |                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.888s]       |                       [32m[Kget_image_width[m[K
+[2.396s] gmake[2]: *** [CMakeFiles/usb_camera_node.dir/build.make:76: CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o] Error 1
+[2.396s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/usb_camera_node.dir/all] Error 2
+[2.396s] gmake: *** [Makefile:146: all] Error 2
+[2.399s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/future/Documents/Robot/nav_ws/install/show_urdf:/home/future/Documents/Robot/nav_ws/install/serial_bridge:/home/future/Documents/Robot/nav_ws/install/ros_tcp_endpoint:/home/future/Documents/Robot/nav_ws/install/remove_obstacle:/home/future/Documents/Robot/nav_ws/install/keyboard_control:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera -- -j24 -l24

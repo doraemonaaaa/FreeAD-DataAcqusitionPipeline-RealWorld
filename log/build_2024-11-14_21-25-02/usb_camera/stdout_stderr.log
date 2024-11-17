@@ -1,0 +1,53 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found image_transport: 3.1.9 (/opt/ros/humble/share/image_transport/cmake)
+-- Found usb_cam: 0.8.1 (/opt/ros/humble/share/usb_cam/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera
+[35m[1mConsolidate compiler generated dependencies of target usb_camera_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o[0m
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:[m[K In constructor ‘[01m[KUsbCameraNode::UsbCameraNode()[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:12:48:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kimage_transport::ImageTransport::ImageTransport(UsbCameraNode*)[m[K’
+   12 |         image_transport::ImageTransport it(this[01;31m[K)[m[K;
+      |                                                [01;31m[K^[m[K
+In file included from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:3[m[K:
+[01m[K/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:111:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kimage_transport::ImageTransport::ImageTransport(rclcpp::Node::SharedPtr)[m[K’
+  111 |   explicit [01;36m[KImageTransport[m[K(rclcpp::Node::SharedPtr node);
+      |            [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/image_transport/image_transport/image_transport.hpp:111:51:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KUsbCameraNode*[m[K’ to ‘[01m[Krclcpp::Node::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::Node>[m[K’}
+  111 |   explicit ImageTransport([01;36m[Krclcpp::Node::SharedPtr node[m[K);
+      |                           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:17:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass usb_cam::UsbCam[m[K’ has no member named ‘[01m[Kopen[m[K’
+   17 |         if (!usb_cam_->[01;31m[Kopen[m[K("/dev/video0"))  // 默认设备
+      |                        [01;31m[K^~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:[m[K In member function ‘[01m[Kvoid UsbCameraNode::publish_image()[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:31:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass usb_cam::UsbCam[m[K’ has no member named ‘[01m[Kgrab_frame[m[K’; did you mean ‘[01m[Kgrab_image[m[K’?
+   31 |         if (usb_cam_->[01;31m[Kgrab_frame[m[K())
+      |                       [01;31m[K^~~~~~~~~~[m[K
+      |                       [32m[Kgrab_image[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:34:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass usb_cam::UsbCam[m[K’ has no member named ‘[01m[Kget_image_msg[m[K’; did you mean ‘[01m[Kget_image[m[K’?
+   34 |             sensor_msgs::msg::Image::SharedPtr msg = usb_cam_->[01;31m[Kget_image_msg[m[K();
+      |                                                                [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                                                [32m[Kget_image[m[K
+gmake[2]: *** [CMakeFiles/usb_camera_node.dir/build.make:76: CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/usb_camera_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

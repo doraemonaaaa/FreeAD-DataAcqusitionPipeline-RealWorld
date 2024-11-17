@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+349457807e05dcdc5ddeda52291d9397 CMakeFiles/usb_camera_uninstall

@@ -1,0 +1,54 @@
+[35m[1mConsolidate compiler generated dependencies of target robot_hardware_interface[0m
+[  8%] Built target robot_hardware__rosidl_generator_c
+[ 11%] Built target robot_hardware__cpp
+[ 11%] Built target ament_cmake_python_symlink_robot_hardware
+[ 14%] [32mBuilding CXX object CMakeFiles/robot_hardware_interface.dir/src/robot_hardware_interface.cpp.o[0m
+[ 22%] Built target robot_hardware__rosidl_typesupport_fastrtps_c
+[ 31%] Built target robot_hardware__rosidl_typesupport_introspection_cpp
+[ 40%] Built target robot_hardware__rosidl_typesupport_introspection_c
+[ 48%] Built target robot_hardware__rosidl_typesupport_c
+[ 60%] Built target robot_hardware__rosidl_typesupport_cpp
+[ 65%] Built target robot_hardware__rosidl_typesupport_fastrtps_cpp
+[ 65%] Built target robot_hardware
+[ 68%] Built target robot_hardware__py
+[ 74%] Built target robot_hardware__rosidl_generator_py
+[ 91%] Built target robot_hardware__rosidl_typesupport_fastrtps_c__pyext
+[ 91%] Built target robot_hardware__rosidl_typesupport_introspection_c__pyext
+[ 91%] Built target robot_hardware__rosidl_typesupport_c__pyext
+running egg_info
+writing robot_hardware.egg-info/PKG-INFO
+writing dependency_links to robot_hardware.egg-info/dependency_links.txt
+writing top-level names to robot_hardware.egg-info/top_level.txt
+reading manifest file 'robot_hardware.egg-info/SOURCES.txt'
+writing manifest file 'robot_hardware.egg-info/SOURCES.txt'
+[ 91%] Built target ament_cmake_python_build_robot_hardware_egg
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:10:17:[m[K [01;31m[Kerror: [m[K‘[01m[Khardware_interface::return_type RobotHardwareInterface::configure(const hardware_interface::HardwareInfo&)[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+   10 |     return_type [01;31m[Kconfigure[m[K(const hardware_interface::HardwareInfo &info) override {
+      |                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:38:17:[m[K [01;31m[Kerror: [m[K‘[01m[Khardware_interface::return_type RobotHardwareInterface::start()[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+   38 |     return_type [01;31m[Kstart[m[K() override {
+      |                 [01;31m[K^~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:43:17:[m[K [01;31m[Kerror: [m[K‘[01m[Khardware_interface::return_type RobotHardwareInterface::stop()[m[K’ marked ‘[01m[Koverride[m[K’, but does not override
+   43 |     return_type [01;31m[Kstop[m[K() override {
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:[m[K In member function ‘[01m[Khardware_interface::return_type RobotHardwareInterface::configure(const hardware_interface::HardwareInfo&)[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:11:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kconfigure[m[K’ is not a member of ‘[01m[Khardware_interface::SystemInterface[m[K’
+   11 |         if (hardware_interface::SystemInterface::[01;31m[Kconfigure[m[K(info) != return_type::OK) {
+      |                                                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type RobotHardwareInterface::read(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:48:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   48 |     return_type read([01;35m[Kconst rclcpp::Time &time[m[K, const rclcpp::Duration &period) override {
+      |                      [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:48:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kperiod[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   48 |     return_type read(const rclcpp::Time &time, [01;35m[Kconst rclcpp::Duration &period[m[K) override {
+      |                                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type RobotHardwareInterface::write(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:55:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   55 |     return_type write([01;35m[Kconst rclcpp::Time &time[m[K, const rclcpp::Duration &period) override {
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/robot_hardware_interface.cpp:55:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kperiod[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   55 |     return_type write(const rclcpp::Time &time, [01;35m[Kconst rclcpp::Duration &period[m[K) override {
+      |                                                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/robot_hardware_interface.dir/build.make:76: CMakeFiles/robot_hardware_interface.dir/src/robot_hardware_interface.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:594: CMakeFiles/robot_hardware_interface.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

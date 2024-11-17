@@ -1,0 +1,24 @@
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:[m[K In constructor ‘[01m[KUsbCameraNode::UsbCameraNode()[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:17:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass usb_cam::UsbCam[m[K’ has no member named ‘[01m[Kstart_device[m[K’; did you mean ‘[01m[Kinit_device[m[K’?
+   17 |         if (!usb_cam_->[01;31m[Kstart_device[m[K("/dev/video0"))  // 默认设备
+      |                        [01;31m[K^~~~~~~~~~~~[m[K
+      |                        [32m[Kinit_device[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:[m[K In member function ‘[01m[Kvoid UsbCameraNode::publish_image()[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:31:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid usb_cam::UsbCam::grab_image()[m[K’ is private within this context
+   31 |         if ([01;31m[Kusb_cam_->grab_image()[m[K)  // 捕获图像
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:4[m[K:
+[01m[K/opt/ros/humble/include/usb_cam/usb_cam.hpp:389:8:[m[K [01;36m[Knote: [m[Kdeclared private here
+  389 |   void [01;36m[Kgrab_image[m[K();
+      |        [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:31:33:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K((UsbCameraNode*)this)->UsbCameraNode::usb_cam_.std::unique_ptr<usb_cam::UsbCam>::operator->()->usb_cam::UsbCam::grab_image()[m[K’ from ‘[01m[Kvoid[m[K’ to ‘[01m[Kbool[m[K’
+   31 |         if ([01;31m[Kusb_cam_->grab_image()[m[K)  // 捕获图像
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~^~[m[K
+      |                                 [01;31m[K|[m[K
+      |                                 [01;31m[Kvoid[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp:34:73:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[Kchar*[m[K’ to non-scalar type ‘[01m[Ksensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > >[m[K’} requested
+   34 |             sensor_msgs::msg::Image::SharedPtr msg = [01;31m[Kusb_cam_->get_image()[m[K;
+      |                                                      [01;31m[K~~~~~~~~~~~~~~~~~~~^~[m[K
+gmake[2]: *** [CMakeFiles/usb_camera_node.dir/build.make:76: CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/usb_camera_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
