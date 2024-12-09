@@ -704,12 +704,6 @@ CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o: /home/future/Document
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
   /home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/visibility_control.h \
   /home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp \
-  /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/include/nav_interfaces/nav_interfaces/msg/wheel_speed.hpp \
-  /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/include/nav_interfaces/nav_interfaces/msg/detail/wheel_speed__struct.hpp \
-  /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/include/nav_interfaces/nav_interfaces/msg/detail/wheel_speed__builder.hpp \
-  /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/include/nav_interfaces/nav_interfaces/msg/detail/wheel_speed__traits.hpp \
-  /usr/local/include/serial/serial.h \
-  /usr/local/include/serial/v8stdint.h \
   /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/hardware_data.hpp \
   /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__struct.hpp \
   /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__builder.hpp \
@@ -754,6 +748,8 @@ CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o: /home/future/Document
 
 /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
+
 /usr/include/x86_64-linux-gnu/bits/termios-baud.h:
 
 /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h:
@@ -769,18 +765,6 @@ CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o: /home/future/Document
 /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__traits.hpp:
 
 /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/hardware_data.hpp:
-
-/usr/local/include/serial/serial.h:
-
-/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/include/nav_interfaces/nav_interfaces/msg/detail/wheel_speed__traits.hpp:
-
-/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/include/nav_interfaces/nav_interfaces/msg/detail/wheel_speed__builder.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
-
-/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/include/nav_interfaces/nav_interfaces/msg/detail/wheel_speed__struct.hpp:
-
-/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/include/nav_interfaces/nav_interfaces/msg/wheel_speed.hpp:
 
 /home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:
 
@@ -1819,8 +1803,6 @@ CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o: /home/future/Document
 /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
-
-/usr/local/include/serial/v8stdint.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp:
 

@@ -5,8 +5,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp"
 #include "rclcpp_lifecycle/state.hpp"
-#include "nav_interfaces/msg/wheel_speed.hpp"
-#include <serial/serial.h>
 #include "robot_hardware/msg/hardware_data.hpp" // 引入 HardwareData 消息
 
 // 接口为  输入速度vel   输出速度vel
