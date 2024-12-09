@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/robot_hardware_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" "TARGETS" "robot_hardware__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/robot_hardware")

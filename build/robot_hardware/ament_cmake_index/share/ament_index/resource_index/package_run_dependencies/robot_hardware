@@ -1,1 +1,1 @@
-rclcpp;std_msgs;sensor_msgs;cv_bridge;OpenCV;hardware_interface;controller_manager;ros2_control;pluginlib;rosidl_default_runtime;ament_lint_auto;ament_lint_common
+diff_drive_controller;rclcpp;std_msgs;sensor_msgs;cv_bridge;OpenCV;hardware_interface;controller_manager;ros2_control;pluginlib;rosidl_default_runtime;ament_lint_auto;ament_lint_common

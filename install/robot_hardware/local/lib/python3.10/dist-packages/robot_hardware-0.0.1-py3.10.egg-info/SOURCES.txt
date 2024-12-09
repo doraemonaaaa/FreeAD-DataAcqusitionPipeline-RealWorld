@@ -1,1 +1,8 @@
-/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/ament_cmake_python/robot_hardware/robot_hardware.egg-info/SOURCES.txt
+setup.py
+robot_hardware/__init__.py
+robot_hardware.egg-info/PKG-INFO
+robot_hardware.egg-info/SOURCES.txt
+robot_hardware.egg-info/dependency_links.txt
+robot_hardware.egg-info/top_level.txt
+robot_hardware/msg/__init__.py
+robot_hardware/msg/_hardware_data.py

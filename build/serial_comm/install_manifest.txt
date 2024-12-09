@@ -1,4 +1,5 @@
 /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/lib/serial_comm/serial_node
+/home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/launch/serial_comm.launch.py
 /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/ament_index/resource_index/package_run_dependencies/serial_comm
 /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/ament_index/resource_index/parent_prefix_path/serial_comm
 /home/future/Documents/pengyh/RobotAD_ws/install/serial_comm/share/serial_comm/environment/ament_prefix_path.sh

@@ -73,15 +73,15 @@ CMakeFiles/serial_node.dir/src/serial_node.cpp.o: CMakeFiles/serial_node.dir/fla
 CMakeFiles/serial_node.dir/src/serial_node.cpp.o: /home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp
 CMakeFiles/serial_node.dir/src/serial_node.cpp.o: CMakeFiles/serial_node.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/future/Documents/pengyh/RobotAD_ws/build/serial_comm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/serial_node.dir/src/serial_node.cpp.o"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serial_node.dir/src/serial_node.cpp.o -MF CMakeFiles/serial_node.dir/src/serial_node.cpp.o.d -o CMakeFiles/serial_node.dir/src/serial_node.cpp.o -c /home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/serial_node.dir/src/serial_node.cpp.o -MF CMakeFiles/serial_node.dir/src/serial_node.cpp.o.d -o CMakeFiles/serial_node.dir/src/serial_node.cpp.o -c /home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp
 
 CMakeFiles/serial_node.dir/src/serial_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial_node.dir/src/serial_node.cpp.i"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp > CMakeFiles/serial_node.dir/src/serial_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp > CMakeFiles/serial_node.dir/src/serial_node.cpp.i
 
 CMakeFiles/serial_node.dir/src/serial_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial_node.dir/src/serial_node.cpp.s"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp -o CMakeFiles/serial_node.dir/src/serial_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp -o CMakeFiles/serial_node.dir/src/serial_node.cpp.s
 
 # Object files for target serial_node
 serial_node_OBJECTS = \

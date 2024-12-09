@@ -32,22 +32,48 @@ cdr_serialize(
   const robot_hardware::msg::HardwareData & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: real_left_speed
-  cdr << ros_message.real_left_speed;
-  // Member: real_right_speed
-  cdr << ros_message.real_right_speed;
+  // Member: real_left_speed_rpm
+  cdr << ros_message.real_left_speed_rpm;
+  // Member: real_right_speed_rpm
+  cdr << ros_message.real_right_speed_rpm;
   // Member: real_left_neg_flag
   cdr << ros_message.real_left_neg_flag;
   // Member: real_right_neg_flag
   cdr << ros_message.real_right_neg_flag;
-  // Member: expect_left_speed
-  cdr << ros_message.expect_left_speed;
-  // Member: expect_right_speed
-  cdr << ros_message.expect_right_speed;
+  // Member: expect_left_speed_rpm
+  cdr << ros_message.expect_left_speed_rpm;
+  // Member: expect_right_speed_rpm
+  cdr << ros_message.expect_right_speed_rpm;
   // Member: expect_left_neg_flag
   cdr << ros_message.expect_left_neg_flag;
   // Member: expect_right_neg_flag
   cdr << ros_message.expect_right_neg_flag;
+  // Member: imu_orientation_x
+  cdr << ros_message.imu_orientation_x;
+  // Member: imu_orientation_y
+  cdr << ros_message.imu_orientation_y;
+  // Member: imu_orientation_z
+  cdr << ros_message.imu_orientation_z;
+  // Member: imu_orientation_w
+  cdr << ros_message.imu_orientation_w;
+  // Member: imu_linear_acceleration_x
+  cdr << ros_message.imu_linear_acceleration_x;
+  // Member: imu_linear_acceleration_y
+  cdr << ros_message.imu_linear_acceleration_y;
+  // Member: imu_linear_acceleration_z
+  cdr << ros_message.imu_linear_acceleration_z;
+  // Member: imu_angular_velocity_x
+  cdr << ros_message.imu_angular_velocity_x;
+  // Member: imu_angular_velocity_y
+  cdr << ros_message.imu_angular_velocity_y;
+  // Member: imu_angular_velocity_z
+  cdr << ros_message.imu_angular_velocity_z;
+  // Member: magnetic_field_x
+  cdr << ros_message.magnetic_field_x;
+  // Member: magnetic_field_y
+  cdr << ros_message.magnetic_field_y;
+  // Member: magnetic_field_z
+  cdr << ros_message.magnetic_field_z;
   return true;
 }
 
@@ -57,11 +83,11 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   robot_hardware::msg::HardwareData & ros_message)
 {
-  // Member: real_left_speed
-  cdr >> ros_message.real_left_speed;
+  // Member: real_left_speed_rpm
+  cdr >> ros_message.real_left_speed_rpm;
 
-  // Member: real_right_speed
-  cdr >> ros_message.real_right_speed;
+  // Member: real_right_speed_rpm
+  cdr >> ros_message.real_right_speed_rpm;
 
   // Member: real_left_neg_flag
   cdr >> ros_message.real_left_neg_flag;
@@ -69,17 +95,56 @@ cdr_deserialize(
   // Member: real_right_neg_flag
   cdr >> ros_message.real_right_neg_flag;
 
-  // Member: expect_left_speed
-  cdr >> ros_message.expect_left_speed;
+  // Member: expect_left_speed_rpm
+  cdr >> ros_message.expect_left_speed_rpm;
 
-  // Member: expect_right_speed
-  cdr >> ros_message.expect_right_speed;
+  // Member: expect_right_speed_rpm
+  cdr >> ros_message.expect_right_speed_rpm;
 
   // Member: expect_left_neg_flag
   cdr >> ros_message.expect_left_neg_flag;
 
   // Member: expect_right_neg_flag
   cdr >> ros_message.expect_right_neg_flag;
+
+  // Member: imu_orientation_x
+  cdr >> ros_message.imu_orientation_x;
+
+  // Member: imu_orientation_y
+  cdr >> ros_message.imu_orientation_y;
+
+  // Member: imu_orientation_z
+  cdr >> ros_message.imu_orientation_z;
+
+  // Member: imu_orientation_w
+  cdr >> ros_message.imu_orientation_w;
+
+  // Member: imu_linear_acceleration_x
+  cdr >> ros_message.imu_linear_acceleration_x;
+
+  // Member: imu_linear_acceleration_y
+  cdr >> ros_message.imu_linear_acceleration_y;
+
+  // Member: imu_linear_acceleration_z
+  cdr >> ros_message.imu_linear_acceleration_z;
+
+  // Member: imu_angular_velocity_x
+  cdr >> ros_message.imu_angular_velocity_x;
+
+  // Member: imu_angular_velocity_y
+  cdr >> ros_message.imu_angular_velocity_y;
+
+  // Member: imu_angular_velocity_z
+  cdr >> ros_message.imu_angular_velocity_z;
+
+  // Member: magnetic_field_x
+  cdr >> ros_message.magnetic_field_x;
+
+  // Member: magnetic_field_y
+  cdr >> ros_message.magnetic_field_y;
+
+  // Member: magnetic_field_z
+  cdr >> ros_message.magnetic_field_z;
 
   return true;
 }
@@ -97,15 +162,15 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: real_left_speed
+  // Member: real_left_speed_rpm
   {
-    size_t item_size = sizeof(ros_message.real_left_speed);
+    size_t item_size = sizeof(ros_message.real_left_speed_rpm);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: real_right_speed
+  // Member: real_right_speed_rpm
   {
-    size_t item_size = sizeof(ros_message.real_right_speed);
+    size_t item_size = sizeof(ros_message.real_right_speed_rpm);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -121,15 +186,15 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: expect_left_speed
+  // Member: expect_left_speed_rpm
   {
-    size_t item_size = sizeof(ros_message.expect_left_speed);
+    size_t item_size = sizeof(ros_message.expect_left_speed_rpm);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: expect_right_speed
+  // Member: expect_right_speed_rpm
   {
-    size_t item_size = sizeof(ros_message.expect_right_speed);
+    size_t item_size = sizeof(ros_message.expect_right_speed_rpm);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -142,6 +207,84 @@ get_serialized_size(
   // Member: expect_right_neg_flag
   {
     size_t item_size = sizeof(ros_message.expect_right_neg_flag);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: imu_orientation_x
+  {
+    size_t item_size = sizeof(ros_message.imu_orientation_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: imu_orientation_y
+  {
+    size_t item_size = sizeof(ros_message.imu_orientation_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: imu_orientation_z
+  {
+    size_t item_size = sizeof(ros_message.imu_orientation_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: imu_orientation_w
+  {
+    size_t item_size = sizeof(ros_message.imu_orientation_w);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: imu_linear_acceleration_x
+  {
+    size_t item_size = sizeof(ros_message.imu_linear_acceleration_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: imu_linear_acceleration_y
+  {
+    size_t item_size = sizeof(ros_message.imu_linear_acceleration_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: imu_linear_acceleration_z
+  {
+    size_t item_size = sizeof(ros_message.imu_linear_acceleration_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: imu_angular_velocity_x
+  {
+    size_t item_size = sizeof(ros_message.imu_angular_velocity_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: imu_angular_velocity_y
+  {
+    size_t item_size = sizeof(ros_message.imu_angular_velocity_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: imu_angular_velocity_z
+  {
+    size_t item_size = sizeof(ros_message.imu_angular_velocity_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: magnetic_field_x
+  {
+    size_t item_size = sizeof(ros_message.magnetic_field_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: magnetic_field_y
+  {
+    size_t item_size = sizeof(ros_message.magnetic_field_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: magnetic_field_z
+  {
+    size_t item_size = sizeof(ros_message.magnetic_field_z);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -169,7 +312,7 @@ max_serialized_size_HardwareData(
   is_plain = true;
 
 
-  // Member: real_left_speed
+  // Member: real_left_speed_rpm
   {
     size_t array_size = 1;
 
@@ -178,7 +321,7 @@ max_serialized_size_HardwareData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
 
-  // Member: real_right_speed
+  // Member: real_right_speed_rpm
   {
     size_t array_size = 1;
 
@@ -203,7 +346,7 @@ max_serialized_size_HardwareData(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: expect_left_speed
+  // Member: expect_left_speed_rpm
   {
     size_t array_size = 1;
 
@@ -212,7 +355,7 @@ max_serialized_size_HardwareData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
 
-  // Member: expect_right_speed
+  // Member: expect_right_speed_rpm
   {
     size_t array_size = 1;
 
@@ -237,6 +380,123 @@ max_serialized_size_HardwareData(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Member: imu_orientation_x
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: imu_orientation_y
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: imu_orientation_z
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: imu_orientation_w
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: imu_linear_acceleration_x
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: imu_linear_acceleration_y
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: imu_linear_acceleration_z
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: imu_angular_velocity_x
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: imu_angular_velocity_y
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: imu_angular_velocity_z
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: magnetic_field_x
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: magnetic_field_y
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: magnetic_field_z
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -245,7 +505,7 @@ max_serialized_size_HardwareData(
     using DataType = robot_hardware::msg::HardwareData;
     is_plain =
       (
-      offsetof(DataType, expect_right_neg_flag) +
+      offsetof(DataType, magnetic_field_z) +
       last_member_size
       ) == ret_val;
   }

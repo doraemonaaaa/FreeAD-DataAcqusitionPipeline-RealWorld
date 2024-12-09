@@ -1,0 +1,10 @@
+/home/future/Documents/pengyh/RobotAD_ws/build/miiboo_imu/CMakeFiles/uninstall.dir
+/home/future/Documents/pengyh/RobotAD_ws/build/miiboo_imu/CMakeFiles/miiboo_imu_uninstall.dir
+/home/future/Documents/pengyh/RobotAD_ws/build/miiboo_imu/CMakeFiles/imu_read.dir
+/home/future/Documents/pengyh/RobotAD_ws/build/miiboo_imu/CMakeFiles/test.dir
+/home/future/Documents/pengyh/RobotAD_ws/build/miiboo_imu/CMakeFiles/edit_cache.dir
+/home/future/Documents/pengyh/RobotAD_ws/build/miiboo_imu/CMakeFiles/rebuild_cache.dir
+/home/future/Documents/pengyh/RobotAD_ws/build/miiboo_imu/CMakeFiles/list_install_components.dir
+/home/future/Documents/pengyh/RobotAD_ws/build/miiboo_imu/CMakeFiles/install.dir
+/home/future/Documents/pengyh/RobotAD_ws/build/miiboo_imu/CMakeFiles/install/local.dir
+/home/future/Documents/pengyh/RobotAD_ws/build/miiboo_imu/CMakeFiles/install/strip.dir

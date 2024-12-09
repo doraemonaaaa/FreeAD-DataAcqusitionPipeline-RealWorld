@@ -1,0 +1,8 @@
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/keyboard_control/src/keyboard_control_node.cpp:[m[K In constructor ‘[01m[KMoveBot::MoveBot()[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/keyboard_control/src/keyboard_control_node.cpp:14:73:[m[K [01;31m[Kerror: [m[Kinvalid use of void expression
+   14 | [01;31m[KeBot::publish_velocity()[m[K, this));
+      | [01;31m[K~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+
+gmake[2]: *** [CMakeFiles/keyboard_control_node.dir/build.make:76: CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/keyboard_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

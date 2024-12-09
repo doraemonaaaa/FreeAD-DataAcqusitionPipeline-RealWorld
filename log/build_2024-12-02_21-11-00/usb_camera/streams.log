@@ -1,0 +1,4 @@
+[0.019s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera -- -j24 -l24
+[0.060s] [ 50%] [32mBuilding CXX object CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o[0m
+[3.927s] [100%] [32m[1mLinking CXX executable usb_camera_node[0m
+[4.330s] [100%] Built target usb_camera_node

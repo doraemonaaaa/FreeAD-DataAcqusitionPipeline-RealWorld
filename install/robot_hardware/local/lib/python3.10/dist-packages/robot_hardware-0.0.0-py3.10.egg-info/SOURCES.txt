@@ -1,1 +1,0 @@
-/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/ament_cmake_python/robot_hardware/robot_hardware.egg-info/SOURCES.txt

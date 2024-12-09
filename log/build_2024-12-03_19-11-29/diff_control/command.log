@@ -1,0 +1,4 @@
+Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24
+Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24
+Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/future/Documents/pengyh/RobotAD_ws/build/diff_control
+Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/future/Documents/pengyh/RobotAD_ws/build/diff_control

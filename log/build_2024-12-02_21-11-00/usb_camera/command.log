@@ -1,0 +1,1 @@
+Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera -- -j24 -l24

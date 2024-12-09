@@ -22,21 +22,36 @@ extern "C"
 typedef struct robot_hardware__msg__HardwareData
 {
   /// 左轮实际速度
-  int16_t real_left_speed;
+  int16_t real_left_speed_rpm;
   /// 右轮实际速度
-  int16_t real_right_speed;
-  /// 左轮负向标志
+  int16_t real_right_speed_rpm;
+  /// 左轮负向标志    1表示正转，0为反转
   uint8_t real_left_neg_flag;
   /// 右轮负向标志
   uint8_t real_right_neg_flag;
   /// 左轮期望速度
-  int16_t expect_left_speed;
+  int16_t expect_left_speed_rpm;
   /// 右轮期望速度
-  int16_t expect_right_speed;
+  int16_t expect_right_speed_rpm;
   /// 左轮负向标志
   uint8_t expect_left_neg_flag;
   /// 右轮负向标志
   uint8_t expect_right_neg_flag;
+  /// IMU data fields
+  double imu_orientation_x;
+  double imu_orientation_y;
+  double imu_orientation_z;
+  double imu_orientation_w;
+  double imu_linear_acceleration_x;
+  double imu_linear_acceleration_y;
+  double imu_linear_acceleration_z;
+  double imu_angular_velocity_x;
+  double imu_angular_velocity_y;
+  double imu_angular_velocity_z;
+  /// Magnetic field data fields
+  double magnetic_field_x;
+  double magnetic_field_y;
+  double magnetic_field_z;
 } robot_hardware__msg__HardwareData;
 
 // Struct for a sequence of robot_hardware__msg__HardwareData.

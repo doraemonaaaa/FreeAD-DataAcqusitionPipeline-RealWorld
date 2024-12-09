@@ -38,14 +38,27 @@ struct HardwareData_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->real_left_speed = 0;
-      this->real_right_speed = 0;
+      this->real_left_speed_rpm = 0;
+      this->real_right_speed_rpm = 0;
       this->real_left_neg_flag = 0;
       this->real_right_neg_flag = 0;
-      this->expect_left_speed = 0;
-      this->expect_right_speed = 0;
+      this->expect_left_speed_rpm = 0;
+      this->expect_right_speed_rpm = 0;
       this->expect_left_neg_flag = 0;
       this->expect_right_neg_flag = 0;
+      this->imu_orientation_x = 0.0;
+      this->imu_orientation_y = 0.0;
+      this->imu_orientation_z = 0.0;
+      this->imu_orientation_w = 0.0;
+      this->imu_linear_acceleration_x = 0.0;
+      this->imu_linear_acceleration_y = 0.0;
+      this->imu_linear_acceleration_z = 0.0;
+      this->imu_angular_velocity_x = 0.0;
+      this->imu_angular_velocity_y = 0.0;
+      this->imu_angular_velocity_z = 0.0;
+      this->magnetic_field_x = 0.0;
+      this->magnetic_field_y = 0.0;
+      this->magnetic_field_z = 0.0;
     }
   }
 
@@ -55,54 +68,106 @@ struct HardwareData_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->real_left_speed = 0;
-      this->real_right_speed = 0;
+      this->real_left_speed_rpm = 0;
+      this->real_right_speed_rpm = 0;
       this->real_left_neg_flag = 0;
       this->real_right_neg_flag = 0;
-      this->expect_left_speed = 0;
-      this->expect_right_speed = 0;
+      this->expect_left_speed_rpm = 0;
+      this->expect_right_speed_rpm = 0;
       this->expect_left_neg_flag = 0;
       this->expect_right_neg_flag = 0;
+      this->imu_orientation_x = 0.0;
+      this->imu_orientation_y = 0.0;
+      this->imu_orientation_z = 0.0;
+      this->imu_orientation_w = 0.0;
+      this->imu_linear_acceleration_x = 0.0;
+      this->imu_linear_acceleration_y = 0.0;
+      this->imu_linear_acceleration_z = 0.0;
+      this->imu_angular_velocity_x = 0.0;
+      this->imu_angular_velocity_y = 0.0;
+      this->imu_angular_velocity_z = 0.0;
+      this->magnetic_field_x = 0.0;
+      this->magnetic_field_y = 0.0;
+      this->magnetic_field_z = 0.0;
     }
   }
 
   // field types and members
-  using _real_left_speed_type =
+  using _real_left_speed_rpm_type =
     int16_t;
-  _real_left_speed_type real_left_speed;
-  using _real_right_speed_type =
+  _real_left_speed_rpm_type real_left_speed_rpm;
+  using _real_right_speed_rpm_type =
     int16_t;
-  _real_right_speed_type real_right_speed;
+  _real_right_speed_rpm_type real_right_speed_rpm;
   using _real_left_neg_flag_type =
     uint8_t;
   _real_left_neg_flag_type real_left_neg_flag;
   using _real_right_neg_flag_type =
     uint8_t;
   _real_right_neg_flag_type real_right_neg_flag;
-  using _expect_left_speed_type =
+  using _expect_left_speed_rpm_type =
     int16_t;
-  _expect_left_speed_type expect_left_speed;
-  using _expect_right_speed_type =
+  _expect_left_speed_rpm_type expect_left_speed_rpm;
+  using _expect_right_speed_rpm_type =
     int16_t;
-  _expect_right_speed_type expect_right_speed;
+  _expect_right_speed_rpm_type expect_right_speed_rpm;
   using _expect_left_neg_flag_type =
     uint8_t;
   _expect_left_neg_flag_type expect_left_neg_flag;
   using _expect_right_neg_flag_type =
     uint8_t;
   _expect_right_neg_flag_type expect_right_neg_flag;
+  using _imu_orientation_x_type =
+    double;
+  _imu_orientation_x_type imu_orientation_x;
+  using _imu_orientation_y_type =
+    double;
+  _imu_orientation_y_type imu_orientation_y;
+  using _imu_orientation_z_type =
+    double;
+  _imu_orientation_z_type imu_orientation_z;
+  using _imu_orientation_w_type =
+    double;
+  _imu_orientation_w_type imu_orientation_w;
+  using _imu_linear_acceleration_x_type =
+    double;
+  _imu_linear_acceleration_x_type imu_linear_acceleration_x;
+  using _imu_linear_acceleration_y_type =
+    double;
+  _imu_linear_acceleration_y_type imu_linear_acceleration_y;
+  using _imu_linear_acceleration_z_type =
+    double;
+  _imu_linear_acceleration_z_type imu_linear_acceleration_z;
+  using _imu_angular_velocity_x_type =
+    double;
+  _imu_angular_velocity_x_type imu_angular_velocity_x;
+  using _imu_angular_velocity_y_type =
+    double;
+  _imu_angular_velocity_y_type imu_angular_velocity_y;
+  using _imu_angular_velocity_z_type =
+    double;
+  _imu_angular_velocity_z_type imu_angular_velocity_z;
+  using _magnetic_field_x_type =
+    double;
+  _magnetic_field_x_type magnetic_field_x;
+  using _magnetic_field_y_type =
+    double;
+  _magnetic_field_y_type magnetic_field_y;
+  using _magnetic_field_z_type =
+    double;
+  _magnetic_field_z_type magnetic_field_z;
 
   // setters for named parameter idiom
-  Type & set__real_left_speed(
+  Type & set__real_left_speed_rpm(
     const int16_t & _arg)
   {
-    this->real_left_speed = _arg;
+    this->real_left_speed_rpm = _arg;
     return *this;
   }
-  Type & set__real_right_speed(
+  Type & set__real_right_speed_rpm(
     const int16_t & _arg)
   {
-    this->real_right_speed = _arg;
+    this->real_right_speed_rpm = _arg;
     return *this;
   }
   Type & set__real_left_neg_flag(
@@ -117,16 +182,16 @@ struct HardwareData_
     this->real_right_neg_flag = _arg;
     return *this;
   }
-  Type & set__expect_left_speed(
+  Type & set__expect_left_speed_rpm(
     const int16_t & _arg)
   {
-    this->expect_left_speed = _arg;
+    this->expect_left_speed_rpm = _arg;
     return *this;
   }
-  Type & set__expect_right_speed(
+  Type & set__expect_right_speed_rpm(
     const int16_t & _arg)
   {
-    this->expect_right_speed = _arg;
+    this->expect_right_speed_rpm = _arg;
     return *this;
   }
   Type & set__expect_left_neg_flag(
@@ -139,6 +204,84 @@ struct HardwareData_
     const uint8_t & _arg)
   {
     this->expect_right_neg_flag = _arg;
+    return *this;
+  }
+  Type & set__imu_orientation_x(
+    const double & _arg)
+  {
+    this->imu_orientation_x = _arg;
+    return *this;
+  }
+  Type & set__imu_orientation_y(
+    const double & _arg)
+  {
+    this->imu_orientation_y = _arg;
+    return *this;
+  }
+  Type & set__imu_orientation_z(
+    const double & _arg)
+  {
+    this->imu_orientation_z = _arg;
+    return *this;
+  }
+  Type & set__imu_orientation_w(
+    const double & _arg)
+  {
+    this->imu_orientation_w = _arg;
+    return *this;
+  }
+  Type & set__imu_linear_acceleration_x(
+    const double & _arg)
+  {
+    this->imu_linear_acceleration_x = _arg;
+    return *this;
+  }
+  Type & set__imu_linear_acceleration_y(
+    const double & _arg)
+  {
+    this->imu_linear_acceleration_y = _arg;
+    return *this;
+  }
+  Type & set__imu_linear_acceleration_z(
+    const double & _arg)
+  {
+    this->imu_linear_acceleration_z = _arg;
+    return *this;
+  }
+  Type & set__imu_angular_velocity_x(
+    const double & _arg)
+  {
+    this->imu_angular_velocity_x = _arg;
+    return *this;
+  }
+  Type & set__imu_angular_velocity_y(
+    const double & _arg)
+  {
+    this->imu_angular_velocity_y = _arg;
+    return *this;
+  }
+  Type & set__imu_angular_velocity_z(
+    const double & _arg)
+  {
+    this->imu_angular_velocity_z = _arg;
+    return *this;
+  }
+  Type & set__magnetic_field_x(
+    const double & _arg)
+  {
+    this->magnetic_field_x = _arg;
+    return *this;
+  }
+  Type & set__magnetic_field_y(
+    const double & _arg)
+  {
+    this->magnetic_field_y = _arg;
+    return *this;
+  }
+  Type & set__magnetic_field_z(
+    const double & _arg)
+  {
+    this->magnetic_field_z = _arg;
     return *this;
   }
 
@@ -184,10 +327,10 @@ struct HardwareData_
   // comparison operators
   bool operator==(const HardwareData_ & other) const
   {
-    if (this->real_left_speed != other.real_left_speed) {
+    if (this->real_left_speed_rpm != other.real_left_speed_rpm) {
       return false;
     }
-    if (this->real_right_speed != other.real_right_speed) {
+    if (this->real_right_speed_rpm != other.real_right_speed_rpm) {
       return false;
     }
     if (this->real_left_neg_flag != other.real_left_neg_flag) {
@@ -196,16 +339,55 @@ struct HardwareData_
     if (this->real_right_neg_flag != other.real_right_neg_flag) {
       return false;
     }
-    if (this->expect_left_speed != other.expect_left_speed) {
+    if (this->expect_left_speed_rpm != other.expect_left_speed_rpm) {
       return false;
     }
-    if (this->expect_right_speed != other.expect_right_speed) {
+    if (this->expect_right_speed_rpm != other.expect_right_speed_rpm) {
       return false;
     }
     if (this->expect_left_neg_flag != other.expect_left_neg_flag) {
       return false;
     }
     if (this->expect_right_neg_flag != other.expect_right_neg_flag) {
+      return false;
+    }
+    if (this->imu_orientation_x != other.imu_orientation_x) {
+      return false;
+    }
+    if (this->imu_orientation_y != other.imu_orientation_y) {
+      return false;
+    }
+    if (this->imu_orientation_z != other.imu_orientation_z) {
+      return false;
+    }
+    if (this->imu_orientation_w != other.imu_orientation_w) {
+      return false;
+    }
+    if (this->imu_linear_acceleration_x != other.imu_linear_acceleration_x) {
+      return false;
+    }
+    if (this->imu_linear_acceleration_y != other.imu_linear_acceleration_y) {
+      return false;
+    }
+    if (this->imu_linear_acceleration_z != other.imu_linear_acceleration_z) {
+      return false;
+    }
+    if (this->imu_angular_velocity_x != other.imu_angular_velocity_x) {
+      return false;
+    }
+    if (this->imu_angular_velocity_y != other.imu_angular_velocity_y) {
+      return false;
+    }
+    if (this->imu_angular_velocity_z != other.imu_angular_velocity_z) {
+      return false;
+    }
+    if (this->magnetic_field_x != other.magnetic_field_x) {
+      return false;
+    }
+    if (this->magnetic_field_y != other.magnetic_field_y) {
+      return false;
+    }
+    if (this->magnetic_field_z != other.magnetic_field_z) {
       return false;
     }
     return true;

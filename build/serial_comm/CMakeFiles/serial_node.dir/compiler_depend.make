@@ -670,15 +670,15 @@ CMakeFiles/serial_node.dir/src/serial_node.cpp.o: /home/future/Documents/pengyh/
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
   /usr/local/include/serial/serial.h \
   /usr/local/include/serial/v8stdint.h \
-  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__struct.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__builder.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__traits.hpp
+  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/hardware_data.hpp \
+  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__struct.hpp \
+  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__builder.hpp \
+  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__traits.hpp
 
 
-/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__struct.hpp:
+/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__traits.hpp:
 
-/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp:
+/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/hardware_data.hpp:
 
 /usr/local/include/serial/serial.h:
 
@@ -817,6 +817,8 @@ CMakeFiles/serial_node.dir/src/serial_node.cpp.o: /home/future/Documents/pengyh/
 /opt/ros/humble/include/rclcpp/rclcpp/node.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/future_return_code.hpp:
+
+/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__struct.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/publisher_options.hpp:
 
@@ -1134,6 +1136,8 @@ CMakeFiles/serial_node.dir/src/serial_node.cpp.o: /home/future/Documents/pengyh/
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
+/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__builder.hpp:
+
 /usr/include/c++/12/mutex:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/dynamic_storage.hpp:
@@ -1177,8 +1181,6 @@ CMakeFiles/serial_node.dir/src/serial_node.cpp.o: /home/future/Documents/pengyh/
 /usr/include/c++/12/streambuf:
 
 /usr/include/c++/12/typeinfo:
-
-/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__builder.hpp:
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/liveliness_lost.h:
 
@@ -1759,8 +1761,6 @@ CMakeFiles/serial_node.dir/src/serial_node.cpp.o: /home/future/Documents/pengyh/
 /opt/ros/humble/include/rclcpp/rclcpp/contexts/default_context.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/guard_condition.hpp:
-
-/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__traits.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:
 

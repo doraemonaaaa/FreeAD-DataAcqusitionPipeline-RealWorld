@@ -668,43 +668,15 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/futu
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__struct.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__builder.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__traits.hpp \
-  /usr/include/termios.h \
-  /usr/include/x86_64-linux-gnu/bits/termios.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
-  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp
 
 
-/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-baud.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-struct.h:
-
-/usr/include/termios.h:
-
-/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__struct.hpp:
-
-/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp:
 
@@ -846,8 +818,6 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/futu
 
 /opt/ros/humble/include/rclcpp/rclcpp/loaned_message.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
-
 /opt/ros/humble/include/rclcpp/rclcpp/get_message_type_support_handle.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:
@@ -909,8 +879,6 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/futu
 /opt/ros/humble/include/rclcpp/rclcpp/detail/resolve_use_intra_process.hpp:
 
 /usr/include/c++/12/bits/parse_numbers.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-misc.h:
 
 /usr/include/c++/12/ctime:
 
@@ -1206,11 +1174,11 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/futu
 
 /usr/include/c++/12/typeinfo:
 
-/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__builder.hpp:
-
 /opt/ros/humble/include/rmw/rmw/events_statuses/liveliness_lost.h:
 
 /opt/ros/humble/include/rcl/rcl/node.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
@@ -1246,6 +1214,8 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/futu
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/requested_deadline_missed.h:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp:
+
 /usr/include/c++/12/bits/istream.tcc:
 
 /usr/include/c++/12/bits/shared_ptr_base.h:
@@ -1269,6 +1239,8 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/futu
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/intra_process_buffer_type.hpp:
 
@@ -1487,8 +1459,6 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/futu
 /usr/include/c++/12/bits/stl_function.h:
 
 /usr/include/c++/12/backward/binders.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios.h:
 
 /usr/include/c++/12/initializer_list:
 
@@ -1710,9 +1680,9 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/futu
 
 /usr/include/c++/12/tr1/special_function_util.h:
 
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/sequence_bound.h:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/sequence_bound.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp:
 
@@ -1791,8 +1761,6 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/futu
 /opt/ros/humble/include/rclcpp/rclcpp/contexts/default_context.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/guard_condition.hpp:
-
-/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__traits.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:
 
@@ -2039,6 +2007,8 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/futu
 /usr/include/c++/12/tr1/poly_hermite.tcc:
 
 /usr/include/c++/12/tr1/poly_laguerre.tcc:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/constants.hpp:
 

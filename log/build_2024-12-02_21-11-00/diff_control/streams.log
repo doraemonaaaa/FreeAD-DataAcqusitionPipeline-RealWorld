@@ -1,0 +1,38 @@
+[0.020s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/future/Documents/pengyh/RobotAD_ws/src/diff_control -DCMAKE_INSTALL_PREFIX=/home/future/Documents/pengyh/RobotAD_ws/install/diff_control
+[0.028s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.111s] -- Found hardware_interface: 2.43.1 (/opt/ros/humble/share/hardware_interface/cmake)
+[0.129s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.130s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.134s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.140s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.148s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.258s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.259s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.271s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.279s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.291s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.297s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.307s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.339s] -- Found nav_interfaces: 0.0.0 (/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/share/nav_interfaces/cmake)
+[0.344s] -- Found rclcpp_components: 16.0.10 (/opt/ros/humble/share/rclcpp_components/cmake)
+[0.355s] -- Found serial: 1.2.1 (/usr/local/share/serial/cmake)
+[0.363s] [31mCMake Error at CMakeLists.txt:23 (find_package):
+[0.363s]   By not providing "Findrobot_hardware.cmake" in CMAKE_MODULE_PATH this
+[0.363s]   project has asked CMake to find a package configuration file provided by
+[0.363s]   "robot_hardware", but CMake did not find one.
+[0.363s] 
+[0.363s]   Could not find a package configuration file provided by "robot_hardware"
+[0.363s]   with any of the following names:
+[0.363s] 
+[0.363s]     robot_hardwareConfig.cmake
+[0.364s]     robot_hardware-config.cmake
+[0.364s] 
+[0.364s]   Add the installation prefix of "robot_hardware" to CMAKE_PREFIX_PATH or set
+[0.364s]   "robot_hardware_DIR" to a directory containing one of the above files.  If
+[0.364s]   "robot_hardware" provides a separate development package or SDK, be sure it
+[0.364s]   has been installed.
+[0.364s] 
+[0.364s] [0m
+[0.364s] -- Configuring incomplete, errors occurred!
+[0.364s] See also "/home/future/Documents/pengyh/RobotAD_ws/build/diff_control/CMakeFiles/CMakeOutput.log".
+[0.369s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/future/Documents/pengyh/RobotAD_ws/src/diff_control -DCMAKE_INSTALL_PREFIX=/home/future/Documents/pengyh/RobotAD_ws/install/diff_control

@@ -1,1 +1,1 @@
-/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera/ament_cmake_environment_hooks/ament_prefix_path.dsv
+prepend-non-duplicate;AMENT_PREFIX_PATH;

@@ -1,9 +1,0 @@
-[31mCMake Error at /opt/ros/humble/share/pluginlib/cmake/pluginlib_export_plugin_description_file.cmake:84 (message):
-  Given plugin description file
-  '/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/robot_hardware_interface.xml'
-  does not exist
-Call Stack (most recent call first):
-  CMakeLists.txt:46 (pluginlib_export_plugin_description_file)
-
-[0m
-gmake: *** [Makefile:788: cmake_check_build_system] Error 1

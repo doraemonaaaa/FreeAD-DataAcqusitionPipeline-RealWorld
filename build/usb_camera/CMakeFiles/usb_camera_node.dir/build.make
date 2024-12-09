@@ -73,15 +73,15 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: CMakeFiles/usb_camera_
 CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp
 CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: CMakeFiles/usb_camera_node.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o -MF CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o.d -o CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o -c /home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o -MF CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o.d -o CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o -c /home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp
 
 CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.i"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp > CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp > CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.i
 
 CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.s"
-	/usr/bin/g++-12 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp -o CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp -o CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.s
 
 # Object files for target usb_camera_node
 usb_camera_node_OBJECTS = \

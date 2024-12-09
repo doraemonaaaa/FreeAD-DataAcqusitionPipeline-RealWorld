@@ -1,1 +1,1 @@
-OpenCV:controller_manager:cv_bridge:hardware_interface:pluginlib:rclcpp:ros2_control:rosidl_default_runtime:sensor_msgs:std_msgs
+OpenCV:controller_manager:cv_bridge:diff_drive_controller:hardware_interface:pluginlib:rclcpp:ros2_control:rosidl_default_runtime:sensor_msgs:std_msgs

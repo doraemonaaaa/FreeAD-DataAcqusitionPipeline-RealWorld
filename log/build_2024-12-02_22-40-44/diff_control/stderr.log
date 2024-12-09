@@ -1,0 +1,12 @@
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/diffbot_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type diff_control::DiffBotSystemHardware::write(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/diffbot_system.cpp:206:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Wheel[m[K’ has no member named ‘[01m[Kex_ve[m[K’; did you mean ‘[01m[Kex_vel[m[K’?
+  206 |         wheel_l_.[01;31m[Kex_ve[m[K = 0.5;
+      |                  [01;31m[K^~~~~[m[K
+      |                  [32m[Kex_vel[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/diffbot_system.cpp:207:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Wheel[m[K’ has no member named ‘[01m[Kex_ve[m[K’; did you mean ‘[01m[Kex_vel[m[K’?
+  207 |         wheel_r_.[01;31m[Kex_ve[m[K = 0.5;
+      |                  [01;31m[K^~~~~[m[K
+      |                  [32m[Kex_vel[m[K
+gmake[2]: *** [CMakeFiles/diff_control.dir/build.make:76: CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/diff_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

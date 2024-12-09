@@ -1,0 +1,17 @@
+[31mCMake Error at CMakeLists.txt:23 (find_package):
+  By not providing "Findrobot_hardware.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "robot_hardware", but CMake did not find one.
+
+  Could not find a package configuration file provided by "robot_hardware"
+  with any of the following names:
+
+    robot_hardwareConfig.cmake
+    robot_hardware-config.cmake
+
+  Add the installation prefix of "robot_hardware" to CMAKE_PREFIX_PATH or set
+  "robot_hardware_DIR" to a directory containing one of the above files.  If
+  "robot_hardware" provides a separate development package or SDK, be sure it
+  has been installed.
+
+[0m

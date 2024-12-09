@@ -315,17 +315,17 @@ robot_hardware__rosidl_typesupport_cpp/fast:
 .PHONY : robot_hardware__rosidl_typesupport_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_symlink_robot_hardware
+# Target rules for targets named ament_cmake_python_copy_robot_hardware
 
 # Build rule for target.
-ament_cmake_python_symlink_robot_hardware: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_robot_hardware
-.PHONY : ament_cmake_python_symlink_robot_hardware
+ament_cmake_python_copy_robot_hardware: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_robot_hardware
+.PHONY : ament_cmake_python_copy_robot_hardware
 
 # fast build rule for target.
-ament_cmake_python_symlink_robot_hardware/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_robot_hardware.dir/build.make CMakeFiles/ament_cmake_python_symlink_robot_hardware.dir/build
-.PHONY : ament_cmake_python_symlink_robot_hardware/fast
+ament_cmake_python_copy_robot_hardware/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_robot_hardware.dir/build.make CMakeFiles/ament_cmake_python_copy_robot_hardware.dir/build
+.PHONY : ament_cmake_python_copy_robot_hardware/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_robot_hardware_egg
@@ -393,17 +393,17 @@ robot_hardware__rosidl_typesupport_c__pyext/fast:
 .PHONY : robot_hardware__rosidl_typesupport_c__pyext/fast
 
 #=============================================================================
-# Target rules for targets named robot_hardware_interface
+# Target rules for targets named hardware_manager
 
 # Build rule for target.
-robot_hardware_interface: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot_hardware_interface
-.PHONY : robot_hardware_interface
+hardware_manager: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hardware_manager
+.PHONY : hardware_manager
 
 # fast build rule for target.
-robot_hardware_interface/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware_interface.dir/build.make CMakeFiles/robot_hardware_interface.dir/build
-.PHONY : robot_hardware_interface/fast
+hardware_manager/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hardware_manager.dir/build.make CMakeFiles/hardware_manager.dir/build
+.PHONY : hardware_manager/fast
 
 #=============================================================================
 # Target rules for targets named robot_hardware__py
@@ -682,29 +682,29 @@ rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__ty
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.cpp.s
 
-src/robot_hardware_interface.o: src/robot_hardware_interface.cpp.o
-.PHONY : src/robot_hardware_interface.o
+src/hardware_manager.o: src/hardware_manager.cpp.o
+.PHONY : src/hardware_manager.o
 
 # target to build an object file
-src/robot_hardware_interface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware_interface.dir/build.make CMakeFiles/robot_hardware_interface.dir/src/robot_hardware_interface.cpp.o
-.PHONY : src/robot_hardware_interface.cpp.o
+src/hardware_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hardware_manager.dir/build.make CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o
+.PHONY : src/hardware_manager.cpp.o
 
-src/robot_hardware_interface.i: src/robot_hardware_interface.cpp.i
-.PHONY : src/robot_hardware_interface.i
+src/hardware_manager.i: src/hardware_manager.cpp.i
+.PHONY : src/hardware_manager.i
 
 # target to preprocess a source file
-src/robot_hardware_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware_interface.dir/build.make CMakeFiles/robot_hardware_interface.dir/src/robot_hardware_interface.cpp.i
-.PHONY : src/robot_hardware_interface.cpp.i
+src/hardware_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hardware_manager.dir/build.make CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.i
+.PHONY : src/hardware_manager.cpp.i
 
-src/robot_hardware_interface.s: src/robot_hardware_interface.cpp.s
-.PHONY : src/robot_hardware_interface.s
+src/hardware_manager.s: src/hardware_manager.cpp.s
+.PHONY : src/hardware_manager.s
 
 # target to generate assembly for a file
-src/robot_hardware_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware_interface.dir/build.make CMakeFiles/robot_hardware_interface.dir/src/robot_hardware_interface.cpp.s
-.PHONY : src/robot_hardware_interface.cpp.s
+src/hardware_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hardware_manager.dir/build.make CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.s
+.PHONY : src/hardware_manager.cpp.s
 
 # Help Target
 help:
@@ -720,12 +720,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_robot_hardware_egg"
-	@echo "... ament_cmake_python_symlink_robot_hardware"
+	@echo "... ament_cmake_python_copy_robot_hardware"
 	@echo "... robot_hardware"
 	@echo "... robot_hardware__cpp"
 	@echo "... robot_hardware__py"
 	@echo "... robot_hardware_uninstall"
 	@echo "... uninstall"
+	@echo "... hardware_manager"
 	@echo "... robot_hardware__rosidl_generator_c"
 	@echo "... robot_hardware__rosidl_generator_py"
 	@echo "... robot_hardware__rosidl_typesupport_c"
@@ -737,7 +738,6 @@ help:
 	@echo "... robot_hardware__rosidl_typesupport_introspection_c"
 	@echo "... robot_hardware__rosidl_typesupport_introspection_c__pyext"
 	@echo "... robot_hardware__rosidl_typesupport_introspection_cpp"
-	@echo "... robot_hardware_interface"
 	@echo "... rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.o"
 	@echo "... rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.i"
 	@echo "... rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.s"
@@ -771,9 +771,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.s"
-	@echo "... src/robot_hardware_interface.o"
-	@echo "... src/robot_hardware_interface.i"
-	@echo "... src/robot_hardware_interface.s"
+	@echo "... src/hardware_manager.o"
+	@echo "... src/hardware_manager.i"
+	@echo "... src/hardware_manager.s"
 .PHONY : help
 
 
