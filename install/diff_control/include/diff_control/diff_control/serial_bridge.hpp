@@ -26,19 +26,19 @@ public:
     bool setup(double wheel_radius)
     {
         wheel_radius_ = wheel_radius;
-
         try
         {
             serial_port_.open();
             if (serial_port_.isOpen())
             {
                 RCLCPP_INFO(this->get_logger(), "Serial port opened successfully");
+                return true;
             }
             else
             {
                 RCLCPP_ERROR(this->get_logger(), "Failed to open serial port");
+                return false;
             }
-            return true;
         }
         catch (serial::IOException &e)
         {
@@ -51,39 +51,36 @@ public:
     {
         double vel_l = 0, vel_r = 0;
 
-        // 确保串口有足够的数据
-        if (serial_port_.available() >= 8)  // 至少需要8字节
+        // 确保串口有足够的数据可读取（24字节）
+        if (serial_port_.available() >= 8)
         {
-            std::vector<uint8_t> incoming_data(8);  // 预分配8字节的空间
+            // 读取8个字节数据
+            std::vector<uint8_t> incoming_data(8);
+            size_t bytes_read = serial_port_.read(incoming_data.data(), 8); // 直接读取到缓冲区
 
-            // 从串口读取数据
-            size_t bytes_read = serial_port_.read(incoming_data.data(), 8);
-
-            // 确保读取到足够的字节并验证数据结构
+            // 如果读取到的数据符合预期
             if (bytes_read == 8 && incoming_data[0] == 0xFF && incoming_data[7] == 0xAA)
             {
-                // 解析速度数据
-                int16_t speed_l = (incoming_data[1] << 8) | incoming_data[2];  // 左轮速度 (高字节和低字节合并)
-                int16_t speed_r = (incoming_data[3] << 8) | incoming_data[4];  // 右轮速度 (高字节和低字节合并)
+                // 逐字节解析数据
+                int16_t speed_l = (incoming_data[1] << 8) | incoming_data[2];  // left wheel speed
+                int16_t speed_r = (incoming_data[3] << 8) | incoming_data[4];  // right wheel speed
+                uint8_t neg_flag_l = incoming_data[21];  // left wheel direction
+                uint8_t neg_flag_r = incoming_data[22];  // right wheel direction
 
-                // 解析方向标志
-                uint8_t neg_flag_l = incoming_data[5];  // 左轮方向标志
-                uint8_t neg_flag_r = incoming_data[6];  // 右轮方向标志
+                // 限制最大速度为 10000 RPM
+                speed_l = std::min(speed_l, static_cast<int16_t>(10000));
+                speed_r = std::min(speed_r, static_cast<int16_t>(10000));
 
-                // 限制速度范围，避免过大的速度值
-                speed_l = std::min(speed_l, int16_t(10000));  // 限制最大速度为10000 RPM
-                speed_r = std::min(speed_r, int16_t(10000));  // 限制最大速度为10000 RPM
-
-                // 转换RPM为线速度
+                // 将 RPM 转换为线速度
                 vel_l = rpm_to_velocity(speed_l);
                 vel_r = rpm_to_velocity(speed_r);
 
-                // 根据方向标志调整速度方向
-                vel_l = (neg_flag_l == 1) ? vel_l : -vel_l;
-                vel_r = (neg_flag_r == 1) ? vel_r : -vel_r;
+                // 处理方向标志
+                vel_l = (neg_flag_l) ? vel_l : -vel_l;
+                vel_r = (neg_flag_r) ? vel_r : -vel_r;
 
-                // 日志记录接收到的速度信息
-                RCLCPP_INFO(this->get_logger(), "Received speeds: left: %d, right: %d", speed_l, speed_r);
+                // 可选：调试输出
+                //RCLCPP_INFO(this->get_logger(), "Received speeds: left: %.2f m/s, right: %.2f m/s", vel_l, vel_r);
             }
         }
 
@@ -115,7 +112,6 @@ public:
         data.push_back(0xAA);
 
         ser_write(data);
-        //RCLCPP_INFO(this->get_logger(), "write speeds: left: %d, right: %d", hardware_data_.expect_left_speed_rpm, hardware_data_.expect_right_speed_rpm );
     }
 
 
@@ -162,4 +158,3 @@ private:
         return ss.str();
     }
 };
-

@@ -1,3 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target diff_control[0m
-[ 50%] Built target serial_bridge_node
-[ 75%] [32mBuilding CXX object CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o[0m

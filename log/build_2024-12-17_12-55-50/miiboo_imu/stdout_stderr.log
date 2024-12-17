@@ -1,0 +1,45 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/imu_read.dir/src/imu_read.cpp.o[0m
+In file included from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/miiboo_imu/src/imu_read.cpp:15[m[K:
+[01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/detail/yield_k.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/detail/spinlock.hpp:42[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/detail/spinlock_pool.hpp:25[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:29[m[K,
+                 from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/usr/include/boost/date_time/time_clock.hpp:17[m[K,
+                 from [01m[K/usr/include/boost/date_time/posix_time/posix_time_types.hpp:10[m[K,
+                 from [01m[K/usr/include/boost/asio/time_traits.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/asio/detail/timer_queue_ptime.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/asio/detail/deadline_timer_service.hpp:29[m[K,
+                 from [01m[K/usr/include/boost/asio/basic_deadline_timer.hpp:25[m[K,
+                 from [01m[K/usr/include/boost/asio.hpp:25[m[K,
+                 from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/miiboo_imu/src/imu_read.cpp:8[m[K:
+[01m[K/usr/include/boost/bind.hpp:36:1:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.[m[K’
+   36 | [01;36m[KBOOST_PRAGMA_MESSAGE[m[K(
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable imu_read[0m
+[100%] Built target imu_read
+-- Install configuration: ""
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/lib/miiboo_imu/imu_read
+-- Set runtime path of "/home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/lib/miiboo_imu/imu_read" to ""
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu//launch
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu//launch/imu.launch.py
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/ament_index/resource_index/package_run_dependencies/miiboo_imu
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/ament_index/resource_index/parent_prefix_path/miiboo_imu
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/environment/ament_prefix_path.sh
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/environment/ament_prefix_path.dsv
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/environment/path.sh
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/environment/path.dsv
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/local_setup.bash
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/local_setup.sh
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/local_setup.zsh
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/local_setup.dsv
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/package.dsv
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/ament_index/resource_index/packages/miiboo_imu
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/cmake/miiboo_imuConfig.cmake
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/cmake/miiboo_imuConfig-version.cmake
+-- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu/share/miiboo_imu/package.xml

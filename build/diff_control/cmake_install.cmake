@@ -81,7 +81,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdiff_control.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdiff_control.so"
-         OLD_RPATH "/opt/ros/humble/lib:/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib:/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libdiff_control.so")

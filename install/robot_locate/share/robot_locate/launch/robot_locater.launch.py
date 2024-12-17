@@ -61,9 +61,9 @@ def generate_launch_description():
         condition = IfCondition(LaunchConfiguration('use_sim_time'))
     )
 
-    watch_dog = IncludeLaunchDescription(
+    serial_comm = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
-            os.path.join(get_package_share_directory('serial_comm'), 'launch'), '/watch_dog.launch.py'
+            os.path.join(get_package_share_directory('serial_comm'), 'launch'), '/serial_comm.launch.py'
         ]),
         condition = UnlessCondition(LaunchConfiguration('use_sim_time'))
     )
@@ -82,7 +82,7 @@ def generate_launch_description():
             default_value='false',
             description='Enable use_sim_time => use gazebo to simulate; disable use_sim_time => use real hardware'
         ),
-        #watch_dog,
+        #serial_comm,
         imu_driver,
         rslidar_driver,
         robot_localization_node,

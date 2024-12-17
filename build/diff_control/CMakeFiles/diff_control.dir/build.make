@@ -93,6 +93,12 @@ diff_control_EXTERNAL_OBJECTS =
 libdiff_control.so: CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o
 libdiff_control.so: CMakeFiles/diff_control.dir/build.make
 libdiff_control.so: /opt/ros/humble/lib/librclcpp_lifecycle.so
+libdiff_control.so: /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib/libnav_interfaces__rosidl_typesupport_fastrtps_c.so
+libdiff_control.so: /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib/libnav_interfaces__rosidl_typesupport_introspection_c.so
+libdiff_control.so: /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib/libnav_interfaces__rosidl_typesupport_fastrtps_cpp.so
+libdiff_control.so: /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib/libnav_interfaces__rosidl_typesupport_introspection_cpp.so
+libdiff_control.so: /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib/libnav_interfaces__rosidl_typesupport_cpp.so
+libdiff_control.so: /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib/libnav_interfaces__rosidl_generator_py.so
 libdiff_control.so: /opt/ros/humble/lib/libcomponent_manager.so
 libdiff_control.so: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_fastrtps_c.so
 libdiff_control.so: /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_fastrtps_cpp.so
@@ -214,6 +220,8 @@ libdiff_control.so: /opt/ros/humble/lib/librcutils.so
 libdiff_control.so: /usr/local/lib/libserial.a
 libdiff_control.so: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_c.so
 libdiff_control.so: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_generator_c.so
+libdiff_control.so: /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib/libnav_interfaces__rosidl_typesupport_c.so
+libdiff_control.so: /home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib/libnav_interfaces__rosidl_generator_c.so
 libdiff_control.so: /opt/ros/humble/lib/liblibstatistics_collector.so
 libdiff_control.so: /opt/ros/humble/lib/librcl.so
 libdiff_control.so: /opt/ros/humble/lib/librcl_yaml_param_parser.so

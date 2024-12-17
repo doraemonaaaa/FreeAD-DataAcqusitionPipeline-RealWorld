@@ -1,3 +1,0 @@
-gmake[2]: *** [CMakeFiles/diff_control.dir/build.make:76: CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/diff_control.dir/all] Interrupt
-gmake: *** [Makefile:146: all] Interrupt

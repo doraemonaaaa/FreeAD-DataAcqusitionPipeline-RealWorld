@@ -1,5 +1,0 @@
-[0.031s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24
-[0.072s] [35m[1mConsolidate compiler generated dependencies of target diff_control[0m
-[0.094s] [ 50%] [32mBuilding CXX object CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o[0m
-[8.558s] [100%] [32m[1mLinking CXX shared library libdiff_control.so[0m
-[9.008s] [100%] Built target diff_control

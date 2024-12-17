@@ -605,10 +605,6 @@ CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o: \
  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__struct.hpp \
  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__builder.hpp \
  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__traits.hpp \
- /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/motor_data.hpp \
- /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__struct.hpp \
- /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__builder.hpp \
- /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__traits.hpp \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \

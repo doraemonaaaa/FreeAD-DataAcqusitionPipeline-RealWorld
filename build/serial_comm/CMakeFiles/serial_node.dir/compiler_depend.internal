@@ -671,8 +671,8 @@ CMakeFiles/serial_node.dir/src/serial_node.cpp.o
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp
  /usr/local/include/serial/serial.h
  /usr/local/include/serial/v8stdint.h
- /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/motor_data.hpp
- /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__struct.hpp
- /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__builder.hpp
- /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__traits.hpp
+ /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/hardware_data.hpp
+ /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__struct.hpp
+ /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__builder.hpp
+ /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__traits.hpp
 

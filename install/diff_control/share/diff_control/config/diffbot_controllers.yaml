@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 55 # Hz,所有控制器的更新频率
+    update_rate: 55  # Hz,所有控制器的更新频率
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -13,7 +13,7 @@ diffbot_base_controller:
     left_wheel_names: ["left_wheel_joint"]
     right_wheel_names: ["right_wheel_joint"]
 
-    wheel_separation: 0.34
+    wheel_separation: 0.35
     wheel_radius: 0.08  # 半经8cm
     #wheels_per_side: 1  # actually 2, but both are controlled by 1 signal
     # wheel_separation: 0.297
@@ -27,8 +27,8 @@ diffbot_base_controller:
     use_stamped_vel: false
     odom_frame_id: odom
     base_frame_id: base_link
-    pose_covariance_diagonal: [0.01, 0.01, 0.01, 0.005, 0.005, 0.005]
-    twist_covariance_diagonal: [0.1, 0.1, 0.1, 0.01, 0.01, 0.01]
+    pose_covariance_diagonal : [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
+    twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
 
     position_feedback: true
     open_loop: false

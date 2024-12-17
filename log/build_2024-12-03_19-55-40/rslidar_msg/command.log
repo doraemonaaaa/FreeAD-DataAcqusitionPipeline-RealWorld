@@ -1,1 +1,0 @@
-Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/rslidar_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/rslidar_msg -- -j24 -l24

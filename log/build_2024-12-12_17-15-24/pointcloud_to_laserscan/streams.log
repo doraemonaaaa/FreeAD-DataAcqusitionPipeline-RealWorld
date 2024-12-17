@@ -1,7 +1,0 @@
-[0.019s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/pointcloud_to_laserscan -- -j24 -l24
-[0.058s] [ 16%] Built target pointcloud_to_laserscan_node
-[0.059s] [ 33%] Built target laserscan_to_pointcloud_node
-[0.060s] [ 50%] Built target laserscan_to_pointcloud
-[0.080s] [ 66%] Built target pointcloud_to_laserscan
-[0.098s] [100%] Built target dummy_pointcloud_publisher
-[0.098s] [100%] Built target sub_laser_node

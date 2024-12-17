@@ -34,7 +34,6 @@
 #include "diff_control/visibility_control.h"
 #include "diff_control/serial_bridge.hpp"
 #include "diff_control/wheel.hpp"
-#include <serial/serial.h>
 
 namespace diff_control
 {
@@ -103,7 +102,6 @@ namespace diff_control
         std::vector<double> hw_positions_;
         std::vector<double> hw_velocities_;
 
-        serial::Serial serial_port_;  // 串口对象
         std::shared_ptr<SerialBridge> serial_bridge_p_ = std::make_shared<SerialBridge>();
         Config cfg_;
         Wheel wheel_l_;

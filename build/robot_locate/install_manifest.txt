@@ -1,6 +1,3 @@
-/home/future/Documents/pengyh/RobotAD_ws/install/robot_locate/share/robot_locate/src/description/sam_bot_description.urdf
-/home/future/Documents/pengyh/RobotAD_ws/install/robot_locate/share/robot_locate/src/description/old/sam_bot_description.urdf.bak
-/home/future/Documents/pengyh/RobotAD_ws/install/robot_locate/share/robot_locate/src/description/old/sam_bot_description_official.urdf
 /home/future/Documents/pengyh/RobotAD_ws/install/robot_locate/share/robot_locate/launch/navigation_launch.py
 /home/future/Documents/pengyh/RobotAD_ws/install/robot_locate/share/robot_locate/launch/localization_launch.py
 /home/future/Documents/pengyh/RobotAD_ws/install/robot_locate/share/robot_locate/launch/robot_test.launch.py
