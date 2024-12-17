@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>robot_hardware</name>
+  <version>0.0.1</version>
+  <description>A ROS 2 package for robot hardware integration.</description>
+  <maintainer email="future@todo.todo">future</maintainer>
+  <license>Apache-2.0</license> <!-- 替换为适当的开源许可证 -->
+
+  <!-- 构建工具依赖 -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- 构建依赖 -->
+  <build_depend>rclcpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend> <!-- 支持图像消息 -->
+  <build_depend>cv_bridge</build_depend> <!-- OpenCV 与 ROS 图像转换 -->
+  <build_depend>OpenCV</build_depend> <!-- OpenCV 库 -->
+  <build_depend>hardware_interface</build_depend> <!-- ros2_control 硬件接口 -->
+  <build_depend>controller_manager</build_depend> <!-- 控制器管理 -->
+  <depend>diff_drive_controller</depend>
+  <build_depend>ros2_control</build_depend> <!-- ros2_control 框架 -->
+  <build_depend>pluginlib</build_depend> <!-- 插件支持 -->
+  <build_depend>rosidl_default_generators</build_depend>
+
+  <!-- 运行依赖 -->
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>OpenCV</exec_depend>
+  <exec_depend>hardware_interface</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>ros2_control</exec_depend>
+  <exec_depend>pluginlib</exec_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <!-- 测试依赖 -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- 分组信息 -->
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <!-- 导出信息 -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

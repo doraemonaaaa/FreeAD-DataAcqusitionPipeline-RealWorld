@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<robot name="diffbot">
+
+  <!-- 基本的机器人底盘 -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.34 0.44 0.3"/> <!-- 底盘尺寸 -->
+      </geometry>
+    </visual>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="10.0"/> <!-- 质量 -->
+      <inertia ixx="0.27" ixy="0.0" ixz="0.0" iyy="0.35" iyz="0.0" izz="0.12"/>
+    </inertial>
+  </link>
+
+  <!-- 左轮 -->
+  <link name="left_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="0.03" radius="0.08"/> <!-- 轮子尺寸 -->
+      </geometry>
+    </visual>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.5"/>
+      <inertia ixx="0.00048" ixy="0.0" ixz="0.0" iyy="0.00048" iyz="0.0" izz="0.0032"/>
+    </inertial>
+  </link>
+
+  <!-- 右轮 -->
+  <link name="right_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="0.03" radius="0.08"/> <!-- 轮子尺寸 -->
+      </geometry>
+    </visual>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.5"/>
+      <inertia ixx="0.00048" ixy="0.0" ixz="0.0" iyy="0.00048" iyz="0.0" izz="0.0032"/>
+    </inertial>
+  </link>
+
+  <!-- 左轮与底盘的关节 -->
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <origin xyz="-0.17 0.155 -0.15" rpy="0 0 0"/> <!-- 关节的位置 -->
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.1" friction="0.1"/>
+  </joint>
+
+  <!-- 右轮与底盘的关节 -->
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <origin xyz="-0.17 -0.155 -0.15" rpy="0 0 0"/> <!-- 关节的位置 -->
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.1" friction="0.1"/>
+  </joint>
+
+  <!-- ROS2 Control 插件配置 -->
+  <ros2_control name="diffbot_system" type="system">
+    <hardware>
+      <plugin>RobotHardwareInterface</plugin>
+      <param name="loop_rate" value="50"/> <!-- 硬件更新频率 -->
+    </hardware>
+    <joint name="left_wheel_joint">
+      <command_interface name="velocity"/> <!-- 速度控制接口 -->
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="right_wheel_joint">
+      <command_interface name="velocity"/> <!-- 速度控制接口 -->
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+</robot>

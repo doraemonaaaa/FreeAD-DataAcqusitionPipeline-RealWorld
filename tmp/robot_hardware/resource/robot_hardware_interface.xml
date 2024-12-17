@@ -1,0 +1,8 @@
+<library path="librobot_hardware_interface">
+  <class name="RobotHardwareInterface" type="RobotHardwareInterface"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Robot Hardware Interface for ROS2 control
+    </description>
+  </class>
+</library>
