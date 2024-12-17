@@ -70,6 +70,10 @@ CMakeFiles/robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/hardware
 CMakeFiles/robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__builder.hpp
 CMakeFiles/robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__struct.hpp
 CMakeFiles/robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__traits.hpp
+CMakeFiles/robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/motor_data.hpp
+CMakeFiles/robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__builder.hpp
+CMakeFiles/robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__struct.hpp
+CMakeFiles/robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__traits.hpp
 
 rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -87,6 +91,7 @@ rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp: /opt/ros/humble/share
 rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp: rosidl_adapter/robot_hardware/msg/HardwareData.idl
+rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp: rosidl_adapter/robot_hardware/msg/MotorData.idl
 rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -131,11 +136,27 @@ rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__struct.hpp: rosidl
 rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__traits.hpp: rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__traits.hpp
 
+rosidl_generator_cpp/robot_hardware/msg/motor_data.hpp: rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_hardware/msg/motor_data.hpp
+
+rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__builder.hpp: rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__builder.hpp
+
+rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__struct.hpp: rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__struct.hpp
+
+rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__traits.hpp: rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__traits.hpp
+
 robot_hardware__cpp: CMakeFiles/robot_hardware__cpp
 robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__builder.hpp
 robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__struct.hpp
 robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__traits.hpp
+robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__builder.hpp
+robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__struct.hpp
+robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__traits.hpp
 robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp
+robot_hardware__cpp: rosidl_generator_cpp/robot_hardware/msg/motor_data.hpp
 robot_hardware__cpp: CMakeFiles/robot_hardware__cpp.dir/build.make
 .PHONY : robot_hardware__cpp
 

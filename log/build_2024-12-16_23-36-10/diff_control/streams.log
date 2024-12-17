@@ -1,0 +1,37 @@
+[0.024s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24
+[0.061s] [ 50%] [32mBuilding CXX object CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o[0m
+[1.378s] In file included from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/diffbot_system.hpp:35[m[K,
+[1.378s]                  from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/diffbot_system.cpp:15[m[K:
+[1.378s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:[m[K In member function ‘[01m[Kstd::tuple<double, double> SerialBridge::read_motor_vel()[m[K’:
+[1.378s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:69:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbyte1[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.378s]    69 |  uint8_t [01;35m[Kbyte1[m[K = incoming_data[0];
+[1.378s]       |          [01;35m[K^~~~~[m[K
+[1.378s] 
+[1.378s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:76:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbyte24[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.378s]    76 |  uint8_t [01;35m[Kbyte24[m[K = incoming_data[23];
+[1.378s]       |          [01;35m[K^~~~~~[m[K
+[1.378s] 
+[1.378s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:88:26:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kmsg[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[1.379s]    88 |     auto [01;35m[Kmsg[m[K = robot_hardware::msg::MotorData();
+[1.379s]       |          [01;35m[K^~~[m[K
+[1.379s] 
+[1.381s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:98:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kspeed_l[m[K’ was not declared in this scope
+[1.381s]    98 | o_velocity([01;31m[Kspeed_l[m[K);
+[1.382s]       |            [01;31m[K^~~~~~~[m[K
+[1.382s] 
+[1.385s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:99:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kspeed_r[m[K’ was not declared in this scope
+[1.385s]    99 | o_velocity([01;31m[Kspeed_r[m[K);
+[1.385s]       |            [01;31m[K^~~~~~~[m[K
+[1.385s] 
+[1.389s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:100:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kneg_flah_l[m[K’ was not declared in this scope
+[1.389s]   100 |  vel_l = [01;31m[Kneg_flah_l[m[K ? vel_l : -vel_l;
+[1.389s]       |          [01;31m[K^~~~~~~~~~[m[K
+[1.389s] 
+[1.392s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:101:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kneg_flah_r[m[K’ was not declared in this scope
+[1.392s]   101 |  vel_r = [01;31m[Kneg_flah_r[m[K ? vel_r : -vel_r;
+[1.392s]       |          [01;31m[K^~~~~~~~~~[m[K
+[1.392s] 
+[1.781s] gmake[2]: *** [CMakeFiles/diff_control.dir/build.make:76: CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o] Error 1
+[1.781s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/diff_control.dir/all] Error 2
+[1.782s] gmake: *** [Makefile:146: all] Error 2
+[1.783s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24

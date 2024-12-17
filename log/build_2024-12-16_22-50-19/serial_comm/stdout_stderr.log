@@ -1,0 +1,30 @@
+[35m[1mConsolidate compiler generated dependencies of target serial_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial_node.cpp.o[0m
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid SerialNode::expect_speed_sub_callback(robot_hardware::msg::MotorData_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:115:26:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kauto msg[m[K’ shadows a parameter
+  115 |     auto [01;31m[Kmsg[m[K = robot_hardware::msg::MotorData();
+      |          [01;31m[K^~~[m[K
+
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:95:84:[m[K [01;36m[Knote: [m[K‘[01m[Kconst robot_hardware::msg::MotorData_<std::allocator<void> >::SharedPtr msg[m[K’ previously declared here
+   95 | [01;36m[KData::SharedPtr msg[m[K)
+      | [01;36m[K~~~~~~~~~~~~~~~~^~~[m[K
+
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:116:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kspeed_l[m[K’ was not declared in this scope
+  116 | speed_rpm = [01;31m[Kspeed_l[m[K;
+      |             [01;31m[K^~~~~~~[m[K
+
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:117:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kspeed_r[m[K’ was not declared in this scope
+  117 | speed_rpm = [01;31m[Kspeed_r[m[K;
+      |             [01;31m[K^~~~~~~[m[K
+
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:118:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kneg_flag1[m[K’ was not declared in this scope
+  118 | eg_flag = [01;31m[Kneg_flag1[m[K;
+      |           [01;31m[K^~~~~~~~~[m[K
+
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:119:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kneg_flag2[m[K’ was not declared in this scope
+  119 | eg_flag = [01;31m[Kneg_flag2[m[K;
+      |           [01;31m[K^~~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:76: CMakeFiles/serial_node.dir/src/serial_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/serial_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,2 +1,4 @@
 msg/HardwareData.idl
 msg/HardwareData.msg
+msg/MotorData.idl
+msg/MotorData.msg

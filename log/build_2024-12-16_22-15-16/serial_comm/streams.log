@@ -1,0 +1,97 @@
+[0.009s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/serial_comm': CMAKE_PREFIX_PATH=/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware:/home/future/Documents/pengyh/RobotAD_ws/install/usb_camera:/home/future/Documents/pengyh/RobotAD_ws/install/serial_comm:/home/future/Documents/pengyh/RobotAD_ws/install/rslidar_sdk:/home/future/Documents/pengyh/RobotAD_ws/install/rslidar_msg:/home/future/Documents/pengyh/RobotAD_ws/install/robot_locate:/home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan:/home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu:/home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control:/home/future/Documents/pengyh/RobotAD_ws/install/diff_control:/home/future/Documents/VIW-FUSION/install/vins:/home/future/Documents/VIW-FUSION/install/loop_fusion:/home/future/Documents/VIW-FUSION/install/global_fusion:/home/future/Documents/VIW-FUSION/install/camera_models:/home/future/Documents/people_tracker/install/people_msgs:/home/future/Documents/people_tracker/install/leg_tracker_ros2:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib:/home/future/Documents/pengyh/RobotAD_ws/install/rslidar_msg/lib:/home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/lib:/home/future/Documents/pengyh/RobotAD_ws/install/diff_control/lib:/home/future/Documents/VIW-FUSION/install/camera_models/lib:/home/future/Documents/people_tracker/install/people_msgs/lib:/home/future/Documents/people_tracker/install/leg_tracker_ros2/lib:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/serial_comm -- -j24 -l24
+[0.036s] [35m[1mConsolidate compiler generated dependencies of target serial_node[0m
+[0.050s] [ 50%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial_node.cpp.o[0m
+[1.339s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid SerialNode::expect_speed_sub_callback(robot_hardware::msg::MotorData_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.339s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:114:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst robot_hardware::msg::MotorData_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<robot_hardware::msg::MotorData_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kreal_left_speed_rpm[m[K’
+[1.339s]   114 |      msg.[01;31m[Kreal_left_speed_rpm[m[K = 1;00
+[1.339s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.339s] 
+[1.339s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:115:21:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kmsg[m[K’
+[1.339s]   115 |          [01;31m[Kmsg[m[K.real_right_speed_rpm = 100;
+[1.339s]       |          [01;31m[K^~~[m[K
+[1.339s] 
+[1.340s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:116:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst robot_hardware::msg::MotorData_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<robot_hardware::msg::MotorData_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kreal_left_neg_flag[m[K’
+[1.340s]   116 |      msg.[01;31m[Kreal_left_neg_flag[m[K = 1;
+[1.340s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.340s] 
+[1.340s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:117:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst robot_hardware::msg::MotorData_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<robot_hardware::msg::MotorData_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kreal_right_neg_flag[m[K’
+[1.340s]   117 |      msg.[01;31m[Kreal_right_neg_flag[m[K = 1;
+[1.340s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.340s] 
+[1.340s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:119:40:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Publisher<robot_hardware::msg::MotorData_<std::allocator<void> > >::publish(const robot_hardware::msg::MotorData_<std::allocator<void> >::SharedPtr&)[m[K’
+[1.340s]   119 | [01;31m[Ksher_->publish(msg)[m[K;
+[1.340s]       | [01;31m[K~~~~~~~~~~~~~~^~~~~[m[K
+[1.340s] 
+[1.340s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31[m[K,
+[1.340s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+[1.340s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[1.341s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[1.341s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[1.341s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[1.341s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[1.341s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.341s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.341s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.341s]                  from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:1[m[K:
+[1.341s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:251:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> std::enable_if_t<(rosidl_generator_traits::is_message<T>::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::ros_message_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(std::unique_ptr<T, typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>::allocator_type>::rebind_alloc<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>, std::allocator<typename rclcpp::TypeAdapter<MessageT>::ros_message_type> >::value, std::default_delete<typename rclcpp::TypeAdapter<MessageT>::ros_message_type>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>::allocator_type> >::type>) [with MessageT = robot_hardware::msg::MotorData_<std::allocator<void> >; AllocatorT = std::allocator<void>][m[K’
+[1.341s]   251 |   [01;36m[Kpublish[m[K(std::unique_ptr<T, ROSMessageTypeDeleter> msg)
+[1.341s]       |   [01;36m[K^~~~~~~[m[K
+[1.341s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:251:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.341s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:119:40:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::shared_ptr<robot_hardware::msg::MotorData_<std::allocator<void> > >[m[K’ is not derived from ‘[01m[Kstd::unique_ptr<T, std::default_delete<robot_hardware::msg::MotorData_<std::allocator<void> > > >[m[K’
+[1.341s]   119 | [01;36m[Ksher_->publish(msg)[m[K;
+[1.341s]       | [01;36m[K~~~~~~~~~~~~~~^~~~~[m[K
+[1.341s] 
+[1.342s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:292:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> std::enable_if_t<(rosidl_generator_traits::is_message<T>::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::ros_message_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(const T&) [with MessageT = robot_hardware::msg::MotorData_<std::allocator<void> >; AllocatorT = std::allocator<void>][m[K’
+[1.342s]   292 |   [01;36m[Kpublish[m[K(const T & msg)
+[1.342s]       |   [01;36m[K^~~~~~~[m[K
+[1.342s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:292:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.342s] In file included from [01m[K/usr/include/c++/12/bits/move.h:57[m[K,
+[1.342s]                  from [01m[K/usr/include/c++/12/bits/new_allocator.h:36[m[K,
+[1.342s]                  from [01m[K/usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h:33[m[K,
+[1.342s]                  from [01m[K/usr/include/c++/12/bits/allocator.h:46[m[K,
+[1.342s]                  from [01m[K/usr/include/c++/12/memory:63[m[K,
+[1.342s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K:
+[1.342s] /usr/include/c++/12/type_traits: In substitution of ‘[01m[Ktemplate<bool _Cond, class _Tp> using enable_if_t = typename std::enable_if::type [with bool _Cond = false; _Tp = void][m[K’:
+[1.342s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:292:3:[m[K   required by substitution of ‘[01m[Ktemplate<class T> std::enable_if_t<(rosidl_generator_traits::is_message<T>::value && std::is_same<T, robot_hardware::msg::MotorData_<std::allocator<void> > >::value), void> rclcpp::Publisher<robot_hardware::msg::MotorData_<std::allocator<void> > >::publish(const T&) [with T = std::shared_ptr<robot_hardware::msg::MotorData_<std::allocator<void> > >][m[K’
+[1.342s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:119:40:[m[K   required from here
+[1.342s] [01m[K/usr/include/c++/12/type_traits:2608:11:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, void>[m[K’
+[1.342s]  2608 |    using [01;31m[Kenable_if_t[m[K = typename enable_if<_Cond, _Tp>::type;
+[1.342s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[1.342s] 
+[1.342s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:322:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> std::enable_if_t<(typename rclcpp::TypeAdapter<MessageT>::is_specialized::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::custom_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(std::unique_ptr<T, typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>::allocator_type>::rebind_alloc<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>, std::allocator<typename rclcpp::TypeAdapter<MessageT>::custom_type> >::value, std::default_delete<typename rclcpp::TypeAdapter<MessageT>::custom_type>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>::allocator_type> >::type>) [with MessageT = robot_hardware::msg::MotorData_<std::allocator<void> >; AllocatorT = std::allocator<void>][m[K’
+[1.342s]   322 |   [01;36m[Kpublish[m[K(std::unique_ptr<T, PublishedTypeDeleter> msg)
+[1.342s]       |   [01;36m[K^~~~~~~[m[K
+[1.342s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:322:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.342s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/serial_node.cpp:119:40:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::shared_ptr<robot_hardware::msg::MotorData_<std::allocator<void> > >[m[K’ is not derived from ‘[01m[Kstd::unique_ptr<T, std::default_delete<robot_hardware::msg::MotorData_<std::allocator<void> > > >[m[K’
+[1.342s]   119 | [01;36m[Ksher_->publish(msg)[m[K;
+[1.342s]       | [01;36m[K~~~~~~~~~~~~~~^~~~~[m[K
+[1.343s] 
+[1.343s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:364:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> std::enable_if_t<(typename rclcpp::TypeAdapter<MessageT>::is_specialized::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::custom_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(const T&) [with MessageT = robot_hardware::msg::MotorData_<std::allocator<void> >; AllocatorT = std::allocator<void>][m[K’
+[1.343s]   364 |   [01;36m[Kpublish[m[K(const T & msg)
+[1.343s]       |   [01;36m[K^~~~~~~[m[K
+[1.343s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:364:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.343s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:383:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(const rcl_serialized_message_t&) [with MessageT = robot_hardware::msg::MotorData_<std::allocator<void> >; AllocatorT = std::allocator<void>; rcl_serialized_message_t = rcutils_uint8_array_s][m[K’
+[1.343s]   383 |   [01;36m[Kpublish[m[K(const rcl_serialized_message_t & serialized_msg)
+[1.343s]       |   [01;36m[K^~~~~~~[m[K
+[1.343s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:383:44:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst robot_hardware::msg::MotorData_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kconst std::shared_ptr<robot_hardware::msg::MotorData_<std::allocator<void> > >[m[K’} to ‘[01m[Kconst rcl_serialized_message_t&[m[K’ {aka ‘[01m[Kconst rcutils_uint8_array_s&[m[K’}
+[1.343s]   383 | [01;36m[Ksage_t & serialized_msg[m[K)
+[1.343s]       | [01;36m[K~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[1.343s] 
+[1.343s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:389:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(const rclcpp::SerializedMessage&) [with MessageT = robot_hardware::msg::MotorData_<std::allocator<void> >; AllocatorT = std::allocator<void>][m[K’
+[1.343s]   389 |   [01;36m[Kpublish[m[K(const SerializedMessage & serialized_msg)
+[1.343s]       |   [01;36m[K^~~~~~~[m[K
+[1.343s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:389:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst robot_hardware::msg::MotorData_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kconst std::shared_ptr<robot_hardware::msg::MotorData_<std::allocator<void> > >[m[K’} to ‘[01m[Kconst rclcpp::SerializedMessage&[m[K’
+[1.343s]   389 | [01;36m[Kessage & serialized_msg[m[K)
+[1.343s]       | [01;36m[K~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[1.343s] 
+[1.343s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:403:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(rclcpp::LoanedMessage<typename rclcpp::TypeAdapter<MessageT>::ros_message_type, AllocatorT>&&) [with MessageT = robot_hardware::msg::MotorData_<std::allocator<void> >; AllocatorT = std::allocator<void>; typename rclcpp::TypeAdapter<MessageT>::ros_message_type = robot_hardware::msg::MotorData_<std::allocator<void> >][m[K’
+[1.343s]   403 |   [01;36m[Kpublish[m[K(rclcpp::LoanedMessage<ROSMessageType, AllocatorT> && loaned_msg)
+[1.343s]       |   [01;36m[K^~~~~~~[m[K
+[1.343s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:403:64:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst robot_hardware::msg::MotorData_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kconst std::shared_ptr<robot_hardware::msg::MotorData_<std::allocator<void> > >[m[K’} to ‘[01m[Krclcpp::LoanedMessage<robot_hardware::msg::MotorData_<std::allocator<void> >, std::allocator<void> >&&[m[K’
+[1.343s]   403 | [01;36m[KtorT> && loaned_msg[m[K)
+[1.343s]       | [01;36m[K~~~~~~~~~^~~~~~~~~~[m[K
+[1.343s] 
+[2.834s] gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:76: CMakeFiles/serial_node.dir/src/serial_node.cpp.o] Error 1
+[2.834s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/serial_node.dir/all] Error 2
+[2.834s] gmake: *** [Makefile:146: all] Error 2
+[2.836s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/serial_comm' returned '2': CMAKE_PREFIX_PATH=/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware:/home/future/Documents/pengyh/RobotAD_ws/install/usb_camera:/home/future/Documents/pengyh/RobotAD_ws/install/serial_comm:/home/future/Documents/pengyh/RobotAD_ws/install/rslidar_sdk:/home/future/Documents/pengyh/RobotAD_ws/install/rslidar_msg:/home/future/Documents/pengyh/RobotAD_ws/install/robot_locate:/home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan:/home/future/Documents/pengyh/RobotAD_ws/install/miiboo_imu:/home/future/Documents/pengyh/RobotAD_ws/install/keyboard_control:/home/future/Documents/pengyh/RobotAD_ws/install/diff_control:/home/future/Documents/VIW-FUSION/install/vins:/home/future/Documents/VIW-FUSION/install/loop_fusion:/home/future/Documents/VIW-FUSION/install/global_fusion:/home/future/Documents/VIW-FUSION/install/camera_models:/home/future/Documents/people_tracker/install/people_msgs:/home/future/Documents/people_tracker/install/leg_tracker_ros2:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/lib:/home/future/Documents/pengyh/RobotAD_ws/install/rslidar_msg/lib:/home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/lib:/home/future/Documents/pengyh/RobotAD_ws/install/diff_control/lib:/home/future/Documents/VIW-FUSION/install/camera_models/lib:/home/future/Documents/people_tracker/install/people_msgs/lib:/home/future/Documents/people_tracker/install/leg_tracker_ros2/lib:/home/future/Documents/Navigation/interface_ws/install/nav_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/lib:/usr/local/lib /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/serial_comm -- -j24 -l24

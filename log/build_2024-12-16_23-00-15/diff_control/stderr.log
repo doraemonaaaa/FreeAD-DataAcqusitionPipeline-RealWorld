@@ -1,0 +1,7 @@
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/serial_bridge_node.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Kdiff_control/diffbot_system.hpp: No such file or directory
+    3 | #include [01;31m[K"diff_control/diffbot_system.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/serial_bridge_node.dir/build.make:76: CMakeFiles/serial_bridge_node.dir/hardware/serial_bridge_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/serial_bridge_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

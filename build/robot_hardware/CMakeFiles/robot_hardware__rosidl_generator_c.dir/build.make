@@ -83,6 +83,7 @@ rosidl_generator_c/robot_hardware/msg/hardware_data.h: /opt/ros/humble/share/ros
 rosidl_generator_c/robot_hardware/msg/hardware_data.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
 rosidl_generator_c/robot_hardware/msg/hardware_data.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/robot_hardware/msg/hardware_data.h: rosidl_adapter/robot_hardware/msg/HardwareData.idl
+rosidl_generator_c/robot_hardware/msg/hardware_data.h: rosidl_adapter/robot_hardware/msg/MotorData.idl
 rosidl_generator_c/robot_hardware/msg/hardware_data.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_c/robot_hardware/msg/hardware_data.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_c/robot_hardware/msg/hardware_data.h: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -127,8 +128,23 @@ rosidl_generator_c/robot_hardware/msg/detail/hardware_data__struct.h: rosidl_gen
 rosidl_generator_c/robot_hardware/msg/detail/hardware_data__type_support.h: rosidl_generator_c/robot_hardware/msg/hardware_data.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/robot_hardware/msg/detail/hardware_data__type_support.h
 
+rosidl_generator_c/robot_hardware/msg/motor_data.h: rosidl_generator_c/robot_hardware/msg/hardware_data.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/robot_hardware/msg/motor_data.h
+
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.h: rosidl_generator_c/robot_hardware/msg/hardware_data.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.h
+
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__struct.h: rosidl_generator_c/robot_hardware/msg/hardware_data.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/robot_hardware/msg/detail/motor_data__struct.h
+
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__type_support.h: rosidl_generator_c/robot_hardware/msg/hardware_data.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/robot_hardware/msg/detail/motor_data__type_support.h
+
 rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c: rosidl_generator_c/robot_hardware/msg/hardware_data.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c
+
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c: rosidl_generator_c/robot_hardware/msg/hardware_data.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c
 
 CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c.o: CMakeFiles/robot_hardware__rosidl_generator_c.dir/flags.make
 CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c.o: rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c
@@ -144,21 +160,37 @@ CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardw
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c -o CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c.s
 
+CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o: CMakeFiles/robot_hardware__rosidl_generator_c.dir/flags.make
+CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o: rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c
+CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o: CMakeFiles/robot_hardware__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o -MF CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o.d -o CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o -c /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c
+
+CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c > CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.i
+
+CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c -o CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.s
+
 # Object files for target robot_hardware__rosidl_generator_c
 robot_hardware__rosidl_generator_c_OBJECTS = \
-"CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c.o"
+"CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c.o" \
+"CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o"
 
 # External object files for target robot_hardware__rosidl_generator_c
 robot_hardware__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 librobot_hardware__rosidl_generator_c.so: CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c.o
+librobot_hardware__rosidl_generator_c.so: CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o
 librobot_hardware__rosidl_generator_c.so: CMakeFiles/robot_hardware__rosidl_generator_c.dir/build.make
 librobot_hardware__rosidl_generator_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 librobot_hardware__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
 librobot_hardware__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 librobot_hardware__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 librobot_hardware__rosidl_generator_c.so: CMakeFiles/robot_hardware__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library librobot_hardware__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library librobot_hardware__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robot_hardware__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -173,7 +205,12 @@ CMakeFiles/robot_hardware__rosidl_generator_c.dir/depend: rosidl_generator_c/rob
 CMakeFiles/robot_hardware__rosidl_generator_c.dir/depend: rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.h
 CMakeFiles/robot_hardware__rosidl_generator_c.dir/depend: rosidl_generator_c/robot_hardware/msg/detail/hardware_data__struct.h
 CMakeFiles/robot_hardware__rosidl_generator_c.dir/depend: rosidl_generator_c/robot_hardware/msg/detail/hardware_data__type_support.h
+CMakeFiles/robot_hardware__rosidl_generator_c.dir/depend: rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c
+CMakeFiles/robot_hardware__rosidl_generator_c.dir/depend: rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.h
+CMakeFiles/robot_hardware__rosidl_generator_c.dir/depend: rosidl_generator_c/robot_hardware/msg/detail/motor_data__struct.h
+CMakeFiles/robot_hardware__rosidl_generator_c.dir/depend: rosidl_generator_c/robot_hardware/msg/detail/motor_data__type_support.h
 CMakeFiles/robot_hardware__rosidl_generator_c.dir/depend: rosidl_generator_c/robot_hardware/msg/hardware_data.h
+CMakeFiles/robot_hardware__rosidl_generator_c.dir/depend: rosidl_generator_c/robot_hardware/msg/motor_data.h
 	cd /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware /home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/CMakeFiles/robot_hardware__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/robot_hardware__rosidl_generator_c.dir/depend
 

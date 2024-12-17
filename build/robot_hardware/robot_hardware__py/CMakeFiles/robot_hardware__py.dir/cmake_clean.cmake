@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/robot_hardware/msg/__init__.py"
   "../rosidl_generator_py/robot_hardware/msg/_hardware_data.py"
   "../rosidl_generator_py/robot_hardware/msg/_hardware_data_s.c"
+  "../rosidl_generator_py/robot_hardware/msg/_motor_data.py"
+  "../rosidl_generator_py/robot_hardware/msg/_motor_data_s.c"
   "CMakeFiles/robot_hardware__py"
 )
 

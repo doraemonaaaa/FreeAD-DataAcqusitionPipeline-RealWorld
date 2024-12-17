@@ -17,6 +17,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/msg/__init__.py" "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/msg/_hardware_data.py" "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/msg/_hardware_data_s.c" "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/msg/_motor_data.py" "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/msg/_motor_data_s.c" "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

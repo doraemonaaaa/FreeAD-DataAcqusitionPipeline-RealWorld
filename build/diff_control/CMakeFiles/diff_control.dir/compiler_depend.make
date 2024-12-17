@@ -704,10 +704,12 @@ CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o: /home/future/Document
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
   /home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/visibility_control.h \
   /home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/hardware_data.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__struct.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__builder.hpp \
-  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__traits.hpp \
+  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/motor_data.hpp \
+  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__struct.hpp \
+  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__builder.hpp \
+  /home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__traits.hpp \
+  /usr/local/include/serial/serial.h \
+  /usr/local/include/serial/v8stdint.h \
   /home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/wheel.hpp \
   /usr/include/termios.h \
   /usr/include/x86_64-linux-gnu/bits/termios.h \
@@ -762,9 +764,13 @@ CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o: /home/future/Document
 
 /home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/wheel.hpp:
 
-/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__traits.hpp:
+/usr/local/include/serial/serial.h:
 
-/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/hardware_data.hpp:
+/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__builder.hpp:
+
+/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__struct.hpp:
+
+/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/motor_data.hpp:
 
 /home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:
 
@@ -899,8 +905,6 @@ CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o: /home/future/Document
 /opt/ros/humble/include/rclcpp/rclcpp/node.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/future_return_code.hpp:
-
-/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__struct.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/publisher_options.hpp:
 
@@ -1307,6 +1311,8 @@ CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o: /home/future/Document
 /opt/ros/humble/include/rcutils/rcutils/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__traits.hpp:
 
 /opt/ros/humble/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__struct.h:
 
@@ -1804,6 +1810,8 @@ CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o: /home/future/Document
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
 
+/usr/local/include/serial/v8stdint.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp:
@@ -1927,8 +1935,6 @@ CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o: /home/future/Document
 /usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
 /usr/include/c++/12/bits/std_function.h:
-
-/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__builder.hpp:
 
 /usr/include/c++/12/mutex:
 

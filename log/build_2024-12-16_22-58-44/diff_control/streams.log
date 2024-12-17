@@ -1,0 +1,11 @@
+[0.023s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24
+[0.064s] [ 50%] Built target diff_control
+[0.066s] [ 75%] [32mBuilding CXX object CMakeFiles/serial_bridge_node.dir/src/serial_bridge_node.cpp.o[0m
+[0.212s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/src/serial_bridge_node.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Kdiff_control/hardware/serial_bridge.hpp: No such file or directory
+[0.213s]     3 | #include [01;31m[K"diff_control/hardware/serial_bridge.hpp"[m[K
+[0.213s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.213s] compilation terminated.
+[0.215s] gmake[2]: *** [CMakeFiles/serial_bridge_node.dir/build.make:76: CMakeFiles/serial_bridge_node.dir/src/serial_bridge_node.cpp.o] Error 1
+[0.215s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/serial_bridge_node.dir/all] Error 2
+[0.215s] gmake: *** [Makefile:146: all] Error 2
+[0.217s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24

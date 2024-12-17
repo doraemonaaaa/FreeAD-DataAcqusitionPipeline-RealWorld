@@ -1,0 +1,42 @@
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/hardware_manager.cpp:104:63:[m[K [01;31m[Kerror: [m[K‘[01m[KMotorData[m[K’ in namespace ‘[01m[Krobot_hardware::msg[m[K’ does not name a type
+  104 |     void receive_real_rpm_callback(const robot_hardware::msg::[01;31m[KMotorData[m[K::SharedPtr msg) {
+      |                                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/hardware_manager.cpp:104:84:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kmsg[m[K’
+  104 |     void receive_real_rpm_callback(const robot_hardware::msg::MotorData::SharedPtr [01;31m[Kmsg[m[K) {
+      |                                                                                    [01;31m[K^~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/hardware_manager.cpp:104:83:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kmsg[m[K’
+  104 |     void receive_real_rpm_callback[34m[K([m[Kconst robot_hardware::msg::MotorData::SharedPtr[01;31m[K [m[K[32m[Kmsg[m[K) {
+      |                                   [34m[K~[m[K                                               [01;31m[K^[m[K[32m[K~~~[m[K
+      |                                                                                   [32m[K)[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/hardware_manager.cpp:104:74:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  104 |     void receive_real_rpm_callback(const robot_hardware::msg::MotorData::[01;31m[KSharedPtr[m[K msg) {
+      |                                                                          [01;31m[K^~~~~~~~~[m[K
+      |                                                                                   [32m[K;[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/hardware_manager.cpp:104:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ does not name a type
+  104 |     void receive_real_rpm_callback(const robot_hardware::msg::MotorData::SharedPtr [01;31m[Kmsg[m[K) {
+      |                                                                                    [01;31m[K^~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/hardware_manager.cpp:[m[K In constructor ‘[01m[KHardwareManager::HardwareManager()[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/hardware_manager.cpp:23:74:[m[K [01;31m[Kerror: [m[K‘[01m[KMotorData[m[K’ is not a member of ‘[01m[Krobot_hardware::msg[m[K’
+   23 |         real_speed_sub_ = this->create_subscription<robot_hardware::msg::[01;31m[KMotorData[m[K>(
+      |                                                                          [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/hardware_manager.cpp:23:84:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KHardwareManager::create_subscription<<expression error> >(const char [32], int, std::_Bind_helper<false, void (HardwareManager::*)(...), HardwareManager*, const std::_Placeholder<1>&>::type)[m[K’
+   23 |         real_speed_sub_ = [01;31m[Kthis->create_subscription<robot_hardware::msg::MotorData>([m[K
+      |                           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   24 | [01;31m[K            "/serial/hardware_real_speed_msg", 10, std::bind(&HardwareManager::receive_real_rpm_callback, this, std::placeholders::_1))[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/hardware_manager.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const std::string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+  219 |   [01;36m[Kcreate_subscription[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/src/hardware_manager.cpp:23:84:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   23 |         real_speed_sub_ = [01;31m[Kthis->create_subscription<robot_hardware::msg::MotorData>([m[K
+      |                           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   24 | [01;31m[K            "/serial/hardware_real_speed_msg", 10, std::bind(&HardwareManager::receive_real_rpm_callback, this, std::placeholders::_1))[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/hardware_manager.dir/build.make:76: CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:593: CMakeFiles/hardware_manager.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

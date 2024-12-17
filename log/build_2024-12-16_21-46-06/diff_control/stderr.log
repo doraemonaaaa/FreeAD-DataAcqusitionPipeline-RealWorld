@@ -1,0 +1,39 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/diffbot_system.hpp:30[m[K,
+                 from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/diffbot_system.cpp:15[m[K:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:[m[K In member function ‘[01m[Kvoid SerialBridge::receive_real_rpm_callback(robot_hardware::msg::MotorData_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:63:56:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 5 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   63 | _name"), [01;35m[K"速度：%f,速度r:%f"[m[K, [32m[Khardware_data_.real_left_speed_rpm[m[K, hardware_data_.real_right_speed_rpm );
+      |          [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                              [32m[K|[m[K
+      |                                              [32m[Kint[m[K
+
+In file included from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/diffbot_system.hpp:35[m[K:
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:63:64:[m[K [01;36m[Knote: [m[Kformat string is defined here
+   63 |  "速度：[01;36m[K%f[m[K,速度r:%f", hardware_data_.real_left_speed_rpm, hardware_data_.real_right_speed_rpm );
+      |         [01;36m[K~^[m[K
+      |          [01;36m[K|[m[K
+      |          [01;36m[Kdouble[m[K
+      |         [32m[K%d[m[K
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:63:56:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 6 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   63 | _name"), [01;35m[K"速度：%f,速度r:%f"[m[K, hardware_data_.real_left_speed_rpm, [32m[Khardware_data_.real_right_speed_rpm[m[K );
+      |          [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K                                      [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                  [32m[K|[m[K
+      |                                                                                  [32m[Kint[m[K
+
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:63:73:[m[K [01;36m[Knote: [m[Kformat string is defined here
+   63 | f,速度r:[01;36m[K%f[m[K", hardware_data_.real_left_speed_rpm, hardware_data_.real_right_speed_rpm );
+      |         [01;36m[K~^[m[K
+      |          [01;36m[K|[m[K
+      |          [01;36m[Kdouble[m[K
+      |         [32m[K%d[m[K

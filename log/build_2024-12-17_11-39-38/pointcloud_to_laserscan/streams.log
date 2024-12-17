@@ -1,0 +1,53 @@
+[0.021s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/pointcloud_to_laserscan -- -j24 -l24
+[0.057s] [ 16%] Built target pointcloud_to_laserscan_node
+[0.058s] [ 33%] Built target laserscan_to_pointcloud_node
+[0.065s] [ 50%] Built target laserscan_to_pointcloud
+[0.086s] [ 58%] [32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan.dir/src/pointcloud_to_laserscan_node.cpp.o[0m
+[7.168s] [ 66%] [32m[1mLinking CXX shared library libpointcloud_to_laserscan.so[0m
+[7.511s] [ 66%] Built target pointcloud_to_laserscan
+[7.529s] [ 75%] [32m[1mLinking CXX executable sub_laser_node[0m
+[7.530s] [ 83%] [32m[1mLinking CXX executable dummy_pointcloud_publisher[0m
+[7.683s] [ 91%] Built target dummy_pointcloud_publisher
+[7.800s] [100%] Built target sub_laser_node
+[7.808s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/pointcloud_to_laserscan -- -j24 -l24
+[7.808s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/future/Documents/pengyh/RobotAD_ws/build/pointcloud_to_laserscan
+[7.815s] -- Install configuration: ""
+[7.815s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node
+[7.815s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node
+[7.815s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/include
+[7.815s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan
+[7.815s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/pointcloud_to_laserscan_node.hpp
+[7.815s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/laserscan_to_pointcloud_node.hpp
+[7.815s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/visibility_control.h
+[7.815s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/library_path.sh
+[7.815s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/library_path.dsv
+[7.816s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/lib/liblaserscan_to_pointcloud.so
+[7.816s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so
+[7.819s] -- Set runtime path of "/home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so" to ""
+[7.819s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher
+[7.820s] -- Set runtime path of "/home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher" to ""
+[7.820s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/sub_laser_node
+[7.822s] -- Set runtime path of "/home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/sub_laser_node" to ""
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch
+[7.822s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_pointcloud_to_laserscan_launch.py
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_laserscan_to_pointcloud_launch.py
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/package_run_dependencies/pointcloud_to_laserscan
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/parent_prefix_path/pointcloud_to_laserscan
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.sh
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.dsv
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.sh
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.dsv
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.bash
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.sh
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.zsh
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.dsv
+[7.822s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/packages/pointcloud_to_laserscan
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/ament_index/resource_index/rclcpp_components/pointcloud_to_laserscan
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_libraries-extras.cmake
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig.cmake
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig-version.cmake
+[7.822s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.xml
+[7.824s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/future/Documents/pengyh/RobotAD_ws/build/pointcloud_to_laserscan

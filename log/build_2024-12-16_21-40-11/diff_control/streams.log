@@ -1,0 +1,15 @@
+[0.022s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24
+[0.065s] [ 50%] [32mBuilding CXX object CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o[0m
+[1.394s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/diffbot_system.cpp:[m[K In member function ‘[01m[Kvirtual std::vector<hardware_interface::CommandInterface> diff_control::DiffBotSystemHardware::export_command_interfaces()[m[K’:
+[1.394s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/diffbot_system.cpp:137:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Wheel[m[K’ has no member named ‘[01m[Kname[m[K’; did you mean ‘[01m[Kname_[m[K’?
+[1.394s]   137 | wheel_l_.[01;31m[Kname[m[K, hardware_interface::HW_IF_VELOCITY, &wheel_l_.ex_vel_));
+[1.394s]       |          [01;31m[K^~~~[m[K
+[1.394s]       |          [32m[Kname_[m[K
+[1.394s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/diffbot_system.cpp:140:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Wheel[m[K’ has no member named ‘[01m[Kname[m[K’; did you mean ‘[01m[Kname_[m[K’?
+[1.394s]   140 | wheel_r_.[01;31m[Kname[m[K, hardware_interface::HW_IF_VELOCITY, &wheel_r_.ex_vel_));
+[1.394s]       |          [01;31m[K^~~~[m[K
+[1.394s]       |          [32m[Kname_[m[K
+[2.945s] gmake[2]: *** [CMakeFiles/diff_control.dir/build.make:76: CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o] Error 1
+[2.945s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/diff_control.dir/all] Error 2
+[2.945s] gmake: *** [Makefile:146: all] Error 2
+[2.947s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24

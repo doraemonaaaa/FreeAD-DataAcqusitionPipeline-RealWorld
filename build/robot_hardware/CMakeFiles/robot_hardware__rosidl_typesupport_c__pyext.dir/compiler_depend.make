@@ -245,8 +245,13 @@ CMakeFiles/robot_hardware__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/r
   rosidl_generator_c/robot_hardware/msg/detail/hardware_data__type_support.h \
   rosidl_generator_c/robot_hardware/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/robot_hardware/msg/detail/hardware_data__struct.h \
-  rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.h
+  rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.h \
+  rosidl_generator_c/robot_hardware/msg/detail/motor_data__type_support.h \
+  rosidl_generator_c/robot_hardware/msg/detail/motor_data__struct.h \
+  rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.h
 
+
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__type_support.h:
 
 /usr/include/python3.10/fileutils.h:
 
@@ -257,6 +262,8 @@ CMakeFiles/robot_hardware__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/r
 /usr/include/python3.10/cpython/import.h:
 
 /usr/include/python3.10/import.h:
+
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.h:
 
 /usr/include/python3.10/intrcheck.h:
 
@@ -325,6 +332,8 @@ rosidl_generator_c/robot_hardware/msg/detail/hardware_data__type_support.h:
 /usr/include/python3.10/cpython/tupleobject.h:
 
 /usr/include/python3.10/tupleobject.h:
+
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__struct.h:
 
 /usr/include/python3.10/enumobject.h:
 

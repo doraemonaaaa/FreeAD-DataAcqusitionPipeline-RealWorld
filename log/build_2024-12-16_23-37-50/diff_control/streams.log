@@ -1,0 +1,76 @@
+[0.025s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24
+[0.066s] [ 50%] [32mBuilding CXX object CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o[0m
+[1.405s] In file included from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/diffbot_system.hpp:35[m[K,
+[1.405s]                  from [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/diffbot_system.cpp:15[m[K:
+[1.405s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:[m[K In member function ‘[01m[Kstd::tuple<double, double> SerialBridge::read_motor_vel()[m[K’:
+[1.405s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:69:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbyte1[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.405s]    69 |  uint8_t [01;35m[Kbyte1[m[K = incoming_data[0];
+[1.405s]       |          [01;35m[K^~~~~[m[K
+[1.405s] 
+[1.405s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/include/diff_control/serial_bridge.hpp:76:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbyte24[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.405s]    76 |  uint8_t [01;35m[Kbyte24[m[K = incoming_data[23];
+[1.405s]       |          [01;35m[K^~~~~~[m[K
+[1.405s] 
+[2.320s] [100%] [32m[1mLinking CXX shared library libdiff_control.so[0m
+[2.439s] [100%] Built target diff_control
+[2.450s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24
+[2.451s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/future/Documents/pengyh/RobotAD_ws/build/diff_control
+[2.457s] -- Install configuration: ""
+[2.457s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/diff_control.xml
+[2.457s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/world
+[2.457s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/world/sim_world.sdf
+[2.457s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/world/sim_world_2.sdf
+[2.457s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/world/sim_world2.sdf
+[2.457s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/world/obstacles.world
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/include/diff_control
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/include/diff_control/diff_control
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/include/diff_control/diff_control/wheel.hpp
+[2.458s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/include/diff_control/diff_control/serial_bridge.hpp
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/include/diff_control/diff_control/diffbot_system.hpp
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/include/diff_control/diff_control/visibility_control.h
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/launch
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/launch/view_robot.launch.py
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/ros2_control
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/ros2_control/diffbot.materials.xacro
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/ros2_control/diffbot_model_our.urdf.xacro
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/ros2_control/inertial_macros.xacro
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/ros2_control/diffbot.ros2_control.xacro
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/ros2_control/lidar.xacro
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/urdf
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/urdf/diffbot.urdf.xacro
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/launch
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/launch/diffbot_sim.launch.py
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/launch/diffbot.launch.py
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/launch/__pycache__
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/launch/__pycache__/diffbot.launch.cpython-310.pyc
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/config
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/config/gazebo_params.yaml
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/config/diffbot_controllers.yaml
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/config/urdf.rviz
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/config/gazebo_use_sim_control.yaml
+[2.458s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/config/urdf.rviz.old
+[2.458s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/lib/libdiff_control.so
+[2.459s] -- Set runtime path of "/home/future/Documents/pengyh/RobotAD_ws/install/diff_control/lib/libdiff_control.so" to ""
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/environment/library_path.sh
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/environment/library_path.dsv
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/ament_index/resource_index/package_run_dependencies/diff_control
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/ament_index/resource_index/parent_prefix_path/diff_control
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/environment/ament_prefix_path.sh
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/environment/ament_prefix_path.dsv
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/environment/path.sh
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/environment/path.dsv
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/local_setup.bash
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/local_setup.sh
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/local_setup.zsh
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/local_setup.dsv
+[2.459s] -- Installing: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/package.dsv
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/ament_index/resource_index/packages/diff_control
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/diff_control
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/cmake/export_diff_controlExport.cmake
+[2.459s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/cmake/export_diff_controlExport-noconfig.cmake
+[2.460s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/cmake/ament_cmake_export_targets-extras.cmake
+[2.460s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.460s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/cmake/diff_controlConfig.cmake
+[2.460s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/cmake/diff_controlConfig-version.cmake
+[2.460s] -- Up-to-date: /home/future/Documents/pengyh/RobotAD_ws/install/diff_control/share/diff_control/package.xml
+[2.461s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/future/Documents/pengyh/RobotAD_ws/build/diff_control

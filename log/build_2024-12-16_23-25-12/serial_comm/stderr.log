@@ -1,0 +1,7 @@
+[01m[K/home/future/Documents/pengyh/RobotAD_ws/src/serial_comm/src/watch_dog.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.hpp: No such file or directory
+    1 | #include [01;31m[K<rclcpp/rclcpp.hpp>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/watch_dog_node.dir/build.make:76: CMakeFiles/watch_dog_node.dir/src/watch_dog.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/watch_dog_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

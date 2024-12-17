@@ -1,0 +1,35 @@
+[0.024s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24
+[0.054s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.160s] -- Found hardware_interface: 2.43.1 (/opt/ros/humble/share/hardware_interface/cmake)
+[0.183s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.184s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.188s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.194s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.201s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.296s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.297s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.309s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.314s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.327s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.331s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.339s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.365s] -- Found rclcpp_components: 16.0.10 (/opt/ros/humble/share/rclcpp_components/cmake)
+[0.376s] -- Found robot_hardware: 0.0.1 (/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware/share/robot_hardware/cmake)
+[0.384s] -- Found tf2: 0.25.9 (/opt/ros/humble/share/tf2/cmake)
+[0.388s] -- Found tf2_ros: 0.25.9 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.430s] -- Found ament_cmake_pytest: 1.3.10 (/opt/ros/humble/share/ament_cmake_pytest/cmake)
+[0.853s] -- Configuring done
+[0.866s] -- Generating done
+[0.869s] -- Build files have been written to: /home/future/Documents/pengyh/RobotAD_ws/build/diff_control
+[0.888s] [35m[1mConsolidate compiler generated dependencies of target diff_control[0m
+[0.899s] [ 66%] [32mBuilding CXX object CMakeFiles/diff_control.dir/hardware/tf_broadcaster.cpp.o[0m
+[0.900s] [ 66%] [32mBuilding CXX object CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o[0m
+[0.906s] [01m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/tf_broadcaster.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Ktf/transform_broadcaster.h: No such file or directory
+[0.906s]     2 | #include [01;31m[K<tf/transform_broadcaster.h>[m[K
+[0.906s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.907s] compilation terminated.
+[0.907s] gmake[2]: *** [CMakeFiles/diff_control.dir/build.make:90: CMakeFiles/diff_control.dir/hardware/tf_broadcaster.cpp.o] Error 1
+[0.907s] gmake[2]: *** Waiting for unfinished jobs....
+[6.282s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/diff_control.dir/all] Error 2
+[6.282s] gmake: *** [Makefile:146: all] Error 2
+[6.284s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/diff_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/diff_control -- -j24 -l24

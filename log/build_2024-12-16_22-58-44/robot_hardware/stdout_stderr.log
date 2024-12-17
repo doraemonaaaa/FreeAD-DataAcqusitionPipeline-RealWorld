@@ -1,0 +1,23 @@
+[  2%] Built target robot_hardware__cpp
+[ 12%] Built target robot_hardware__rosidl_generator_c
+[ 12%] Built target ament_cmake_python_copy_robot_hardware
+[ 21%] Built target robot_hardware__rosidl_typesupport_cpp
+[ 31%] Built target robot_hardware__rosidl_typesupport_fastrtps_cpp
+[ 41%] Built target robot_hardware__rosidl_typesupport_introspection_cpp
+[ 58%] Built target robot_hardware__rosidl_typesupport_c
+[ 60%] Built target robot_hardware__rosidl_typesupport_introspection_c
+[ 70%] Built target robot_hardware__rosidl_typesupport_fastrtps_c
+[ 75%] Built target hardware_manager
+[ 75%] Built target robot_hardware
+[ 78%] Built target robot_hardware__py
+[ 85%] Built target robot_hardware__rosidl_generator_py
+[ 90%] Built target robot_hardware__rosidl_typesupport_introspection_c__pyext
+[100%] Built target robot_hardware__rosidl_typesupport_c__pyext
+[100%] Built target robot_hardware__rosidl_typesupport_fastrtps_c__pyext
+running egg_info
+writing robot_hardware.egg-info/PKG-INFO
+writing dependency_links to robot_hardware.egg-info/dependency_links.txt
+writing top-level names to robot_hardware.egg-info/top_level.txt
+reading manifest file 'robot_hardware.egg-info/SOURCES.txt'
+writing manifest file 'robot_hardware.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_robot_hardware_egg

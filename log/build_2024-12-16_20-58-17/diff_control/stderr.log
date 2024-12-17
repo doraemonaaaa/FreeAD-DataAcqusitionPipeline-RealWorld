@@ -1,0 +1,6 @@
+[01m[Kcc1plus:[m[K [01;31m[Kfatal error: [m[K/home/future/Documents/pengyh/RobotAD_ws/src/diff_control/hardware/tf_broadcaster.cpp: No such file or directory
+compilation terminated.
+gmake[2]: *** [CMakeFiles/diff_control.dir/build.make:90: CMakeFiles/diff_control.dir/hardware/tf_broadcaster.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/diff_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

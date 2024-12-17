@@ -1,0 +1,29 @@
+[0.028s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware -- -j24 -l24
+[0.059s] [  2%] Built target robot_hardware__cpp
+[0.063s] [ 12%] Built target robot_hardware__rosidl_generator_c
+[0.066s] [ 12%] Built target ament_cmake_python_copy_robot_hardware
+[0.075s] [ 21%] Built target robot_hardware__rosidl_typesupport_fastrtps_cpp
+[0.076s] [ 31%] Built target robot_hardware__rosidl_typesupport_cpp
+[0.082s] [ 41%] Built target robot_hardware__rosidl_typesupport_introspection_c
+[0.088s] [ 51%] Built target robot_hardware__rosidl_typesupport_introspection_cpp
+[0.091s] [ 60%] Built target robot_hardware__rosidl_typesupport_fastrtps_c
+[0.093s] [ 70%] Built target robot_hardware__rosidl_typesupport_c
+[0.095s] [35m[1mConsolidate compiler generated dependencies of target hardware_manager[0m
+[0.099s] [ 70%] Built target robot_hardware
+[0.099s] [ 73%] [32mBuilding CXX object CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o[0m
+[0.115s] [ 75%] Built target robot_hardware__py
+[0.129s] [ 82%] Built target robot_hardware__rosidl_generator_py
+[0.145s] [ 87%] Built target robot_hardware__rosidl_typesupport_c__pyext
+[0.146s] [ 92%] Built target robot_hardware__rosidl_typesupport_fastrtps_c__pyext
+[0.146s] [ 97%] Built target robot_hardware__rosidl_typesupport_introspection_c__pyext
+[0.257s] running egg_info
+[0.258s] writing robot_hardware.egg-info/PKG-INFO
+[0.258s] writing dependency_links to robot_hardware.egg-info/dependency_links.txt
+[0.258s] writing top-level names to robot_hardware.egg-info/top_level.txt
+[0.260s] reading manifest file 'robot_hardware.egg-info/SOURCES.txt'
+[0.260s] writing manifest file 'robot_hardware.egg-info/SOURCES.txt'
+[0.279s] [ 97%] Built target ament_cmake_python_build_robot_hardware_egg
+[7.149s] gmake[2]: *** [CMakeFiles/hardware_manager.dir/build.make:76: CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o] Interrupt
+[7.150s] gmake[1]: *** [CMakeFiles/Makefile2:593: CMakeFiles/hardware_manager.dir/all] Interrupt
+[7.150s] gmake: *** [Makefile:146: all] Interrupt
+[7.194s] Invoked command in '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware -- -j24 -l24

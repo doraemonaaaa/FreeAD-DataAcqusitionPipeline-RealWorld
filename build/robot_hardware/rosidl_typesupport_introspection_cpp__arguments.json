@@ -3,7 +3,8 @@
   "output_dir": "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_typesupport_introspection_cpp/robot_hardware",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_introspection_cpp/resource",
   "idl_tuples": [
-    "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_adapter/robot_hardware:msg/HardwareData.idl"
+    "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_adapter/robot_hardware:msg/HardwareData.idl",
+    "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_adapter/robot_hardware:msg/MotorData.idl"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/Bool.idl",
@@ -49,6 +50,7 @@
     "/opt/ros/humble/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
     "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_adapter/robot_hardware/msg/HardwareData.idl",
+    "/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_adapter/robot_hardware/msg/MotorData.idl",
     "/opt/ros/humble/share/std_msgs/msg/Bool.idl",
     "/opt/ros/humble/share/std_msgs/msg/Byte.idl",
     "/opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl",

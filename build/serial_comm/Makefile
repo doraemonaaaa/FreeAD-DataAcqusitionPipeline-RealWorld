@@ -210,6 +210,19 @@ serial_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_node.dir/build.make CMakeFiles/serial_node.dir/build
 .PHONY : serial_node/fast
 
+#=============================================================================
+# Target rules for targets named watch_dog_node
+
+# Build rule for target.
+watch_dog_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 watch_dog_node
+.PHONY : watch_dog_node
+
+# fast build rule for target.
+watch_dog_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watch_dog_node.dir/build.make CMakeFiles/watch_dog_node.dir/build
+.PHONY : watch_dog_node/fast
+
 src/serial_node.o: src/serial_node.cpp.o
 .PHONY : src/serial_node.o
 
@@ -234,6 +247,30 @@ src/serial_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/serial_node.dir/build.make CMakeFiles/serial_node.dir/src/serial_node.cpp.s
 .PHONY : src/serial_node.cpp.s
 
+src/watch_dog.o: src/watch_dog.cpp.o
+.PHONY : src/watch_dog.o
+
+# target to build an object file
+src/watch_dog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watch_dog_node.dir/build.make CMakeFiles/watch_dog_node.dir/src/watch_dog.cpp.o
+.PHONY : src/watch_dog.cpp.o
+
+src/watch_dog.i: src/watch_dog.cpp.i
+.PHONY : src/watch_dog.i
+
+# target to preprocess a source file
+src/watch_dog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watch_dog_node.dir/build.make CMakeFiles/watch_dog_node.dir/src/watch_dog.cpp.i
+.PHONY : src/watch_dog.cpp.i
+
+src/watch_dog.s: src/watch_dog.cpp.s
+.PHONY : src/watch_dog.s
+
+# target to generate assembly for a file
+src/watch_dog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watch_dog_node.dir/build.make CMakeFiles/watch_dog_node.dir/src/watch_dog.cpp.s
+.PHONY : src/watch_dog.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -250,9 +287,13 @@ help:
 	@echo "... serial_comm_uninstall"
 	@echo "... uninstall"
 	@echo "... serial_node"
+	@echo "... watch_dog_node"
 	@echo "... src/serial_node.o"
 	@echo "... src/serial_node.i"
 	@echo "... src/serial_node.s"
+	@echo "... src/watch_dog.o"
+	@echo "... src/watch_dog.i"
+	@echo "... src/watch_dog.s"
 .PHONY : help
 
 

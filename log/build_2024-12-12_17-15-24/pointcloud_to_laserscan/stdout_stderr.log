@@ -1,0 +1,6 @@
+[ 16%] Built target pointcloud_to_laserscan_node
+[ 33%] Built target laserscan_to_pointcloud_node
+[ 50%] Built target laserscan_to_pointcloud
+[ 66%] Built target pointcloud_to_laserscan
+[100%] Built target dummy_pointcloud_publisher
+[100%] Built target sub_laser_node

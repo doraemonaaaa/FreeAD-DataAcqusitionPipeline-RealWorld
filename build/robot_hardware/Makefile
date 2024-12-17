@@ -442,6 +442,30 @@ rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_generator_c.dir/build.make CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c.s
 .PHONY : rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c.s
 
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.o: rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o
+.PHONY : rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.o
+
+# target to build an object file
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_generator_c.dir/build.make CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o
+.PHONY : rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o
+
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.i: rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.i
+.PHONY : rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_generator_c.dir/build.make CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.i
+.PHONY : rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.i
+
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.s: rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.s
+.PHONY : rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_generator_c.dir/build.make CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.s
+.PHONY : rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.s
+
 rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_c.o: rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_c.c.o
 .PHONY : rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_c.o
 
@@ -538,6 +562,30 @@ rosidl_generator_py/robot_hardware/msg/_hardware_data_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_generator_py.dir/build.make CMakeFiles/robot_hardware__rosidl_generator_py.dir/rosidl_generator_py/robot_hardware/msg/_hardware_data_s.c.s
 .PHONY : rosidl_generator_py/robot_hardware/msg/_hardware_data_s.c.s
 
+rosidl_generator_py/robot_hardware/msg/_motor_data_s.o: rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.o
+.PHONY : rosidl_generator_py/robot_hardware/msg/_motor_data_s.o
+
+# target to build an object file
+rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_generator_py.dir/build.make CMakeFiles/robot_hardware__rosidl_generator_py.dir/rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.o
+.PHONY : rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.o
+
+rosidl_generator_py/robot_hardware/msg/_motor_data_s.i: rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.i
+.PHONY : rosidl_generator_py/robot_hardware/msg/_motor_data_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_generator_py.dir/build.make CMakeFiles/robot_hardware__rosidl_generator_py.dir/rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.i
+.PHONY : rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.i
+
+rosidl_generator_py/robot_hardware/msg/_motor_data_s.s: rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.s
+.PHONY : rosidl_generator_py/robot_hardware/msg/_motor_data_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_generator_py.dir/build.make CMakeFiles/robot_hardware__rosidl_generator_py.dir/rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.s
+.PHONY : rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.s
+
 rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.o: rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.o
 
@@ -561,6 +609,30 @@ rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.s: rosidl_ty
 rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.cpp.s
+
+rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.o: rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.o
+
+rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.i: rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.i
+
+rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.s: rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.s
 
 rosidl_typesupport_cpp/robot_hardware/msg/hardware_data__type_support.o: rosidl_typesupport_cpp/robot_hardware/msg/hardware_data__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/robot_hardware/msg/hardware_data__type_support.o
@@ -586,6 +658,30 @@ rosidl_typesupport_cpp/robot_hardware/msg/hardware_data__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_hardware/msg/hardware_data__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/robot_hardware/msg/hardware_data__type_support.cpp.s
 
+rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.o: rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.o
+
+rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.i: rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.i
+
+rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.s: rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/hardware_data__type_support_c.o: rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/hardware_data__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/hardware_data__type_support_c.o
 
@@ -609,6 +705,30 @@ rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/hardware_data__type_supp
 rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/hardware_data__type_support_c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/hardware_data__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/hardware_data__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.o: rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.i: rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.s: rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/hardware_data__type_support.o: rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/hardware_data__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/hardware_data__type_support.o
@@ -634,6 +754,30 @@ rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/hardware_
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/hardware_data__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/hardware_data__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.o: rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.i: rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.s: rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.s
+
 rosidl_typesupport_introspection_c/robot_hardware/msg/detail/hardware_data__type_support.o: rosidl_typesupport_introspection_c/robot_hardware/msg/detail/hardware_data__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/robot_hardware/msg/detail/hardware_data__type_support.o
 
@@ -658,6 +802,30 @@ rosidl_typesupport_introspection_c/robot_hardware/msg/detail/hardware_data__type
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_hardware/msg/detail/hardware_data__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/robot_hardware/msg/detail/hardware_data__type_support.c.s
 
+rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.o: rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.o
+
+rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.i: rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.i
+
+rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.s: rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.s
+
 rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.o: rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.o
 
@@ -681,6 +849,30 @@ rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__ty
 rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.cpp.s
+
+rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.o: rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.i: rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.s: rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.s
 
 src/hardware_manager.o: src/hardware_manager.cpp.o
 .PHONY : src/hardware_manager.o
@@ -741,6 +933,9 @@ help:
 	@echo "... rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.o"
 	@echo "... rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.i"
 	@echo "... rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.s"
+	@echo "... rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.o"
+	@echo "... rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.i"
+	@echo "... rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.s"
 	@echo "... rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_c.o"
 	@echo "... rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_c.i"
 	@echo "... rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_c.s"
@@ -753,24 +948,45 @@ help:
 	@echo "... rosidl_generator_py/robot_hardware/msg/_hardware_data_s.o"
 	@echo "... rosidl_generator_py/robot_hardware/msg/_hardware_data_s.i"
 	@echo "... rosidl_generator_py/robot_hardware/msg/_hardware_data_s.s"
+	@echo "... rosidl_generator_py/robot_hardware/msg/_motor_data_s.o"
+	@echo "... rosidl_generator_py/robot_hardware/msg/_motor_data_s.i"
+	@echo "... rosidl_generator_py/robot_hardware/msg/_motor_data_s.s"
 	@echo "... rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.o"
 	@echo "... rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.i"
 	@echo "... rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.s"
+	@echo "... rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.o"
+	@echo "... rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.i"
+	@echo "... rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.s"
 	@echo "... rosidl_typesupport_cpp/robot_hardware/msg/hardware_data__type_support.o"
 	@echo "... rosidl_typesupport_cpp/robot_hardware/msg/hardware_data__type_support.i"
 	@echo "... rosidl_typesupport_cpp/robot_hardware/msg/hardware_data__type_support.s"
+	@echo "... rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.o"
+	@echo "... rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.i"
+	@echo "... rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/hardware_data__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/hardware_data__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/hardware_data__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/hardware_data__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/hardware_data__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/hardware_data__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/robot_hardware/msg/detail/hardware_data__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/robot_hardware/msg/detail/hardware_data__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/robot_hardware/msg/detail/hardware_data__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.s"
 	@echo "... src/hardware_manager.o"
 	@echo "... src/hardware_manager.i"
 	@echo "... src/hardware_manager.s"

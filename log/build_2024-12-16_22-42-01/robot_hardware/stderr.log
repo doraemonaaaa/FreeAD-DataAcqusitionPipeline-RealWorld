@@ -1,0 +1,9 @@
+[31mCMake Error at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+  rosidl_generate_interfaces() the passed file 'srv/GetMotorSpeed.srv'
+  doesn't exist relative to the CMAKE_CURRENT_SOURCE_DIR
+  '/home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware'
+Call Stack (most recent call first):
+  CMakeLists.txt:29 (rosidl_generate_interfaces)
+
+[0m
+gmake: *** [Makefile:1004: cmake_check_build_system] Error 1

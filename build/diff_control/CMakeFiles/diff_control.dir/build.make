@@ -211,6 +211,7 @@ libdiff_control.so: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_cp
 libdiff_control.so: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_generator_py.so
 libdiff_control.so: /opt/ros/humble/lib/librcpputils.so
 libdiff_control.so: /opt/ros/humble/lib/librcutils.so
+libdiff_control.so: /usr/local/lib/libserial.a
 libdiff_control.so: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_c.so
 libdiff_control.so: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_generator_c.so
 libdiff_control.so: /opt/ros/humble/lib/liblibstatistics_collector.so

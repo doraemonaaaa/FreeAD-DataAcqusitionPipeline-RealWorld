@@ -67,6 +67,7 @@ include CMakeFiles/robot_hardware.dir/compiler_depend.make
 include CMakeFiles/robot_hardware.dir/progress.make
 
 CMakeFiles/robot_hardware: /home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/msg/HardwareData.msg
+CMakeFiles/robot_hardware: /home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware/msg/MotorData.msg
 CMakeFiles/robot_hardware: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 CMakeFiles/robot_hardware: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 CMakeFiles/robot_hardware: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl

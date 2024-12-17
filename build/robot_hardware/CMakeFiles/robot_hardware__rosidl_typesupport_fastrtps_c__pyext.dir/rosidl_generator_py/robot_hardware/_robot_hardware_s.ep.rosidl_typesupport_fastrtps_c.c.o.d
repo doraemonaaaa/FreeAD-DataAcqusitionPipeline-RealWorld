@@ -204,4 +204,7 @@ CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_gener
  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__type_support.h \
  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/rosidl_generator_c__visibility_control.h \
  /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__struct.h \
- /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.h
+ /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.h \
+ /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/detail/motor_data__type_support.h \
+ /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/detail/motor_data__struct.h \
+ /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.h

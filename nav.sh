@@ -1,0 +1,1 @@
+ros2 launch robot_locate navigation_launch.py

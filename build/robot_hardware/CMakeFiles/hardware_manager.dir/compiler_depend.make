@@ -672,6 +672,10 @@ CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o: /home/future/Documen
   rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__struct.hpp \
   rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__builder.hpp \
   rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__traits.hpp \
+  rosidl_generator_cpp/robot_hardware/msg/motor_data.hpp \
+  rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__struct.hpp \
+  rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__builder.hpp \
+  rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__traits.hpp \
   /usr/include/opencv4/opencv2/opencv.hpp \
   /usr/include/opencv4/opencv2/opencv_modules.hpp \
   /usr/include/opencv4/opencv2/core.hpp \
@@ -1009,6 +1013,10 @@ CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o: /home/future/Documen
 /usr/include/opencv4/opencv2/core/cvdef.h:
 
 /usr/include/opencv4/opencv2/core.hpp:
+
+rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__builder.hpp:
+
+rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__struct.hpp:
 
 rosidl_generator_cpp/robot_hardware/msg/detail/hardware_data__traits.hpp:
 
@@ -2162,6 +2170,8 @@ rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp:
 
 /usr/include/c++/12/array:
 
+rosidl_generator_cpp/robot_hardware/msg/detail/motor_data__traits.hpp:
+
 /opt/ros/humble/include/rcl_yaml_param_parser/rcl_yaml_param_parser/visibility_control.h:
 
 /usr/include/c++/12/compare:
@@ -2395,6 +2405,8 @@ rosidl_generator_cpp/robot_hardware/msg/hardware_data.hpp:
 /opt/ros/humble/include/rclcpp/rclcpp/intra_process_setting.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/detail/resolve_intra_process_buffer_type.hpp:
+
+rosidl_generator_cpp/robot_hardware/msg/motor_data.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
 
