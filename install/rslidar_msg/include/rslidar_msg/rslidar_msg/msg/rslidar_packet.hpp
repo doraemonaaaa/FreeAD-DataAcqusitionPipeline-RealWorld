@@ -1,11 +1,1 @@
-// generated from rosidl_generator_cpp/resource/idl.hpp.em
-// generated code does not contain a copyright notice
-
-#ifndef RSLIDAR_MSG__MSG__RSLIDAR_PACKET_HPP_
-#define RSLIDAR_MSG__MSG__RSLIDAR_PACKET_HPP_
-
-#include "rslidar_msg/msg/detail/rslidar_packet__struct.hpp"
-#include "rslidar_msg/msg/detail/rslidar_packet__builder.hpp"
-#include "rslidar_msg/msg/detail/rslidar_packet__traits.hpp"
-
-#endif  // RSLIDAR_MSG__MSG__RSLIDAR_PACKET_HPP_
+/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_generator_cpp/rslidar_msg/msg/rslidar_packet.hpp

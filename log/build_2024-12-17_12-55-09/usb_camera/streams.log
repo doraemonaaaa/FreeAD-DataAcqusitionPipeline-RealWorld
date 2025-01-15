@@ -1,9 +1,0 @@
-[0.025s] Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/future/Documents/pengyh/RobotAD_ws/build/usb_camera -- -j24 -l24
-[0.065s] [ 50%] [32mBuilding CXX object CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o[0m
-[2.720s] gmake[2]: *** wait: No child processes.  Stop.
-[2.720s] gmake[2]: *** Waiting for unfinished jobs....
-[2.721s] gmake[2]: *** wait: No child processes.  Stop.
-[2.721s] gmake[1]: *** wait: No child processes.  Stop.
-[2.721s] gmake[1]: *** Waiting for unfinished jobs....
-[2.721s] gmake[1]: *** wait: No child processes.  Stop.
-[2.722s] gmake: *** [Makefile:146: all] Error 2

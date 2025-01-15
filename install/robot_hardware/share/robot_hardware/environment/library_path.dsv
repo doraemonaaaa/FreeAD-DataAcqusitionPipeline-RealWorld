@@ -1,1 +1,1 @@
-prepend-non-duplicate;LD_LIBRARY_PATH;lib
+/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_environment_hooks/library_path.dsv

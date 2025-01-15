@@ -1,2 +1,1 @@
-source;share/usb_camera/environment/ament_prefix_path.sh
-source;share/usb_camera/environment/path.sh
+/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera/ament_cmake_environment_hooks/local_setup.dsv

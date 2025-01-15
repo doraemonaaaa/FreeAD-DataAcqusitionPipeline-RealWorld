@@ -1,8 +1,8 @@
-# Install script for directory: /home/future/Documents/pengyh/RobotAD_ws/build/rslidar_msg/rslidar_msg__py
+# Install script for directory: /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rslidar_msg__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/future/Documents/pengyh/RobotAD_ws/install/rslidar_msg")
+  set(CMAKE_INSTALL_PREFIX "/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

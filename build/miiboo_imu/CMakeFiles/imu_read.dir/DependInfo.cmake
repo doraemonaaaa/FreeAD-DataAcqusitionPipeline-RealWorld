@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/future/Documents/pengyh/RobotAD_ws/src/miiboo_imu/src/imu_read.cpp" "CMakeFiles/imu_read.dir/src/imu_read.cpp.o" "gcc" "CMakeFiles/imu_read.dir/src/imu_read.cpp.o.d"
+  "/home/pengyh/documents/ros2_ws/RobotAD/src/miiboo_imu/src/imu_read.cpp" "CMakeFiles/imu_read.dir/src/imu_read.cpp.o" "gcc" "CMakeFiles/imu_read.dir/src/imu_read.cpp.o.d"
   )
 
 # Targets to which this target links.

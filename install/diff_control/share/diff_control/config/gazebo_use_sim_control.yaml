@@ -1,3 +1,1 @@
-controller_manager:
-  ros__parameters:
-    use_sim_time: true
+/home/pengyh/documents/ros2_ws/RobotAD/src/diff_control/bringup/config/gazebo_use_sim_control.yaml

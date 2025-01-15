@@ -7,5 +7,6 @@
 #include "robot_hardware/msg/detail/hardware_data__struct.hpp"
 #include "robot_hardware/msg/detail/hardware_data__builder.hpp"
 #include "robot_hardware/msg/detail/hardware_data__traits.hpp"
+#include "robot_hardware/msg/detail/hardware_data__type_support.hpp"
 
 #endif  // ROBOT_HARDWARE__MSG__HARDWARE_DATA_HPP_

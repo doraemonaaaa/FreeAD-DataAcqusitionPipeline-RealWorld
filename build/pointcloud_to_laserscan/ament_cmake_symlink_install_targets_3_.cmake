@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan/dummy_pointcloud_publisher" "/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan/sub_laser_node" "TARGETS" "dummy_pointcloud_publisher" "sub_laser_node" "DESTINATION" "lib/pointcloud_to_laserscan")

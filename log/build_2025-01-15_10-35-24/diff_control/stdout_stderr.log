@@ -1,0 +1,3 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/diff_control.dir/hardware/diffbot_system.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libdiff_control.so[0m
+[100%] Built target diff_control

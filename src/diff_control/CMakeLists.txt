@@ -11,7 +11,6 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
   pluginlib
   rclcpp
   rclcpp_lifecycle
-  nav_interfaces
   rclcpp_components
   serial
   robot_hardware

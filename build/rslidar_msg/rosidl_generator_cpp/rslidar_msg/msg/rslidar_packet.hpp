@@ -7,5 +7,6 @@
 #include "rslidar_msg/msg/detail/rslidar_packet__struct.hpp"
 #include "rslidar_msg/msg/detail/rslidar_packet__builder.hpp"
 #include "rslidar_msg/msg/detail/rslidar_packet__traits.hpp"
+#include "rslidar_msg/msg/detail/rslidar_packet__type_support.hpp"
 
 #endif  // RSLIDAR_MSG__MSG__RSLIDAR_PACKET_HPP_

@@ -1,4 +1,4 @@
-# Install script for directory: /home/future/Documents/pengyh/RobotAD_ws/src/rslidar_sdk/src/rs_driver
+# Install script for directory: /home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_sdk/src/rs_driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

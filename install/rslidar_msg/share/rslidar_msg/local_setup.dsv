@@ -1,4 +1,1 @@
-source;share/rslidar_msg/environment/ament_prefix_path.sh
-source;share/rslidar_msg/environment/library_path.sh
-source;share/rslidar_msg/environment/path.sh
-source;share/rslidar_msg/environment/pythonpath.sh
+/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_environment_hooks/local_setup.dsv

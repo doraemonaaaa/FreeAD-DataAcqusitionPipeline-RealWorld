@@ -1,8 +1,8 @@
-# Install script for directory: /home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware/robot_hardware__py
+# Install script for directory: /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/robot_hardware__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware")
+  set(CMAKE_INSTALL_PREFIX "/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

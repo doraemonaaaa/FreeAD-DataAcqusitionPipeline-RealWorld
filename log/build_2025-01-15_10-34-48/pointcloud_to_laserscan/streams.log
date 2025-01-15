@@ -1,0 +1,19 @@
+[0.016s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan -- -j24 -l24
+[0.044s] [  8%] [32mBuilding CXX object CMakeFiles/laserscan_to_pointcloud.dir/src/laserscan_to_pointcloud_node.cpp.o[0m
+[0.044s] [ 16%] [32mBuilding CXX object CMakeFiles/laserscan_to_pointcloud_node.dir/rclcpp_components/node_main_laserscan_to_pointcloud_node.cpp.o[0m
+[0.044s] [ 25%] [32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan_node.dir/rclcpp_components/node_main_pointcloud_to_laserscan_node.cpp.o[0m
+[2.392s] [ 33%] [32m[1mLinking CXX executable pointcloud_to_laserscan_node[0m
+[2.466s] [ 41%] [32m[1mLinking CXX executable laserscan_to_pointcloud_node[0m
+[2.468s] [ 41%] Built target pointcloud_to_laserscan_node
+[2.543s] [ 41%] Built target laserscan_to_pointcloud_node
+[7.139s] [ 50%] [32m[1mLinking CXX shared library liblaserscan_to_pointcloud.so[0m
+[7.442s] [ 50%] Built target laserscan_to_pointcloud
+[7.456s] [ 58%] [32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan.dir/src/pointcloud_to_laserscan_node.cpp.o[0m
+[13.840s] [ 66%] [32m[1mLinking CXX shared library libpointcloud_to_laserscan.so[0m
+[14.166s] [ 66%] Built target pointcloud_to_laserscan
+[14.180s] [ 75%] [32mBuilding CXX object CMakeFiles/sub_laser_node.dir/src/sub_laser_node.cpp.o[0m
+[14.180s] [ 83%] [32mBuilding CXX object CMakeFiles/dummy_pointcloud_publisher.dir/src/dummy_pointcloud_publisher.cpp.o[0m
+[16.660s] [ 91%] [32m[1mLinking CXX executable dummy_pointcloud_publisher[0m
+[16.800s] [ 91%] Built target dummy_pointcloud_publisher
+[18.855s] [100%] [32m[1mLinking CXX executable sub_laser_node[0m
+[19.133s] [100%] Built target sub_laser_node

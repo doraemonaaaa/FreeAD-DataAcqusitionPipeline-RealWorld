@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_generator_py/robot_hardware/robot_hardware_s__rosidl_typesupport_fastrtps_c.cpython-312-x86_64-linux-gnu.so" "TARGETS" "robot_hardware__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "lib/python3.12/site-packages/robot_hardware")

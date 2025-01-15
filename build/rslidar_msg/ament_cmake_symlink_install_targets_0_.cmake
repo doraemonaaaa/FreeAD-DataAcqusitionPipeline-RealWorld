@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_generator_py/rslidar_msg/rslidar_msg_s__rosidl_typesupport_fastrtps_c.cpython-312-x86_64-linux-gnu.so" "TARGETS" "rslidar_msg__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "lib/python3.12/site-packages/rslidar_msg")

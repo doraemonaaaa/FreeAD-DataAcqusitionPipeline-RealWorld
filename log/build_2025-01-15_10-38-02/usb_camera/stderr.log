@@ -1,0 +1,24 @@
+[33mCMake Warning at CMakeLists.txt:29 (add_executable):
+  Cannot generate a safe runtime search path for target usb_camera_node
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libcurl.so.4] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+      /home/pengyh/softwares/anaconda3/lib
+
+  Some of these libraries may not be found correctly.
+
+[0m
+/usr/bin/ld: /usr/lib/libgdal.so: undefined reference to `TIFFReadRGBAStripExt@LIBTIFF_4.0'
+/usr/bin/ld: /usr/lib/libgdal.so: undefined reference to `TIFFReadFromUserBuffer@LIBTIFF_4.0'
+/usr/bin/ld: /usr/lib/libgdal.so: undefined reference to `TIFFGetStrileOffsetWithErr@LIBTIFF_4.0'
+/usr/bin/ld: /usr/lib/libgdal.so: undefined reference to `TIFFGetStrileOffset@LIBTIFF_4.0'
+/usr/bin/ld: /usr/lib/libgdal.so: undefined reference to `TIFFGetStrileByteCount@LIBTIFF_4.0'
+/usr/bin/ld: /usr/lib/libgdal.so: undefined reference to `TIFFDeferStrileArrayWriting@LIBTIFF_4.0'
+/usr/bin/ld: /usr/lib/libgdal.so: undefined reference to `TIFFGetStrileByteCountWithErr@LIBTIFF_4.0'
+/usr/bin/ld: /usr/lib/libgdal.so: undefined reference to `TIFFForceStrileArrayWriting@LIBTIFF_4.0'
+/usr/bin/ld: /usr/lib/libgdal.so: undefined reference to `TIFFReadRGBATileExt@LIBTIFF_4.0'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/usb_camera_node.dir/build.make:232: usb_camera_node] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/usb_camera_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

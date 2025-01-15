@@ -1,0 +1,50 @@
+[0.019s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/pengyh/documents/ros2_ws/RobotAD/src/robot_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware
+[0.069s] -- The C compiler identification is GNU 11.4.0
+[0.104s] -- The CXX compiler identification is GNU 11.4.0
+[0.108s] -- Detecting C compiler ABI info
+[0.148s] -- Detecting C compiler ABI info - done
+[0.153s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.153s] -- Detecting C compile features
+[0.153s] -- Detecting C compile features - done
+[0.155s] -- Detecting CXX compiler ABI info
+[0.207s] -- Detecting CXX compiler ABI info - done
+[0.211s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.211s] -- Detecting CXX compile features
+[0.211s] -- Detecting CXX compile features - done
+[0.212s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.453s] -- Found Python3: /home/pengyh/softwares/anaconda3/bin/python3 (found version "3.12.2") found components: Interpreter 
+[0.508s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.521s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.543s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.545s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.549s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.556s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.565s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.587s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.589s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.647s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.664s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.697s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.702s] -- Looking for pthread.h
+[0.746s] -- Looking for pthread.h - found
+[0.747s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.792s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.794s] -- Found Threads: TRUE  
+[0.830s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.847s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.858s] -- Found OpenCV: /usr (found version "4.5.4") 
+[0.858s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.056s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.265s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.350s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.364s] -- Found PythonInterp: /home/pengyh/softwares/anaconda3/bin/python3 (found suitable version "3.12.2", minimum required is "3.6") 
+[1.365s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.379s] -- Found PythonLibs: /home/pengyh/softwares/anaconda3/lib/libpython3.12.so (found suitable version "3.12.2", minimum required is "3.5") 
+[1.379s] -- Using PYTHON_EXECUTABLE: /home/pengyh/softwares/anaconda3/bin/python3
+[1.379s] -- Using PYTHON_INCLUDE_DIRS: /home/pengyh/softwares/anaconda3/include/python3.12
+[1.379s] -- Using PYTHON_LIBRARIES: /home/pengyh/softwares/anaconda3/lib/libpython3.12.so
+[1.394s] -- Found PythonExtra: .so  
+[1.499s] -- Using numpy include directory: /home/pengyh/softwares/anaconda3/lib/python3.12/site-packages/numpy/core/include
+[1.512s] -- Configuring done
+[1.535s] -- Generating done
+[1.543s] -- Build files have been written to: /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware

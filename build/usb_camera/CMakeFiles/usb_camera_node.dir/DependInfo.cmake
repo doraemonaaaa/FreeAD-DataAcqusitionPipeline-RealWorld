@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/future/Documents/pengyh/RobotAD_ws/src/usb_camera/src/usb_camera_node.cpp" "CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o" "gcc" "CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o.d"
+  "/home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera/src/usb_camera_node.cpp" "CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o" "gcc" "CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o.d"
   )
 
 # Targets to which this target links.

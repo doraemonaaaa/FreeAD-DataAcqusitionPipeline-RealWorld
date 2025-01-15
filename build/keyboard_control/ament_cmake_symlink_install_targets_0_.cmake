@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control/keyboard_control_node" "TARGETS" "keyboard_control_node" "DESTINATION" "lib/keyboard_control")

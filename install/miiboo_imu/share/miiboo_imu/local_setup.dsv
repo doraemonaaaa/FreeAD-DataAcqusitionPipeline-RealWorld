@@ -1,2 +1,1 @@
-source;share/miiboo_imu/environment/ament_prefix_path.sh
-source;share/miiboo_imu/environment/path.sh
+/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu/ament_cmake_environment_hooks/local_setup.dsv

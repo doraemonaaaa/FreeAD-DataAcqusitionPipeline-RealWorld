@@ -1,0 +1,1 @@
+Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/pengyh/documents/ros2_ws/RobotAD/src/diff_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control

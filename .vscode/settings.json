@@ -1,0 +1,6 @@
+{
+    "cmake.sourceDirectory": "/home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera",
+    "files.associations": {
+        "chrono": "cpp"
+    }
+}

@@ -1,0 +1,21 @@
+[35m[1mConsolidate compiler generated dependencies of target imu_read[0m
+[100%] Built target imu_read
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/lib/miiboo_imu/imu_read
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu//launch/imu.launch.py
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/package_run_dependencies/miiboo_imu
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/parent_prefix_path/miiboo_imu
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/ament_prefix_path.sh
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/ament_prefix_path.dsv
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/path.sh
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/path.dsv
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.bash
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.sh
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.zsh
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.dsv
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.dsv
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/packages/miiboo_imu
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/cmake/miiboo_imuConfig.cmake
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/cmake/miiboo_imuConfig-version.cmake
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.xml

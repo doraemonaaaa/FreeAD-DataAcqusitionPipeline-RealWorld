@@ -1,1 +1,0 @@
-Invoking command in '/home/future/Documents/pengyh/RobotAD_ws/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/future/Documents/pengyh/RobotAD_ws/src/robot_hardware -DCMAKE_INSTALL_PREFIX=/home/future/Documents/pengyh/RobotAD_ws/install/robot_hardware

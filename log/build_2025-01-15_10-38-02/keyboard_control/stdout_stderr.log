@@ -1,0 +1,20 @@
+[35m[1mConsolidate compiler generated dependencies of target keyboard_control_node[0m
+[100%] Built target keyboard_control_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/lib/keyboard_control/keyboard_control_node
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/ament_index/resource_index/package_run_dependencies/keyboard_control
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/ament_index/resource_index/parent_prefix_path/keyboard_control
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/environment/ament_prefix_path.sh
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/environment/ament_prefix_path.dsv
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/environment/path.sh
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/environment/path.dsv
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/local_setup.bash
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/local_setup.sh
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/local_setup.zsh
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/local_setup.dsv
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.dsv
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/ament_index/resource_index/packages/keyboard_control
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/cmake/keyboard_controlConfig.cmake
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/cmake/keyboard_controlConfig-version.cmake
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.xml

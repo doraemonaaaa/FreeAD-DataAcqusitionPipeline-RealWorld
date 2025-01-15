@@ -1,0 +1,17 @@
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/lib/miiboo_imu/imu_read
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu//launch/imu.launch.py
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/package_run_dependencies/miiboo_imu
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/parent_prefix_path/miiboo_imu
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/ament_prefix_path.sh
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/ament_prefix_path.dsv
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/path.sh
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/path.dsv
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.bash
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.sh
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.zsh
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.dsv
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.dsv
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/packages/miiboo_imu
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/cmake/miiboo_imuConfig.cmake
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/cmake/miiboo_imuConfig-version.cmake
+/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.xml

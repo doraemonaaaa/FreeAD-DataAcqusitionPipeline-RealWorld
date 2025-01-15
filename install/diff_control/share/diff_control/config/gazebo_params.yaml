@@ -1,3 +1,1 @@
-gazebo:
-  ros__parameters:
-    publish_rate: 400.0
+/home/pengyh/documents/ros2_ws/RobotAD/src/diff_control/bringup/config/gazebo_params.yaml

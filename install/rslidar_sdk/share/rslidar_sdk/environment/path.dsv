@@ -1,1 +1,1 @@
-prepend-non-duplicate-if-exists;PATH;bin
+/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_sdk/ament_cmake_environment_hooks/path.dsv
