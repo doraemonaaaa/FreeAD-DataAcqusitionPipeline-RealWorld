@@ -3,42 +3,17 @@ cmake_minimum_required(VERSION 3.5)
 # 项目名称必须与 package.xml 中的包名一致
 project(usb_camera)
 
-# Find packages
+# 找到所需的包
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(OpenCV REQUIRED)
-find_package(CURL REQUIRED)
 
-# Explicitly find GDAL
-find_package(GDAL REQUIRED)
-find_library(GDAL_LIBRARY NAMES gdal HINTS /usr/lib /usr/lib/x86_64-linux-gnu)
-if(NOT GDAL_LIBRARY)
-  message(FATAL_ERROR "GDAL library not found")
-endif()
-
-# Find TIFF explicitly
-find_package(TIFF REQUIRED)
-
-# Ensure CURL is found
-find_package(CURL REQUIRED)
-find_library(CURL_LIBRARY NAMES curl)
-if(NOT CURL_LIBRARY)
-  message(FATAL_ERROR "CURL library not found")
-endif()
-
-# Add executable
+# 添加可执行文件
 add_executable(${PROJECT_NAME}_node src/usb_camera_node.cpp)
 
-# Link libraries
-target_link_libraries(${PROJECT_NAME}_node
-  ${CURL_LIBRARY}
-  ${GDAL_LIBRARY}
-  TIFF::TIFF
-)
-
-# Link ROS 2 dependencies
+# 链接依赖项
 ament_target_dependencies(${PROJECT_NAME}_node
   rclcpp
   sensor_msgs
@@ -46,10 +21,20 @@ ament_target_dependencies(${PROJECT_NAME}_node
   OpenCV
 )
 
-# Install target
+# 添加 include 目录
+include_directories(
+  include  # 添加自己的 include 目录
+)
+
+# 将 YAML 配置文件放到 share 目录
+install(DIRECTORY config/
+  DESTINATION share/${PROJECT_NAME}/config
+)
+
+# 安装目标
 install(TARGETS
   ${PROJECT_NAME}_node
   DESTINATION lib/${PROJECT_NAME})
 
-# ament macros
+# ament 宏
 ament_package()

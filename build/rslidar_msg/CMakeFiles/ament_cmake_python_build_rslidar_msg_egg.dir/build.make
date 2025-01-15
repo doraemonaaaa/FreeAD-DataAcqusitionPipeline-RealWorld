@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_rslidar_msg_egg.dir/compiler_depend.
 include CMakeFiles/ament_cmake_python_build_rslidar_msg_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_rslidar_msg_egg:
-	cd /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_python/rslidar_msg && /home/pengyh/softwares/anaconda3/bin/python3 setup.py egg_info
+	cd /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_python/rslidar_msg && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_rslidar_msg_egg: CMakeFiles/ament_cmake_python_build_rslidar_msg_egg
 ament_cmake_python_build_rslidar_msg_egg: CMakeFiles/ament_cmake_python_build_rslidar_msg_egg.dir/build.make

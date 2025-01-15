@@ -1,0 +1,56 @@
+[0.017s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg -- -j24 -l24
+[0.039s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.045s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.055s] [  6%] Built target ament_cmake_python_symlink_rslidar_msg
+[0.214s] running egg_info
+[0.215s] creating rslidar_msg.egg-info
+[0.215s] writing rslidar_msg.egg-info/PKG-INFO
+[0.215s] writing dependency_links to rslidar_msg.egg-info/dependency_links.txt
+[0.215s] writing top-level names to rslidar_msg.egg-info/top_level.txt
+[0.215s] writing manifest file 'rslidar_msg.egg-info/SOURCES.txt'
+[0.217s] reading manifest file 'rslidar_msg.egg-info/SOURCES.txt'
+[0.217s] writing manifest file 'rslidar_msg.egg-info/SOURCES.txt'
+[0.228s] [  9%] [32mBuilding C object CMakeFiles/rslidar_msg__rosidl_generator_c.dir/rosidl_generator_c/rslidar_msg/msg/detail/rslidar_packet__functions.c.o[0m
+[0.239s] [  9%] Built target ament_cmake_python_build_rslidar_msg_egg
+[0.270s] [ 12%] [32m[1mLinking C shared library librslidar_msg__rosidl_generator_c.so[0m
+[0.279s] [ 12%] Built target rslidar_msg__cpp
+[0.285s] [ 16%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[0.285s] [ 19%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[0.286s] [ 22%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[0.294s] [ 22%] Built target rslidar_msg__rosidl_generator_c
+[0.301s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[0.302s] [ 29%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[0.303s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[0.459s] [ 35%] [32mBuilding CXX object CMakeFiles/rslidar_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rslidar_msg/msg/rslidar_packet__type_support.cpp.o[0m
+[0.481s] [ 38%] [32mBuilding CXX object CMakeFiles/rslidar_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/rslidar_msg/msg/rslidar_packet__type_support.cpp.o[0m
+[0.493s] [ 41%] [32mBuilding CXX object CMakeFiles/rslidar_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rslidar_msg/msg/detail/rslidar_packet__type_support.cpp.o[0m
+[0.507s] [ 45%] [32mBuilding CXX object CMakeFiles/rslidar_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rslidar_msg/msg/detail/rslidar_packet__type_support_c.cpp.o[0m
+[0.507s] [ 48%] [32m[1mLinking CXX shared library librslidar_msg__rosidl_typesupport_c.so[0m
+[0.527s] [ 51%] [32mBuilding CXX object CMakeFiles/rslidar_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rslidar_msg/msg/detail/dds_fastrtps/rslidar_packet__type_support.cpp.o[0m
+[0.554s] [ 51%] Built target rslidar_msg__rosidl_typesupport_c
+[0.579s] [ 54%] [32mBuilding C object CMakeFiles/rslidar_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rslidar_msg/msg/detail/rslidar_packet__type_support.c.o[0m
+[0.613s] [ 58%] [32m[1mLinking C shared library librslidar_msg__rosidl_typesupport_introspection_c.so[0m
+[0.637s] [ 58%] Built target rslidar_msg__rosidl_typesupport_introspection_c
+[0.718s] [ 61%] [32m[1mLinking CXX shared library librslidar_msg__rosidl_typesupport_cpp.so[0m
+[0.756s] [ 61%] Built target rslidar_msg__rosidl_typesupport_cpp
+[0.821s] [ 64%] [32m[1mLinking CXX shared library librslidar_msg__rosidl_typesupport_introspection_cpp.so[0m
+[0.881s] [ 67%] [32m[1mLinking CXX shared library librslidar_msg__rosidl_typesupport_fastrtps_c.so[0m
+[0.886s] [ 67%] Built target rslidar_msg__rosidl_typesupport_introspection_cpp
+[0.912s] [ 70%] [32m[1mLinking CXX shared library librslidar_msg__rosidl_typesupport_fastrtps_cpp.so[0m
+[0.944s] [ 70%] Built target rslidar_msg__rosidl_typesupport_fastrtps_c
+[0.970s] [ 70%] Built target rslidar_msg__rosidl_typesupport_fastrtps_cpp
+[0.985s] [ 70%] Built target rslidar_msg
+[0.999s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[1.191s] [ 74%] Built target rslidar_msg__py
+[1.209s] [ 77%] [32mBuilding C object CMakeFiles/rslidar_msg__rosidl_generator_py.dir/rosidl_generator_py/rslidar_msg/msg/_rslidar_packet_s.c.o[0m
+[1.293s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/rslidar_msg/librslidar_msg__rosidl_generator_py.so[0m
+[1.323s] [ 80%] Built target rslidar_msg__rosidl_generator_py
+[1.337s] [ 83%] [32mBuilding C object CMakeFiles/rslidar_msg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/rslidar_msg/_rslidar_msg_s.ep.rosidl_typesupport_c.c.o[0m
+[1.338s] [ 90%] [32mBuilding C object CMakeFiles/rslidar_msg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/rslidar_msg/_rslidar_msg_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[1.338s] [ 90%] [32mBuilding C object CMakeFiles/rslidar_msg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/rslidar_msg/_rslidar_msg_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[1.395s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/rslidar_msg/rslidar_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[1.397s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/rslidar_msg/rslidar_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[1.420s] [ 96%] Built target rslidar_msg__rosidl_typesupport_fastrtps_c__pyext
+[1.421s] [ 96%] Built target rslidar_msg__rosidl_typesupport_introspection_c__pyext
+[1.429s] [100%] [32m[1mLinking C shared library rosidl_generator_py/rslidar_msg/rslidar_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[1.461s] [100%] Built target rslidar_msg__rosidl_typesupport_c__pyext

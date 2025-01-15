@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-41ee60cbab27f84f1c50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "robot_hardware__py",
+					"jsonFile" : "directory-robot_hardware__py-aee887efb691a56d230a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/robot_hardware__py",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "robot_hardware",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_robot_hardware_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_robot_hardware_egg-9a8d0d428a7c51af339d.json",
+					"name" : "ament_cmake_python_build_robot_hardware_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_robot_hardware::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_robot_hardware-2e1e09f3a5685e16b3c4.json",
+					"name" : "ament_cmake_python_symlink_robot_hardware",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hardware_manager::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hardware_manager-a867004ffad0a1252fa1.json",
+					"name" : "hardware_manager",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware-7c25b935c4d02422d8cc.json",
+					"name" : "robot_hardware",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__cpp-2abaad763d1ef716a97f.json",
+					"name" : "robot_hardware__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "robot_hardware__py::@9ea8e487caa8a97309e2",
+					"jsonFile" : "target-robot_hardware__py-405bf453e3e70bdbdb90.json",
+					"name" : "robot_hardware__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__rosidl_generator_c-7e43c46338f90e356c70.json",
+					"name" : "robot_hardware__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__rosidl_generator_py-49321f6adc47c09f4474.json",
+					"name" : "robot_hardware__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__rosidl_typesupport_c-4dcdafad282db7684e96.json",
+					"name" : "robot_hardware__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__rosidl_typesupport_c__pyext-d94bef344fbdf1c30cf0.json",
+					"name" : "robot_hardware__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__rosidl_typesupport_cpp-fc0490c1715115c08396.json",
+					"name" : "robot_hardware__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__rosidl_typesupport_fastrtps_c-27aa8dabc98502183647.json",
+					"name" : "robot_hardware__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__rosidl_typesupport_fastrtps_c__pyext-84ee9fe58b350b792fbc.json",
+					"name" : "robot_hardware__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__rosidl_typesupport_fastrtps_cpp-cb1d00d505c65133cfde.json",
+					"name" : "robot_hardware__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__rosidl_typesupport_introspection_c-4df7898de8473ada8b8a.json",
+					"name" : "robot_hardware__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__rosidl_typesupport_introspection_c__pyext-b035ed0fb051a0bfbd92.json",
+					"name" : "robot_hardware__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware__rosidl_typesupport_introspection_cpp-9c23f1f61cc32e47eb3f.json",
+					"name" : "robot_hardware__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hardware_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hardware_uninstall-68e3375d985987b02891.json",
+					"name" : "robot_hardware_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-29e0b97f71d90aa1549d.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware",
+		"source" : "/home/pengyh/documents/ros2_ws/RobotAD/src/robot_hardware"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -110,7 +110,7 @@ rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.cpp: /opt/ro
 rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.cpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.cpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support dispatch for ROS interfaces"
-	/home/pengyh/softwares/anaconda3/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
+	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
 
 rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp: rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp

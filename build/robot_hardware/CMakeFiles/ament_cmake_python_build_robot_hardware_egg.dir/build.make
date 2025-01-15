@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_robot_hardware_egg.dir/compiler_depe
 include CMakeFiles/ament_cmake_python_build_robot_hardware_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_robot_hardware_egg:
-	cd /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_python/robot_hardware && /home/pengyh/softwares/anaconda3/bin/python3 setup.py egg_info
+	cd /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_python/robot_hardware && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_robot_hardware_egg: CMakeFiles/ament_cmake_python_build_robot_hardware_egg
 ament_cmake_python_build_robot_hardware_egg: CMakeFiles/ament_cmake_python_build_robot_hardware_egg.dir/build.make

@@ -140,7 +140,6 @@ keyboard_control_node: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_
 keyboard_control_node: /opt/ros/humble/lib/libtracetools.so
 keyboard_control_node: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_c.so
 keyboard_control_node: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_generator_c.so
-keyboard_control_node: /home/pengyh/softwares/anaconda3/lib/libpython3.12.so
 keyboard_control_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 keyboard_control_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
 keyboard_control_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so

@@ -1,0 +1,1 @@
+/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector/ament_cmake_core/nuscenes_data_collectorConfig-version.cmake

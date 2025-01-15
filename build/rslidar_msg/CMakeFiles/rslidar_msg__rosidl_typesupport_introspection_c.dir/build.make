@@ -111,7 +111,7 @@ rosidl_typesupport_introspection_c/rslidar_msg/msg/detail/rslidar_packet__rosidl
 rosidl_typesupport_introspection_c/rslidar_msg/msg/detail/rslidar_packet__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
 rosidl_typesupport_introspection_c/rslidar_msg/msg/detail/rslidar_packet__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
-	/home/pengyh/softwares/anaconda3/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_typesupport_introspection_c__arguments.json
+	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_typesupport_introspection_c__arguments.json
 
 rosidl_typesupport_introspection_c/rslidar_msg/msg/detail/rslidar_packet__type_support.c: rosidl_typesupport_introspection_c/rslidar_msg/msg/detail/rslidar_packet__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/rslidar_msg/msg/detail/rslidar_packet__type_support.c

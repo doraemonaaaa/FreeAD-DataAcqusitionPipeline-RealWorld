@@ -54,8 +54,7 @@ endif()
 add_library(robot_hardware::robot_hardware__rosidl_generator_py SHARED IMPORTED)
 
 set_target_properties(robot_hardware::robot_hardware__rosidl_generator_py PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/pengyh/softwares/anaconda3/lib/python3.12/site-packages/numpy/core/include"
-  INTERFACE_LINK_LIBRARIES "robot_hardware::robot_hardware__rosidl_generator_c;/home/pengyh/softwares/anaconda3/lib/libpython3.12.so;robot_hardware::robot_hardware__rosidl_typesupport_c;std_msgs::std_msgs__rosidl_generator_py;builtin_interfaces::builtin_interfaces__rosidl_generator_py"
+  INTERFACE_LINK_LIBRARIES "robot_hardware::robot_hardware__rosidl_generator_c;/usr/lib/x86_64-linux-gnu/libpython3.10.so;robot_hardware::robot_hardware__rosidl_typesupport_c;std_msgs::std_msgs__rosidl_generator_py;builtin_interfaces::builtin_interfaces__rosidl_generator_py"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

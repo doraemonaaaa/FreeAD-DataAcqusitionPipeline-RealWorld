@@ -343,19 +343,19 @@ ament_cmake_symlink_install_files("/home/pengyh/documents/ros2_ws/RobotAD/src/rs
 # install(FILES "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/rslidar_msg/environment")
 ament_cmake_symlink_install_files("/home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_msg" FILES "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/rslidar_msg/environment")
 
-# install(DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_python/rslidar_msg/rslidar_msg.egg-info/" "DESTINATION" "lib/python3.12/site-packages/rslidar_msg-0.0.0-py3.12.egg-info")
-ament_cmake_symlink_install_directory("/home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_msg" DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_python/rslidar_msg/rslidar_msg.egg-info/" "DESTINATION" "lib/python3.12/site-packages/rslidar_msg-0.0.0-py3.12.egg-info")
+# install(DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_python/rslidar_msg/rslidar_msg.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/rslidar_msg-0.0.0-py3.10.egg-info")
+ament_cmake_symlink_install_directory("/home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_msg" DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_python/rslidar_msg/rslidar_msg.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/rslidar_msg-0.0.0-py3.10.egg-info")
 
-# install(DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_generator_py/rslidar_msg/" "DESTINATION" "lib/python3.12/site-packages/rslidar_msg" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_msg" DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_generator_py/rslidar_msg/" "DESTINATION" "lib/python3.12/site-packages/rslidar_msg" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_generator_py/rslidar_msg/" "DESTINATION" "local/lib/python3.10/dist-packages/rslidar_msg" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_msg" DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_generator_py/rslidar_msg/" "DESTINATION" "local/lib/python3.10/dist-packages/rslidar_msg" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
-# install("TARGETS" "rslidar_msg__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "lib/python3.12/site-packages/rslidar_msg")
+# install("TARGETS" "rslidar_msg__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/rslidar_msg")
 include("/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install("TARGETS" "rslidar_msg__rosidl_typesupport_introspection_c__pyext" "DESTINATION" "lib/python3.12/site-packages/rslidar_msg")
+# install("TARGETS" "rslidar_msg__rosidl_typesupport_introspection_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/rslidar_msg")
 include("/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install("TARGETS" "rslidar_msg__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.12/site-packages/rslidar_msg")
+# install("TARGETS" "rslidar_msg__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/rslidar_msg")
 include("/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_adapter/rslidar_msg/msg/RslidarPacket.idl" "DESTINATION" "share/rslidar_msg/msg")

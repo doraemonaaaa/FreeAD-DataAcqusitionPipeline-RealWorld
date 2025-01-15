@@ -117,7 +117,7 @@ rosidl_generator_c/robot_hardware/msg/hardware_data.h: /opt/ros/humble/share/std
 rosidl_generator_c/robot_hardware/msg/hardware_data.h: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_c/robot_hardware/msg/hardware_data.h: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/home/pengyh/softwares/anaconda3/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_generator_c__arguments.json
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_generator_c__arguments.json
 
 rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.h: rosidl_generator_c/robot_hardware/msg/hardware_data.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.h

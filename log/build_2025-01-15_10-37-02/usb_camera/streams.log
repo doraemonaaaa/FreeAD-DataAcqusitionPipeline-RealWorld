@@ -1,9 +1,0 @@
-[0.023s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera -- -j24 -l24
-[0.045s] [35m[1mConsolidate compiler generated dependencies of target usb_camera_node[0m
-[0.057s] [ 50%] [32m[1mLinking CXX executable usb_camera_node[0m
-[0.068s] /usr/bin/ld: cannot find -lCURL::CURL: No such file or directory
-[0.118s] collect2: error: ld returned 1 exit status
-[0.119s] gmake[2]: *** [CMakeFiles/usb_camera_node.dir/build.make:231: usb_camera_node] Error 1
-[0.119s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/usb_camera_node.dir/all] Error 2
-[0.120s] gmake: *** [Makefile:146: all] Error 2
-[0.121s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera -- -j24 -l24

@@ -1,0 +1,7 @@
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera/src/usb_camera_node.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kusb_camera/usb_camera.hpp: No such file or directory
+    1 | #include [01;31m[K"usb_camera/usb_camera.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/usb_camera_node.dir/build.make:76: CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/usb_camera_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

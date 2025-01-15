@@ -4,6 +4,7 @@
 CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o
  /home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera/src/usb_camera_node.cpp
  /usr/include/stdc-predef.h
+ /home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera/include/usb_camera/usb_camera.hpp
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp
  /usr/include/c++/11/csignal
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h

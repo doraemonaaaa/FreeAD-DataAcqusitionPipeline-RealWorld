@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector/nuscenes_data_collector_node" "/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector/nuscenes_data_collector_issac_node" "TARGETS" "nuscenes_data_collector_node" "nuscenes_data_collector_issac_node" "DESTINATION" "lib/nuscenes_data_collector")

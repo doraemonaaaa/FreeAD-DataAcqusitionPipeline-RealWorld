@@ -108,6 +108,7 @@ rslidar_sdk_node_EXTERNAL_OBJECTS =
 rslidar_sdk_node: CMakeFiles/rslidar_sdk_node.dir/node/rslidar_sdk_node.cpp.o
 rslidar_sdk_node: CMakeFiles/rslidar_sdk_node.dir/src/manager/node_manager.cpp.o
 rslidar_sdk_node: CMakeFiles/rslidar_sdk_node.dir/build.make
+rslidar_sdk_node: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.7.0
 rslidar_sdk_node: /opt/ros/humble/lib/librclcpp.so
 rslidar_sdk_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
 rslidar_sdk_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
@@ -194,7 +195,6 @@ rslidar_sdk_node: /opt/ros/humble/lib/librcpputils.so
 rslidar_sdk_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 rslidar_sdk_node: /opt/ros/humble/lib/librcutils.so
 rslidar_sdk_node: /usr/lib/x86_64-linux-gnu/libpython3.10.so
-rslidar_sdk_node: /home/pengyh/softwares/anaconda3/lib/libpython3.12.so
 rslidar_sdk_node: CMakeFiles/rslidar_sdk_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable rslidar_sdk_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rslidar_sdk_node.dir/link.txt --verbose=$(VERBOSE)

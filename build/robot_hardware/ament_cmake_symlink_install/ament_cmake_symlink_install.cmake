@@ -343,19 +343,19 @@ ament_cmake_symlink_install_files("/home/pengyh/documents/ros2_ws/RobotAD/src/ro
 # install(FILES "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/robot_hardware/environment")
 ament_cmake_symlink_install_files("/home/pengyh/documents/ros2_ws/RobotAD/src/robot_hardware" FILES "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/robot_hardware/environment")
 
-# install(DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_python/robot_hardware/robot_hardware.egg-info/" "DESTINATION" "lib/python3.12/site-packages/robot_hardware-0.0.1-py3.12.egg-info")
-ament_cmake_symlink_install_directory("/home/pengyh/documents/ros2_ws/RobotAD/src/robot_hardware" DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_python/robot_hardware/robot_hardware.egg-info/" "DESTINATION" "lib/python3.12/site-packages/robot_hardware-0.0.1-py3.12.egg-info")
+# install(DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_python/robot_hardware/robot_hardware.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/robot_hardware-0.0.1-py3.10.egg-info")
+ament_cmake_symlink_install_directory("/home/pengyh/documents/ros2_ws/RobotAD/src/robot_hardware" DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_python/robot_hardware/robot_hardware.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/robot_hardware-0.0.1-py3.10.egg-info")
 
-# install(DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_generator_py/robot_hardware/" "DESTINATION" "lib/python3.12/site-packages/robot_hardware" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/pengyh/documents/ros2_ws/RobotAD/src/robot_hardware" DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_generator_py/robot_hardware/" "DESTINATION" "lib/python3.12/site-packages/robot_hardware" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_generator_py/robot_hardware/" "DESTINATION" "local/lib/python3.10/dist-packages/robot_hardware" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/pengyh/documents/ros2_ws/RobotAD/src/robot_hardware" DIRECTORY "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_generator_py/robot_hardware/" "DESTINATION" "local/lib/python3.10/dist-packages/robot_hardware" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
-# install("TARGETS" "robot_hardware__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "lib/python3.12/site-packages/robot_hardware")
+# install("TARGETS" "robot_hardware__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/robot_hardware")
 include("/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install("TARGETS" "robot_hardware__rosidl_typesupport_introspection_c__pyext" "DESTINATION" "lib/python3.12/site-packages/robot_hardware")
+# install("TARGETS" "robot_hardware__rosidl_typesupport_introspection_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/robot_hardware")
 include("/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install("TARGETS" "robot_hardware__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.12/site-packages/robot_hardware")
+# install("TARGETS" "robot_hardware__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/robot_hardware")
 include("/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_adapter/robot_hardware/msg/HardwareData.idl" "DESTINATION" "share/robot_hardware/msg")

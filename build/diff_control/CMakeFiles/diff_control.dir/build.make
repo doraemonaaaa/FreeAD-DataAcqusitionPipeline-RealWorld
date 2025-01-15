@@ -258,7 +258,6 @@ libdiff_control.so: /opt/ros/humble/lib/libcomposition_interfaces__rosidl_genera
 libdiff_control.so: /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so
 libdiff_control.so: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_c.so
 libdiff_control.so: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_generator_c.so
-libdiff_control.so: /home/pengyh/softwares/anaconda3/lib/libpython3.12.so
 libdiff_control.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
 libdiff_control.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 libdiff_control.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so

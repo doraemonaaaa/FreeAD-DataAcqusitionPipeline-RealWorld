@@ -109,7 +109,7 @@ rosidl_typesupport_cpp/rslidar_msg/msg/rslidar_packet__type_support.cpp: /opt/ro
 rosidl_typesupport_cpp/rslidar_msg/msg/rslidar_packet__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
 rosidl_typesupport_cpp/rslidar_msg/msg/rslidar_packet__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ type support dispatch for ROS interfaces"
-	/home/pengyh/softwares/anaconda3/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_typesupport_cpp__arguments.json --typesupports rosidl_typesupport_fastrtps_cpp rosidl_typesupport_introspection_cpp
+	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_typesupport_cpp__arguments.json --typesupports rosidl_typesupport_fastrtps_cpp rosidl_typesupport_introspection_cpp
 
 CMakeFiles/rslidar_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rslidar_msg/msg/rslidar_packet__type_support.cpp.o: CMakeFiles/rslidar_msg__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/rslidar_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rslidar_msg/msg/rslidar_packet__type_support.cpp.o: rosidl_typesupport_cpp/rslidar_msg/msg/rslidar_packet__type_support.cpp

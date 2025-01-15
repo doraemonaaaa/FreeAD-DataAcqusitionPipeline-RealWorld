@@ -54,8 +54,7 @@ endif()
 add_library(rslidar_msg::rslidar_msg__rosidl_generator_py SHARED IMPORTED)
 
 set_target_properties(rslidar_msg::rslidar_msg__rosidl_generator_py PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/pengyh/softwares/anaconda3/lib/python3.12/site-packages/numpy/core/include"
-  INTERFACE_LINK_LIBRARIES "rslidar_msg::rslidar_msg__rosidl_generator_c;/home/pengyh/softwares/anaconda3/lib/libpython3.12.so;rslidar_msg::rslidar_msg__rosidl_typesupport_c;builtin_interfaces::builtin_interfaces__rosidl_generator_py;std_msgs::std_msgs__rosidl_generator_py"
+  INTERFACE_LINK_LIBRARIES "rslidar_msg::rslidar_msg__rosidl_generator_c;/usr/lib/x86_64-linux-gnu/libpython3.10.so;rslidar_msg::rslidar_msg__rosidl_typesupport_c;builtin_interfaces::builtin_interfaces__rosidl_generator_py;std_msgs::std_msgs__rosidl_generator_py"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

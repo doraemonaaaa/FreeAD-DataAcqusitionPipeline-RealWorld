@@ -116,7 +116,7 @@ rosidl_generator_c/rslidar_msg/msg/rslidar_packet.h: /opt/ros/humble/share/std_m
 rosidl_generator_c/rslidar_msg/msg/rslidar_packet.h: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
 rosidl_generator_c/rslidar_msg/msg/rslidar_packet.h: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/home/pengyh/softwares/anaconda3/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_generator_c__arguments.json
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg/rosidl_generator_c__arguments.json
 
 rosidl_generator_c/rslidar_msg/msg/detail/rslidar_packet__functions.h: rosidl_generator_c/rslidar_msg/msg/rslidar_packet.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/rslidar_msg/msg/detail/rslidar_packet__functions.h

@@ -210,8 +210,8 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
-        "/home/pengyh/softwares/anaconda3/bin/python3" "-m" "compileall"
-        "/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/python3.12/site-packages/robot_hardware"
+        "/usr/bin/python3" "-m" "compileall"
+        "/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware"
       )
 endif()
 
@@ -227,7 +227,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librobot_hardware__rosidl_generator_py.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librobot_hardware__rosidl_generator_py.so"
-         OLD_RPATH "/home/pengyh/softwares/anaconda3/lib:/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librobot_hardware__rosidl_generator_py.so")

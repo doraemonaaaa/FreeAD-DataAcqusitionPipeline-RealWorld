@@ -1,0 +1,39 @@
+# nuscenes_data_collector_params.yaml
+
+nuscenes_data_collector:
+  ros__parameters:
+    data_collector_type: "issac"
+    
+    sample_sensors_:
+      - "CAM_FRONT"
+      - "CAM_BACK"
+      - "CAM_BACK_LEFT"
+      - "CAM_FRONT_LEFT"
+      - "CAM_FRONT_RIGHT"
+      - "CAM_BACK_RIGHT"
+      - "LIDAR_TOP"
+    scene_mode_: "train"
+    robot_model_: "diff_bot"
+    map_name_: "office_issac"
+    root_path_: "/home/pyh/Documents/ros2_ws/RobotAD_Issac_ws/NuscenesData"
+    issac_per_sec_frame_: 60
+    sample_frequency_: 0.5
+    sensor_token_map_:
+      CAM_FRONT: "SENSOR_CAM_FRONT"
+      CAM_BACK: "SENSOR_CAM_BACK"
+      CAM_BACK_LEFT: "SENSOR_CAM_BACK_LEFT"
+      CAM_FRONT_LEFT: "SENSOR_CAM_FRONT_LEFT"
+      CAM_FRONT_RIGHT: "SENSOR_CAM_FRONT_RIGHT"
+      CAM_BACK_RIGHT: "SENSOR_CAM_BACK_RIGHT"
+      LIDAR_TOP: "SENSOR_LIDAR_TOP"
+    calibrated_sensor_token_map_:
+      CAM_FRONT: "CALIBRATION_CAM_FRONT"
+      CAM_BACK: "CALIBRATION_CAM_BACK"
+      CAM_BACK_LEFT: "CALIBRATION_CAM_BACK_LEFT"
+      CAM_FRONT_LEFT: "CALIBRATION_CAM_FRONT_LEFT"
+      CAM_FRONT_RIGHT: "CALIBRATION_CAM_FRONT_RIGHT"
+      CAM_BACK_RIGHT: "CALIBRATION_CAM_BACK_RIGHT"
+      LIDAR_TOP: "CALIBRATION_LIDAR_TOP"
+    target_sample_frame_: 40
+    scene_frame_: 20
+    sample_scene_recoder_name_: "LIDAR_TOP"

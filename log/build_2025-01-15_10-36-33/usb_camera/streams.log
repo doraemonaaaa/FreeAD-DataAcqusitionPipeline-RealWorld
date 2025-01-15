@@ -1,8 +1,0 @@
-[0.020s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera -- -j24 -l24
-[0.046s] [35m[1mConsolidate compiler generated dependencies of target usb_camera_node[0m
-[0.056s] gmake[2]: *** No rule to make target '/usr/lib/libgdal.so', needed by 'usb_camera_node'.  Stop.
-[0.056s] gmake[2]: *** Waiting for unfinished jobs....
-[0.059s] [ 50%] [32mBuilding CXX object CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o[0m
-[2.780s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/usb_camera_node.dir/all] Error 2
-[2.780s] gmake: *** [Makefile:146: all] Error 2
-[2.781s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera -- -j24 -l24

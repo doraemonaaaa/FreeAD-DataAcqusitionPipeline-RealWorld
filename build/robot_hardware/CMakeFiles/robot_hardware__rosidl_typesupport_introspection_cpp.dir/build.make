@@ -112,7 +112,7 @@ rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__ro
 rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ introspection for ROS interfaces"
-	/home/pengyh/softwares/anaconda3/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_typesupport_introspection_cpp__arguments.json
+	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp --generator-arguments-file /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware/rosidl_typesupport_introspection_cpp__arguments.json
 
 rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__rosidl_typesupport_introspection_cpp.hpp

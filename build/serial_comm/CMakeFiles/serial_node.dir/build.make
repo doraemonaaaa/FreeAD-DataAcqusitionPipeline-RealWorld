@@ -152,7 +152,6 @@ serial_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.s
 serial_node: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
 serial_node: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_c.so
 serial_node: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_generator_c.so
-serial_node: /home/pengyh/softwares/anaconda3/lib/libpython3.12.so
 serial_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
 serial_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
 serial_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so

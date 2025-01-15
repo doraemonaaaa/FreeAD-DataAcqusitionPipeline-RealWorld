@@ -92,9 +92,6 @@ usb_camera_node_EXTERNAL_OBJECTS =
 
 usb_camera_node: CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o
 usb_camera_node: CMakeFiles/usb_camera_node.dir/build.make
-usb_camera_node: /usr/lib/x86_64-linux-gnu/libcurl.so
-usb_camera_node: /usr/lib/libgdal.so
-usb_camera_node: /usr/lib/x86_64-linux-gnu/libtiff.so
 usb_camera_node: /opt/ros/humble/lib/librclcpp.so
 usb_camera_node: /opt/ros/humble/lib/libcv_bridge.so
 usb_camera_node: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.5.4d
