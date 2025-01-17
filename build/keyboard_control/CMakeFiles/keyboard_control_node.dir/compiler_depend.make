@@ -691,8 +691,34 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/peng
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__type_support.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h
 
+
+/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-misc.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-struct.h:
+
+/usr/include/termios.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
@@ -851,6 +877,8 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/peng
 /opt/ros/humble/include/rclcpp/rclcpp/loaned_message.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/is_ros_compatible_type.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__type_support.hpp:
 
@@ -1476,6 +1504,8 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/peng
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h:
+
 /usr/include/c++/11/cwchar:
 
 /usr/include/c++/11/bits/stl_algobase.h:
@@ -1688,6 +1718,8 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/peng
 
 /opt/ros/humble/include/rcutils/rcutils/types/char_array.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios-baud.h:
+
 /usr/include/c++/11/variant:
 
 /opt/ros/humble/include/rcutils/rcutils/types/hash_map.h:
@@ -1795,6 +1827,8 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/peng
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/sequence_bound.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp:
 
@@ -1909,6 +1943,8 @@ CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o: /home/peng
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_content_filter_options.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/termios.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
 

@@ -1,0 +1,1 @@
+Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg': /usr/bin/cmake /home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_msg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg

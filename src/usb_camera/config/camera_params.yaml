@@ -6,3 +6,5 @@ usb_camera_node:
     img_type: PNG
     post_processing_img_width: 1600
     post_processing_img_height: 900
+    flip_x: false  # Flip the image along the X-axis
+    flip_y: false # Do not flip the image along the Y-axis

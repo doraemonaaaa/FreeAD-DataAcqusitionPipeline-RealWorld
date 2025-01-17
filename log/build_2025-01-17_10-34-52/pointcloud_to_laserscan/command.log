@@ -1,0 +1,1 @@
+Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan': /usr/bin/cmake /home/pengyh/documents/ros2_ws/RobotAD/src/pointcloud_to_laserscan -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan

@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target keyboard_control_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o[0m
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Kkeyboard/keyboard.hpp: No such file or directory
+    3 | #include [01;31m[K"keyboard/keyboard.hpp"[m[K  // 用于键盘输入（注意：需要额外安装 keyboard 库）
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/keyboard_control_node.dir/build.make:76: CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/keyboard_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

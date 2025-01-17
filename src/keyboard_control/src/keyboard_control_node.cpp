@@ -1,51 +1,79 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
+#include <termios.h>
+#include <unistd.h>
+#include <stdio.h>
 
-class MoveBot : public rclcpp::Node
+// 获取键盘按键输入
+char get_key()
+{
+    struct termios oldt, newt;
+    char ch;
+    tcgetattr(STDIN_FILENO, &oldt);  // 获取当前终端设置
+    newt = oldt;
+    newt.c_lflag &= ~ICANON;  // 禁用缓冲模式
+    newt.c_lflag &= ~ECHO;    // 禁用回显
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+    ch = getchar();  // 获取键盘输入
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);  // 恢复终端设置
+    return ch;
+}
+
+class KeyboardControl : public rclcpp::Node
 {
 public:
-    MoveBot() : Node("move_bot")
+    KeyboardControl() : Node("keyboard_control")
     {
-        // 创建发布器，发布到 /cmd_vel 话题，消息类型是 Twist
+        // 创建发布者，发布 Twist 消息到 /cmd_vel 话题
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
-
-        // 定时器每秒调用一次 publish_velocity 方法
+        
+        // 创建定时器，每 0.1 秒检查一次键盘输入
         timer_ = this->create_wall_timer(
-            std::chrono::seconds(1), std::bind(&MoveBot::publish_velocity, this));
+            std::chrono::milliseconds(100), std::bind(&KeyboardControl::publish_twist, this));
+        
+        // 打印控制信息
+        RCLCPP_INFO(this->get_logger(), "Use 'w' to move forward, 's' to move backward, 'a' to turn left, 'd' to turn right.");
     }
 
 private:
-    // 定时发布消息
-    void publish_velocity()
+    void publish_twist()
     {
-        // 创建 Twist 消息
-        geometry_msgs::msg::Twist twist_msg;
+        // 默认速度为 0
+        twist_.linear.x = 0.0;
+        twist_.angular.z = 0.0;
 
-        // 设置线速度，向前移动
-        twist_msg.linear.x = -2;
-        // 设置角速度，不旋转
-        twist_msg.angular.z = 0.0;
+        // 检查键盘输入并设置线速度
+        char key = get_key();
+        if (key == 's') {  // 按 's' 键时往后退
+            twist_.linear.x = -0.2;  // 负值表示往后退
+            RCLCPP_INFO(this->get_logger(), "Moving backward");
+        }
+        else if (key == 'w') {  // 按 'w' 键时往前进
+            twist_.linear.x = 0.2;
+            RCLCPP_INFO(this->get_logger(), "Moving forward");
+        }
+        else if (key == 'a') {  // 按 'a' 键时向左转
+            twist_.angular.z = 0.2;
+            RCLCPP_INFO(this->get_logger(), "Turning left");
+        }
+        else if (key == 'd') {  // 按 'd' 键时向右转
+            twist_.angular.z = -0.2;
+            RCLCPP_INFO(this->get_logger(), "Turning right");
+        }
 
-        // 发布消息
-        publisher_->publish(twist_msg);
-        RCLCPP_INFO(this->get_logger(), "Publishing: linear.x = %.2f, angular.z = %.2f", 
-                    twist_msg.linear.x, twist_msg.angular.z);
+        // 发布 Twist 消息
+        publisher_->publish(twist_);
     }
 
-    // 发布器和定时器成员
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer_;
+    geometry_msgs::msg::Twist twist_;
 };
 
 int main(int argc, char **argv)
 {
-    // 初始化 ROS 2
     rclcpp::init(argc, argv);
-
-    // 创建并启动节点
-    rclcpp::spin(std::make_shared<MoveBot>());
-
-    // 关闭 ROS 2
+    rclcpp::spin(std::make_shared<KeyboardControl>());
     rclcpp::shutdown();
     return 0;
 }

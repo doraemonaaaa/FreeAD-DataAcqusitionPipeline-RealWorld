@@ -1,0 +1,151 @@
+[0.023s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[0.067s] [35m[1mConsolidate compiler generated dependencies of target nuscenes_data_collector_node[0m
+[0.084s] [ 25%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_issac_node.dir/src/nuscenes_data_collector_issac.cpp.o[0m
+[0.099s] [ 50%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o[0m
+[4.279s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.279s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+[4.279s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.279s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr, const string&)[m[K’:
+[4.279s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:381:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 5 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type[m[K’ {aka ‘[01m[Kint[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[4.279s]   381 | CLCPP_INFO(this->get_logger(), [01;35m[K"Odometry Timestamp: %ld.%ld"[m[K, [32m[Kmsg->header.stamp.sec[m[K, msg->header.stamp.nanosec);
+[4.279s]       |                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.279s]       |                                                                                 [32m[K|[m[K
+[4.279s]       |                                                                                 [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type {aka int}[m[K
+[4.279s] 
+[4.279s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.279s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:381:64:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[4.279s]   381 | gger(), "Odometry Timestamp: [01;36m[K%ld[m[K.%ld", msg->header.stamp.sec, msg->header.stamp.nanosec);
+[4.279s]       |                              [01;36m[K~~^[m[K
+[4.279s]       |                                [01;36m[K|[m[K
+[4.279s]       |                                [01;36m[Klong int[m[K
+[4.279s]       |                              [32m[K%d[m[K
+[4.279s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.279s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.280s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+[4.280s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.280s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:381:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 6 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[4.280s]   381 | CLCPP_INFO(this->get_logger(), [01;35m[K"Odometry Timestamp: %ld.%ld"[m[K, msg->header.stamp.sec, [32m[Kmsg->header.stamp.nanosec[m[K);
+[4.280s]       |                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                         [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.280s]       |                                                                                                        [32m[K|[m[K
+[4.280s]       |                                                                                                        [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type {aka unsigned int}[m[K
+[4.280s] 
+[4.280s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.280s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:381:68:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[4.280s]   381 | (), "Odometry Timestamp: %ld.[01;36m[K%ld[m[K", msg->header.stamp.sec, msg->header.stamp.nanosec);
+[4.280s]       |                              [01;36m[K~~^[m[K
+[4.280s]       |                                [01;36m[K|[m[K
+[4.280s]       |                                [01;36m[Klong int[m[K
+[4.280s]       |                              [32m[K%d[m[K
+[4.280s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.280s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.280s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+[4.280s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.280s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::imu_callback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr, const string&)[m[K’:
+[4.280s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:387:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 5 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type[m[K’ {aka ‘[01m[Kint[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[4.280s]   387 | CLCPP_INFO(this->get_logger(), [01;35m[K"IMU Timestamp: %ld.%ld"[m[K, [32m[Kmsg->header.stamp.sec[m[K, msg->header.stamp.nanosec);
+[4.280s]       |                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.280s]       |                                                                            [32m[K|[m[K
+[4.280s]       |                                                                            [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type {aka int}[m[K
+[4.280s] 
+[4.280s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.280s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:387:59:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[4.280s]   387 | et_logger(), "IMU Timestamp: [01;36m[K%ld[m[K.%ld", msg->header.stamp.sec, msg->header.stamp.nanosec);
+[4.281s]       |                              [01;36m[K~~^[m[K
+[4.281s]       |                                [01;36m[K|[m[K
+[4.281s]       |                                [01;36m[Klong int[m[K
+[4.281s]       |                              [32m[K%d[m[K
+[4.281s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[4.281s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[4.281s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.281s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.281s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.281s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.281s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.281s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.281s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.281s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.281s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.281s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+[4.281s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.281s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:387:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 6 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[4.281s]   387 | CLCPP_INFO(this->get_logger(), [01;35m[K"IMU Timestamp: %ld.%ld"[m[K, msg->header.stamp.sec, [32m[Kmsg->header.stamp.nanosec[m[K);
+[4.281s]       |                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K                         [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.281s]       |                                                                                                   [32m[K|[m[K
+[4.281s]       |                                                                                                   [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type {aka unsigned int}[m[K
+[4.281s] 
+[4.281s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.281s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:387:63:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[4.281s]   387 | ogger(), "IMU Timestamp: %ld.[01;36m[K%ld[m[K", msg->header.stamp.sec, msg->header.stamp.nanosec);
+[4.281s]       |                              [01;36m[K~~^[m[K
+[4.281s]       |                                [01;36m[K|[m[K
+[4.281s]       |                                [01;36m[Klong int[m[K
+[4.281s]       |                              [32m[K%d[m[K
+[4.705s] In file included from [01m[K/usr/include/pcl-1.12/pcl/type_traits.h:40[m[K,
+[4.705s]                  from [01m[K/usr/include/pcl-1.12/pcl/memory.h:46[m[K,
+[4.705s]                  from [01m[K/usr/include/pcl-1.12/pcl/PCLHeader.h:3[m[K,
+[4.705s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_cloud.h:47[m[K,
+[4.705s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:29[m[K,
+[4.705s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.705s] /usr/include/pcl-1.12/pcl/point_struct_traits.h: In instantiation of ‘[01m[Kstruct pcl::traits::fieldList<PointXYZIR>[m[K’:
+[4.705s] [01m[K/usr/include/pcl-1.12/pcl/conversions.h:126:5:[m[K   required from ‘[01m[Kvoid pcl::createMapping(const std::vector<pcl::PCLPointField>&, pcl::MsgFieldMap&) [with PointT = PointXYZIR; pcl::MsgFieldMap = std::vector<pcl::detail::FieldMapping>][m[K’
+[4.705s] [01m[K/usr/include/pcl-1.12/pcl/conversions.h:229:27:[m[K   required from ‘[01m[Kvoid pcl::fromPCLPointCloud2(const pcl::PCLPointCloud2&, pcl::PointCloud<PointT>&) [with PointT = PointXYZIR][m[K’
+[4.705s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:601:28:[m[K   required from here
+[4.705s] [01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:195:8:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kstruct pcl::traits::fieldList<PointXYZIR>[m[K’
+[4.705s]   195 | struct [01;31m[KfieldList[m[K /** \cond NO_WARN_RECURSIVE */ : fieldList<typename POD<PointT>::type> /** \endcond */
+[4.705s]       |        [01;31m[K^~~~~~~~~[m[K
+[4.705s] [01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:195:8:[m[K [01;36m[Knote: [m[Kdeclaration of ‘[01m[Kstruct pcl::traits::fieldList<PointXYZIR>[m[K’
+[4.705s] In file included from [01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:40[m[K,
+[4.706s]                  from [01m[K/usr/include/pcl-1.12/pcl/type_traits.h:40[m[K,
+[4.706s]                  from [01m[K/usr/include/pcl-1.12/pcl/memory.h:46[m[K,
+[4.706s]                  from [01m[K/usr/include/pcl-1.12/pcl/PCLHeader.h:3[m[K,
+[4.706s]                  from [01m[K/usr/include/pcl-1.12/pcl/point_cloud.h:47[m[K,
+[4.706s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:29[m[K,
+[4.706s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.706s] [01m[K/usr/include/pcl-1.12/pcl/point_struct_traits.h:201:3:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kpcl::traits::fieldList<PointXYZIR>::POINT_TYPE_NOT_PROPERLY_REGISTERED201::assert_arg()[m[K’ from ‘[01m[Kmpl_::failed************ (pcl::traits::fieldList<PointXYZIR>::POINT_TYPE_NOT_PROPERLY_REGISTERED::************)(PointXYZIR&)[m[K’ to ‘[01m[Kmpl_::assert<false>::type[m[K’ {aka ‘[01m[Kmpl_::assert<false>[m[K’}
+[4.706s]   201 |   [01;31m[KB[m[KOOST_MPL_ASSERT_MSG((!std::is_same<PointT, typename POD<PointT>::type>::value),
+[4.706s]       |   [01;31m[K^[m[K
+[4.706s]       |   [01;31m[K|[m[K
+[4.706s]       |   [01;31m[Kmpl_::failed************ (pcl::traits::fieldList<PointXYZIR>::POINT_TYPE_NOT_PROPERLY_REGISTERED::************)(PointXYZIR&)[m[K
+[4.706s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:31[m[K,
+[4.706s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.706s] /usr/include/pcl-1.12/pcl/conversions.h: In instantiation of ‘[01m[Kvoid pcl::createMapping(const std::vector<pcl::PCLPointField>&, pcl::MsgFieldMap&) [with PointT = PointXYZIR; pcl::MsgFieldMap = std::vector<pcl::detail::FieldMapping>][m[K’:
+[4.706s] [01m[K/usr/include/pcl-1.12/pcl/conversions.h:229:27:[m[K   required from ‘[01m[Kvoid pcl::fromPCLPointCloud2(const pcl::PCLPointCloud2&, pcl::PointCloud<PointT>&) [with PointT = PointXYZIR][m[K’
+[4.706s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:601:28:[m[K   required from here
+[4.706s] [01m[K/usr/include/pcl-1.12/pcl/conversions.h:126:5:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct pcl::traits::fieldList<PointXYZIR>[m[K’
+[4.706s]   126 |     [01;31m[Kfor_each_type< typename traits::fieldList<PointT>::type >[m[K (mapper);
+[4.706s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[8.628s] gmake[2]: *** [CMakeFiles/nuscenes_data_collector_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o] Error 1
+[8.628s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/nuscenes_data_collector_node.dir/all] Error 2
+[8.628s] gmake[1]: *** Waiting for unfinished jobs....
+[17.433s] [ 75%] [32m[1mLinking CXX executable nuscenes_data_collector_issac_node[0m
+[18.962s] [ 75%] Built target nuscenes_data_collector_issac_node
+[18.963s] gmake: *** [Makefile:146: all] Error 2
+[18.965s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24

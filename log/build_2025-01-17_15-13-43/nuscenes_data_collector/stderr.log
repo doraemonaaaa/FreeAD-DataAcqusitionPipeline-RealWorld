@@ -1,0 +1,1180 @@
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:634:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_ego_pose_[m[K’ does not name a type
+  634 |         [01;31m[Klatest_ego_pose_[m[K["token"] = sample_data_token;  // set as sample_data_token
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:635:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_writer_[m[K’ does not name a type
+  635 |         [01;31m[Kjson_writer_[m[K.addKeyValuePairToJson("ego_pose", latest_ego_pose_, true);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:637:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+  637 |         [01;31m[Kif[m[K(is_key_frame && sample_triggers_[device_name]){
+      |         [01;31m[K^~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:642:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+  642 |         [01;31m[Kif[m[K (latest_scene_.contains("name") && !latest_scene_["name"].get<std::string>().empty()) {
+      |         [01;31m[K^~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:648:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+  648 |         [01;31m[Kif[m[K (calibrated_sensor_token.empty()) {
+      |         [01;31m[K^~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:654:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  654 |         [01;31m[Ksample_data_json[m[K["token"] = sample_data_token;
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:655:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  655 |         [01;31m[Ksample_data_json[m[K["sample_token"] = sample_token;
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:656:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  656 |         [01;31m[Ksample_data_json[m[K["ego_pose_token"] = sample_data_token;
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:657:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  657 |         [01;31m[Ksample_data_json[m[K["calibrated_sensor_token"] = calibrated_sensor_token;
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:658:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  658 |         [01;31m[Ksample_data_json[m[K["timestamp"] = timestamp;
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:659:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  659 |         [01;31m[Ksample_data_json[m[K["fileformat"] = "bin";  // 修改文件格式为 bin
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:660:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  660 |         [01;31m[Ksample_data_json[m[K["is_key_frame"] = is_key_frame;
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:661:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  661 |         [01;31m[Ksample_data_json[m[K["height"] = "";
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:662:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  662 |         [01;31m[Ksample_data_json[m[K["width"] = "";
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:663:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  663 |         [01;31m[Ksample_data_json[m[K["filename"] = relative_path;
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:664:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  664 |         [01;31m[Ksample_data_json[m[K["prev"] = "";
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:665:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ does not name a type
+  665 |         [01;31m[Ksample_data_json[m[K["next"] = "";
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:667:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_next_sliders_[m[K’ has not been declared
+  667 | ext_and_write_json_dynamically([01;31m[Kprev_next_sliders_[m[K,
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:668:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_data_json[m[K’ is not a type
+  668 |             [01;31m[Ksample_data_json[m[K,
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:669:13:[m[K [01;31m[Kerror: [m[Kexpected identifier before string constant
+  669 |             [01;31m[K"sample_data_"[m[K + device_name,
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:669:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before string constant
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:667:9:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Kgenerate_prev_next_and_write_json_dynamically[m[K’ with no type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  667 |         [01;31m[Kgenerate_prev_next_and_write_json_dynamically[m[K(prev_next_sliders_,
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:673:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdevices_frame_count_[m[K’ does not name a type
+  673 |         [01;31m[Kdevices_frame_count_[m[K[device_name]++;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:674:6:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+  674 |     }
+      |      [01;31m[K^[m[K
+      |      [32m[K;[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:629:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+  629 |         uint64_t timestamp = [01;31m[Kmsg[m[K->header.stamp.sec * 1e9 + msg->header.stamp.nanosec;
+      |                              [01;31m[K^~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:629:30:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:45[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:16[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:16[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:19[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:19[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Knav_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/object_hypothesis_with_pose__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/detection3_d__struct.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/detection3_d_array__struct.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detection3_d_array.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:21[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/object_hypothesis__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kvision_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rosgraph_msgs/rosgraph_msgs/msg/clock.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:24[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rosgraph_msgs/rosgraph_msgs/msg/detail/clock__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krosgraph_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/pcl_msgs/pcl_msgs/msg/point_indices.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h:62[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:32[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/pcl_msgs/pcl_msgs/msg/detail/point_indices__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:629:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+  629 |  msg->header.stamp.sec * 1e9 + [01;31m[Kmsg[m[K->header.stamp.nanosec;
+      |                                [01;31m[K^~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:629:60:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:45[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:16[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:16[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:19[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:19[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Knav_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/object_hypothesis_with_pose__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/detection3_d__struct.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/detection3_d_array__struct.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detection3_d_array.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:21[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/object_hypothesis__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kvision_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rosgraph_msgs/rosgraph_msgs/msg/clock.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:24[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rosgraph_msgs/rosgraph_msgs/msg/detail/clock__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krosgraph_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/pcl_msgs/pcl_msgs/msg/point_indices.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h:62[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:32[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/pcl_msgs/pcl_msgs/msg/detail/point_indices__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:630:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kdata_type[m[K’ was not declared in this scope; did you mean ‘[01m[Krosidl_generator_traits::data_type[m[K’?
+  630 |         bool is_key_frame = ([01;31m[Kdata_type[m[K == "samples");  // Example of setting key frame flag
+      |                              [01;31m[K^~~~~~~~~[m[K
+      |                              [32m[Krosidl_generator_traits::data_type[m[K
+In file included from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+                 from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:152:21:[m[K [01;36m[Knote: [m[K‘[01m[Krosidl_generator_traits::data_type[m[K’ declared here
+  152 | inline const char * [01;36m[Kdata_type[m[K();
+      |                     [01;36m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:631:58:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_frame_[m[K’ was not declared in this scope
+  631 | _token = generate_sample_token([01;31m[Ksample_frame_[m[K, start_system_time_token_);
+      |                                [01;31m[K^~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:631:73:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_system_time_token_[m[K’ was not declared in this scope
+  631 | te_sample_token(sample_frame_, [01;31m[Kstart_system_time_token_[m[K);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:632:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kdevices_frame_count_[m[K’ was not declared in this scope
+  632 | _token = generate_unique_token([01;31m[Kdevices_frame_count_[m[K[device_name], device_name, start_system_time_token_);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:632:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kdevice_name[m[K’ was not declared in this scope
+  632 | que_token(devices_frame_count_[[01;31m[Kdevice_name[m[K], device_name, start_system_time_token_);
+      |                                [01;31m[K^~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:632:98:[m[K [01;31m[Kerror: [m[K‘[01m[Kdevice_name[m[K’ was not declared in this scope
+  632 | ces_frame_count_[device_name], [01;31m[Kdevice_name[m[K, start_system_time_token_);
+      |                                [01;31m[K^~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:632:111:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_system_time_token_[m[K’ was not declared in this scope
+  632 | nt_[device_name], device_name, [01;31m[Kstart_system_time_token_[m[K);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:647:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalibrated_sensor_token_map_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalibrated_sensor_token[m[K’?
+  647 | _token = get_calibration_token([01;31m[Kcalibrated_sensor_token_map_[m[K, device_name);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                [32m[Kcalibrated_sensor_token[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:647:99:[m[K [01;31m[Kerror: [m[K‘[01m[Kdevice_name[m[K’ was not declared in this scope
+  647 | (calibrated_sensor_token_map_, [01;31m[Kdevice_name[m[K);
+      |                                [01;31m[K^~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:652:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kcloud_save_file[m[K’ was not declared in this scope
+  652 | ive_path = extractRelativePath([01;31m[Kcloud_save_file[m[K);
+      |                                [01;31m[K^~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:652:37:[m[K [01;31m[Kerror: [m[K‘[01m[KextractRelativePath[m[K’ was not declared in this scope
+  652 |    std::string relative_path = [01;31m[KextractRelativePath[m[K(cloud_save_file);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In constructor ‘[01m[KNuScenesDataCollector::NuScenesDataCollector()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:66:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KNuScenesDataCollector[m[K’ does not have any field named ‘[01m[Kroot_path_[m[K’
+   66 |       [01;31m[Kroot_path_[m[K(this->declare_parameter<std::string>("root_path_", "/home/pyh/Documents/ros2_ws/RobotAD_Issac_ws/NuscenesData")), // 从参数中获取 root_path_
+      |       [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:67:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KNuScenesDataCollector[m[K’ does not have any field named ‘[01m[Kjson_paths_[m[K’
+   67 |       [01;31m[Kjson_paths_[m[K({ // json init
+      |       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:68:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kroot_path_[m[K’ was not declared in this scope
+   68 |           [01;31m[Kroot_path_[m[K + "/ego_pose.json",
+      |           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:78:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KNuScenesDataCollector[m[K’ does not have any field named ‘[01m[Kjson_writer_[m[K’
+   78 |       [01;31m[Kjson_writer_[m[K(json_paths_)                     // 将 logger 传递给 json_writer_
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:78:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_paths_[m[K’ was not declared in this scope
+   78 |       json_writer_([01;31m[Kjson_paths_[m[K)                     // 将 logger 传递给 json_writer_
+      |                    [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:115:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene_mode_[m[K’ was not declared in this scope
+  115 | ->get_parameter("scene_mode_", [01;31m[Kscene_mode_[m[K);
+      |                                [01;31m[K^~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:116:45:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_model_[m[K’ was not declared in this scope
+  116 | >get_parameter("robot_model_", [01;31m[Krobot_model_[m[K);
+      |                                [01;31m[K^~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:117:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_name_[m[K’ was not declared in this scope
+  117 | is->get_parameter("map_name_", [01;31m[Kmap_name_[m[K);
+      |                                [01;31m[K^~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:119:50:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_frequency_[m[K’ was not declared in this scope
+  119 | parameter("sample_frequency_", [01;31m[Ksample_frequency_[m[K);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:120:48:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_sensors_[m[K’ was not declared in this scope; did you mean ‘[01m[Kadd_sample_sensors[m[K’?
+  120 | t_parameter("sample_sensors_", [01;31m[Ksample_sensors_[m[K);
+      |                                [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                [32m[Kadd_sample_sensors[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:132:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_token_map_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksensor_token_map_json[m[K’?
+  132 |                 [01;31m[Ksensor_token_map_[m[K[it.key()] = it.value();
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                 [32m[Ksensor_token_map_json[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:137:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalibrated_sensor_token_map_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalibrated_sensor_token_map_json[m[K’?
+  137 |                 [01;31m[Kcalibrated_sensor_token_map_[m[K[it.key()] = it.value();
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                 [32m[Kcalibrated_sensor_token_map_json[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:145:53:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_sample_frame_[m[K’ was not declared in this scope
+  145 | ameter("target_sample_frame_", [01;31m[Ktarget_sample_frame_[m[K);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:146:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene_frame_[m[K’ was not declared in this scope
+  146 | >get_parameter("scene_frame_", [01;31m[Kscene_frame_[m[K);
+      |                                [01;31m[K^~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:147:59:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_scene_recoder_name_[m[K’ was not declared in this scope
+  147 | ("sample_scene_recoder_name_", [01;31m[Ksample_scene_recoder_name_[m[K);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:166:41:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_token_map_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksensor_token_map_json[m[K’?
+  166 | or (const auto& [key, value] : [01;31m[Ksensor_token_map_[m[K) {
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                [32m[Ksensor_token_map_json[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:172:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalibrated_sensor_token_map_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalibrated_sensor_token_map_json[m[K’?
+  172 | or (const auto& [key, value] : [01;31m[Kcalibrated_sensor_token_map_[m[K) {
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                [32m[Kcalibrated_sensor_token_map_json[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:178:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_writer_[m[K’ was not declared in this scope
+  178 |         if ([01;31m[Kjson_writer_[m[K.isLoadError()) {
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:192:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kodom_subscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+  192 |         [01;31m[Kodom_subscription_[m[K = this->create_subscription<nav_msgs::msg::Odometry>(
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[Krmw_subscription_t[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:193:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kodom_topic_[m[K’ was not declared in this scope; did you mean ‘[01m[Knode_topics_[m[K’?
+  193 |             [01;31m[Kodom_topic_[m[K, qos_profile, [this](const nav_msgs::msg::Odometry::SharedPtr msg) {
+      |             [01;31m[K^~~~~~~~~~~[m[K
+      |             [32m[Knode_topics_[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:199:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klidar_subscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcreate_subscription[m[K’?
+  199 |         [01;31m[Klidar_subscription_[m[K = this->create_subscription<sensor_msgs::msg::PointCloud2>(
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[Kcreate_subscription[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:200:13:[m[K [01;31m[Kerror: [m[K‘[01m[Klidar_topic_[m[K’ was not declared in this scope
+  200 |             [01;31m[Klidar_topic_[m[K, qos_profile, [this](const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:206:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_subscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+  206 |         [01;31m[Kimu_subscription_[m[K = this->create_subscription<sensor_msgs::msg::Imu>(
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |         [32m[Krmw_subscription_t[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:207:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_topic_[m[K’ was not declared in this scope
+  207 |             [01;31m[Kimu_topic_[m[K,        // 替换为您的 IMU 主题名称，例如 "/sensor/imu"
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:215:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_names_[m[K’ was not declared in this scope
+  215 |         for(auto c: [01;31m[Kcamera_names_[m[K) add_sample_sensors(c);
+      |                     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:218:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kdevices_frame_count_[m[K’ was not declared in this scope
+  218 |             [01;31m[Kdevices_frame_count_[m[K[device] = 0;
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:219:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_triggers_[m[K’ was not declared in this scope
+  219 |             [01;31m[Ksample_triggers_[m[K[device] = true;
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:220:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_done_sign_[m[K’ was not declared in this scope
+  220 |             [01;31m[Ksample_done_sign_[m[K[device] = false;
+      |             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:222:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_system_time_token_[m[K’ was not declared in this scope
+  222 |         [01;31m[Kstart_system_time_token_[m[K = get_cur_system_time();
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:222:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_cur_system_time[m[K’ was not declared in this scope
+  222 |     start_system_time_token_ = [01;31m[Kget_cur_system_time[m[K();
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:223:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene_sample_frame_count_[m[K’ was not declared in this scope
+  223 |         [01;31m[Kscene_sample_frame_count_[m[K = 0;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:225:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_sample_time_[m[K’ was not declared in this scope
+  225 |         [01;31m[Klast_sample_time_[m[K = rclcpp::Time(0);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:226:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_frame_[m[K’ was not declared in this scope
+  226 |         [01;31m[Ksample_frame_[m[K = 0;
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:227:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcur_scene_num_[m[K’ was not declared in this scope
+  227 |         [01;31m[Kcur_scene_num_[m[K = 0;
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:230:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klog_token_[m[K’ was not declared in this scope
+  230 |         [01;31m[Klog_token_[m[K = map_name_ + start_system_time_token_;
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:237:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_writer_[m[K’ was not declared in this scope
+  237 |         [01;31m[Kjson_writer_[m[K.addKeyValuePairToJson("log", log_json, true);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:239:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_write[m[K’ was not declared in this scope; did you mean ‘[01m[Kpwrite[m[K’?
+  239 |         [01;31m[Kmap_write[m[K(log_json, root_path_+"/map.json", map_name_);
+      |         [01;31m[K^~~~~~~~~[m[K
+      |         [32m[Kpwrite[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:242:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kclock_timer_[m[K’ was not declared in this scope; did you mean ‘[01m[Klocaltime_r[m[K’?
+  242 |         [01;31m[Kclock_timer_[m[K = this->create_wall_timer(
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[Klocaltime_r[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::add_sample_sensors(std::string)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:253:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_sensors_[m[K’ was not declared in this scope; did you mean ‘[01m[Kadd_sample_sensors[m[K’?
+  253 |         [01;31m[Ksample_sensors_[m[K.emplace_back(device_name);
+      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |         [32m[Kadd_sample_sensors[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::declare_parameters()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:258:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_names_[m[K’ was not declared in this scope
+  258 |         [01;31m[Kcamera_names_[m[K = {"CAM_FRONT", "CAM_FRONT_RIGHT", "CAM_FRONT_LEFT", "CAM_BACK", "CAM_BACK_LEFT", "CAM_BACK_RIGHT"};
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:260:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_topics_[m[K’ was not declared in this scope; did you mean ‘[01m[Knode_topics_[m[K’?
+  260 |             [01;31m[Kcamera_topics_[m[K[camera] = "/" + camera;
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+      |             [32m[Knode_topics_[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:264:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kodom_topic_[m[K’ was not declared in this scope; did you mean ‘[01m[Knode_topics_[m[K’?
+  264 |         [01;31m[Kodom_topic_[m[K = "/diffbot_base_controller/odom";
+      |         [01;31m[K^~~~~~~~~~~[m[K
+      |         [32m[Knode_topics_[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:266:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klidar_topic_[m[K’ was not declared in this scope
+  266 |         [01;31m[Klidar_topic_[m[K = "/scanner/cloud";
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:268:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_topic_[m[K’ was not declared in this scope
+  268 |         [01;31m[Kimu_topic_[m[K = "/demo/imu";
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::initialize_sync_camera_subscriptions()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:278:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_names_[m[K’ was not declared in this scope
+  278 |      for (const auto &camera : [01;31m[Kcamera_names_[m[K) {
+      |                                [01;31m[K^~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:280:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_topics_[m[K’ was not declared in this scope; did you mean ‘[01m[Knode_topics_[m[K’?
+  280 |                 this, [01;31m[Kcamera_topics_[m[K[camera], rmw_qos_profile_sensor_data);
+      |                       [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                       [32m[Knode_topics_[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:312:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksynchronizers_[m[K’ was not declared in this scope
+  312 |         [01;31m[Ksynchronizers_[m[K.push_back(sync);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::synced_camera_callback(const ConstSharedPtr&, const string&)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:329:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_triggers_[m[K’ was not declared in this scope
+  329 |             [01;31m[Ksample_triggers_[m[K[camera_name] = false;
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:330:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_done_sign_[m[K’ was not declared in this scope
+  330 |             [01;31m[Ksample_done_sign_[m[K[camera_name] = true;
+      |             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::lidar_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr, const string&)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:342:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_triggers_[m[K’ was not declared in this scope
+  342 |             [01;31m[Ksample_triggers_[m[K[device_name] = false;
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:343:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_done_sign_[m[K’ was not declared in this scope
+  343 |             [01;31m[Ksample_done_sign_[m[K[device_name] = true;
+      |             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::clock_callback()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:354:49:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_sample_time_[m[K’ was not declared in this scope
+  354 | uration time_diff = cur_time - [01;31m[Klast_sample_time_[m[K;
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:356:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_frame_[m[K’ was not declared in this scope
+  356 |         if ([01;31m[Ksample_frame_[m[K >= target_sample_frame_) {
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:356:30:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_sample_frame_[m[K’ was not declared in this scope
+  356 |         if (sample_frame_ >= [01;31m[Ktarget_sample_frame_[m[K) {
+      |                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:357:13:[m[K [01;31m[Kerror: [m[K‘[01m[Knode_shutdown_callback[m[K’ was not declared in this scope
+  357 |             [01;31m[Knode_shutdown_callback[m[K();
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:361:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kcheck_sample_done[m[K’ was not declared in this scope
+  361 | (time_diff.seconds() >= 0.5 && [01;31m[Kcheck_sample_done[m[K()) {
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:362:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_frame_[m[K’ was not declared in this scope
+  362 |             [01;31m[Ksample_frame_[m[K++;
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:365:33:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_sample_frame_[m[K’ was not declared in this scope
+  365 |            if (sample_frame_ > [01;31m[Ktarget_sample_frame_[m[K) {
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:366:17:[m[K [01;31m[Kerror: [m[K‘[01m[Knode_shutdown_callback[m[K’ was not declared in this scope
+  366 |                 [01;31m[Knode_shutdown_callback[m[K();
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:371:34:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_triggers_[m[K’ was not declared in this scope
+  371 |           for (auto& trigger : [01;31m[Ksample_triggers_[m[K) {
+      |                                [01;31m[K^~~~~~~~~~~~~~~~[m[K
+
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr, const string&)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:381:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 5 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type[m[K’ {aka ‘[01m[Kint[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  381 | CLCPP_INFO(this->get_logger(), [01;35m[K"Odometry Timestamp: %ld.%ld"[m[K, [32m[Kmsg->header.stamp.sec[m[K, msg->header.stamp.nanosec);
+      |                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                 [32m[K|[m[K
+      |                                                                                 [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type {aka int}[m[K
+
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:381:64:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  381 | gger(), "Odometry Timestamp: [01;36m[K%ld[m[K.%ld", msg->header.stamp.sec, msg->header.stamp.nanosec);
+      |                              [01;36m[K~~^[m[K
+      |                                [01;36m[K|[m[K
+      |                                [01;36m[Klong int[m[K
+      |                              [32m[K%d[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:381:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 6 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  381 | CLCPP_INFO(this->get_logger(), [01;35m[K"Odometry Timestamp: %ld.%ld"[m[K, msg->header.stamp.sec, [32m[Kmsg->header.stamp.nanosec[m[K);
+      |                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                         [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                                        [32m[K|[m[K
+      |                                                                                                        [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type {aka unsigned int}[m[K
+
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:381:68:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  381 | (), "Odometry Timestamp: %ld.[01;36m[K%ld[m[K", msg->header.stamp.sec, msg->header.stamp.nanosec);
+      |                              [01;36m[K~~^[m[K
+      |                                [01;36m[K|[m[K
+      |                                [01;36m[Klong int[m[K
+      |                              [32m[K%d[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::imu_callback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr, const string&)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:387:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 5 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type[m[K’ {aka ‘[01m[Kint[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  387 | CLCPP_INFO(this->get_logger(), [01;35m[K"IMU Timestamp: %ld.%ld"[m[K, [32m[Kmsg->header.stamp.sec[m[K, msg->header.stamp.nanosec);
+      |                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                            [32m[K|[m[K
+      |                                                                            [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type {aka int}[m[K
+
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:387:59:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  387 | et_logger(), "IMU Timestamp: [01;36m[K%ld[m[K.%ld", msg->header.stamp.sec, msg->header.stamp.nanosec);
+      |                              [01;36m[K~~^[m[K
+      |                                [01;36m[K|[m[K
+      |                                [01;36m[Klong int[m[K
+      |                              [32m[K%d[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:387:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 6 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  387 | CLCPP_INFO(this->get_logger(), [01;35m[K"IMU Timestamp: %ld.%ld"[m[K, msg->header.stamp.sec, [32m[Kmsg->header.stamp.nanosec[m[K);
+      |                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K                         [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                                   [32m[K|[m[K
+      |                                                                                                   [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type {aka unsigned int}[m[K
+
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:387:63:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  387 | ogger(), "IMU Timestamp: %ld.[01;36m[K%ld[m[K", msg->header.stamp.sec, msg->header.stamp.nanosec);
+      |                              [01;36m[K~~^[m[K
+      |                                [01;36m[K|[m[K
+      |                                [01;36m[Klong int[m[K
+      |                              [32m[K%d[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::save_data(const T&, const string&)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:401:22:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_ego_pose_[m[K’ was not declared in this scope
+  401 |                 if (![01;31m[Klatest_ego_pose_[m[K.empty()) {
+      |                      [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:406:19:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_ego_pose_[m[K’ was not declared in this scope
+  406 |             if ((![01;31m[Klatest_ego_pose_[m[K.empty()) && (!latest_imu_.empty())) {
+      |                   [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:406:50:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_imu_[m[K’ was not declared in this scope
+  406 | latest_ego_pose_.empty()) && (![01;31m[Klatest_imu_[m[K.empty())) {
+      |                                [01;31m[K^~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::save_odom_data(std::shared_ptr<nav_msgs::msg::Odometry_<std::allocator<void> > >)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:443:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_ego_pose_[m[K’ was not declared in this scope
+  443 |         [01;31m[Klatest_ego_pose_[m[K = ego_pose_data;
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::save_imu_data(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:465:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_imu_[m[K’ was not declared in this scope
+  465 |         [01;31m[Klatest_imu_[m[K["linear_accel"] = linear_accel_json;  // 线性加速度
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:468:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_ego_pose_[m[K’ was not declared in this scope
+  468 |         latest_imu_["pos"] = [01;31m[Klatest_ego_pose_[m[K["translation"];  // 位置
+      |                              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::save_image_data(const std::shared_ptr<const sensor_msgs::msg::Image_<std::allocator<void> > >&, const string&)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:476:34:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_triggers_[m[K’ was not declared in this scope
+  476 |       std::string data_type = ([01;31m[Ksample_triggers_[m[K[device_name] == true) ? "samples" : "sweeps";
+      |                                [01;31m[K^~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:478:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kroot_path_[m[K’ was not declared in this scope
+  478 |      std::string folder_path = [01;31m[Kroot_path_[m[K + "/" + data_type + "/" + device_name;
+      |                                [01;31m[K^~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:479:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kensure_directory_exists[m[K’ was not declared in this scope
+  479 |         [01;31m[Kensure_directory_exists[m[K(folder_path);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:482:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_system_time_token_[m[K’ was not declared in this scope
+  482 |    ss << folder_path << '/' << [01;31m[Kstart_system_time_token_[m[K << "__" << device_name << "__" << msg->header.stamp.sec << "_" << msg->header.stamp.nanosec << ".jpg";
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:529:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kdevices_frame_count_[m[K’ was not declared in this scope
+  529 | _token = generate_unique_token([01;31m[Kdevices_frame_count_[m[K[device_name], device_name, start_system_time_token_);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:531:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_ego_pose_[m[K’ was not declared in this scope
+  531 |         [01;31m[Klatest_ego_pose_[m[K["token"] = sample_data_token;  // set as sample_data_token
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:532:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_writer_[m[K’ was not declared in this scope
+  532 |         [01;31m[Kjson_writer_[m[K.addKeyValuePairToJson("ego_pose", latest_ego_pose_, true);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:537:58:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_frame_[m[K’ was not declared in this scope
+  537 | _token = generate_sample_token([01;31m[Ksample_frame_[m[K, start_system_time_token_);
+      |                                [01;31m[K^~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:539:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_recorder[m[K’ was not declared in this scope
+  539 |             [01;31m[Ksample_recorder[m[K(device_name, timestamp, sample_token);
+      |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:542:13:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_scene_[m[K’ was not declared in this scope
+  542 |         if ([01;31m[Klatest_scene_[m[K.contains("name") && !latest_scene_["name"].get<std::string>().empty()) {
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:542:85:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  542 | _scene_["name"].get<std::string[01;31m[K>[m[K().empty()) {
+      |                                [01;31m[K^[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:542:73:[m[K [01;35m[Kwarning: [m[Klogical not is only applied to the left hand side of comparison [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wlogical-not-parentheses-Wlogical-not-parentheses]8;;[m[K]
+  542 | ) && !latest_scene_["name"].get[01;35m[K<[m[Kstd::string>().empty()) {
+      |                                [01;35m[K^[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:542:87:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+  542 | cene_["name"].get<std::string>([01;31m[K)[m[K.empty()) {
+      |                                [01;31m[K^[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:544:65:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_imu_[m[K’ was not declared in this scope
+  544 | nderKey("can_bus", scene_name, [01;31m[Klatest_imu_[m[K, true);
+      |                                [01;31m[K^~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:547:37:[m[K [01;31m[Kerror: [m[K‘[01m[KextractRelativePath[m[K’ was not declared in this scope
+  547 |    std::string relative_path = [01;31m[KextractRelativePath[m[K(image_save_file);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:549:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalibrated_sensor_token_map_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalibrated_sensor_token[m[K’?
+  549 | _token = get_calibration_token([01;31m[Kcalibrated_sensor_token_map_[m[K ,device_name);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                [32m[Kcalibrated_sensor_token[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:566:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_next_sliders_[m[K’ was not declared in this scope
+  566 | ext_and_write_json_dynamically([01;31m[Kprev_next_sliders_[m[K,
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::save_lidar_data(const std::shared_ptr<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >&, const string&)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:581:30:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_triggers_[m[K’ was not declared in this scope
+  581 |     std::string data_type = ([01;31m[Ksample_triggers_[m[K[device_name] == true) ? "samples" : "sweeps";
+      |                              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:584:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kroot_path_[m[K’ was not declared in this scope
+  584 |     std::string folder_path = [01;31m[Kroot_path_[m[K + "/" + data_type + "/" + device_name;
+      |                               [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:585:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kensure_directory_exists[m[K’ was not declared in this scope
+  585 |     [01;31m[Kensure_directory_exists[m[K(folder_path);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:589:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_system_time_token_[m[K’ was not declared in this scope
+  589 |    ss << folder_path << '/' << [01;31m[Kstart_system_time_token_[m[K << "__" << device_name << "__"
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:594:26:[m[K [01;31m[Kerror: [m[K‘[01m[KPointXYZIR[m[K’ is not a member of ‘[01m[Kpcl[m[K’; did you mean ‘[01m[KPointXYZI[m[K’?
+  594 |     pcl::PointCloud<pcl::[01;31m[KPointXYZIR[m[K> cloud;  // 使用 PointXYZIR 支持强度和环号
+      |                          [01;31m[K^~~~~~~~~~[m[K
+      |                          [32m[KPointXYZI[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:594:36:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  594 | pcl::PointCloud<pcl::PointXYZIR[01;31m[K>[m[K cloud;  // 使用 PointXYZIR 支持强度和环号
+      |                                [01;31m[K^[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:601:28:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KfromPCLPointCloud2(pcl::PCLPointCloud2&, int&)[m[K’
+  601 |     [01;31m[Kpcl::fromPCLPointCloud2(pcl_cloud2, cloud)[m[K;  // 使用 pcl::fromPCLPointCloud2
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:31[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/usr/include/pcl-1.12/pcl/conversions.h:166:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PointT> void pcl::fromPCLPointCloud2(const pcl::PCLPointCloud2&, pcl::PointCloud<PointT>&, const MsgFieldMap&)[m[K’
+  166 |   [01;36m[KfromPCLPointCloud2[m[K (const pcl::PCLPointCloud2& msg, pcl::PointCloud<PointT>& cloud,
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.12/pcl/conversions.h:166:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:601:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kpcl::PointCloud<PointT>[m[K’ and ‘[01m[Kint[m[K’
+  601 |     [01;36m[Kpcl::fromPCLPointCloud2(pcl_cloud2, cloud)[m[K;  // 使用 pcl::fromPCLPointCloud2
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:31[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/usr/include/pcl-1.12/pcl/conversions.h:226:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PointT> void pcl::fromPCLPointCloud2(const pcl::PCLPointCloud2&, pcl::PointCloud<PointT>&)[m[K’
+  226 |   [01;36m[KfromPCLPointCloud2[m[K (const pcl::PCLPointCloud2& msg, pcl::PointCloud<PointT>& cloud)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.12/pcl/conversions.h:226:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:601:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kpcl::PointCloud<PointT>[m[K’ and ‘[01m[Kint[m[K’
+  601 |     [01;36m[Kpcl::fromPCLPointCloud2(pcl_cloud2, cloud)[m[K;  // 使用 pcl::fromPCLPointCloud2
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:604:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kpoints[m[K’ in ‘[01m[Kcloud[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+  604 |     if (cloud.[01;31m[Kpoints[m[K.empty()) {
+      |               [01;31m[K^~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:613:40:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kpoints[m[K’ in ‘[01m[Kcloud[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+  613 |   for (const auto &point : cloud.[01;31m[Kpoints[m[K) {
+      |                                  [01;31m[K^~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In function ‘[01m[Kvoid sample_recorder(std::string, uint64_t, std::string)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:677:41:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_scene_recoder_name_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksample_scene_recoder_name[m[K’?
+  677 | f(sample_scene_recoder_name == [01;31m[Ksample_scene_recoder_name_[m[K){
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                [32m[Ksample_scene_recoder_name[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:680:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene_sample_frame_count_[m[K’ was not declared in this scope
+  680 |             if([01;31m[Kscene_sample_frame_count_[m[K < scene_frame_ - 1)
+      |                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:680:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene_frame_[m[K’ was not declared in this scope
+  680 | if(scene_sample_frame_count_ < [01;31m[Kscene_frame_[m[K - 1)
+      |                                [01;31m[K^~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:682:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene_processing[m[K’ was not declared in this scope
+  682 |                 [01;31m[Kscene_processing[m[K(sample_token);
+      |                 [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:689:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kcur_scene_token_[m[K’ was not declared in this scope
+  689 |   sample_json["scene_token"] = [01;31m[Kcur_scene_token_[m[K;
+      |                                [01;31m[K^~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:691:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_next_sliders_[m[K’ was not declared in this scope
+  691 | ext_and_write_json_dynamically([01;31m[Kprev_next_sliders_[m[K,
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:694:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_writer_[m[K’ was not declared in this scope
+  694 |                 [01;31m[Kjson_writer_[m[K,
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:705:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kcur_scene_token_[m[K’ was not declared in this scope
+  705 |   sample_json["scene_token"] = [01;31m[Kcur_scene_token_[m[K;
+      |                                [01;31m[K^~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:707:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_next_sliders_[m[K’ was not declared in this scope
+  707 | ext_and_write_json_dynamically([01;31m[Kprev_next_sliders_[m[K,
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:710:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_writer_[m[K’ was not declared in this scope
+  710 |                 [01;31m[Kjson_writer_[m[K,
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:713:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene_done[m[K’ was not declared in this scope
+  713 |                 [01;31m[Kscene_done[m[K(sample_token);
+      |                 [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In function ‘[01m[Kvoid scene_processing(std::string)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:720:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene_sample_frame_count_[m[K’ was not declared in this scope
+  720 |         [01;31m[Kscene_sample_frame_count_[m[K++;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:723:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_cur_system_time[m[K’ was not declared in this scope
+  723 | tring cur_system_time_string = [01;31m[Kget_cur_system_time[m[K();
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:724:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcur_scene_token_[m[K’ was not declared in this scope
+  724 |             [01;31m[Kcur_scene_token_[m[K = "scene_" + map_name_ + "_" + cur_system_time_string;
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:724:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap_name_[m[K’ was not declared in this scope
+  724 |  cur_scene_token_ = "scene_" + [01;31m[Kmap_name_[m[K + "_" + cur_system_time_string;
+      |                                [01;31m[K^~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:725:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene_mode_[m[K’ was not declared in this scope
+  725 |       std::string scene_name = [01;31m[Kscene_mode_[m[K + "_" + map_name_ + "_" + std::to_string(cur_scene_num_) + "_" + start_system_time_token_; // TODO: nuscenes对每个场景有严格的划分nuscnes.splits函数可以划分那些事train、val还是test
+      |                                [01;31m[K^~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:725:91:[m[K [01;31m[Kerror: [m[K‘[01m[Kcur_scene_num_[m[K’ was not declared in this scope
+  725 | p_name_ + "_" + std::to_string([01;31m[Kcur_scene_num_[m[K) + "_" + start_system_time_token_; // TODO: nuscenes对每个场景有严格的划分nuscnes.splits函数可以划分那些事train、val还是test
+      |                                [01;31m[K^~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:725:115:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_system_time_token_[m[K’ was not declared in this scope
+  725 | string(cur_scene_num_) + "_" + [01;31m[Kstart_system_time_token_[m[K; // TODO: nuscenes对每个场景有严格的划分nuscnes.splits函数可以划分那些事train、val还是test
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:727:13:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_scene_[m[K’ was not declared in this scope
+  727 |             [01;31m[Klatest_scene_[m[K["token"] = cur_scene_token_;
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:728:42:[m[K [01;31m[Kerror: [m[K‘[01m[Klog_token_[m[K’ was not declared in this scope
+  728 |   latest_scene_["log_token"] = [01;31m[Klog_token_[m[K;
+      |                                [01;31m[K^~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:736:13:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_scene_[m[K’ was not declared in this scope
+  736 |             [01;31m[Klatest_scene_[m[K["last_sample_token"] = sample_token;
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In function ‘[01m[Kvoid scene_done(std::string)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:743:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene_sample_frame_count_[m[K’ was not declared in this scope
+  743 |         [01;31m[Kscene_sample_frame_count_[m[K++;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:745:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_scene_[m[K’ was not declared in this scope
+  745 |         [01;31m[Klatest_scene_[m[K["last_sample_token"] = sample_token;
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:747:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_writer_[m[K’ was not declared in this scope
+  747 |         [01;31m[Kjson_writer_[m[K.addKeyValuePairToJson("scene", latest_scene_, true);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:751:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcur_scene_num_[m[K’ was not declared in this scope
+  751 |         [01;31m[Kcur_scene_num_[m[K++;
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In function ‘[01m[Kvoid scene_cache_write()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:756:14:[m[K [01;31m[Kerror: [m[K‘[01m[Klatest_scene_[m[K’ was not declared in this scope
+  756 |         if (![01;31m[Klatest_scene_[m[K.empty()) {
+      |              [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:757:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_writer_[m[K’ was not declared in this scope
+  757 |             [01;31m[Kjson_writer_[m[K.addKeyValuePairToJson("scene", latest_scene_, true);
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:761:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene_sample_frame_count_[m[K’ was not declared in this scope
+  761 |         [01;31m[Kscene_sample_frame_count_[m[K = 0;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In function ‘[01m[Kvoid map_write(const json&, const string&, const string&)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:765:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  765 |         auto logger = [01;31m[Kthis[m[K->get_logger();
+      |                       [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:769:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  769 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "map.json does not exist at path: %s", map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:769:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  769 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "map.json does not exist at path: %s", map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:769:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  769 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "map.json does not exist at path: %s", map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:776:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  776 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "Failed to open %s for reading.", map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:776:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  776 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "Failed to open %s for reading.", map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:776:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  776 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "Failed to open %s for reading.", map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:784:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  784 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "JSON parse error in %s: %s", map_path.c_str(), e.what());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:784:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  784 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "JSON parse error in %s: %s", map_path.c_str(), e.what());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:784:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  784 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "JSON parse error in %s: %s", map_path.c_str(), e.what());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:789:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  789 |             [01;31m[KRCLCPP_INFO[m[K(logger, "Successfully read map.json");
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:789:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  789 |             [01;31m[KRCLCPP_INFO[m[K(logger, "Successfully read map.json");
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:789:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  789 |             [01;31m[KRCLCPP_INFO[m[K(logger, "Successfully read map.json");
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:793:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  793 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "map.json is not an array.");
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:793:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  793 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "map.json is not an array.");
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:793:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  793 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "map.json is not an array.");
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:799:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  799 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "Provided log_json does not contain a valid 'token' field.");
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:799:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  799 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "Provided log_json does not contain a valid 'token' field.");
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:799:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  799 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "Provided log_json does not contain a valid 'token' field.");
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:826:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  826 |                         [01;31m[KRCLCPP_INFO[m[K(logger, "Added log token '%s' to map token '%s'.", new_log_token.c_str(), map_name.c_str());
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:826:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  826 |                         [01;31m[KRCLCPP_INFO[m[K(logger, "Added log token '%s' to map token '%s'.", new_log_token.c_str(), map_name.c_str());
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:826:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  826 |                         [01;31m[KRCLCPP_INFO[m[K(logger, "Added log token '%s' to map token '%s'.", new_log_token.c_str(), map_name.c_str());
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:828:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  828 |                         [01;31m[KRCLCPP_INFO[m[K(logger, "Log token '%s' already exists for map token '%s'.", new_log_token.c_str(), map_name.c_str());
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:828:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  828 |                         [01;31m[KRCLCPP_INFO[m[K(logger, "Log token '%s' already exists for map token '%s'.", new_log_token.c_str(), map_name.c_str());
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:828:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  828 |                         [01;31m[KRCLCPP_INFO[m[K(logger, "Log token '%s' already exists for map token '%s'.", new_log_token.c_str(), map_name.c_str());
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:840:21:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  840 |                     [01;31m[KRCLCPP_ERROR[m[K(logger, "Failed to open %s for writing.", map_path.c_str());
+      |                     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:840:21:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  840 |                     [01;31m[KRCLCPP_ERROR[m[K(logger, "Failed to open %s for writing.", map_path.c_str());
+      |                     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:840:21:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  840 |                     [01;31m[KRCLCPP_ERROR[m[K(logger, "Failed to open %s for writing.", map_path.c_str());
+      |                     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:845:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  845 |                 [01;31m[KRCLCPP_INFO[m[K(logger, "Log token added successfully to %s.", map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:845:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  845 |                 [01;31m[KRCLCPP_INFO[m[K(logger, "Log token added successfully to %s.", map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:845:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  845 |                 [01;31m[KRCLCPP_INFO[m[K(logger, "Log token added successfully to %s.", map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:847:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  847 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "Token '%s' not found in %s.", map_name.c_str(), map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:847:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  847 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "Token '%s' not found in %s.", map_name.c_str(), map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:847:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  847 |                 [01;31m[KRCLCPP_ERROR[m[K(logger, "Token '%s' not found in %s.", map_name.c_str(), map_path.c_str());
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:851:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  851 |             [01;31m[KRCLCPP_ERROR[m[K(logger, "Exception occurred: %s", e.what());
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:851:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  851 |             [01;31m[KRCLCPP_ERROR[m[K(logger, "Exception occurred: %s", e.what());
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:851:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  851 |             [01;31m[KRCLCPP_ERROR[m[K(logger, "Exception occurred: %s", e.what());
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In function ‘[01m[Kbool check_sample_done()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:857:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_done_sign_[m[K’ was not declared in this scope
+  857 |         for(auto& sign_pair : [01;31m[Ksample_done_sign_[m[K){
+      |                               [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:862:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_done_sign_[m[K’ was not declared in this scope
+  862 |         for(auto& sign_pair : [01;31m[Ksample_done_sign_[m[K){
+      |                               [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In function ‘[01m[Kvoid node_shutdown_callback()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:870:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_next_sliders_[m[K’ was not declared in this scope
+  870 |         for (auto& slider : [01;31m[Kprev_next_sliders_[m[K) {
+      |                             [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:874:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_writer_[m[K’ was not declared in this scope
+  874 |                     [01;31m[Kjson_writer_[m[K.addKeyValuePairToJson("sample_data", slider.second[0], true);
+      |                     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:878:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_writer_[m[K’ was not declared in this scope
+  878 |                     [01;31m[Kjson_writer_[m[K.addKeyValuePairToJson("sample", slider.second[0], true);
+      |                     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:882:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kjson_writer_[m[K’ was not declared in this scope
+  882 |                      [01;31m[Kjson_writer_[m[K.addKeyValuePairToJson("sample_annotation", slider.second[0], true);
+      |                      [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:890:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  890 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "*****************************sample finished*****************************");
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:890:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:890:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  890 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "*****************************sample finished*****************************");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:890:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  890 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "*****************************sample finished*****************************");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:890:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  890 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "*****************************sample finished*****************************");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:890:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  890 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "*****************************sample finished*****************************");
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:890:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  890 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "*****************************sample finished*****************************");
+      |                     [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In function ‘[01m[Kvoid ensure_directory_exists(const string&)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:924:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  924 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Directory created: %s", path.c_str());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:924:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:924:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  924 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Directory created: %s", path.c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:924:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  924 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Directory created: %s", path.c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:924:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  924 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Directory created: %s", path.c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:924:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  924 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Directory created: %s", path.c_str());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:924:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  924 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Directory created: %s", path.c_str());
+      |                         [01;31m[K^~~~[m[K
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K At global scope:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:959:24:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KNuscenesJsonWriter::NuscenesJsonWriter()[m[K’
+  959 |     NuscenesJsonWriter [01;31m[Kjson_writer_[m[K;
+      |                        [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:42[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_json_writer.hpp:16:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KNuscenesJsonWriter::NuscenesJsonWriter(const std::vector<std::__cxx11::basic_string<char> >&)[m[K’
+   16 |     [01;36m[KNuscenesJsonWriter[m[K(const std::vector<std::string>& file_paths) {
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_json_writer.hpp:16:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_json_writer.hpp:13:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KNuscenesJsonWriter::NuscenesJsonWriter(const NuscenesJsonWriter&)[m[K’
+   13 | class [01;36m[KNuscenesJsonWriter[m[K {
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_json_writer.hpp:13:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_json_writer.hpp:13:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KNuscenesJsonWriter::NuscenesJsonWriter(NuscenesJsonWriter&&)[m[K’
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_json_writer.hpp:13:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:977:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  977 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/nuscenes_data_collector_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/nuscenes_data_collector_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,68 @@
+[0.020s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware': /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware -- -j24 -l24
+[0.043s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.051s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.061s] [  4%] Built target ament_cmake_python_symlink_robot_hardware
+[0.251s] running egg_info
+[0.252s] creating robot_hardware.egg-info
+[0.252s] writing robot_hardware.egg-info/PKG-INFO
+[0.252s] writing dependency_links to robot_hardware.egg-info/dependency_links.txt
+[0.252s] writing top-level names to robot_hardware.egg-info/top_level.txt
+[0.252s] writing manifest file 'robot_hardware.egg-info/SOURCES.txt'
+[0.254s] reading manifest file 'robot_hardware.egg-info/SOURCES.txt'
+[0.254s] writing manifest file 'robot_hardware.egg-info/SOURCES.txt'
+[0.276s] [  4%] Built target ament_cmake_python_build_robot_hardware_egg
+[0.421s] [  4%] Built target robot_hardware__cpp
+[0.429s] [  7%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[0.429s] [  9%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[0.430s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[0.606s] [ 14%] [32mBuilding C object CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/motor_data__functions.c.o[0m
+[0.606s] [ 17%] [32mBuilding C object CMakeFiles/robot_hardware__rosidl_generator_c.dir/rosidl_generator_c/robot_hardware/msg/detail/hardware_data__functions.c.o[0m
+[0.654s] [ 19%] [32m[1mLinking C shared library librobot_hardware__rosidl_generator_c.so[0m
+[0.681s] [ 19%] Built target robot_hardware__rosidl_generator_c
+[0.688s] [ 21%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[0.689s] [ 24%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[0.692s] [ 26%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[0.825s] [ 31%] [32mBuilding CXX object CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/motor_data__type_support.cpp.o[0m
+[0.825s] [ 31%] [32mBuilding CXX object CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_hardware/msg/detail/dds_fastrtps/hardware_data__type_support.cpp.o[0m
+[0.847s] [ 34%] [32mBuilding CXX object CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/motor_data__type_support.cpp.o[0m
+[0.849s] [ 36%] [32mBuilding CXX object CMakeFiles/robot_hardware__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_hardware/msg/detail/hardware_data__type_support.cpp.o[0m
+[0.866s] [ 39%] [32mBuilding CXX object CMakeFiles/robot_hardware__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_hardware/msg/hardware_data__type_support.cpp.o[0m
+[0.866s] [ 41%] [32mBuilding CXX object CMakeFiles/robot_hardware__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_hardware/msg/motor_data__type_support.cpp.o[0m
+[1.089s] [ 43%] [32mBuilding CXX object CMakeFiles/robot_hardware__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_hardware/msg/motor_data__type_support.cpp.o[0m
+[1.089s] [ 46%] [32mBuilding CXX object CMakeFiles/robot_hardware__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_hardware/msg/hardware_data__type_support.cpp.o[0m
+[1.112s] [ 48%] [32m[1mLinking CXX shared library librobot_hardware__rosidl_typesupport_cpp.so[0m
+[1.117s] [ 51%] [32m[1mLinking CXX shared library librobot_hardware__rosidl_typesupport_c.so[0m
+[1.142s] [ 51%] Built target robot_hardware__rosidl_typesupport_cpp
+[1.149s] [ 53%] [32m[1mLinking CXX shared library librobot_hardware__rosidl_typesupport_fastrtps_cpp.so[0m
+[1.151s] [ 53%] Built target robot_hardware__rosidl_typesupport_c
+[1.157s] [ 56%] [32mBuilding CXX object CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o[0m
+[1.182s] [ 58%] [32mBuilding CXX object CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/hardware_data__type_support_c.cpp.o[0m
+[1.186s] [ 60%] [32mBuilding CXX object CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_hardware/msg/detail/motor_data__type_support_c.cpp.o[0m
+[1.196s] [ 63%] [32mBuilding C object CMakeFiles/robot_hardware__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_hardware/msg/detail/hardware_data__type_support.c.o[0m
+[1.198s] [ 65%] [32mBuilding C object CMakeFiles/robot_hardware__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_hardware/msg/detail/motor_data__type_support.c.o[0m
+[1.205s] [ 65%] Built target robot_hardware__rosidl_typesupport_fastrtps_cpp
+[1.223s] [ 68%] [32m[1mLinking C shared library librobot_hardware__rosidl_typesupport_introspection_c.so[0m
+[1.247s] [ 68%] Built target robot_hardware__rosidl_typesupport_introspection_c
+[1.265s] [ 70%] [32m[1mLinking CXX shared library librobot_hardware__rosidl_typesupport_introspection_cpp.so[0m
+[1.296s] [ 70%] Built target robot_hardware__rosidl_typesupport_introspection_cpp
+[1.432s] [ 73%] [32m[1mLinking CXX shared library librobot_hardware__rosidl_typesupport_fastrtps_c.so[0m
+[1.491s] [ 73%] Built target robot_hardware__rosidl_typesupport_fastrtps_c
+[1.508s] [ 73%] Built target robot_hardware
+[1.526s] [ 75%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.140s] [ 75%] Built target robot_hardware__py
+[2.155s] [ 80%] [32mBuilding C object CMakeFiles/robot_hardware__rosidl_generator_py.dir/rosidl_generator_py/robot_hardware/msg/_motor_data_s.c.o[0m
+[2.155s] [ 80%] [32mBuilding C object CMakeFiles/robot_hardware__rosidl_generator_py.dir/rosidl_generator_py/robot_hardware/msg/_hardware_data_s.c.o[0m
+[2.233s] [ 82%] [32m[1mLinking C shared library rosidl_generator_py/robot_hardware/librobot_hardware__rosidl_generator_py.so[0m
+[2.265s] [ 82%] Built target robot_hardware__rosidl_generator_py
+[2.278s] [ 85%] [32mBuilding C object CMakeFiles/robot_hardware__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_c.c.o[0m
+[2.279s] [ 87%] [32mBuilding C object CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.282s] [ 90%] [32mBuilding C object CMakeFiles/robot_hardware__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.348s] [ 92%] [32m[1mLinking C shared library rosidl_generator_py/robot_hardware/robot_hardware_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.350s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/robot_hardware/robot_hardware_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.369s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/robot_hardware/robot_hardware_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.379s] [ 97%] Built target robot_hardware__rosidl_typesupport_introspection_c__pyext
+[2.384s] [ 97%] Built target robot_hardware__rosidl_typesupport_c__pyext
+[2.397s] gmake[2]: *** [CMakeFiles/hardware_manager.dir/build.make:76: CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o] Interrupt
+[2.397s] gmake[1]: *** [CMakeFiles/Makefile2:508: CMakeFiles/robot_hardware__rosidl_typesupport_fastrtps_c__pyext.dir/all] Interrupt
+[2.397s] gmake[1]: *** [CMakeFiles/Makefile2:593: CMakeFiles/hardware_manager.dir/all] Interrupt
+[2.397s] gmake: *** [Makefile:146: all] Interrupt

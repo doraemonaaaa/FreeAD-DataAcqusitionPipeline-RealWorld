@@ -1,0 +1,169 @@
+[0.006s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware': /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware -- -j24 -l24
+[0.036s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware__rosidl_generator_c[0m
+[0.043s] [  2%] Built target robot_hardware__cpp
+[0.043s] [ 12%] Built target robot_hardware__rosidl_generator_c
+[0.048s] [ 12%] Built target ament_cmake_python_symlink_robot_hardware
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware__rosidl_typesupport_c[0m
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware__rosidl_typesupport_introspection_c[0m
+[0.049s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware__rosidl_typesupport_introspection_cpp[0m
+[0.049s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware__rosidl_typesupport_fastrtps_cpp[0m
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware__rosidl_typesupport_cpp[0m
+[0.053s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware__rosidl_typesupport_fastrtps_c[0m
+[0.053s] [ 21%] Built target robot_hardware__rosidl_typesupport_c
+[0.054s] [ 31%] Built target robot_hardware__rosidl_typesupport_introspection_c
+[0.056s] [ 41%] Built target robot_hardware__rosidl_typesupport_fastrtps_cpp
+[0.057s] [ 51%] Built target robot_hardware__rosidl_typesupport_introspection_cpp
+[0.059s] [ 60%] Built target robot_hardware__rosidl_typesupport_cpp
+[0.061s] [ 70%] Built target robot_hardware__rosidl_typesupport_fastrtps_c
+[0.073s] [ 73%] [32mBuilding CXX object CMakeFiles/hardware_manager.dir/src/hardware_manager.cpp.o[0m
+[0.073s] [ 73%] Built target robot_hardware
+[0.086s] [ 75%] Built target robot_hardware__py
+[0.093s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware__rosidl_generator_py[0m
+[0.101s] [ 82%] Built target robot_hardware__rosidl_generator_py
+[0.107s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware__rosidl_typesupport_fastrtps_c__pyext[0m
+[0.109s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware__rosidl_typesupport_c__pyext[0m
+[0.109s] [35m[1mConsolidate compiler generated dependencies of target robot_hardware__rosidl_typesupport_introspection_c__pyext[0m
+[0.115s] [ 87%] Built target robot_hardware__rosidl_typesupport_fastrtps_c__pyext
+[0.116s] [ 92%] Built target robot_hardware__rosidl_typesupport_c__pyext
+[0.116s] [ 97%] Built target robot_hardware__rosidl_typesupport_introspection_c__pyext
+[0.183s] running egg_info
+[0.183s] writing robot_hardware.egg-info/PKG-INFO
+[0.183s] writing dependency_links to robot_hardware.egg-info/dependency_links.txt
+[0.184s] writing top-level names to robot_hardware.egg-info/top_level.txt
+[0.185s] reading manifest file 'robot_hardware.egg-info/SOURCES.txt'
+[0.185s] writing manifest file 'robot_hardware.egg-info/SOURCES.txt'
+[0.200s] [ 97%] Built target ament_cmake_python_build_robot_hardware_egg
+[8.554s] [100%] [32m[1mLinking CXX executable hardware_manager[0m
+[9.008s] [100%] Built target hardware_manager
+[9.013s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware' returned '0': /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware -- -j24 -l24
+[9.020s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware': /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware
+[9.025s] -- Install configuration: ""
+[9.025s] -- Execute custom install script
+[9.025s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/ament_index/resource_index/rosidl_interfaces/robot_hardware
+[9.031s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__functions.h
+[9.035s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__struct.h
+[9.041s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__type_support.h
+[9.046s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__functions.h
+[9.050s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__struct.h
+[9.055s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__type_support.h
+[9.061s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/hardware_data.h
+[9.067s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/motor_data.h
+[9.072s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/rosidl_generator_c__visibility_control.h
+[9.077s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/environment/library_path.sh
+[9.082s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/environment/library_path.dsv
+[9.087s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__rosidl_typesupport_fastrtps_c.h
+[9.092s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__rosidl_typesupport_fastrtps_c.h
+[9.098s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[9.103s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__builder.hpp
+[9.107s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__struct.hpp
+[9.111s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__traits.hpp
+[9.116s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__type_support.hpp
+[9.120s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__builder.hpp
+[9.125s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__struct.hpp
+[9.130s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__traits.hpp
+[9.135s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__type_support.hpp
+[9.142s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/hardware_data.hpp
+[9.146s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/motor_data.hpp
+[9.151s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/rosidl_generator_cpp__visibility_control.hpp
+[9.155s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__rosidl_typesupport_fastrtps_cpp.hpp
+[9.160s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__rosidl_typesupport_fastrtps_cpp.hpp
+[9.166s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[9.172s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__rosidl_typesupport_introspection_c.h
+[9.177s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__rosidl_typesupport_introspection_c.h
+[9.182s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[9.187s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/hardware_data__rosidl_typesupport_introspection_cpp.hpp
+[9.193s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/robot_hardware/robot_hardware/msg/detail/motor_data__rosidl_typesupport_introspection_cpp.hpp
+[9.199s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/environment/pythonpath.sh
+[9.205s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/environment/pythonpath.dsv
+[9.209s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware-0.0.1-py3.10.egg-info/PKG-INFO
+[9.214s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware-0.0.1-py3.10.egg-info/SOURCES.txt
+[9.218s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware-0.0.1-py3.10.egg-info/dependency_links.txt
+[9.222s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware-0.0.1-py3.10.egg-info/top_level.txt
+[9.228s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/__init__.py
+[9.233s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_c.c
+[9.239s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_fastrtps_c.c
+[9.243s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/_robot_hardware_s.ep.rosidl_typesupport_introspection_c.c
+[9.248s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/librobot_hardware__rosidl_generator_py.so
+[9.253s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg/__init__.py
+[9.258s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg/_hardware_data.py
+[9.263s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg/_hardware_data_s.c
+[9.269s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg/_motor_data.py
+[9.274s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg/_motor_data_s.c
+[9.278s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[9.282s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[9.286s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[9.291s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[9.291s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[9.291s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/robot_hardware_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[9.292s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/msg/HardwareData.idl
+[9.297s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/msg/MotorData.idl
+[9.302s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/msg/HardwareData.msg
+[9.306s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/msg/MotorData.msg
+[9.311s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/robot_hardware/hardware_manager
+[9.314s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/hardware_bridge_interface.hpp
+[9.319s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/hardware_manager.hpp
+[9.324s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/include/wheel.hpp
+[9.330s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/msg/msg/HardwareData.msg
+[9.334s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/msg/msg/MotorData.msg
+[9.339s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/ament_index/resource_index/package_run_dependencies/robot_hardware
+[9.343s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/ament_index/resource_index/parent_prefix_path/robot_hardware
+[9.348s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/environment/ament_prefix_path.sh
+[9.353s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/environment/ament_prefix_path.dsv
+[9.358s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/environment/path.sh
+[9.363s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/environment/path.dsv
+[9.368s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/local_setup.bash
+[9.373s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/local_setup.sh
+[9.378s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/local_setup.zsh
+[9.383s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/local_setup.dsv
+[9.387s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.dsv
+[9.392s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/ament_index/resource_index/packages/robot_hardware
+[9.398s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/rosidl_cmake-extras.cmake
+[9.402s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/ament_cmake_export_dependencies-extras.cmake
+[9.407s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/ament_cmake_export_include_directories-extras.cmake
+[9.411s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/ament_cmake_export_libraries-extras.cmake
+[9.415s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/ament_cmake_export_targets-extras.cmake
+[9.420s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[9.425s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[9.431s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/robot_hardwareConfig.cmake
+[9.436s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/robot_hardwareConfig-version.cmake
+[9.441s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.xml
+[9.446s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_generator_c.so
+[9.446s] -- Set runtime path of "/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_generator_c.so" to ""
+[9.446s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_fastrtps_c.so
+[9.446s] -- Set runtime path of "/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_fastrtps_c.so" to ""
+[9.446s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_fastrtps_cpp.so
+[9.446s] -- Set runtime path of "/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_fastrtps_cpp.so" to ""
+[9.446s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_introspection_c.so
+[9.447s] -- Set runtime path of "/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_introspection_c.so" to ""
+[9.447s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_c.so
+[9.447s] -- Set runtime path of "/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_c.so" to ""
+[9.447s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_introspection_cpp.so
+[9.447s] -- Set runtime path of "/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_introspection_cpp.so" to ""
+[9.447s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_cpp.so
+[9.447s] -- Set runtime path of "/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_typesupport_cpp.so" to ""
+[9.469s] Listing '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware'...
+[9.469s] Compiling '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/__init__.py'...
+[9.469s] Listing '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg'...
+[9.469s] Compiling '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg/__init__.py'...
+[9.469s] Compiling '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg/_hardware_data.py'...
+[9.469s] Compiling '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/local/lib/python3.10/dist-packages/robot_hardware/msg/_motor_data.py'...
+[9.471s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_generator_py.so
+[9.472s] -- Set runtime path of "/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/librobot_hardware__rosidl_generator_py.so" to ""
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_generator_cExport.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_generator_cExport-noconfig.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_typesupport_fastrtps_cExport.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_generator_cppExport.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_typesupport_fastrtps_cppExport.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_introspection_cExport.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_cExport.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_cExport-noconfig.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_introspection_cppExport.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[9.472s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_cppExport.cmake
+[9.473s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/robot_hardware__rosidl_typesupport_cppExport-noconfig.cmake
+[9.473s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_generator_pyExport.cmake
+[9.473s] -- Installing: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/cmake/export_robot_hardware__rosidl_generator_pyExport-noconfig.cmake
+[9.474s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware' returned '0': /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware

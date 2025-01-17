@@ -1,0 +1,38 @@
+[0.018s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control': /usr/bin/cmake /home/pengyh/documents/ros2_ws/RobotAD/src/diff_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control
+[0.027s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.120s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.125s] -- Found hardware_interface: 2.46.0 (/opt/ros/humble/share/hardware_interface/cmake)
+[0.142s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.144s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.148s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.154s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.161s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.270s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.271s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.284s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.292s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.307s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.314s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.323s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.354s] -- Found rclcpp_components: 16.0.11 (/opt/ros/humble/share/rclcpp_components/cmake)
+[0.366s] -- Found serial: 1.2.1 (/usr/local/share/serial/cmake)
+[0.375s] [31mCMake Error at CMakeLists.txt:22 (find_package):
+[0.375s]   By not providing "Findrobot_hardware.cmake" in CMAKE_MODULE_PATH this
+[0.375s]   project has asked CMake to find a package configuration file provided by
+[0.375s]   "robot_hardware", but CMake did not find one.
+[0.376s] 
+[0.376s]   Could not find a package configuration file provided by "robot_hardware"
+[0.376s]   with any of the following names:
+[0.376s] 
+[0.376s]     robot_hardwareConfig.cmake
+[0.376s]     robot_hardware-config.cmake
+[0.376s] 
+[0.376s]   Add the installation prefix of "robot_hardware" to CMAKE_PREFIX_PATH or set
+[0.376s]   "robot_hardware_DIR" to a directory containing one of the above files.  If
+[0.376s]   "robot_hardware" provides a separate development package or SDK, be sure it
+[0.376s]   has been installed.
+[0.376s] 
+[0.376s] [0m
+[0.377s] -- Configuring incomplete, errors occurred!
+[0.377s] See also "/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control/CMakeFiles/CMakeOutput.log".
+[0.382s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control' returned '1': /usr/bin/cmake /home/pengyh/documents/ros2_ws/RobotAD/src/diff_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control

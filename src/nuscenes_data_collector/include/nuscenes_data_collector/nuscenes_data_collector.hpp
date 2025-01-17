@@ -59,7 +59,6 @@ using ImgSyncPolicy = message_filters::sync_policies::ApproximateTime<
     sensor_msgs::msg::Image    // 第六个摄像头
 >;
 
-// issac use simulation time
 class NuScenesDataCollector : public rclcpp::Node {
 public:
     NuScenesDataCollector()
@@ -106,7 +105,6 @@ public:
         this->declare_parameter<std::string>("scene_mode_", "train");
         this->declare_parameter<std::string>("robot_model_", "diff_bot");
         this->declare_parameter<std::string>("map_name_", "office_issac");
-        this->declare_parameter<int>("issac_per_sec_frame_", 60);
         this->declare_parameter<float>("sample_frequency_", 0.5);
         this->declare_parameter<std::vector<std::string>>("sample_sensors_", {
             "CAM_FRONT", "CAM_BACK", "CAM_BACK_LEFT",
@@ -118,7 +116,6 @@ public:
         this->get_parameter("robot_model_", robot_model_);
         this->get_parameter("map_name_", map_name_);
         this->get_parameter("root_path_", root_path_);
-        this->get_parameter("issac_per_sec_frame_", issac_per_sec_frame_);
         this->get_parameter("sample_frequency_", sample_frequency_);
         this->get_parameter("sample_sensors_", sample_sensors_);
 
@@ -154,7 +151,6 @@ public:
         RCLCPP_INFO(this->get_logger(), "Robot Model: %s", robot_model_.c_str());
         RCLCPP_INFO(this->get_logger(), "Map Name: %s", map_name_.c_str());
         RCLCPP_INFO(this->get_logger(), "Root Path: %s", root_path_.c_str());
-        RCLCPP_INFO(this->get_logger(), "Isaac Per Sec Frame: %d", issac_per_sec_frame_);
         RCLCPP_INFO(this->get_logger(), "Sample Frequency: %.2f", sample_frequency_);
         RCLCPP_INFO(this->get_logger(), "target_sample_frame_: %ld", target_sample_frame_);
         RCLCPP_INFO(this->get_logger(), "scene_frame_: %d", scene_frame_);
@@ -187,8 +183,8 @@ public:
 
         // 初始化其他参数和订阅
         declare_parameters();
-        //initialize_camera_subscriptions();
-        initialize_sync_camera_subscriptions();
+
+        //initialize_sync_camera_subscriptions();
 
         rclcpp::QoS qos_profile(100);
         qos_profile.reliable();  // 设置可靠传输
@@ -247,6 +243,7 @@ public:
             std::chrono::milliseconds(500), // 每500毫秒触发一次
             std::bind(&NuScenesDataCollector::clock_callback, this)
         );
+        last_sample_time_ = this->now();
     }
 
 private:
@@ -257,22 +254,18 @@ private:
     }
 
     void declare_parameters() {
-        // Declare odom_topic parameter
-        this->declare_parameter<std::string>("odom_topic", "/issac/odom");
-        RCLCPP_INFO(this->get_logger(), "Declared odom_topic with default: '/issac/odom'");
-
         // Initialize camera names and declare related parameters
         camera_names_ = {"CAM_FRONT", "CAM_FRONT_RIGHT", "CAM_FRONT_LEFT", "CAM_BACK", "CAM_BACK_LEFT", "CAM_BACK_RIGHT"};
         for (const auto &camera : camera_names_) {
-            camera_topics_[camera] = "/issac/" + camera;
+            camera_topics_[camera] = "/" + camera;
             RCLCPP_INFO(this->get_logger(), "Declared camera topic parameter for %s: %s", camera.c_str(), camera_topics_[camera].c_str());
         }
         // Get odom_topic and lidar_topic parameter
-        odom_topic_ = "/issac/odom";
+        odom_topic_ = "/diffbot_base_controller/odom";
         RCLCPP_INFO(this->get_logger(), "Retrieved odom_topic: %s", odom_topic_.c_str());
-        lidar_topic_ = "/issac/point_cloud";
+        lidar_topic_ = "/scanner/cloud";
         RCLCPP_INFO(this->get_logger(), "Retrieved lidar_topic: %s", lidar_topic_.c_str());
-        imu_topic_ = "/issac/nuscenes/imu";
+        imu_topic_ = "/demo/imu";
         RCLCPP_INFO(this->get_logger(), "Retrieved imu_topic: %s", imu_topic_.c_str());
     }
 
@@ -385,13 +378,13 @@ private:
 
     // Odometry data callback
     void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg, const std::string &device_name) {
-        RCLCPP_INFO(this->get_logger(), "Received odometry data");
+        RCLCPP_INFO(this->get_logger(), "received Odometry data");
         save_data(msg, device_name);
     }
 
     // Odometry data callback
     void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg, const std::string &device_name) {
-        RCLCPP_INFO(this->get_logger(), "Received odometry data");
+        RCLCPP_INFO(this->get_logger(), "received IMU data");
         save_data(msg, device_name);
     }
     
@@ -407,7 +400,7 @@ private:
             else if constexpr (std::is_same_v<T, std::shared_ptr<sensor_msgs::msg::Imu>>) {
                 if (!latest_ego_pose_.empty()) {
                     save_imu_data(msg);
-                }
+                } 
             }
             // Ensure we must have an ego pose and imu before processing other types
             if ((!latest_ego_pose_.empty()) && (!latest_imu_.empty())) {
@@ -459,7 +452,7 @@ private:
         auto angular_velocity = msg->angular_velocity;
 
         // 获取消息的时间戳并转换为微秒（utime）
-        auto utime = msg->header.stamp.sec * 1e6 + msg->header.stamp.nanosec / 1000;
+        uint64_t timestamp = msg->header.stamp.sec * 1e9 + msg->header.stamp.nanosec;
 
         // 将geometry_msgs::msg::Quaternion转为JSON数组
         nlohmann::json orientation_json = {orientation.x, orientation.y, orientation.z, orientation.w};
@@ -473,7 +466,7 @@ private:
         latest_imu_["q"] = orientation_json;              // 四元数
         latest_imu_["rotation_rate"] = angular_velocity_json;  // 角速度
         latest_imu_["pos"] = latest_ego_pose_["translation"];  // 位置
-        latest_imu_["utime"] = utime;  // 保存计算的utime
+        latest_imu_["utime"] = timestamp;  // 保存计算的utime
     }
 
     // Save Image data as JPEG and write it to sampe_data.json in the nuscenes sample_data format
@@ -922,8 +915,6 @@ private:
         return ss.str();
     }
 
-    
-
     // Ensure a specific directory exists
     void ensure_directory_exists(const std::string &path) {
         if (!std::filesystem::exists(path)) {
@@ -938,7 +929,6 @@ private:
     std::string scene_mode_;
     std::string robot_model_; // specify the robot used for capturing data
     std::string map_name_;
-    int issac_per_sec_frame_;
     float sample_frequency_; // sample every 0.5s
     std::unordered_map<std::string, std::string> sensor_token_map_;  // Initialize the unordered_map with device name (channel) -> token mapping
 
@@ -984,6 +974,6 @@ private:
 
 };
 
-#endif  // NUSCENES_DATA_COLLECTOR_ISSAC_HPP
+#endif  // NUSCENES_DATA_COLLECTOR_HPP
 
 

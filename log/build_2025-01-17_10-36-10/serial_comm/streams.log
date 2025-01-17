@@ -1,0 +1,26 @@
+[0.007s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm -- -j24 -l24
+[0.039s] [ 50%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial_node.cpp.o[0m
+[5.617s] [100%] [32m[1mLinking CXX executable serial_node[0m
+[5.859s] [100%] Built target serial_node
+[5.867s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm' returned '0': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm -- -j24 -l24
+[5.868s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm
+[5.872s] -- Install configuration: ""
+[5.872s] -- Execute custom install script
+[5.872s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/lib/serial_comm/serial_node
+[5.879s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/launch/serial_comm.launch.py
+[5.884s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/ament_index/resource_index/package_run_dependencies/serial_comm
+[5.889s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/ament_index/resource_index/parent_prefix_path/serial_comm
+[5.895s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/environment/ament_prefix_path.sh
+[5.900s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/environment/ament_prefix_path.dsv
+[5.905s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/environment/path.sh
+[5.910s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/environment/path.dsv
+[5.916s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/local_setup.bash
+[5.920s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/local_setup.sh
+[5.925s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/local_setup.zsh
+[5.930s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/local_setup.dsv
+[5.934s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.dsv
+[5.939s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/ament_index/resource_index/packages/serial_comm
+[5.945s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/cmake/serial_commConfig.cmake
+[5.951s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/cmake/serial_commConfig-version.cmake
+[5.957s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.xml
+[5.964s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm' returned '0': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm

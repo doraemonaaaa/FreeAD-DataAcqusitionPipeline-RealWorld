@@ -1,0 +1,4 @@
+[ 50%] Built target nuscenes_data_collector_issac_node
+[ 75%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o[0m
+[100%] [32m[1mLinking CXX executable nuscenes_data_collector_node[0m
+[100%] Built target nuscenes_data_collector_node

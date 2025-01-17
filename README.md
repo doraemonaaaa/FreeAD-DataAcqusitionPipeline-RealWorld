@@ -13,3 +13,53 @@ ros2换算m/s的speed<----->rpm
 雷达数据：
 通过设置config.yaml的
 send_point_cloud_ros  是否为true表示是否让lidar的数据有ros topic,有了之后启动用topic list即可查询
+
+lidar have 4 dimension data (x, y, z, intensity)
+
+# start up
+
+-- install tmux
+sudo apt install ros-humble-twist-mux
+
+-- install ros2_control
+
+-- insta robot_localization
+sudo apt install ros-humble-robot-localization
+
+-- install nav2
+sudo apt install ros-humble-nav2-common
+sudo apt install ros-humble-navigation2
+sudo apt install ros-humble-dwa-local-planner
+sudo apt install ros-humble-amcl
+sudo apt install ros-humble-map-server
+sudo apt install ros-humble-slam-toolbox
+
+-- install pointcloude to laserscan
+sudo apt install ros-humble-pointcloud-to-laserscan
+
+-- use rosdep to install all dependencies
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+
+-- set up the lidar ETH connection
+https://www.ncnynl.com/archives/202209/5470.html
+
+-- set up Real-Time Publish-Subscribe, Fast RTPS, used for RT communication
+sudo apt-get install ros-humble-rmw-cyclonedds-cpp
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+
+-- hardware setup
+    1. plugin stm32 USB
+    2. plugin imu USB
+    3. start up the whole baterry which have lidar and cameras
+
+# build
+-- build robot_hardware packages at first
+colcon build --packages-select robot_hardware --symlink-install
+
+-- then build others
+colcon build --symlink-install
+
+-- set the env PATH
+source install/setup.bash

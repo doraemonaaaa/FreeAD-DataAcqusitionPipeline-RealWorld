@@ -459,7 +459,7 @@ private:
         auto angular_velocity = msg->angular_velocity;
 
         // 获取消息的时间戳并转换为微秒（utime）
-        auto utime = msg->header.stamp.sec * 1e6 + msg->header.stamp.nanosec / 1000;
+        uint64_t timestamp = msg->header.stamp.sec * 1e9 + msg->header.stamp.nanosec;
 
         // 将geometry_msgs::msg::Quaternion转为JSON数组
         nlohmann::json orientation_json = {orientation.x, orientation.y, orientation.z, orientation.w};
@@ -473,7 +473,7 @@ private:
         latest_imu_["q"] = orientation_json;              // 四元数
         latest_imu_["rotation_rate"] = angular_velocity_json;  // 角速度
         latest_imu_["pos"] = latest_ego_pose_["translation"];  // 位置
-        latest_imu_["utime"] = utime;  // 保存计算的utime
+        latest_imu_["utime"] = timestamp;  // 保存计算的utime
     }
 
 

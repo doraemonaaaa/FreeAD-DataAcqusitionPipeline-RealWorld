@@ -1,0 +1,6 @@
+Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control': /usr/bin/cmake /home/pengyh/documents/ros2_ws/RobotAD/src/diff_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control
+Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control' returned '0': /usr/bin/cmake /home/pengyh/documents/ros2_ws/RobotAD/src/diff_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control
+Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control': /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/diff_control -- -j24 -l24
+Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control' returned '0': /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/diff_control -- -j24 -l24
+Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control': /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/diff_control
+Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control' returned '0': /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/diff_control

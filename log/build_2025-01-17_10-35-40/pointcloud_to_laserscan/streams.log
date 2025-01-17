@@ -1,0 +1,20 @@
+[0.018s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan': /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan -- -j24 -l24
+[0.045s] [35m[1mConsolidate compiler generated dependencies of target laserscan_to_pointcloud_node[0m
+[0.052s] [  8%] [32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan_node.dir/rclcpp_components/node_main_pointcloud_to_laserscan_node.cpp.o[0m
+[0.061s] [ 16%] [32mBuilding CXX object CMakeFiles/laserscan_to_pointcloud.dir/src/laserscan_to_pointcloud_node.cpp.o[0m
+[0.062s] [ 25%] [32mBuilding CXX object CMakeFiles/laserscan_to_pointcloud_node.dir/rclcpp_components/node_main_laserscan_to_pointcloud_node.cpp.o[0m
+[2.206s] [ 33%] [32m[1mLinking CXX executable pointcloud_to_laserscan_node[0m
+[2.224s] [ 41%] [32m[1mLinking CXX executable laserscan_to_pointcloud_node[0m
+[2.289s] [ 41%] Built target pointcloud_to_laserscan_node
+[2.301s] [ 41%] Built target laserscan_to_pointcloud_node
+[7.183s] [ 50%] [32m[1mLinking CXX shared library liblaserscan_to_pointcloud.so[0m
+[7.526s] [ 50%] Built target laserscan_to_pointcloud
+[7.541s] [ 58%] [32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan.dir/src/pointcloud_to_laserscan_node.cpp.o[0m
+[14.521s] [ 66%] [32m[1mLinking CXX shared library libpointcloud_to_laserscan.so[0m
+[14.912s] [ 66%] Built target pointcloud_to_laserscan
+[14.925s] [ 75%] [32mBuilding CXX object CMakeFiles/dummy_pointcloud_publisher.dir/src/dummy_pointcloud_publisher.cpp.o[0m
+[14.925s] [ 83%] [32mBuilding CXX object CMakeFiles/sub_laser_node.dir/src/sub_laser_node.cpp.o[0m
+[18.072s] [ 91%] [32m[1mLinking CXX executable dummy_pointcloud_publisher[0m
+[18.257s] [ 91%] Built target dummy_pointcloud_publisher
+[20.575s] [100%] [32m[1mLinking CXX executable sub_laser_node[0m
+[20.878s] [100%] Built target sub_laser_node

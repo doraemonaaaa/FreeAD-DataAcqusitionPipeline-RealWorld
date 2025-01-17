@@ -837,8 +837,131 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
   /usr/include/opencv4/opencv2/video/background_segm.hpp \
   /usr/include/dirent.h \
   /usr/include/x86_64-linux-gnu/bits/dirent.h \
-  /usr/include/x86_64-linux-gnu/bits/dirent_ext.h
+  /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
+  /usr/include/nlohmann/json.hpp \
+  /usr/include/nlohmann/adl_serializer.hpp \
+  /usr/include/nlohmann/detail/conversions/from_json.hpp \
+  /usr/include/c++/11/forward_list \
+  /usr/include/c++/11/bits/forward_list.h \
+  /usr/include/c++/11/bits/forward_list.tcc \
+  /usr/include/c++/11/valarray \
+  /usr/include/c++/11/bits/valarray_array.h \
+  /usr/include/c++/11/bits/valarray_array.tcc \
+  /usr/include/c++/11/bits/valarray_before.h \
+  /usr/include/c++/11/bits/slice_array.h \
+  /usr/include/c++/11/bits/valarray_after.h \
+  /usr/include/c++/11/bits/gslice.h \
+  /usr/include/c++/11/bits/gslice_array.h \
+  /usr/include/c++/11/bits/mask_array.h \
+  /usr/include/c++/11/bits/indirect_array.h \
+  /usr/include/nlohmann/detail/exceptions.hpp \
+  /usr/include/nlohmann/detail/value_t.hpp \
+  /usr/include/nlohmann/detail/string_escape.hpp \
+  /usr/include/nlohmann/detail/macro_scope.hpp \
+  /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /usr/include/nlohmann/detail/meta/detected.hpp \
+  /usr/include/nlohmann/detail/meta/void_t.hpp \
+  /usr/include/nlohmann/detail/input/position_t.hpp \
+  /usr/include/nlohmann/detail/meta/cpp_future.hpp \
+  /usr/include/nlohmann/detail/meta/identity_tag.hpp \
+  /usr/include/nlohmann/detail/meta/type_traits.hpp \
+  /usr/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /usr/include/nlohmann/detail/meta/call_std/begin.hpp \
+  /usr/include/nlohmann/detail/meta/call_std/end.hpp \
+  /usr/include/nlohmann/json_fwd.hpp \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h \
+  /usr/include/nlohmann/detail/conversions/to_json.hpp \
+  /usr/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /usr/include/nlohmann/byte_container_with_subtype.hpp \
+  /usr/include/nlohmann/detail/hash.hpp \
+  /usr/include/nlohmann/detail/input/binary_reader.hpp \
+  /usr/include/nlohmann/detail/input/input_adapters.hpp \
+  /usr/include/nlohmann/detail/input/json_sax.hpp \
+  /usr/include/nlohmann/detail/input/lexer.hpp \
+  /usr/include/nlohmann/detail/meta/is_sax.hpp \
+  /usr/include/nlohmann/detail/input/parser.hpp \
+  /usr/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  /usr/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  /usr/include/nlohmann/detail/iterators/iter_impl.hpp \
+  /usr/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  /usr/include/nlohmann/detail/json_pointer.hpp \
+  /usr/include/nlohmann/detail/json_ref.hpp \
+  /usr/include/nlohmann/detail/output/binary_writer.hpp \
+  /usr/include/nlohmann/detail/output/output_adapters.hpp \
+  /usr/include/nlohmann/detail/output/serializer.hpp \
+  /usr/include/nlohmann/detail/conversions/to_chars.hpp \
+  /usr/include/nlohmann/ordered_map.hpp \
+  /usr/include/nlohmann/detail/macro_unscope.hpp \
+  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /usr/include/c++/11/fstream \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc
 
+
+/usr/include/c++/11/bits/fstream.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
+
+/usr/include/c++/11/fstream:
+
+/usr/include/nlohmann/detail/macro_unscope.hpp:
+
+/usr/include/nlohmann/ordered_map.hpp:
+
+/usr/include/nlohmann/detail/conversions/to_chars.hpp:
+
+/usr/include/nlohmann/detail/output/output_adapters.hpp:
+
+/usr/include/nlohmann/detail/output/binary_writer.hpp:
+
+/usr/include/nlohmann/detail/iterators/internal_iterator.hpp:
+
+/usr/include/nlohmann/detail/input/input_adapters.hpp:
+
+/usr/include/nlohmann/detail/hash.hpp:
+
+/usr/include/c++/11/bits/fs_ops.h:
+
+/usr/include/c++/11/bits/fs_path.h:
+
+/usr/include/c++/11/filesystem:
+
+/usr/include/nlohmann/json_fwd.hpp:
+
+/usr/include/nlohmann/detail/meta/call_std/end.hpp:
+
+/usr/include/nlohmann/detail/meta/call_std/begin.hpp:
+
+/usr/include/nlohmann/thirdparty/hedley/hedley.hpp:
+
+/usr/include/nlohmann/detail/value_t.hpp:
+
+/usr/include/c++/11/bits/gslice_array.h:
+
+/usr/include/c++/11/bits/gslice.h:
+
+/usr/include/c++/11/bits/valarray_after.h:
+
+/usr/include/c++/11/bits/slice_array.h:
+
+/usr/include/c++/11/valarray:
+
+/usr/include/c++/11/bits/forward_list.tcc:
+
+/usr/include/c++/11/bits/forward_list.h:
+
+/usr/include/c++/11/forward_list:
+
+/usr/include/nlohmann/detail/conversions/from_json.hpp:
+
+/usr/include/nlohmann/adl_serializer.hpp:
+
+/usr/include/nlohmann/json.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/dirent.h:
 
@@ -869,6 +992,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /usr/include/opencv4/opencv2/core/cuda.hpp:
 
 /usr/include/opencv4/opencv2/stitching.hpp:
+
+/usr/include/nlohmann/detail/iterators/primitive_iterator.hpp:
 
 /usr/include/opencv4/opencv2/objdetect/face.hpp:
 
@@ -906,11 +1031,15 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp:
 
+/usr/include/c++/11/bits/indirect_array.h:
+
 /usr/include/opencv4/opencv2/dnn/dnn.inl.hpp:
 
 /usr/include/opencv4/opencv2/dnn/layer.hpp:
 
 /usr/include/opencv4/opencv2/dnn/dict.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
 
 /usr/include/opencv4/opencv2/dnn/version.hpp:
 
@@ -926,6 +1055,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /usr/include/opencv4/opencv2/features2d.hpp:
 
+/usr/include/nlohmann/detail/iterators/json_reverse_iterator.hpp:
+
 /usr/include/opencv4/opencv2/opencv.hpp:
 
 /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge_export.h:
@@ -933,6 +1064,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /usr/include/opencv4/opencv2/imgproc/segmentation.hpp:
 
 /usr/include/opencv4/opencv2/imgproc/imgproc.hpp:
+
+/usr/include/nlohmann/detail/iterators/iterator_traits.hpp:
 
 /usr/include/opencv4/opencv2/core/optim.hpp:
 
@@ -1020,6 +1153,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_service.hpp:
 
+/usr/include/nlohmann/detail/meta/cpp_future.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_event_handler.hpp:
 
 /opt/ros/humble/include/rcl_yaml_param_parser/rcl_yaml_param_parser/visibility_control.h:
@@ -1037,6 +1172,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__type_support.hpp:
+
+/usr/include/c++/11/bits/valarray_array.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__traits.hpp:
 
@@ -1076,6 +1213,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /opt/ros/humble/include/rclcpp/rclcpp/create_subscription.hpp:
 
+/usr/include/c++/11/bits/fs_fwd.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/create_service.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_parameters_interface_traits.hpp:
@@ -1104,6 +1243,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__builder.hpp:
 
+/usr/include/c++/11/bits/valarray_array.tcc:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_type.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__type_support.hpp:
@@ -1115,6 +1256,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_logging_interface.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_clock_interface.hpp:
+
+/usr/include/c++/11/bits/fs_dir.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/generic_subscription.hpp:
 
@@ -1129,6 +1272,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /opt/ros/humble/include/rcutils/rcutils/shared_library.h:
 
 /opt/ros/humble/include/rcpputils/rcpputils/shared_library.hpp:
+
+/usr/include/nlohmann/detail/meta/detected.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__type_support.hpp:
 
@@ -1172,6 +1317,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /opt/ros/humble/include/rclcpp/rclcpp/is_ros_compatible_type.hpp:
 
+/usr/include/nlohmann/detail/input/position_t.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__type_support.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/get_message_type_support_handle.hpp:
@@ -1184,6 +1331,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /opt/ros/humble/include/rcpputils/rcpputils/thread_safety_annotations.hpp:
 
+/usr/include/nlohmann/detail/meta/is_sax.hpp:
+
 /usr/include/opencv4/opencv2/stitching/detail/blenders.hpp:
 
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
@@ -1192,7 +1341,11 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp:
 
+/usr/include/nlohmann/detail/meta/identity_tag.hpp:
+
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
+
+/usr/include/c++/11/bits/valarray_before.h:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
@@ -1237,6 +1390,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /usr/include/c++/11/bits/stl_multiset.h:
 
 /opt/ros/humble/include/rcutils/rcutils/logging_macros.h:
+
+/usr/include/nlohmann/detail/input/lexer.hpp:
 
 /usr/include/c++/11/ratio:
 
@@ -1337,6 +1492,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /usr/include/c++/11/utility:
 
 /usr/include/c++/11/ios:
+
+/usr/include/nlohmann/detail/meta/void_t.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set.hpp:
 
@@ -1439,6 +1596,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/c++/11/ext/concurrence.h:
+
+/usr/include/nlohmann/detail/conversions/to_json.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
@@ -1598,6 +1757,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
 
+/usr/include/nlohmann/detail/input/parser.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
@@ -1678,11 +1839,15 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_age.hpp:
 
+/usr/include/nlohmann/detail/output/serializer.hpp:
+
 /usr/include/c++/11/bits/allocator.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/detail/qos_parameters.hpp:
 
 /usr/include/c++/11/cmath:
+
+/usr/include/nlohmann/byte_container_with_subtype.hpp:
 
 /usr/include/c++/11/pstl/pstl_config.h:
 
@@ -1703,6 +1868,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /usr/include/c++/11/set:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/nlohmann/detail/json_ref.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
@@ -1832,6 +1999,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
+/usr/include/nlohmann/detail/input/json_sax.hpp:
+
 /opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__type_support.hpp:
 
 /usr/include/c++/11/bits/this_thread_sleep.h:
@@ -1896,6 +2065,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /usr/include/math.h:
 
+/usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp:
+
 /usr/include/errno.h:
 
 /usr/include/c++/11/bits/alloc_traits.h:
@@ -1925,6 +2096,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
+
+/usr/include/nlohmann/detail/exceptions.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
@@ -2024,6 +2197,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /opt/ros/humble/include/rcutils/rcutils/testing/fault_injection.h:
 
+/usr/include/nlohmann/detail/iterators/iter_impl.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
@@ -2074,6 +2249,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /usr/include/c++/11/stdlib.h:
 
+/usr/include/c++/11/bits/mask_array.h:
+
 /opt/ros/humble/include/rmw/rmw/impl/cpp/demangle.hpp:
 
 /opt/ros/humble/include/rcutils/rcutils/time.h:
@@ -2095,6 +2272,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /opt/ros/humble/include/rcutils/rcutils/types/string_array.h:
 
 /opt/ros/humble/include/rcutils/rcutils/qsort.h:
+
+/usr/include/nlohmann/detail/iterators/iteration_proxy.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
@@ -2156,6 +2335,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /opt/ros/humble/include/rcl_yaml_param_parser/rcl_yaml_param_parser/types.h:
 
+/usr/include/nlohmann/detail/input/binary_reader.hpp:
+
 /usr/include/c++/11/bits/locale_facets.tcc:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdalign.h:
@@ -2190,6 +2371,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 
 /usr/include/c++/11/bits/locale_facets_nonio.h:
 
+/usr/include/nlohmann/detail/meta/type_traits.hpp:
+
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
 /opt/ros/humble/include/rcl/rcl/time.h:
@@ -2213,6 +2396,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /opt/ros/humble/include/rcl/rcl/publisher.h:
 
 /opt/ros/humble/include/rcpputils/rcpputils/scope_exit.hpp:
+
+/usr/include/nlohmann/detail/string_escape.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:
 
@@ -2303,6 +2488,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__type_support.hpp:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:
+
+/usr/include/nlohmann/detail/macro_scope.hpp:
 
 /opt/ros/humble/include/rcutils/rcutils/logging.h:
 
@@ -2413,6 +2600,8 @@ CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o: /home/pengyh/documents
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/subscription_intra_process.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/buffers/buffer_implementation_base.hpp:
+
+/usr/include/nlohmann/detail/json_pointer.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/rate.hpp:
 

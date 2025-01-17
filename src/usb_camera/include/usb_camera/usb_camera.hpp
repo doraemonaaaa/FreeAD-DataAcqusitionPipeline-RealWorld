@@ -5,6 +5,9 @@
 #include <dirent.h>
 #include <cstring>
 #include <sstream>
+#include <nlohmann/json.hpp>  // For JSON data handling
+#include <fstream>
+#include <algorithm>  // For std::transform
 
 class UsbCameraNode : public rclcpp::Node
 {
@@ -18,6 +21,8 @@ public:
         this->declare_parameter<std::string>("img_type", "PNG");
         this->declare_parameter<int>("post_processing_img_width", 1600);
         this->declare_parameter<int>("post_processing_img_height", 900);
+        this->declare_parameter<bool>("flip_x", false);  // Default is no flip (false)
+        this->declare_parameter<bool>("flip_y", false);  // Default is no flip (false)
 
         // Retrieve parameters from the parameter server
         frame_rate_ = this->get_parameter("frame_rate").as_int();
@@ -26,6 +31,8 @@ public:
         img_type_ = this->get_parameter("img_type").as_string();
         post_processing_img_width_ = this->get_parameter("post_processing_img_width").as_int();
         post_processing_img_height_ = this->get_parameter("post_processing_img_height").as_int();
+        flip_x_ = this->get_parameter("flip_x").as_bool();
+        flip_y_ = this->get_parameter("flip_y").as_bool();
 
         // Scan and open cameras
         if (!scan_and_open_cameras())
@@ -36,14 +43,13 @@ public:
         }
 
         // Create timer to capture frames periodically based on frame rate
-        img_show_timer_ = this->create_wall_timer(std::chrono::milliseconds(1000 / frame_rate_), 
+        img_captrue_timer_ = this->create_wall_timer(std::chrono::milliseconds(1000 / frame_rate_), 
                                                   std::bind(&UsbCameraNode::capture_frames, this));
 
         // Create timer to check for camera timeouts
         timeout_check_timer_ = this->create_wall_timer(std::chrono::seconds(1), 
                                                        std::bind(&UsbCameraNode::check_camera_timeout, this));
     }
-
 
 private:
     int frame_rate_;
@@ -52,11 +58,13 @@ private:
     std::string img_type_;
     int post_processing_img_width_;
     int post_processing_img_height_;
+    bool flip_x_, flip_y_;
 
     std::map<std::string, cv::VideoCapture> camera_caps_;  // Store device names and VideoCapture objects
     std::map<std::string, rclcpp::Time> last_frame_time_; // Store the last frame time for each camera
+    std::map<std::string, rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr> image_publishers_; // Store publishers for each camera
     const rclcpp::Duration timeout_ = rclcpp::Duration(2, 0); // Timeout duration of 2 seconds
-    rclcpp::TimerBase::SharedPtr img_show_timer_;           // Frame capture timer
+    rclcpp::TimerBase::SharedPtr img_captrue_timer_;           // Frame capture timer
     rclcpp::TimerBase::SharedPtr timeout_check_timer_;     // Timeout check timer
 
     // Scan the /dev directory to find camera devices
@@ -83,6 +91,9 @@ private:
                     RCLCPP_ERROR(this->get_logger(), "Failed to open camera %s", device_path.c_str());
                     continue; // If opening the camera fails, try the next one
                 }
+
+                // Create a publisher for each camera, with a topic based on the camera name
+                image_publishers_[camera_name] = this->create_publisher<sensor_msgs::msg::Image>(device_path, 100);
             }
         }
         closedir(dir);  // Close the directory
@@ -110,7 +121,7 @@ private:
         return true;
     }
 
-    // Capture the current frame
+    // Capture the current frame and publish as an image message
     void capture_frames()
     {
         for (auto &camera : camera_caps_)
@@ -139,9 +150,29 @@ private:
                 cv::resize(frame, frame, cv::Size(post_processing_img_width_, post_processing_img_height_));
             }
 
+            // Apply axis flipping if required
+            if (flip_x_)
+            {
+                cv::flip(frame, frame, 1);  // Flip horizontally
+            }
+            if (flip_y_)
+            {
+                cv::flip(frame, frame, 0);  // Flip vertically
+            }
+
+            // Display the frame in a window using OpenCV
+            cv::imshow(camera_name, frame);  // Show in a window named after the camera
+            cv::waitKey(1);  // Wait for 1 ms to process events and refresh the window
+
+            // Convert frame to a sensor_msgs::msg::Image
+            sensor_msgs::msg::Image::SharedPtr msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", frame).toImageMsg();
+
+            // Publish the captured image to the camera's specific topic
+            image_publishers_[camera_name]->publish(*msg);
+
             // Update the last frame timestamp
             last_frame_time_[camera_name] = this->now();
-            RCLCPP_INFO(this->get_logger(), "Successfully captured a frame from camera %s.", camera_name.c_str());
+            RCLCPP_INFO(this->get_logger(), "Successfully captured and published a frame from camera %s.", camera_name.c_str());
         }
     }
 
@@ -158,8 +189,9 @@ private:
             // If the camera has timed out, log a warning
             if (this->now() - last_time > timeout_)
             {
-                RCLCPP_WARN(this->get_logger(), "Camera %s has not provided a frame for more than 2 seconds.", camera_name.c_str());
+                RCLCPP_ERROR(this->get_logger(), "Camera %s has not provided a frame for more than 2 seconds.", camera_name.c_str());
             }
         }
     }
 };
+

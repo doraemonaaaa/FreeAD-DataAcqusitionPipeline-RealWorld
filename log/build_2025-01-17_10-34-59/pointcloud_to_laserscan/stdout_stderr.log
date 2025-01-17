@@ -1,0 +1,11 @@
+[  8%] [32mBuilding CXX object CMakeFiles/laserscan_to_pointcloud.dir/src/laserscan_to_pointcloud_node.cpp.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/laserscan_to_pointcloud_node.dir/rclcpp_components/node_main_laserscan_to_pointcloud_node.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan_node.dir/rclcpp_components/node_main_pointcloud_to_laserscan_node.cpp.o[0m
+gmake[2]: *** Deleting file 'CMakeFiles/laserscan_to_pointcloud_node.dir/rclcpp_components/node_main_laserscan_to_pointcloud_node.cpp.o'
+gmake[2]: *** [CMakeFiles/laserscan_to_pointcloud.dir/build.make:76: CMakeFiles/laserscan_to_pointcloud.dir/src/laserscan_to_pointcloud_node.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/laserscan_to_pointcloud_node.dir/build.make:76: CMakeFiles/laserscan_to_pointcloud_node.dir/rclcpp_components/node_main_laserscan_to_pointcloud_node.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/pointcloud_to_laserscan_node.dir/build.make:76: CMakeFiles/pointcloud_to_laserscan_node.dir/rclcpp_components/node_main_pointcloud_to_laserscan_node.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:147: CMakeFiles/laserscan_to_pointcloud.dir/all] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:173: CMakeFiles/laserscan_to_pointcloud_node.dir/all] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:225: CMakeFiles/pointcloud_to_laserscan_node.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

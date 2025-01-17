@@ -1,0 +1,62 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o[0m
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:4:18:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K#[m[K’ in program
+    4 | import keyboard  [01;31m[K#[m[K 用于捕获键盘输入
+      |                  [01;31m[K^[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:8:26:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+    8 |         super().__init__([01;35m[K'keyboard_control'[m[K)
+      |                          [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:10:11:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #\U0000521b\U00005efa\U000053d1\U00005e03\U00008005\U0000ff0c\U000053d1\U00005e03
+   10 |         # [01;31m[K创建发布者，发布[m[K Twist 消息到 /cmd_vel 话题
+      |           [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:11:55:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+   11 | = self.create_publisher(Twist, [01;35m[K'/cmd_vel'[m[K, 10)
+      |                                [01;35m[K^~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:13:11:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #\U0000521b\U00005efa\U00005b9a\U000065f6\U00005668\U0000ff0c\U00006bcf
+   13 |         # [01;31m[K创建定时器，每[m[K 0.1 秒检查一次键盘输入
+      |           [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:16:11:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #\U0000521d\U000059cb\U00005316
+   16 |         # [01;31m[K初始化[m[K Twist 消息
+      |           [01;31m[K^~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:19:11:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #\U00006253\U00005370\U000063a7\U00005236\U00004fe1\U0000606f
+   19 |         # [01;31m[K打印控制信息[m[K
+      |           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:23:11:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #\U00009ed8\U00008ba4\U0000901f\U00005ea6\U00004e3a
+   23 |         # [01;31m[K默认速度为[m[K 0
+      |           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:27:11:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #\U000068c0\U000067e5\U0000952e\U000076d8\U00008f93\U00005165\U00005e76\U00008bbe\U00007f6e\U00007ebf\U0000901f\U00005ea6
+   27 |         # [01;31m[K检查键盘输入并设置线速度[m[K
+      |           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:28:39:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K#[m[K’ in program
+   28 |  if keyboard.is_pressed('s'):  [01;31m[K#[m[K 按 's' 键时往后退
+      |                                [01;31m[K^[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:29:41:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K#[m[K’ in program
+   29 |    self.twist.linear.x = -0.2  [01;31m[K#[m[K 负值表示往后退
+      |                                [01;31m[K^[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:31:41:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K#[m[K’ in program
+   31 | lif keyboard.is_pressed('w'):  [01;31m[K#[m[K 按 'w' 键时往前进
+      |                                [01;31m[K^[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:34:41:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K#[m[K’ in program
+   34 | lif keyboard.is_pressed('a'):  [01;31m[K#[m[K 按 'a' 键时向左转
+      |                                [01;31m[K^[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:37:41:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K#[m[K’ in program
+   37 | lif keyboard.is_pressed('d'):  [01;31m[K#[m[K 按 'd' 键时向右转
+      |                                [01;31m[K^[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:41:11:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #\U000053d1\U00005e03
+   41 |         # [01;31m[K发布[m[K Twist 消息
+      |           [01;31m[K^~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:50:16:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+   50 | if __name__ == [01;35m[K'__main__'[m[K:
+      |                [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:1:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kimport[m[K’ does not name a type
+    1 | [01;31m[Kimport[m[K rclpy
+      | [01;31m[K^~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control/src/keyboard_control_node.cpp:1:1:[m[K [01;36m[Knote: [m[KC++20 ‘[01m[Kimport[m[K’ only available with ‘[01m[K-fmodules-ts[m[K’
+gmake[2]: *** [CMakeFiles/keyboard_control_node.dir/build.make:76: CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/keyboard_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

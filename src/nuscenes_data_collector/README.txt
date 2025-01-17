@@ -141,3 +141,10 @@
         - use the same prefix in a frame, which contain 6 cam jpgs and 1 lidar bin
         #todo: unlike issac sim, each frame is not sync, so we should use timestamp or other measure to attempt synchronization
         - compare to issac sim, 使用 ROS2 ApproximateTimeSynchronizer 进行msg同步, make it have a synchronized frame like issac sim
+
+
+## 3. start up
+
+    -- set up Real-Time Publish-Subscribe, Fast RTPS, used for RT communication
+    sudo apt-get install ros-humble-rmw-cyclonedds-cpp
+    export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp

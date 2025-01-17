@@ -1,0 +1,7 @@
+[0.018s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[0.052s] [ 25%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o[0m
+[0.054s] [ 50%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_issac_node.dir/src/nuscenes_data_collector_issac.cpp.o[0m
+[16.818s] [ 75%] [32m[1mLinking CXX executable nuscenes_data_collector_node[0m
+[18.505s] [ 75%] Built target nuscenes_data_collector_node
+[19.617s] [100%] [32m[1mLinking CXX executable nuscenes_data_collector_issac_node[0m
+[21.274s] [100%] Built target nuscenes_data_collector_issac_node

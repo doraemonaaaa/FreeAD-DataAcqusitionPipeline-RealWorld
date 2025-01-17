@@ -1,0 +1,4 @@
+Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg': /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg -- -j24 -l24
+Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg' returned '0': /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg -- -j24 -l24
+Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg': /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg
+Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg' returned '0': /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg

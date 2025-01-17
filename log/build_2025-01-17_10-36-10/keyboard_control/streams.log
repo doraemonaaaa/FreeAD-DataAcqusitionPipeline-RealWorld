@@ -1,0 +1,25 @@
+[0.007s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control -- -j24 -l24
+[0.041s] [ 50%] [32mBuilding CXX object CMakeFiles/keyboard_control_node.dir/src/keyboard_control_node.cpp.o[0m
+[2.835s] [100%] [32m[1mLinking CXX executable keyboard_control_node[0m
+[2.999s] [100%] Built target keyboard_control_node
+[3.010s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control' returned '0': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control -- -j24 -l24
+[3.012s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control
+[3.020s] -- Install configuration: ""
+[3.021s] -- Execute custom install script
+[3.022s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/lib/keyboard_control/keyboard_control_node
+[3.031s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/ament_index/resource_index/package_run_dependencies/keyboard_control
+[3.039s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/ament_index/resource_index/parent_prefix_path/keyboard_control
+[3.046s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/environment/ament_prefix_path.sh
+[3.055s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/environment/ament_prefix_path.dsv
+[3.062s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/environment/path.sh
+[3.070s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/environment/path.dsv
+[3.077s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/local_setup.bash
+[3.086s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/local_setup.sh
+[3.094s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/local_setup.zsh
+[3.102s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/local_setup.dsv
+[3.110s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.dsv
+[3.121s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/ament_index/resource_index/packages/keyboard_control
+[3.128s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/cmake/keyboard_controlConfig.cmake
+[3.136s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/cmake/keyboard_controlConfig-version.cmake
+[3.143s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.xml
+[3.153s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control' returned '0': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control

@@ -1,0 +1,4 @@
+Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu': /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu -- -j24 -l24
+Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu' returned '0': /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu -- -j24 -l24
+Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu': /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu
+Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu' returned '0': /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu
