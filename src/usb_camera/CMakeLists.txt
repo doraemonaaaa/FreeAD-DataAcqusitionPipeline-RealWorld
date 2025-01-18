@@ -30,6 +30,10 @@ include_directories(
 install(DIRECTORY config/
   DESTINATION share/${PROJECT_NAME}/config
 )
+# 安装 Launch 文件和配置文件
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
 
 # 安装目标
 install(TARGETS

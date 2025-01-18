@@ -313,6 +313,9 @@ message(STATUS "Execute custom install script")
 # install(DIRECTORY "config/" "DESTINATION" "share/usb_camera/config")
 ament_cmake_symlink_install_directory("/home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera" DIRECTORY "config/" "DESTINATION" "share/usb_camera/config")
 
+# install(DIRECTORY "launch" "DESTINATION" "share/usb_camera")
+ament_cmake_symlink_install_directory("/home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera" DIRECTORY "launch" "DESTINATION" "share/usb_camera")
+
 # install("TARGETS" "usb_camera_node" "DESTINATION" "lib/usb_camera")
 include("/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 

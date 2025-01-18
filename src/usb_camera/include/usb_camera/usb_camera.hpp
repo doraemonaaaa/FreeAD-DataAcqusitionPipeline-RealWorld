@@ -23,6 +23,7 @@ public:
         this->declare_parameter<int>("post_processing_img_height", 900);
         this->declare_parameter<bool>("flip_x", false);  // Default is no flip (false)
         this->declare_parameter<bool>("flip_y", false);  // Default is no flip (false)
+        this->declare_parameter<bool>("is_img_show", false); 
 
         // Retrieve parameters from the parameter server
         frame_rate_ = this->get_parameter("frame_rate").as_int();
@@ -33,7 +34,7 @@ public:
         post_processing_img_height_ = this->get_parameter("post_processing_img_height").as_int();
         flip_x_ = this->get_parameter("flip_x").as_bool();
         flip_y_ = this->get_parameter("flip_y").as_bool();
-
+        is_img_show = this->get_parameter("is_img_show").as_bool();
         // Scan and open cameras
         if (!scan_and_open_cameras())
         {
@@ -58,7 +59,7 @@ private:
     std::string img_type_;
     int post_processing_img_width_;
     int post_processing_img_height_;
-    bool flip_x_, flip_y_;
+    bool flip_x_, flip_y_, is_img_show;
 
     std::map<std::string, cv::VideoCapture> camera_caps_;  // Store device names and VideoCapture objects
     std::map<std::string, rclcpp::Time> last_frame_time_; // Store the last frame time for each camera
@@ -114,6 +115,12 @@ private:
         cap.set(cv::CAP_PROP_FRAME_WIDTH, image_width_);
         cap.set(cv::CAP_PROP_FRAME_HEIGHT, image_height_);
 
+        // Set the frame rate (FPS)
+        if (!cap.set(cv::CAP_PROP_FPS, frame_rate_))  // Try setting the FPS to the desired value
+        {
+            RCLCPP_WARN(this->get_logger(), "Failed to set the desired FPS (%d) for camera %s.", frame_rate_, camera_name.c_str());
+        }
+
         // Store the device file and corresponding VideoCapture object
         camera_caps_[camera_name] = cap;
         last_frame_time_[camera_name] = this->now();  // Initialize the last frame timestamp
@@ -160,9 +167,11 @@ private:
                 cv::flip(frame, frame, 0);  // Flip vertically
             }
 
-            // Display the frame in a window using OpenCV
-            cv::imshow(camera_name, frame);  // Show in a window named after the camera
-            cv::waitKey(1);  // Wait for 1 ms to process events and refresh the window
+            if(is_img_show){
+                cv::resizeWindow(camera_name, 640, 480);  // Resize window to 640x480
+                // Display the frame in a window using OpenCV
+                cv::imshow(camera_name, frame);  // Show in a window named after the camera
+            }
 
             // Convert frame to a sensor_msgs::msg::Image
             sensor_msgs::msg::Image::SharedPtr msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", frame).toImageMsg();

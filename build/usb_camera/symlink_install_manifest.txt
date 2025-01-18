@@ -1,4 +1,6 @@
 /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/config/camera_params.yaml
+/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/launch/__pycache__/launch.cpython-310.pyc
+/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/launch/launch.py
 /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/lib/usb_camera/usb_camera_node
 /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/ament_index/resource_index/package_run_dependencies/usb_camera
 /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/ament_index/resource_index/parent_prefix_path/usb_camera

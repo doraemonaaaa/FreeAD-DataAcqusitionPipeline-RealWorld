@@ -1,0 +1,12 @@
+[0.022s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera -- -j24 -l24
+[0.049s] [35m[1mConsolidate compiler generated dependencies of target usb_camera_node[0m
+[0.063s] [ 50%] [32mBuilding CXX object CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o[0m
+[0.240s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera/src/usb_camera_node.cpp:1[m[K:
+[0.240s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera/include/usb_camera/usb_camera.hpp:5:10:[m[K [01;31m[Kfatal error: [m[Kopencv2/cudaimgproc.hpp: No such file or directory
+[0.240s]     5 | #include [01;31m[K<opencv2/cudaimgproc.hpp>[m[K // CUDA 图像处理
+[0.240s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.240s] compilation terminated.
+[0.242s] gmake[2]: *** [CMakeFiles/usb_camera_node.dir/build.make:76: CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o] Error 1
+[0.242s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/usb_camera_node.dir/all] Error 2
+[0.242s] gmake: *** [Makefile:146: all] Error 2
+[0.243s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera -- -j24 -l24

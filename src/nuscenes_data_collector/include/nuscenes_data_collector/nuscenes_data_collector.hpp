@@ -89,13 +89,13 @@ public:
         })");
         
         this->declare_parameter<std::string>("calibrated_sensor_token_map_", R"({
-            "CAM_FRONT": "CALIBRATION_CAM_FRONT",
-            "CAM_BACK": "CALIBRATION_CAM_BACK",
-            "CAM_BACK_LEFT": "CALIBRATION_CAM_BACK_LEFT",
-            "CAM_FRONT_LEFT": "CALIBRATION_CAM_FRONT_LEFT",
-            "CAM_FRONT_RIGHT": "CALIBRATION_CAM_FRONT_RIGHT",
-            "CAM_BACK_RIGHT": "CALIBRATION_CAM_BACK_RIGHT",
-            "LIDAR_TOP": "CALIBRATION_LIDAR_TOP"
+            "CAM_FRONT": "CALIBRATION_RW_CAM_FRONT",
+            "CAM_BACK": "CALIBRATION_RW_CAM_BACK",
+            "CAM_BACK_LEFT": "CALIBRATION_RW_CAM_BACK_LEFT",
+            "CAM_FRONT_LEFT": "CALIBRATION_RW_CAM_FRONT_LEFT",
+            "CAM_FRONT_RIGHT": "CALIBRATION_RW_CAM_FRONT_RIGHT",
+            "CAM_BACK_RIGHT": "CALIBRATION_RW_CAM_BACK_RIGHT",
+            "LIDAR_TOP": "CALIBRATION_RW_LIDAR_TOP"
         })");
 
         // Declare other parameters
@@ -257,7 +257,7 @@ private:
         // Initialize camera names and declare related parameters
         camera_names_ = {"CAM_FRONT", "CAM_FRONT_RIGHT", "CAM_FRONT_LEFT", "CAM_BACK", "CAM_BACK_LEFT", "CAM_BACK_RIGHT"};
         for (const auto &camera : camera_names_) {
-            camera_topics_[camera] = "/" + camera;
+            camera_topics_[camera] = "/dev/" + camera;
             RCLCPP_INFO(this->get_logger(), "Declared camera topic parameter for %s: %s", camera.c_str(), camera_topics_[camera].c_str());
         }
         // Get odom_topic and lidar_topic parameter
@@ -276,8 +276,15 @@ private:
 
         // 为每个摄像头创建订阅者
         for (const auto &camera : camera_names_) {
+            // 创建订阅器并检查是否成功
             auto image_sub = std::make_shared<message_filters::Subscriber<sensor_msgs::msg::Image>>(
                 this, camera_topics_[camera], rmw_qos_profile_sensor_data);
+
+            // 输出日志，确认是否成功订阅
+            RCLCPP_INFO(this->get_logger(), "Subscribing to camera: %s, Topic: %s", 
+                        camera.c_str(), camera_topics_[camera].c_str());
+
+            // 将订阅器加入到容器中
             image_subs.push_back(image_sub);
         }
 
@@ -293,7 +300,7 @@ private:
         );
 
         // 设置最大同步误差时间为0.1秒
-        sync->setMaxIntervalDuration(std::chrono::milliseconds(100));
+        sync->setMaxIntervalDuration(std::chrono::milliseconds(200));
 
         // 注册回调函数，并传递摄像头名称
         sync->registerCallback(std::bind(&NuScenesDataCollector::synced_camera_callback, 
@@ -309,7 +316,14 @@ private:
         sync->registerCallback(std::bind(&NuScenesDataCollector::synced_camera_callback, 
                                         this, std::placeholders::_6, "CAM_BACK_RIGHT"));
 
+        // 输出日志，确认同步器回调注册成功
+        RCLCPP_INFO(this->get_logger(), "Synchronizer callback registered for 6 camera topics.");
+
+        // 将同步器加入到容器中
         synchronizers_.push_back(sync);
+
+        // 输出日志，确认同步器已成功保存
+        RCLCPP_INFO(this->get_logger(), "Synchronizer added to synchronizers_ container.");
     }
 
     // 同步回调函数，处理六个摄像头的图像数据

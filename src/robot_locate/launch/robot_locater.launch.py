@@ -68,6 +68,13 @@ def generate_launch_description():
         condition = UnlessCondition(LaunchConfiguration('use_sim_time'))
     )
 
+    usb_camera = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('usb_camera'), 'launch'), '/launch.py'
+        ]),
+        condition = UnlessCondition(LaunchConfiguration('use_sim_time'))
+    )
+
     twist_mux_params = os.path.join(pkg_share, 'config/twist_mux.yaml')
     twist_mux = launch_ros.actions.Node(
         package='twist_mux',
@@ -85,6 +92,7 @@ def generate_launch_description():
         #serial_comm,
         imu_driver,
         rslidar_driver,
+        usb_camera,
         robot_localization_node,
         pointcloud_to_laserscan,
         diff_drive_controller,
