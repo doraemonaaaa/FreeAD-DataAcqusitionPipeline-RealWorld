@@ -1,0 +1,13 @@
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::capture_image_callback()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:281:111:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kstd::future<typename std::__invoke_result<typename std::decay<_Tp>::type, typename std::decay<_Args>::type ...>::type> std::async(std::launch, _Fn&&, _Args&& ...) [with _Fn = void (NuScenesDataCollector::*)(const std::__cxx11::basic_string<char>&); _Args = {NuScenesDataCollector*, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&}; typename std::__invoke_result<typename std::decay<_Tp>::type, typename std::decay<_Args>::type ...>::type = void; typename std::decay<_Tp>::type = void (NuScenesDataCollector::*)(const std::__cxx11::basic_string<char>&)][m[K’, declared with attribute ‘[01m[Knodiscard[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  281 | e_frame_async, this, camera_name)[01;35m[K;[m[K
+      |                                  [01;35m[K^[m[K
+
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/usr/include/c++/11/future:1768:5:[m[K [01;36m[Knote: [m[Kdeclared here
+ 1768 |     [01;36m[Kasync[m[K(launch __policy, _Fn&& __fn, _Args&&... __args)
+      |     [01;36m[K^~~~~[m[K

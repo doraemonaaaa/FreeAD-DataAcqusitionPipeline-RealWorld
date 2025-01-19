@@ -6,5 +6,13 @@
     "log_tokens": [
 
     ]
+    },
+    {
+        "category": "semantic_prior",
+        "token": "AIR_F11",
+        "filename": "maps/office_occupancy_map_semantic_prior.png",
+        "log_tokens": [
+    
+        ]
     }
 ]

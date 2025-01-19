@@ -1,0 +1,73 @@
+[0.020s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[0.051s] [35m[1mConsolidate compiler generated dependencies of target nuscenes_data_collector_node[0m
+[0.073s] [ 50%] Built target nuscenes_data_collector_issac_node
+[0.075s] [ 75%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o[0m
+[3.729s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.729s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In constructor ‘[01m[KNuScenesDataCollector::NuScenesDataCollector()[m[K’:
+[3.730s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:255:24:[m[K [01;31m[Kerror: [m[KISO C++ forbids taking the address of an unqualified or parenthesized non-static member function to form a pointer to member function.  Say ‘[01m[K&NuScenesDataCollector::clock_callback[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[3.730s]   255 |      std::bind(&[01;31m[Kclock_callback[m[K, this)
+[3.730s]       |                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.730s] 
+[3.730s] In file included from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[3.730s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[3.730s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[3.730s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[3.730s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[3.730s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.730s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+[3.731s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.731s] /usr/include/c++/11/functional: In instantiation of ‘[01m[Kstruct std::_Bind_check_arity<void (NuScenesDataCollector::*)(std::shared_ptr<rosgraph_msgs::msg::Clock_<std::allocator<void> > >), NuScenesDataCollector*>[m[K’:
+[3.731s] [01m[K/usr/include/c++/11/functional:768:12:[m[K   required from ‘[01m[Kstruct std::_Bind_helper<false, void (NuScenesDataCollector::*)(std::shared_ptr<rosgraph_msgs::msg::Clock_<std::allocator<void> > >), NuScenesDataCollector*>[m[K’
+[3.731s] [01m[K/usr/include/c++/11/functional:789:5:[m[K   required by substitution of ‘[01m[Ktemplate<class _Func, class ... _BoundArgs> typename std::_Bind_helper<std::__is_socketlike<_Func>::value, _Func, _BoundArgs ...>::type std::bind(_Func&&, _BoundArgs&& ...) [with _Func = void (NuScenesDataCollector::*)(std::shared_ptr<rosgraph_msgs::msg::Clock_<std::allocator<void> > >); _BoundArgs = {NuScenesDataCollector*}][m[K’
+[3.731s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:255:22:[m[K   required from here
+[3.731s] [01m[K/usr/include/c++/11/functional:756:21:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: Wrong number of arguments for pointer-to-member
+[3.731s]   755 |   static_assert(_Varargs::[01;31m[Kvalue[m[K
+[3.731s]       |                           [01;31m[K~~~~~[m[K
+[3.731s] 
+[3.731s]   756 |     [01;31m[K            ? sizeof...(_BoundArgs) >= _Arity::value + 1[m[K
+[3.731s]       |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.731s] 
+[3.731s]   757 |     [01;31m[K            : sizeof...(_BoundArgs) == _Arity::value + 1[m[K,
+[3.731s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.731s] 
+[3.731s] [01m[K/usr/include/c++/11/functional:756:21:[m[K [01;36m[Knote: [m[K‘[01m[K(false ? (1 >= (((long unsigned int)std::integral_constant<long unsigned int, 1>::value) + 1)) : (1 == (((long unsigned int)std::integral_constant<long unsigned int, 1>::value) + 1)))[m[K’ evaluates to false
+[3.734s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.734s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:253:47:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KNuScenesDataCollector::create_wall_timer(std::chrono::milliseconds, std::_Bind_helper<false, void (NuScenesDataCollector::*)(std::shared_ptr<rosgraph_msgs::msg::Clock_<std::allocator<void> > >), NuScenesDataCollector*>::type)[m[K’
+[3.734s]   253 |  = [01;31m[Kthis->create_wall_timer([m[K
+[3.734s]       |    [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[3.734s] 
+[3.734s]   254 | [01;31m[Kono::milliseconds(500), // 每500毫秒触发一次[m[K
+[3.734s]       | [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.734s] 
+[3.734s]   255 | [01;31m[Kd(&clock_callback, this)[m[K
+[3.734s]       | [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~[m[K   
+[3.734s] 
+[3.734s]   256 | 
+[3.734s]       |                            
+[3.734s] 
+[3.734s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[3.734s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[3.734s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.734s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+[3.734s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.734s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:238:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class DurationRepT, class DurationT, class CallbackT> typename rclcpp::WallTimer<CallbackT>::SharedPtr rclcpp::Node::create_wall_timer(std::chrono::duration<_Rep1, _Period1>, CallbackT, rclcpp::CallbackGroup::SharedPtr)[m[K’
+[3.734s]   238 |   [01;36m[Kcreate_wall_timer[m[K(
+[3.734s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.734s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:238:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.735s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+[3.735s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[3.735s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[3.735s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.735s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+[3.735s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.735s] /opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp: In substitution of ‘[01m[Ktemplate<class DurationRepT, class DurationT, class CallbackT> typename rclcpp::WallTimer<CallbackT>::SharedPtr rclcpp::Node::create_wall_timer(std::chrono::duration<_Rep1, _Period1>, CallbackT, rclcpp::CallbackGroup::SharedPtr) [with DurationRepT = long int; DurationT = std::ratio<1, 1000>; CallbackT = std::_Bind<void (NuScenesDataCollector::*(NuScenesDataCollector*))(std::shared_ptr<rosgraph_msgs::msg::Clock_<std::allocator<void> > >)>][m[K’:
+[3.735s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:253:47:[m[K   required from here
+[3.735s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:110:1:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, void>[m[K’
+[3.735s]   110 | [01;31m[KNode[m[K::create_wall_timer(
+[3.735s]       | [01;31m[K^~~~[m[K
+[3.735s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:110:1:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, void>[m[K’
+[3.735s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:110:1:[m[K [01;36m[Knote: [m[Kinvalid template non-type parameter
+[6.838s] gmake[2]: *** [CMakeFiles/nuscenes_data_collector_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o] Error 1
+[6.838s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/nuscenes_data_collector_node.dir/all] Error 2
+[6.838s] gmake: *** [Makefile:146: all] Error 2
+[6.840s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24

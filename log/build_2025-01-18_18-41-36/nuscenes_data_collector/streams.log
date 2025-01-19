@@ -1,0 +1,14 @@
+[0.021s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[0.058s] [35m[1mConsolidate compiler generated dependencies of target nuscenes_data_collector_node[0m
+[0.075s] [ 50%] Built target nuscenes_data_collector_issac_node
+[0.075s] [ 75%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o[0m
+[3.750s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.750s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::initialize_sync_camera_subscriptions()[m[K’:
+[3.750s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:288:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass NuScenesDataCollector[m[K’ has no member named ‘[01m[Kget_node_shared_ptr[m[K’
+[3.750s]   288 |            this->[01;31m[Kget_node_shared_ptr[m[K(), camera_topics_[camera], rclcpp::SensorDataQoS());
+[3.750s]       |                  [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[3.750s] 
+[7.190s] gmake[2]: *** [CMakeFiles/nuscenes_data_collector_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o] Error 1
+[7.190s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/nuscenes_data_collector_node.dir/all] Error 2
+[7.190s] gmake: *** [Makefile:146: all] Error 2
+[7.192s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24

@@ -1,0 +1,216 @@
+[0.024s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[0.065s] [35m[1mConsolidate compiler generated dependencies of target nuscenes_data_collector_node[0m
+[0.090s] [ 50%] Built target nuscenes_data_collector_issac_node
+[0.101s] [ 75%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o[0m
+[3.740s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.740s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::initialize_sync_camera_subscriptions()[m[K’:
+[3.740s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:315:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmessage_filters::Synchronizer<message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> > > >::registerCallback(std::_Bind_helper<false, void (NuScenesDataCollector::*)(const std::shared_ptr<const sensor_msgs::msg::Image_<std::allocator<void> > >&, const std::__cxx11::basic_string<char>&), NuScenesDataCollector*, const std::_Placeholder<1>&, const char (&)[10]>::type, std::_Bind_helper<false, void (NuScenesDataCollector::*)(const std::shared_ptr<const sensor_msgs::msg::Image_<std::allocator<void> > >&, const std::__cxx11::basic_string<char>&), NuScenesDataCollector*, const std::_Placeholder<2>&, const char (&)[16]>::type, std::_Bind_helper<false, void (NuScenesDataCollector::*)(const std::shared_ptr<const sensor_msgs::msg::Image_<std::allocator<void> > >&, const std::__cxx11::basic_string<char>&), NuScenesDataCollector*, const std::_Placeholder<3>&, const char (&)[15]>::type, std::_Bind_helper<false, void (NuScenesDataCollector::*)(const std::shared_ptr<const sensor_msgs::msg::Image_<std::allocator<void> > >&, const std::__cxx11::basic_string<char>&), NuScenesDataCollector*, const std::_Placeholder<4>&, const char (&)[9]>::type, std::_Bind_helper<false, void (NuScenesDataCollector::*)(const std::shared_ptr<const sensor_msgs::msg::Image_<std::allocator<void> > >&, const std::__cxx11::basic_string<char>&), NuScenesDataCollector*, const std::_Placeholder<5>&, const char (&)[14]>::type, std::_Bind_helper<false, void (NuScenesDataCollector::*)(const std::shared_ptr<const sensor_msgs::msg::Image_<std::allocator<void> > >&, const std::__cxx11::basic_string<char>&), NuScenesDataCollector*, const std::_Placeholder<6>&, const char (&)[15]>::type)[m[K’
+[3.741s]   315 |     [01;31m[Ksync->registerCallback([m[K
+[3.741s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[3.741s]   316 | [01;31m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.741s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.741s]   317 | [01;31m[K                  std::placeholders::_1, "CAM_FRONT"),[m[K
+[3.741s]       |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.741s]   318 | [01;31m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.741s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.741s]   319 | [01;31m[K                  std::placeholders::_2, "CAM_FRONT_RIGHT"),[m[K
+[3.741s]       |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.741s]   320 | [01;31m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.741s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.741s]   321 | [01;31m[K                  std::placeholders::_3, "CAM_FRONT_LEFT"),[m[K
+[3.741s]       |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.741s]   322 | [01;31m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.741s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.741s]   323 | [01;31m[K                  std::placeholders::_4, "CAM_BACK"),[m[K
+[3.741s]       |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.741s]   324 | [01;31m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.741s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.741s]   325 | [01;31m[K                  std::placeholders::_5, "CAM_BACK_LEFT"),[m[K
+[3.741s]       |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.741s]   326 | [01;31m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.741s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.741s]   327 | [01;31m[K                  std::placeholders::_6, "CAM_BACK_RIGHT")[m[K
+[3.742s]       |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   328 | [01;31m[K    )[m[K;
+[3.742s]       |     [01;31m[K~[m[K                      
+[3.742s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:36[m[K,
+[3.742s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.742s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:290:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class C> message_filters::Connection message_filters::Synchronizer<Policy>::registerCallback(C&) [with C = C; Policy = message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> > >][m[K’
+[3.742s]   290 |   Connection [01;36m[KregisterCallback[m[K(C& callback)
+[3.742s]       |              [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[3.742s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:290:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.742s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.742s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:315:27:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 6 provided
+[3.742s]   315 |     [01;36m[Ksync->registerCallback([m[K
+[3.742s]       |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[3.742s]   316 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.742s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   317 | [01;36m[K                  std::placeholders::_1, "CAM_FRONT"),[m[K
+[3.742s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   318 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.742s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   319 | [01;36m[K                  std::placeholders::_2, "CAM_FRONT_RIGHT"),[m[K
+[3.742s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   320 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.742s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   321 | [01;36m[K                  std::placeholders::_3, "CAM_FRONT_LEFT"),[m[K
+[3.742s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   322 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.742s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   323 | [01;36m[K                  std::placeholders::_4, "CAM_BACK"),[m[K
+[3.742s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   324 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.742s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   325 | [01;36m[K                  std::placeholders::_5, "CAM_BACK_LEFT"),[m[K
+[3.742s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   326 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.742s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   327 | [01;36m[K                  std::placeholders::_6, "CAM_BACK_RIGHT")[m[K
+[3.742s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.742s]   328 | [01;36m[K    )[m[K;
+[3.742s]       |     [01;36m[K~[m[K                      
+[3.742s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:36[m[K,
+[3.742s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.742s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:296:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class C> message_filters::Connection message_filters::Synchronizer<Policy>::registerCallback(const C&) [with C = C; Policy = message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> > >][m[K’
+[3.742s]   296 |   Connection [01;36m[KregisterCallback[m[K(const C& callback)
+[3.743s]       |              [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[3.743s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:296:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.743s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.743s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:315:27:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 6 provided
+[3.743s]   315 |     [01;36m[Ksync->registerCallback([m[K
+[3.743s]       |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[3.743s]   316 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.743s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   317 | [01;36m[K                  std::placeholders::_1, "CAM_FRONT"),[m[K
+[3.743s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   318 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.743s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   319 | [01;36m[K                  std::placeholders::_2, "CAM_FRONT_RIGHT"),[m[K
+[3.743s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   320 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.743s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   321 | [01;36m[K                  std::placeholders::_3, "CAM_FRONT_LEFT"),[m[K
+[3.743s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   322 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.743s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   323 | [01;36m[K                  std::placeholders::_4, "CAM_BACK"),[m[K
+[3.743s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   324 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.743s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   325 | [01;36m[K                  std::placeholders::_5, "CAM_BACK_LEFT"),[m[K
+[3.743s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   326 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.743s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   327 | [01;36m[K                  std::placeholders::_6, "CAM_BACK_RIGHT")[m[K
+[3.743s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.743s]   328 | [01;36m[K    )[m[K;
+[3.743s]       |     [01;36m[K~[m[K                      
+[3.743s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:36[m[K,
+[3.743s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.743s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:302:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class C, class T> message_filters::Connection message_filters::Synchronizer<Policy>::registerCallback(const C&, T*) [with C = C; T = T; Policy = message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> > >][m[K’
+[3.743s]   302 |   Connection [01;36m[KregisterCallback[m[K(const C& callback, T* t)
+[3.743s]       |              [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[3.743s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:302:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.743s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.743s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:315:27:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[KT*[m[K’ and ‘[01m[Kstd::_Bind<void (NuScenesDataCollector::*(NuScenesDataCollector*, std::_Placeholder<2>, const char*))(const std::shared_ptr<const sensor_msgs::msg::Image_<std::allocator<void> > >&, const std::__cxx11::basic_string<char>&)>[m[K’
+[3.743s]   315 |     [01;36m[Ksync->registerCallback([m[K
+[3.743s]       |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[3.743s]   316 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.743s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   317 | [01;36m[K                  std::placeholders::_1, "CAM_FRONT"),[m[K
+[3.744s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   318 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.744s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   319 | [01;36m[K                  std::placeholders::_2, "CAM_FRONT_RIGHT"),[m[K
+[3.744s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   320 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.744s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   321 | [01;36m[K                  std::placeholders::_3, "CAM_FRONT_LEFT"),[m[K
+[3.744s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   322 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.744s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   323 | [01;36m[K                  std::placeholders::_4, "CAM_BACK"),[m[K
+[3.744s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   324 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.744s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   325 | [01;36m[K                  std::placeholders::_5, "CAM_BACK_LEFT"),[m[K
+[3.744s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   326 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.744s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   327 | [01;36m[K                  std::placeholders::_6, "CAM_BACK_RIGHT")[m[K
+[3.744s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   328 | [01;36m[K    )[m[K;
+[3.744s]       |     [01;36m[K~[m[K                      
+[3.744s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:36[m[K,
+[3.744s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.744s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:308:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class C, class T> message_filters::Connection message_filters::Synchronizer<Policy>::registerCallback(C&, T*) [with C = C; T = T; Policy = message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> > >][m[K’
+[3.744s]   308 |   Connection [01;36m[KregisterCallback[m[K(C& callback, T* t)
+[3.744s]       |              [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[3.744s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:308:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.744s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.744s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:315:27:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[KT*[m[K’ and ‘[01m[Kstd::_Bind<void (NuScenesDataCollector::*(NuScenesDataCollector*, std::_Placeholder<2>, const char*))(const std::shared_ptr<const sensor_msgs::msg::Image_<std::allocator<void> > >&, const std::__cxx11::basic_string<char>&)>[m[K’
+[3.744s]   315 |     [01;36m[Ksync->registerCallback([m[K
+[3.744s]       |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[3.744s]   316 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.744s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   317 | [01;36m[K                  std::placeholders::_1, "CAM_FRONT"),[m[K
+[3.744s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   318 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.744s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.744s]   319 | [01;36m[K                  std::placeholders::_2, "CAM_FRONT_RIGHT"),[m[K
+[3.745s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.745s]   320 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.745s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.745s]   321 | [01;36m[K                  std::placeholders::_3, "CAM_FRONT_LEFT"),[m[K
+[3.745s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.745s]   322 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.745s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.745s]   323 | [01;36m[K                  std::placeholders::_4, "CAM_BACK"),[m[K
+[3.745s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.745s]   324 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.745s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.745s]   325 | [01;36m[K                  std::placeholders::_5, "CAM_BACK_LEFT"),[m[K
+[3.745s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.745s]   326 | [01;36m[K        std::bind(&NuScenesDataCollector::synced_camera_callback, this,[m[K
+[3.745s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.745s]   327 | [01;36m[K                  std::placeholders::_6, "CAM_BACK_RIGHT")[m[K
+[3.745s]       |                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.745s]   328 | [01;36m[K    )[m[K;
+[3.745s]       |     [01;36m[K~[m[K                      
+[4.701s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:36[m[K,
+[4.701s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.701s] /opt/ros/humble/include/message_filters/message_filters/synchronizer.h: In instantiation of ‘[01m[Kvoid message_filters::Synchronizer<Policy>::connectInput(F0&, F1&, F2&, F3&, F4&, F5&, F6&, F7&, F8&) [with F0 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F1 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F2 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F3 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F4 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F5 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F6 = message_filters::NullFilter<message_filters::NullType>; F7 = message_filters::NullFilter<message_filters::NullType>; F8 = message_filters::NullFilter<message_filters::NullType>; Policy = message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> > >][m[K’:
+[4.701s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:270:17:[m[K   required from ‘[01m[Kvoid message_filters::Synchronizer<Policy>::connectInput(F0&, F1&, F2&, F3&, F4&, F5&, F6&, F7&) [with F0 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F1 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F2 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F3 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F4 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F5 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F6 = message_filters::NullFilter<message_filters::NullType>; F7 = message_filters::NullFilter<message_filters::NullType>; Policy = message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> > >][m[K’
+[4.701s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:263:17:[m[K   required from ‘[01m[Kvoid message_filters::Synchronizer<Policy>::connectInput(F0&, F1&, F2&, F3&, F4&, F5&, F6&) [with F0 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F1 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F2 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F3 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F4 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F5 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F6 = message_filters::NullFilter<message_filters::NullType>; Policy = message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> > >][m[K’
+[4.702s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:256:17:[m[K   required from ‘[01m[Kvoid message_filters::Synchronizer<Policy>::connectInput(F0&, F1&, F2&, F3&, F4&, F5&) [with F0 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F1 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F2 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F3 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F4 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; F5 = std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >; Policy = message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> >, sensor_msgs::msg::Image_<std::allocator<void> > >][m[K’
+[4.702s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:309:23:[m[K   required from here
+[4.702s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:278:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >[m[K’ has no member named ‘[01m[KregisterCallback[m[K’
+[4.702s]   278 | ections_[0] = [01;31m[Kf0.registerCallback[m[K(std::function<void(const M0Event&)>(std::bind(&Synchronizer::template cb<0>, this, std::placeholders::_1)));
+[4.702s]       |               [01;31m[K~~~^~~~~~~~~~~~~~~~[m[K
+[4.702s] 
+[4.707s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:36[m[K,
+[4.707s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.707s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:279:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >[m[K’ has no member named ‘[01m[KregisterCallback[m[K’
+[4.707s]   279 | ections_[1] = [01;31m[Kf1.registerCallback[m[K(std::function<void(const M1Event&)>(std::bind(&Synchronizer::template cb<1>, this, std::placeholders::_1)));
+[4.707s]       |               [01;31m[K~~~^~~~~~~~~~~~~~~~[m[K
+[4.707s] 
+[4.708s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:280:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >[m[K’ has no member named ‘[01m[KregisterCallback[m[K’
+[4.708s]   280 | ections_[2] = [01;31m[Kf2.registerCallback[m[K(std::function<void(const M2Event&)>(std::bind(&Synchronizer::template cb<2>, this, std::placeholders::_1)));
+[4.708s]       |               [01;31m[K~~~^~~~~~~~~~~~~~~~[m[K
+[4.708s] 
+[4.708s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:281:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >[m[K’ has no member named ‘[01m[KregisterCallback[m[K’
+[4.708s]   281 | ections_[3] = [01;31m[Kf3.registerCallback[m[K(std::function<void(const M3Event&)>(std::bind(&Synchronizer::template cb<3>, this, std::placeholders::_1)));
+[4.708s]       |               [01;31m[K~~~^~~~~~~~~~~~~~~~[m[K
+[4.708s] 
+[4.708s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:282:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >[m[K’ has no member named ‘[01m[KregisterCallback[m[K’
+[4.708s]   282 | ections_[4] = [01;31m[Kf4.registerCallback[m[K(std::function<void(const M4Event&)>(std::bind(&Synchronizer::template cb<4>, this, std::placeholders::_1)));
+[4.708s]       |               [01;31m[K~~~^~~~~~~~~~~~~~~~[m[K
+[4.708s] 
+[4.708s] [01m[K/opt/ros/humble/include/message_filters/message_filters/synchronizer.h:283:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image_<std::allocator<void> > > >[m[K’ has no member named ‘[01m[KregisterCallback[m[K’
+[4.708s]   283 | ections_[5] = [01;31m[Kf5.registerCallback[m[K(std::function<void(const M5Event&)>(std::bind(&Synchronizer::template cb<5>, this, std::placeholders::_1)));
+[4.708s]       |               [01;31m[K~~~^~~~~~~~~~~~~~~~[m[K
+[4.708s] 
+[7.981s] gmake[2]: *** [CMakeFiles/nuscenes_data_collector_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o] Error 1
+[7.982s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/nuscenes_data_collector_node.dir/all] Error 2
+[7.982s] gmake: *** [Makefile:146: all] Error 2
+[7.984s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24

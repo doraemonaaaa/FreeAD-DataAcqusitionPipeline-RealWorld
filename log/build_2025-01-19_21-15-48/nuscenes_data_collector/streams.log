@@ -1,0 +1,22 @@
+[0.020s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[0.061s] [35m[1mConsolidate compiler generated dependencies of target nuscenes_data_collector_node[0m
+[0.081s] [ 50%] Built target nuscenes_data_collector_issac_node
+[0.087s] [ 75%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o[0m
+[3.699s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.699s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:1155:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[3.699s]  1155 | ::TimerBase::SharedPtr [01;31m[Kcapture_image_timer_[m[K
+[3.699s]       |                        [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.699s]       |                                            [32m[K;[m[K
+[3.814s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::check_async_task_status()[m[K’:
+[3.814s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:295:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std::pair<const std::__cxx11::basic_string<char>, std::future<void> >[m[K’ has no member named ‘[01m[Kwait_for[m[K’
+[3.814s]   295 |             if (future.[01;31m[Kwait_for[m[K(std::chrono::milliseconds(0)) != std::future_status::ready)
+[3.814s]       |                        [01;31m[K^~~~~~~~[m[K
+[3.814s] 
+[3.832s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:313:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kfutures_mutex_[m[K’ was not declared in this scope
+[3.832s]   313 | guard<std::mutex> lock([01;31m[Kfutures_mutex_[m[K);
+[3.832s]       |                        [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.832s] 
+[7.141s] gmake[2]: *** [CMakeFiles/nuscenes_data_collector_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o] Error 1
+[7.141s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/nuscenes_data_collector_node.dir/all] Error 2
+[7.141s] gmake: *** [Makefile:146: all] Error 2
+[7.143s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24

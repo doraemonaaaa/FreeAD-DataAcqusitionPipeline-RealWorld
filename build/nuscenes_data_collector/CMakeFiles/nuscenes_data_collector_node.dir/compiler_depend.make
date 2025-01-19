@@ -1846,7 +1846,8 @@ CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o: /
   /usr/include/openssl/asn1err.h \
   /usr/include/openssl/objectserr.h \
   /home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_json_writer.hpp \
-  /home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/token_rule.hpp
+  /home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/token_rule.hpp \
+  /home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/camera_bridge.hpp
 
 
 /home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_json_writer.hpp:
@@ -3462,6 +3463,8 @@ CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o: /
 /opt/ros/humble/include/rclcpp/rclcpp/serialized_message.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+
+/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/camera_bridge.hpp:
 
 /usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_long_long.hpp:
 

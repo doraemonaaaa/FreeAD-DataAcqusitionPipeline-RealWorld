@@ -1,0 +1,17 @@
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In constructor ‘[01m[KNuScenesDataCollector::NuScenesDataCollector()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:181:58:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KUsbCameraBridge[m[K’ and ‘[01m[Kstd::shared_ptr<UsbCameraBridge>[m[K’)
+  181 | d::make_shared<UsbCameraBridge>([01;31m[K)[m[K;
+      |                                 [01;31m[K^[m[K
+
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:44[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/camera_bridge.hpp:9:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KUsbCameraBridge& UsbCameraBridge::operator=(const UsbCameraBridge&)[m[K’ (deleted)
+    9 | class [01;36m[KUsbCameraBridge[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/camera_bridge.hpp:9:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<UsbCameraBridge>[m[K’ to ‘[01m[Kconst UsbCameraBridge&[m[K’
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/camera_bridge.hpp:9:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KUsbCameraBridge& UsbCameraBridge::operator=(UsbCameraBridge&&)[m[K’ (deleted)
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/camera_bridge.hpp:9:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<UsbCameraBridge>[m[K’ to ‘[01m[KUsbCameraBridge&&[m[K’
+gmake[2]: *** [CMakeFiles/nuscenes_data_collector_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/nuscenes_data_collector_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -51,7 +51,7 @@ public:
     {
         double vel_l = 0, vel_r = 0;
 
-        // 确保串口有足够的数据可读取（24字节）
+        // 确保串口有足够的数据可读取（8字节）
         if (serial_port_.available() >= 8)
         {
             // 读取8个字节数据
@@ -64,8 +64,8 @@ public:
                 // 逐字节解析数据
                 int16_t speed_l = (incoming_data[1] << 8) | incoming_data[2];  // left wheel speed
                 int16_t speed_r = (incoming_data[3] << 8) | incoming_data[4];  // right wheel speed
-                uint8_t neg_flag_l = incoming_data[21];  // left wheel direction
-                uint8_t neg_flag_r = incoming_data[22];  // right wheel direction
+                uint8_t neg_flag_l = incoming_data[5];  // left wheel direction
+                uint8_t neg_flag_r = incoming_data[6];  // right wheel direction
 
                 // 限制最大速度为 10000 RPM
                 speed_l = std::min(speed_l, static_cast<int16_t>(10000));
@@ -76,10 +76,10 @@ public:
                 vel_r = rpm_to_velocity(speed_r);
 
                 // 处理方向标志
-                vel_l = (neg_flag_l) ? vel_l : -vel_l;
-                vel_r = (neg_flag_r) ? vel_r : -vel_r;
+                vel_l = (neg_flag_l == 1) ? vel_l : -vel_l;
+                vel_r = (neg_flag_r == 1) ? vel_r : -vel_r;
 
-                // 可选：调试输出
+                // 调试输出
                 //RCLCPP_INFO(this->get_logger(), "Received speeds: left: %.2f m/s, right: %.2f m/s", vel_l, vel_r);
             }
         }

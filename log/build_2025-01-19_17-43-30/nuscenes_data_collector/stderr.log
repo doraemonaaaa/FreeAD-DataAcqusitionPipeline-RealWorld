@@ -1,0 +1,61 @@
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::initialize_sync_camera_subscriptions()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:298:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kimage_subs[m[K’ was not declared in this scope; did you mean ‘[01m[Kimage_subs_[m[K’?
+  298 |     if ([01;31m[Kimage_subs[m[K.size() > 1) {
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Kimage_subs_[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:308:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksync_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksync[m[K’?
+  308 |         [01;31m[Ksync_[m[K = sync;
+      |         [01;31m[K^~~~~[m[K
+      |         [32m[Ksync[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:314:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KsetMaxIntervalDuration[m[K’ in ‘[01m[K* sync[m[K’, which is of non-class type ‘[01m[Kvoid() noexcept[m[K’
+  314 |         sync->[01;31m[KsetMaxIntervalDuration[m[K(std::chrono::milliseconds(500));
+      |               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:317:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KregisterCallback[m[K’ in ‘[01m[K* sync[m[K’, which is of non-class type ‘[01m[Kvoid() noexcept[m[K’
+  317 |         sync->[01;31m[KregisterCallback[m[K(std::bind(&NuScenesDataCollector::synced_camera_callback,
+      |               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:319:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KregisterCallback[m[K’ in ‘[01m[K* sync[m[K’, which is of non-class type ‘[01m[Kvoid() noexcept[m[K’
+  319 |         sync->[01;31m[KregisterCallback[m[K(std::bind(&NuScenesDataCollector::synced_camera_callback,
+      |               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:321:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KregisterCallback[m[K’ in ‘[01m[K* sync[m[K’, which is of non-class type ‘[01m[Kvoid() noexcept[m[K’
+  321 |         sync->[01;31m[KregisterCallback[m[K(std::bind(&NuScenesDataCollector::synced_camera_callback,
+      |               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:323:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KregisterCallback[m[K’ in ‘[01m[K* sync[m[K’, which is of non-class type ‘[01m[Kvoid() noexcept[m[K’
+  323 |         sync->[01;31m[KregisterCallback[m[K(std::bind(&NuScenesDataCollector::synced_camera_callback,
+      |               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:325:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KregisterCallback[m[K’ in ‘[01m[K* sync[m[K’, which is of non-class type ‘[01m[Kvoid() noexcept[m[K’
+  325 |         sync->[01;31m[KregisterCallback[m[K(std::bind(&NuScenesDataCollector::synced_camera_callback,
+      |               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:327:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KregisterCallback[m[K’ in ‘[01m[K* sync[m[K’, which is of non-class type ‘[01m[Kvoid() noexcept[m[K’
+  327 |         sync->[01;31m[KregisterCallback[m[K(std::bind(&NuScenesDataCollector::synced_camera_callback,
+      |               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:334:33:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::vector<std::shared_ptr<void> >::push_back(void (&)() noexcept)[m[K’
+  334 |    [01;31m[Ksynchronizers_.push_back(sync)[m[K;
+      |    [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1187:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::shared_ptr<void>; _Alloc = std::allocator<std::shared_ptr<void> >; std::vector<_Tp, _Alloc>::value_type = std::shared_ptr<void>][m[K’
+ 1187 |       [01;36m[Kpush_back[m[K(const value_type& __x)
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1187:35:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kvoid() noexcept[m[K’ to ‘[01m[Kconst value_type&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<void>&[m[K’}
+ 1187 |   push_back([01;36m[Kconst value_type& __x[m[K)
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~^~~[m[K
+
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1203:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::shared_ptr<void>; _Alloc = std::allocator<std::shared_ptr<void> >; std::vector<_Tp, _Alloc>::value_type = std::shared_ptr<void>][m[K’
+ 1203 |       [01;36m[Kpush_back[m[K(value_type&& __x)
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1203:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kvoid() noexcept[m[K’ to ‘[01m[Kstd::vector<std::shared_ptr<void> >::value_type&&[m[K’ {aka ‘[01m[Kstd::shared_ptr<void>&&[m[K’}
+ 1203 |       push_back([01;36m[Kvalue_type&& __x[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~^~~[m[K
+gmake[2]: *** [CMakeFiles/nuscenes_data_collector_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/nuscenes_data_collector_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

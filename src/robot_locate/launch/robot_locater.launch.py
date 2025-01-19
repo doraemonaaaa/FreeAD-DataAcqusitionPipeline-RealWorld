@@ -92,7 +92,7 @@ def generate_launch_description():
         #serial_comm,
         imu_driver,
         rslidar_driver,
-        usb_camera,
+        #usb_camera,
         robot_localization_node,
         pointcloud_to_laserscan,
         diff_drive_controller,

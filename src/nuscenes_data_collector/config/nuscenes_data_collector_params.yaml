@@ -17,7 +17,7 @@
 #     map_name_: "office_issac"
 #     root_path_: "/home/pyh/Documents/ros2_ws/RobotAD_Issac_ws/NuscenesData"
 #     issac_per_sec_frame_: 60
-#     sample_frequency_: 0.5
+#     sample_duration_: 0.5
 #     sensor_token_map_:
 #       CAM_FRONT: "SENSOR_CAM_FRONT"
 #       CAM_BACK: "SENSOR_CAM_BACK"
@@ -56,7 +56,7 @@ nuscenes_data_collector:
     robot_model_: "diff_bot"
     map_name_: "AIR_F11"
     root_path_: "/home/pengyh/documents/ros2_ws/RobotAD/NuscenesData"
-    sample_frequency_: 0.5
+    sample_duration_: 0.5
     sensor_token_map_:
       CAM_FRONT: "SENSOR_CAM_FRONT"
       CAM_BACK: "SENSOR_CAM_BACK"

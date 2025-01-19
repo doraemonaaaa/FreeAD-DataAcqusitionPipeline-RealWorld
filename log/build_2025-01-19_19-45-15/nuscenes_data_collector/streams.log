@@ -1,0 +1,32 @@
+[0.022s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[0.055s] [35m[1mConsolidate compiler generated dependencies of target nuscenes_data_collector_node[0m
+[0.077s] [ 50%] Built target nuscenes_data_collector_issac_node
+[0.094s] [ 75%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o[0m
+[3.695s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.695s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In constructor ‘[01m[KNuScenesDataCollector::NuScenesDataCollector()[m[K’:
+[3.695s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:181:58:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KUsbCameraBridge[m[K’ and ‘[01m[Kstd::shared_ptr<UsbCameraBridge>[m[K’)
+[3.695s]   181 | d::make_shared<UsbCameraBridge>([01;31m[K)[m[K;
+[3.695s]       |                                 [01;31m[K^[m[K
+[3.695s] 
+[3.695s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:44[m[K,
+[3.695s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.695s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/camera_bridge.hpp:9:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KUsbCameraBridge& UsbCameraBridge::operator=(const UsbCameraBridge&)[m[K’ (deleted)
+[3.695s]     9 | class [01;36m[KUsbCameraBridge[m[K : public rclcpp::Node
+[3.695s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[3.695s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/camera_bridge.hpp:9:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<UsbCameraBridge>[m[K’ to ‘[01m[Kconst UsbCameraBridge&[m[K’
+[3.695s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/camera_bridge.hpp:9:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KUsbCameraBridge& UsbCameraBridge::operator=(UsbCameraBridge&&)[m[K’ (deleted)
+[3.695s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/camera_bridge.hpp:9:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<UsbCameraBridge>[m[K’ to ‘[01m[KUsbCameraBridge&&[m[K’
+[3.732s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[3.732s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:246:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcapture_image_timer_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcaptrue_image_timer_[m[K’?
+[3.733s]   246 |         [01;31m[Kcapture_image_timer_[m[K = this->create_wall_timer(
+[3.733s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.733s]       |         [32m[Kcaptrue_image_timer_[m[K
+[3.733s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::capture_image_callback()[m[K’:
+[3.733s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:281:44:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[KUsbCameraBridge[m[K’
+[3.733s]   281 |  success = usb_cameras_[01;31m[K->[m[Kcapture_frame(camera_name, frame_data);
+[3.733s]       |                        [01;31m[K^~[m[K
+[3.733s] 
+[6.821s] gmake[2]: *** [CMakeFiles/nuscenes_data_collector_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o] Error 1
+[6.821s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/nuscenes_data_collector_node.dir/all] Error 2
+[6.821s] gmake: *** [Makefile:146: all] Error 2
+[6.823s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24

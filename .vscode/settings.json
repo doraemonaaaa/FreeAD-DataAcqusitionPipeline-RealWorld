@@ -74,6 +74,8 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "strstream": "cpp",
+        "cfenv": "cpp"
     }
 }

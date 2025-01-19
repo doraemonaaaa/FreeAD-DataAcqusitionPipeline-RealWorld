@@ -91,12 +91,11 @@ public:
         // Declare other parameters
         this->declare_parameter<int64_t>("target_sample_frame_", 40);
         this->declare_parameter<int>("scene_frame_", 20);
-        this->declare_parameter<std::string>("sample_scene_recoder_name_", "LIDAR_TOP");
         this->declare_parameter<std::string>("scene_mode_", "train");
         this->declare_parameter<std::string>("robot_model_", "diff_bot");
         this->declare_parameter<std::string>("map_name_", "office_issac");
         this->declare_parameter<int>("issac_per_sec_frame_", 60);
-        this->declare_parameter<float>("sample_frequency_", 0.5);
+        this->declare_parameter<float>("sample_duration_", 0.5);
         this->declare_parameter<std::vector<std::string>>("sample_sensors_", {
             "CAM_FRONT", "CAM_BACK", "CAM_BACK_LEFT",
             "CAM_FRONT_LEFT", "CAM_FRONT_RIGHT", "CAM_BACK_RIGHT", "LIDAR_TOP"
@@ -108,7 +107,7 @@ public:
         this->get_parameter("map_name_", map_name_);
         this->get_parameter("root_path_", root_path_);
         this->get_parameter("issac_per_sec_frame_", issac_per_sec_frame_);
-        this->get_parameter("sample_frequency_", sample_frequency_);
+        this->get_parameter("sample_duration_", sample_duration_);
         this->get_parameter("sample_sensors_", sample_sensors_);
 
         // Retrieve JSON string parameters
@@ -136,35 +135,40 @@ public:
         // Retrieve additional parameters
         this->get_parameter("target_sample_frame_", target_sample_frame_);
         this->get_parameter("scene_frame_", scene_frame_);
-        this->get_parameter("sample_scene_recoder_name_", sample_scene_recoder_name_);
 
-        // Log retrieved parameters for verification
-        RCLCPP_INFO(this->get_logger(), "Scene Mode: %s", scene_mode_.c_str());
-        RCLCPP_INFO(this->get_logger(), "Robot Model: %s", robot_model_.c_str());
-        RCLCPP_INFO(this->get_logger(), "Map Name: %s", map_name_.c_str());
-        RCLCPP_INFO(this->get_logger(), "Root Path: %s", root_path_.c_str());
-        RCLCPP_INFO(this->get_logger(), "Isaac Per Sec Frame: %d", issac_per_sec_frame_);
-        RCLCPP_INFO(this->get_logger(), "Sample Frequency: %.2f", sample_frequency_);
-        RCLCPP_INFO(this->get_logger(), "target_sample_frame_: %ld", target_sample_frame_);
-        RCLCPP_INFO(this->get_logger(), "scene_frame_: %d", scene_frame_);
-        RCLCPP_INFO(this->get_logger(), "sample_scene_recoder_name_:%s", sample_scene_recoder_name_.c_str());
-
-        RCLCPP_INFO(this->get_logger(), "Sample Sensors:");
+        // 创建一个大的日志，包含所有相关信息，并加入清晰的分隔符
+        std::stringstream log_message;
+        log_message << "\n----------------------------------------------------------\n";
+        log_message << "                     [Scene Info]                        \n";
+        log_message << "----------------------------------------------------------\n";
+        log_message << "Scene Mode: " << scene_mode_ << std::endl;
+        log_message << "Robot Model: " << robot_model_ << std::endl;
+        log_message << "Map Name: " << map_name_ << std::endl;
+        log_message << "Root Path: " << root_path_ << std::endl;
+        log_message << "Isaac Per Sec Frame: " << issac_per_sec_frame_ << std::endl;
+        log_message << "Sample Frequency: " << sample_duration_ << std::endl;
+        log_message << "Target Sample Frame: " << target_sample_frame_ << std::endl;
+        log_message << "Scene Frame: " << scene_frame_ << std::endl;
+        log_message << "\n----------------------------------------------------------\n";
+        log_message << "                    [Sample Sensors]                     \n";
+        log_message << "----------------------------------------------------------\n";
         for (const auto& sensor : sample_sensors_) {
-            RCLCPP_INFO(this->get_logger(), "  %s", sensor.c_str());
+            log_message << "  - " << sensor << std::endl;
         }
-
-        // Log sensor_token_map_
-        RCLCPP_INFO(this->get_logger(), "Sensor Token Map:");
+        log_message << "\n----------------------------------------------------------\n";
+        log_message << "                 [Sensor Token Map]                       \n";
+        log_message << "----------------------------------------------------------\n";
         for (const auto& [key, value] : sensor_token_map_) {
-            RCLCPP_INFO(this->get_logger(), "  %s: %s", key.c_str(), value.c_str());
+            log_message << "  - " << key << ": " << value << std::endl;
         }
-
-        // Log calibrated_sensor_token_map_
-        RCLCPP_INFO(this->get_logger(), "Calibrated Sensor Token Map:");
+        log_message << "\n----------------------------------------------------------\n";
+        log_message << "            [Calibrated Sensor Token Map]                  \n";
+        log_message << "----------------------------------------------------------\n";
         for (const auto& [key, value] : calibrated_sensor_token_map_) {
-            RCLCPP_INFO(this->get_logger(), "  %s: %s", key.c_str(), value.c_str());
+            log_message << "  - " << key << ": " << value << std::endl;
         }
+        // 输出到日志
+        RCLCPP_INFO(this->get_logger(), "%s", log_message.str().c_str());
 
 
         if (json_writer_.isLoadError()) {
@@ -177,8 +181,9 @@ public:
         declare_parameters();
         initialize_sync_camera_bbox3d_subscriptions();
 
-        rclcpp::QoS qos_profile(100);
+        rclcpp::QoS qos_profile(1);  // 队列大小为1，确保只处理最新的消息
         qos_profile.reliable();  // 设置可靠传输
+        qos_profile.durability_volatile();  // 设置为volatile，防止缓存消息
         // 创建订阅者，订阅 /clock 主题，队列大小为10
         clock_subscription_ = this->create_subscription<rosgraph_msgs::msg::Clock>(
             "/issac/clock",
@@ -187,27 +192,27 @@ public:
                 this->clock_callback(msg);
             }
         );
-
         // Odometry 订阅
         odom_subscription_ = this->create_subscription<nav_msgs::msg::Odometry>(
             odom_topic_, qos_profile, [this](const nav_msgs::msg::Odometry::SharedPtr msg) {
                 this->odom_callback(msg, "odom");
             }
         );
-
-        // lidar 订阅
-        lidar_subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
-            lidar_topic_, qos_profile, [this](const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
-                this->lidar_callback(msg, "LIDAR_TOP");
-            }
-        );
-
         // IMU 订阅
         imu_subscription_ = this->create_subscription<sensor_msgs::msg::Imu>(
             imu_topic_,        // 替换为您的 IMU 主题名称，例如 "/sensor/imu"
             qos_profile,       // 使用之前定义的 QoS 配置
             [this](const sensor_msgs::msg::Imu::SharedPtr msg) {
                 this->imu_callback(msg, "imu");  // 定义 IMU 回调函数以处理接收到的消息
+            }
+        );
+
+        rclcpp::QoS lidar_qos_profile(50);
+        qos_profile.reliable();  // 设置可靠传输
+        // lidar 订阅
+        lidar_subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
+            lidar_topic_, lidar_qos_profile, [this](const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
+                this->lidar_callback(msg, "LIDAR_TOP");
             }
         );
 
@@ -366,21 +371,30 @@ private:
         }
 
         // Check whether the sample time has been reached and the last sample is done
-        if ((time_diff.seconds() >= 0.5) && check_sample_done()) {
-            sample_frame_++;
-            if (sample_frame_ > target_sample_frame_) {
-                node_shutdown_callback();
-                return;
-            }
-
-            // Set all triggers
-            {
+        if (time_diff.seconds() >= sample_duration_) {
+            bool is_sample_done = check_sample_done();
+            if(is_sample_done){
+                if (sample_frame_ + 1 > target_sample_frame_) {
+                    node_shutdown_callback();
+                    return;
+                }
+                else{
+                    sample_frame_++;
+                }
+                // Set all triggers
                 for (auto& trigger : sample_triggers_) {
                     trigger.second = true;
                 }
+                last_sample_time_ = cur_time;
             }
+            else last_sample_time_ = cur_time;
 
-            last_sample_time_ = cur_time;
+            // a new sample should be take
+            // Calculate timestamp (in nanoseconds)
+            uint64_t timestamp = static_cast<uint64_t>(msg->clock.sec) * 1e9 + msg->clock.nanosec;
+            std::string sample_token = generate_sample_token(sample_frame_, start_system_time_token_);
+            sample_recorder_cache_.first = timestamp;
+            sample_recorder_cache_.second = sample_token;
         }
     }
 
@@ -482,6 +496,7 @@ private:
                               const std::string &device_name) {
         // Determine whether to save to 'sweeps' or 'samples'
         std::string data_type = (sample_triggers_[device_name] == true) ? "samples" : "sweeps";
+        bool is_save = data_type == "samples" ? false : true; // samples save to the tmp at first
         // Create the directory path for saving images
         std::string folder_path = root_path_ + "/" + data_type + "/" + device_name;
         ensure_directory_exists(folder_path);
@@ -520,14 +535,21 @@ private:
             return;
         }
         // Save the image file
-        std::ofstream ofs(image_save_file, std::ios::binary);
-        if (ofs.is_open()) {
-            ofs.write(reinterpret_cast<const char*>(encoded_img.data()), encoded_img.size());
-            ofs.close();
-            RCLCPP_INFO(this->get_logger(), "Image saved as JPEG: %s", image_save_file.c_str());
-        } else {
-            RCLCPP_ERROR(this->get_logger(), "Failed to open image file for writing: %s", image_save_file.c_str());
-            return;
+        if(is_save){
+            std::ofstream ofs(image_save_file, std::ios::binary);
+            if (ofs.is_open()) {
+                ofs.write(reinterpret_cast<const char*>(encoded_img.data()), encoded_img.size());
+                ofs.close();
+                RCLCPP_INFO(this->get_logger(), "Image saved as JPEG: %s", image_save_file.c_str());
+            } else {
+                RCLCPP_ERROR(this->get_logger(), "Failed to open image file for writing: %s", image_save_file.c_str());
+                return;
+            }
+        }
+        else{
+            // 如果 is_save 为 false，将图像数据缓存到全局变量
+            sample_imgs_cache_[device_name] = {image_save_file, encoded_img};
+            RCLCPP_INFO(this->get_logger(), "Image data cached: %s", image_save_file.c_str());
         }
 
         // Now, prepare the JSON data based on the format you provided
@@ -543,9 +565,6 @@ private:
         bool is_key_frame = data_type == "samples" ? true : false;
         // record the sample scene and log
         std::string sample_token = generate_sample_token(sample_frame_, start_system_time_token_);
-        if(is_key_frame && sample_triggers_[device_name]){
-            sample_recorder(device_name, timestamp, sample_token);
-        }
         // write can_bus, 检查 latest_scene_ 是否包含 "name" 键，并且其值是否非空
         if (latest_scene_.contains("name") && !latest_scene_["name"].get<std::string>().empty()) {
             std::string scene_name = latest_scene_["name"];
@@ -621,50 +640,11 @@ private:
                 // 填充 num_lidar_pts 和 num_radar_pts
                 sample_annotation_json["num_lidar_pts"] = 99;  // TODO: waiting for the definition
                 sample_annotation_json["num_radar_pts"] = 99;  // TODO: waiting for the definition
+                
                 sample_annotation_jsons.emplace_back(sample_annotation_json);
-
-                // ******************generate instance.json********************
-                auto& val = instance_recorders[instance_token];
-                json instance_json; 
-                if (val.empty()) {
-                    // 如果 vector 为空，初始化一个新的 JSON 对象
-                    instance_json["token"] = instance_token;
-                    instance_json["category_token"] = "1fa93b757fc74fb197cdd60001ad8abf";  // TODO:waitting for category_token
-                    instance_json["nbr_annotations"] = 1;
-                    instance_json["first_annotation_token"] = sample_annotation_token;
-                    instance_json["last_annotation_token"] = sample_annotation_token;
-                    // 将该 JSON 对象插入到 unordered_map 对应的 vector 中
-                    val.push_back(instance_json);
-                } else {
-                    // 如果 vector 不为空，增加一个注解数量
-                    instance_json = val.back(); // 取出最后一个元素，假设每次更新是对最后一个 JSON 对象的更新
-                    instance_json["nbr_annotations"] = instance_json["nbr_annotations"].get<int>() + 1;
-                    instance_json["last_annotation_token"] = sample_annotation_token; // update the last_annotation_token
-                    // 更新 vector 中的最后一个 JSON 对象
-                    val.back() = instance_json;
-                }
             }
-            // resolve next for each instance in slider map
-            for(auto& json : sample_annotation_jsons){
-                // auto& annotation_slider = prev_next_sliders_[c["instance_token"]];  // update the instance class in prev_next_sliders_
-                // if(annotation_slider.size() < sample_annotation_cache_size){
-                //     annotation_slider.push_back(json);
-                //     if(annotation_slider.size() == 2){  // solve it when slider is full
-                //         annotation_slider[0]["next"] = annotation_slider[1]["token"];
-                //         annotation_slider[1]["prev"] = annotation_slider[0]["token"];
-                //         json_writer_.addKeyValuePairToJson("sample_annotation", annotation_slider[0], true);
-                //         // pop front and slide
-                //         annotation_slider[0] = annotation_slider[1];  
-                //         annotation_slider.pop_back();
-                //     }
-                // }
-                std::string instance_key = json["instance_token"];
-                generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
-                json, 
-                instance_key, 
-                json_writer_, 
-                "sample_annotation");
-            }
+            //RCLCPP_INFO(this->get_logger(), "Total sample annotations: %zu", sample_annotation_jsons.size());
+            sample_bbox3d_json_cache_[device_name] = sample_annotation_jsons;
         }
     }
 
@@ -674,7 +654,7 @@ private:
     void save_lidar_data(const std::shared_ptr<sensor_msgs::msg::PointCloud2> &msg, const std::string &device_name) {
         // Determine whether to save to 'sweeps' or 'samples'
         std::string data_type = (sample_triggers_[device_name] == true) ? "samples" : "sweeps";
-        
+        bool is_save = data_type == "samples" ? false : true; // samples save to the tmp at first
         // Create the directory path for saving point cloud
         std::string folder_path = root_path_ + "/" + data_type + "/" + device_name;
         ensure_directory_exists(folder_path);
@@ -701,21 +681,37 @@ private:
             return;
         }
 
+        float default_intensity = 1.0f;  // 默认强度值
         // Save point cloud to binary file in NuScenes format
-        std::ofstream ofs(cloud_save_file, std::ios::binary);
-        if (ofs.is_open()) {
-            // Write the point cloud data to file in [x, y, z, intensity] format
-            float default_intensity = 1.0f;  // 默认强度值
-            for (const auto &point : cloud.points) {
-                ofs.write(reinterpret_cast<const char*>(&point.x), sizeof(float)); // x
-                ofs.write(reinterpret_cast<const char*>(&point.y), sizeof(float)); // y
-                ofs.write(reinterpret_cast<const char*>(&point.z), sizeof(float)); // z
-                ofs.write(reinterpret_cast<const char*>(&default_intensity), sizeof(float)); // intensity (default)
+        if(is_save){
+            std::ofstream ofs(cloud_save_file, std::ios::binary);
+            if (ofs.is_open()) {
+                // Write the point cloud data to file in [x, y, z, intensity] format
+                for (const auto &point : cloud.points) {
+                    ofs.write(reinterpret_cast<const char*>(&point.x), sizeof(float)); // x
+                    ofs.write(reinterpret_cast<const char*>(&point.y), sizeof(float)); // y
+                    ofs.write(reinterpret_cast<const char*>(&point.z), sizeof(float)); // z
+                    ofs.write(reinterpret_cast<const char*>(&default_intensity), sizeof(float)); // intensity (default)
+                }
+                ofs.close();
+                RCLCPP_INFO(this->get_logger(), "PointCloud2 saved as BIN: %s", cloud_save_file.c_str());
+            } else {
+                RCLCPP_ERROR(this->get_logger(), "Failed to open file for saving point cloud: %s", cloud_save_file.c_str());
             }
-            ofs.close();
-            RCLCPP_INFO(this->get_logger(), "PointCloud2 saved as BIN: %s", cloud_save_file.c_str());
-        } else {
-            RCLCPP_ERROR(this->get_logger(), "Failed to open file for saving point cloud: %s", cloud_save_file.c_str());
+        }
+        else{
+            // cache the lidar sample
+            std::vector<uint8_t> point_cloud_data;
+            for (const auto &point : cloud.points) {
+                point_cloud_data.insert(point_cloud_data.end(), reinterpret_cast<const uint8_t*>(&point.x), reinterpret_cast<const uint8_t*>(&point.x) + sizeof(float));
+                point_cloud_data.insert(point_cloud_data.end(), reinterpret_cast<const uint8_t*>(&point.y), reinterpret_cast<const uint8_t*>(&point.y) + sizeof(float));
+                point_cloud_data.insert(point_cloud_data.end(), reinterpret_cast<const uint8_t*>(&point.z), reinterpret_cast<const uint8_t*>(&point.z) + sizeof(float));
+                point_cloud_data.insert(point_cloud_data.end(), reinterpret_cast<const uint8_t*>(&default_intensity), reinterpret_cast<const uint8_t*>(&default_intensity) + sizeof(float));
+            }
+
+            // Overwrite the existing cache
+            sample_lidar_cache_ = {cloud_save_file, point_cloud_data};
+            RCLCPP_INFO(this->get_logger(), "Point cloud data cached: %s", cloud_save_file.c_str());
         }
         
         // Prepare the JSON data for sample_data
@@ -727,11 +723,6 @@ private:
         // write ego_pose
         latest_ego_pose_["token"] = sample_data_token;  // set as sample_data_token
         json_writer_.addKeyValuePairToJson("ego_pose", latest_ego_pose_, true);
-
-        if(is_key_frame && sample_triggers_[device_name]){
-            sample_recorder(device_name, timestamp, sample_token);
-        }
-
         // write can_bus, 检查 latest_scene_ 是否包含 "name" 键，并且其值是否非空
         if (latest_scene_.contains("name") && !latest_scene_["name"].get<std::string>().empty()) {
             std::string scene_name = latest_scene_["name"];
@@ -767,45 +758,43 @@ private:
         devices_frame_count_[device_name]++;
     }
 
-    void sample_recorder(std::string recorder_name, uint64_t timestamp, std::string sample_token){
-        if(recorder_name == sample_scene_recoder_name_){
-            // ********************generate sample_token, and write to sample.json and scene.json********************
-            // adding samples to scene, wont be full
-            if(scene_sample_frame_count_ < scene_frame_ - 1)
-            {
-                scene_processing(sample_token);
+    void sample_recorder(uint64_t timestamp, std::string sample_token){
+        // ********************generate sample_token, and write to sample.json and scene.json********************
+        // adding samples to scene, wont be full
+        if(scene_sample_frame_count_ < scene_frame_ - 1)
+        {
+            scene_processing(sample_token);
 
-                json sample_json;
-                sample_json["token"] = sample_token;
-                sample_json["timestamp"] = timestamp;
-                sample_json["prev"] = "";
-                sample_json["next"] = "";
-                sample_json["scene_token"] = cur_scene_token_;
-                // generate sample's prev and next
-                generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
-                sample_json, 
-                "sample_" + recorder_name, 
-                json_writer_, 
-                "sample");
-                // scene 
-            }
-            // the scene will be full, start a new scene
-            else{
-                json sample_json;
-                sample_json["token"] = sample_token;
-                sample_json["timestamp"] = timestamp;
-                sample_json["prev"] = "";
-                sample_json["next"] = "";
-                sample_json["scene_token"] = cur_scene_token_;
-                // generate sample's prev and next
-                generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
-                sample_json, 
-                "sample_" + recorder_name, 
-                json_writer_, 
-                "sample");
-                // scene
-                scene_done(sample_token);
-            }
+            json sample_json;
+            sample_json["token"] = sample_token;
+            sample_json["timestamp"] = timestamp;
+            sample_json["prev"] = "";
+            sample_json["next"] = "";
+            sample_json["scene_token"] = cur_scene_token_;
+            // generate sample's prev and next
+            generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
+            sample_json, 
+            "sample_", 
+            json_writer_, 
+            "sample");
+            // scene 
+        }
+        // the scene will be full, start a new scene
+        else{
+            json sample_json;
+            sample_json["token"] = sample_token;
+            sample_json["timestamp"] = timestamp;
+            sample_json["prev"] = "";
+            sample_json["next"] = "";
+            sample_json["scene_token"] = cur_scene_token_;
+            // generate sample's prev and next
+            generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
+            sample_json, 
+            "sample_", 
+            json_writer_, 
+            "sample");
+            // scene
+            scene_done(sample_token);
         }
     }
 
@@ -858,102 +847,224 @@ private:
 
     void map_write(const json& log_json, const std::string& map_path, const std::string& map_name) {
         auto logger = this->get_logger();
-        try {
-            // 检查 map.json 是否存在
-            if (!std::filesystem::exists(map_path)) {
-                RCLCPP_ERROR(logger, "map.json does not exist at path: %s", map_path.c_str());
-                return;
-            }
+        bool error_occurred = false; // 标记是否发生了错误
 
+        try {
             // 打开并读取现有的 map.json 文件
             std::ifstream file(map_path);
             if (!file.is_open()) {
                 RCLCPP_ERROR(logger, "Failed to open %s for reading.", map_path.c_str());
-                return;
-            }
-
-            json map_data;
-            try {
-                file >> map_data;
-            } catch (const json::parse_error& e) {
-                RCLCPP_ERROR(logger, "JSON parse error in %s: %s", map_path.c_str(), e.what());
+                error_occurred = true;
+            } else {
+                json map_data;
+                try {
+                    file >> map_data;
+                } catch (const json::parse_error& e) {
+                    RCLCPP_ERROR(logger, "JSON parse error in %s: %s", map_path.c_str(), e.what());
+                    error_occurred = true;
+                }
                 file.close();
-                return;
-            }
-            file.close();
-            RCLCPP_INFO(logger, "Successfully read map.json");
+                RCLCPP_INFO(logger, "Successfully read map.json");
 
-            // 检查 map_data 是否为数组
-            if (!map_data.is_array()) {
-                RCLCPP_ERROR(logger, "map.json is not an array.");
-                return;
-            }
-
-            // 检查 log_json 是否包含 "token" 字段
-            if (!log_json.contains("token") || log_json["token"].is_null() || log_json["token"].get<std::string>().empty()) {
-                RCLCPP_ERROR(logger, "Provided log_json does not contain a valid 'token' field.");
-                return;
-            }
-
-            // 获取要添加的 token
-            std::string new_log_token = log_json["token"].get<std::string>();
-
-            // 查找正确的 map token
-            bool token_found = false;
-            for (auto& item : map_data) {
-                if (item.contains("token") && item["token"] == map_name) {
-                    // 确保 "log_tokens" 是一个数组
-                    if (!item.contains("log_tokens") || !item["log_tokens"].is_array()) {
-                        item["log_tokens"] = json::array();
+                if (!error_occurred) {
+                    // 检查 map_data 是否为数组
+                    if (!map_data.is_array()) {
+                        RCLCPP_ERROR(logger, "map.json is not an array.");
+                        error_occurred = true;
                     }
+                }
 
-                    // 检查是否已经存在该 token，避免重复
-                    bool already_exists = false;
-                    for (const auto& existing_log_token : item["log_tokens"]) {
-                        if (existing_log_token == new_log_token) {
-                            already_exists = true;
+                if (!error_occurred) {
+                    // 检查 log_json 是否包含 "token" 字段
+                    if (!log_json.contains("token") || log_json["token"].is_null() || log_json["token"].get<std::string>().empty()) {
+                        RCLCPP_ERROR(logger, "Provided log_json does not contain a valid 'token' field.");
+                        error_occurred = true;
+                    }
+                }
+
+                if (!error_occurred) {
+                    // 获取要添加的 token
+                    std::string new_log_token = log_json["token"].get<std::string>();
+
+                    // 查找正确的 map token
+                    bool token_found = false;
+                    for (auto& item : map_data) {
+                        if (item.contains("token") && item["token"] == map_name) {
+                            // 确保 "log_tokens" 是一个数组
+                            if (!item.contains("log_tokens") || !item["log_tokens"].is_array()) {
+                                item["log_tokens"] = json::array();
+                            }
+
+                            // 检查是否已经存在该 token，避免重复
+                            bool already_exists = false;
+                            for (const auto& existing_log_token : item["log_tokens"]) {
+                                if (existing_log_token == new_log_token) {
+                                    already_exists = true;
+                                    break;
+                                }
+                            }
+
+                            if (!already_exists) {
+                                item["log_tokens"].push_back(new_log_token);
+                                RCLCPP_INFO(logger, "Added log token '%s' to map token '%s'.", new_log_token.c_str(), map_name.c_str());
+                            } else {
+                                RCLCPP_INFO(logger, "Log token '%s' already exists for map token '%s'.", new_log_token.c_str(), map_name.c_str());
+                            }
+
+                            token_found = true;
                             break;
                         }
                     }
 
-                    if (!already_exists) {
-                        item["log_tokens"].push_back(new_log_token);
-                        RCLCPP_INFO(logger, "Added log token '%s' to map token '%s'.", new_log_token.c_str(), map_name.c_str());
-                    } else {
-                        RCLCPP_INFO(logger, "Log token '%s' already exists for map token '%s'.", new_log_token.c_str(), map_name.c_str());
+                    if (!token_found) {
+                        RCLCPP_ERROR(logger, "Token '%s' not found in %s.", map_name.c_str(), map_path.c_str());
+                        error_occurred = true;
                     }
 
-                    token_found = true;
-                    break;
+                    if (!error_occurred) {
+                        // 写回 map.json 文件
+                        std::ofstream out_file(map_path, std::ios::trunc); // 使用 trunc 模式覆盖文件
+                        if (!out_file.is_open()) {
+                            RCLCPP_ERROR(logger, "Failed to open %s for writing.", map_path.c_str());
+                            error_occurred = true;
+                        } else {
+                            out_file << map_data.dump(4); // 美化输出
+                            out_file.close();
+                            RCLCPP_INFO(logger, "Log token added successfully to %s.", map_path.c_str());
+                        }
+                    }
                 }
-            }
-
-            if (token_found) {
-                // 写回 map.json 文件
-                std::ofstream out_file(map_path, std::ios::trunc); // 使用 trunc 模式覆盖文件
-                if (!out_file.is_open()) {
-                    RCLCPP_ERROR(logger, "Failed to open %s for writing.", map_path.c_str());
-                    return;
-                }
-                out_file << map_data.dump(4); // 美化输出
-                out_file.close();
-                RCLCPP_INFO(logger, "Log token added successfully to %s.", map_path.c_str());
-            } else {
-                RCLCPP_ERROR(logger, "Token '%s' not found in %s.", map_name.c_str(), map_path.c_str());
             }
         }
         catch (const std::exception& e) {
             RCLCPP_ERROR(logger, "Exception occurred: %s", e.what());
+            error_occurred = true;
+        }
+
+        // 如果发生了错误，调用 shutdown 回调
+        if (error_occurred) {
+            this->node_shutdown_callback();
         }
     }
 
     bool check_sample_done(){
-        // get sample done and clear sign
+        // check sample done
         for(auto& sign_pair : sample_done_sign_){
             if(sign_pair.second == false){
+                // clear sign, restart a epoch of sample
+                for(auto& sign_pair : sample_done_sign_){
+                    sign_pair.second = false;
+                }
+                RCLCPP_INFO(this->get_logger(), "Failed this sample epoch");
                 return false;
             }
         }
+
+        // check every sample is not null, if there is a null, return false
+        bool all_samples_done = true;
+        // Check image data cache
+        for (auto& sample_img_cache : sample_imgs_cache_) {
+            if (sample_img_cache.second.second.empty()) {
+                all_samples_done = false; // Image data is null
+                RCLCPP_ERROR(this->get_logger(), "Image data for device %s is empty", sample_img_cache.first.c_str());
+            }
+        }
+        // Check lidar data cache
+        if (sample_lidar_cache_.second.empty()) {
+            all_samples_done = false; // Lidar data is null
+            RCLCPP_ERROR(this->get_logger(), "Lidar data is empty");
+        }
+        // If any sample data is null, abort and return false
+        if (!all_samples_done) {
+            RCLCPP_ERROR(this->get_logger(), "Some sample data is missing, aborting this epoch.");
+            return false;
+        }
+
+        // save sample
+        for (auto& sample_img_cache : sample_imgs_cache_) {
+            // 只在图像数据非空时进行保存
+            if (!sample_img_cache.second.second.empty()) {
+                std::string save_path = sample_img_cache.second.first;  // 获取图像文件保存路径
+                std::vector<uint8_t> data = sample_img_cache.second.second;  // 获取缓存的图像数据
+                // 保存缓存的图像数据
+                std::ofstream ofs(save_path, std::ios::binary);
+                if (ofs.is_open()) {
+                    ofs.write(reinterpret_cast<const char*>(data.data()), data.size());  // 写入缓存数据到文件
+                    ofs.close();
+                    RCLCPP_INFO(this->get_logger(), "Image data saved from cache: %s", save_path.c_str());
+                } else {
+                    RCLCPP_ERROR(this->get_logger(), "Failed to open file for saving cached image: %s", save_path.c_str());
+                }
+                // 清空图像数据缓存（second 部分）
+                sample_img_cache.second.second.clear();  // 清空图像数据部分
+                RCLCPP_INFO(this->get_logger(), "Cache cleared after saving.");
+            }
+        }
+        if (!sample_lidar_cache_.second.empty()) {
+             // Retrieve cached data
+            std::string save_path = sample_lidar_cache_.first;    // File path to save the point cloud
+            std::vector<uint8_t> data = sample_lidar_cache_.second; // Cached lidar data
+            // Save cached data to the file
+            std::ofstream ofs(save_path, std::ios::binary);
+            if (ofs.is_open()) {
+                ofs.write(reinterpret_cast<const char*>(data.data()), data.size());  // Write cached data
+                ofs.close();
+                RCLCPP_INFO(this->get_logger(), "Point cloud data saved from cache: %s", save_path.c_str());
+            } else {
+                RCLCPP_ERROR(this->get_logger(), "Failed to open file for saving cached point cloud: %s", save_path.c_str());
+            }
+            // Clear the cache after saving
+            sample_lidar_cache_.first.clear();
+            sample_lidar_cache_.second.clear();
+            RCLCPP_INFO(this->get_logger(), "Cache cleared after saving.");
+        }
+
+        for(auto& bbox3d_jsons : sample_bbox3d_json_cache_){
+            // this have not to return false when it is empty
+            if (!bbox3d_jsons.second.empty()) {
+                // sample_bbox3d_json_cache_ 存储3D边界框数据
+                for(auto& one_bbox_json : bbox3d_jsons.second){
+                    // ******************update the instance global cache json********************
+                    std::string instance_token = one_bbox_json["instance_token"];
+                    std::string sample_annotation_token = one_bbox_json["token"];
+
+                    auto& val = instance_recorders[instance_token];  // get the global instance cache json
+                    nlohmann::json instance_json; 
+                    if (val.empty()) {
+                        // 如果 vector 为空，初始化一个新的 JSON 对象
+                        instance_json["token"] = instance_token;
+                        instance_json["category_token"] = "1fa93b757fc74fb197cdd60001ad8abf";  // TODO:waitting for category_token
+                        instance_json["nbr_annotations"] = 1;
+                        instance_json["first_annotation_token"] = sample_annotation_token;
+                        instance_json["last_annotation_token"] = sample_annotation_token;
+                        // 将该 JSON 对象插入到 unordered_map 对应的 vector 中
+                        val.push_back(instance_json);
+                    } else {
+                        // 如果 vector 不为空，增加一个注解数量
+                        instance_json = val.back(); // 取出最后一个元素，假设每次更新是对最后一个 JSON 对象的更新
+                        instance_json["nbr_annotations"] = instance_json["nbr_annotations"].get<int>() + 1;
+                        instance_json["last_annotation_token"] = sample_annotation_token; // update the last_annotation_token
+                        // 更新 vector 中的最后一个 JSON 对象
+                        val.back() = instance_json;
+                    }
+
+                    // save the corresponding bbox3d
+                    std::string instance_key = instance_token;
+                    generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
+                        one_bbox_json, 
+                        instance_key, 
+                        json_writer_, 
+                        "sample_annotation");
+                }
+                // 清空缓存
+                bbox3d_jsons.second.clear();
+                RCLCPP_INFO(this->get_logger(), "bbox3d saved.");
+            }
+        }
+        
+        sample_recorder(sample_recorder_cache_.first, sample_recorder_cache_.second);
+
+        // clear sign
         for(auto& sign_pair : sample_done_sign_){
             sign_pair.second = false;
         }
@@ -1015,8 +1126,6 @@ private:
         return ss.str();
     }
 
-    
-
     // Ensure a specific directory exists
     void ensure_directory_exists(const std::string &path) {
         if (!std::filesystem::exists(path)) {
@@ -1031,12 +1140,11 @@ private:
     std::string robot_model_; // specify the robot used for capturing data
     std::string map_name_;
     int issac_per_sec_frame_;
-    float sample_frequency_; // sample every 0.5s
+    float sample_duration_; // sample every 0.5s
     std::unordered_map<std::string, std::string> sensor_token_map_; // Initialize the unordered_map with device name (channel) -> token mapping
     std::unordered_map<std::string, std::string> calibrated_sensor_token_map_;
     int64_t target_sample_frame_;
     int scene_frame_; // the frame each scene should have
-    std::string sample_scene_recoder_name_;
     std::string cur_scene_token_;
     double latest_time_;
     rclcpp::Time last_sample_time_;
@@ -1064,6 +1172,12 @@ private:
     std::string lidar_topic_;
     std::string imu_topic_;
 
+    // samples全局缓存
+    std::pair<std::string, std::vector<uint8_t>> sample_lidar_cache_;
+    std::unordered_map<std::string, std::pair<std::string, std::vector<uint8_t>>> sample_imgs_cache_;
+    std::unordered_map<std::string, std::vector<nlohmann::json>> sample_bbox3d_json_cache_;
+    std::pair<uint64_t, std::string> sample_recorder_cache_;
+
     rclcpp::Subscription<rosgraph_msgs::msg::Clock>::SharedPtr clock_subscription_;
     std::unordered_map<std::string, rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr> camera_subscriptions_;
     std::unordered_map<std::string, rclcpp::Subscription<vision_msgs::msg::Detection3DArray>::SharedPtr> bbox3d_subscriptions_;
@@ -1078,5 +1192,3 @@ private:
 };
 
 #endif  // NUSCENES_DATA_COLLECTOR_ISSAC_HPP
-
-

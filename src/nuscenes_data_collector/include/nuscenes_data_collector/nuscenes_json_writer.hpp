@@ -38,27 +38,27 @@ public:
             if (loaded_json.is_array()) {
                 // 如果是数组，存储为数组
                 if (loaded_json.empty()) {
-                    //std::cout << "Loaded an empty JSON array from file: " << file_path << "\n";
+                    //std::cout << "nuscenes json writer:" << "Loaded an empty JSON array from file: " << file_path << "\n";
                 }
                 std::string json_name = extractFileName(file_path);
                 json_map[json_name] = loaded_json;
                 file_path_map[json_name] = file_path; // 记录 json_name 与文件路径的映射
-                //std::cout << "Loaded JSON array from file: " << file_path << "\n";
+                //std::cout << "nuscenes json writer:" << "Loaded JSON array from file: " << file_path << "\n";
                 return true;
             } else if (loaded_json.is_object()) {
                 // 如果是对象，存储为对象
                 std::string json_name = extractFileName(file_path);
                 json_map[json_name] = loaded_json;
                 file_path_map[json_name] = file_path; // 记录 json_name 与文件路径的映射
-                //std::cout << "Loaded JSON object from file: " << file_path << "\n";
+                //std::cout << "nuscenes json writer:" << "Loaded JSON object from file: " << file_path << "\n";
                 return true;
             } else {
                 // 如果既不是数组也不是对象，输出错误信息
-                std::cerr << "Error: JSON is neither an array nor an object in file: " << file_path << "\n";
+                std::cerr << "nuscenes json writer:" << "nuscenes json writer:" << "Error: JSON is neither an array nor an object in file: " << file_path << "\n";
                 return false;
             }
         } else {
-            std::cerr << "Failed to open file: " << file_path << "\n";
+            std::cerr << "nuscenes json writer:" << "nuscenes json writer:" << "Failed to open file: " << file_path << "\n";
             return false;
         }
     }
@@ -66,7 +66,7 @@ public:
     // 打印所有 JSON 内容
     void printJsons() const {
         for (const auto& entry : json_map) {
-            std::cout << entry.first << ": " << entry.second.dump(4) << "\n";
+            std::cout << "nuscenes json writer:" << entry.first << ": " << entry.second.dump(4) << "\n";
         }
     }
 
@@ -81,7 +81,7 @@ public:
 
         // 如果该 JSON 数据对象不存在
         if (!target_json) {
-            std::cerr << "JSON object with name '" << json_name << "' not found." << std::endl;
+            std::cerr << "nuscenes json writer:" << "JSON object with name '" << json_name << "' not found." << std::endl;
             return;
         }
 
@@ -96,7 +96,7 @@ public:
 
             // 将新的场景添加到 JSON 中
             (*target_json)[key_name] = new_scene;
-            std::cout << "Scene '" << key_name << "' added with new 'data' array." << std::endl;
+            std::cout << "nuscenes json writer:" << "Scene '" << key_name << "' added with new 'data' array." << std::endl;
         } else {
             // 如果场景已存在
             auto& scene_data = (*target_json)[key_name];
@@ -105,10 +105,10 @@ public:
             if (scene_data.contains("data") && scene_data["data"].is_array()) {
                 // 将新的数据项添加到 "data" 数组中
                 scene_data["data"].push_back(new_data);
-                std::cout << "Added new data to existing scene '" << key_name << "' under 'data'." << std::endl;
+                std::cout << "nuscenes json writer:" << "Added new data to existing scene '" << key_name << "' under 'data'." << std::endl;
             } else {
                 // 如果 "data" 不存在或不是数组，创建 "data" 数组
-                std::cerr << "Scene '" << key_name << "' exists, but does not contain 'data' array. Creating it now." << std::endl;
+                std::cerr << "nuscenes json writer:" << "Scene '" << key_name << "' exists, but does not contain 'data' array. Creating it now." << std::endl;
                 scene_data["data"] = json::array();
                 scene_data["data"].push_back(new_data);
             }
@@ -120,12 +120,12 @@ public:
             if (it != file_path_map.end()) {
                 bool save_success = saveJsonToFile(it->second, json_name);
                 if (save_success) {
-                    //std::cout << "Changes saved immediately to file: " << it->second << std::endl;
+                    //std::cout << "nuscenes json writer:" << "Changes saved immediately to file: " << it->second << std::endl;
                 } else {
-                    std::cerr << "Failed to save changes to file: " << it->second << std::endl;
+                    std::cerr << "nuscenes json writer:" << "Failed to save changes to file: " << it->second << std::endl;
                 }
             } else {
-                std::cerr << "File path for JSON '" << json_name << "' not found." << std::endl;
+                std::cerr<< "nuscenes json writer:"  << "File path for JSON '" << json_name << "' not found." << std::endl;
             }
         }
     }
@@ -136,7 +136,7 @@ public:
         if (target_json) {
             // 将传入的字典对象（key_value_pairs）作为新对象，添加到数组中
             target_json->push_back(key_value_pairs);
-            //std::cout << "Added a new object to JSON array '" << json_name << "': " << key_value_pairs.dump() << "\n";
+            //std::cout << "nuscenes json writer:" << "Added a new object to JSON array '" << json_name << "': " << key_value_pairs.dump() << "\n";
 
             if (is_save) {
                 // 查找对应的文件名的文件路径
@@ -144,12 +144,12 @@ public:
                 if (it != file_path_map.end()) {
                     bool save_success = saveJsonToFile(it->second, json_name);
                     if (save_success) {
-                        //std::cout << "Changes saved immediately to file: " << it->second << "\n";
+                        //std::cout << "nuscenes json writer:" << "Changes saved immediately to file: " << it->second << "\n";
                     } else {
-                        std::cerr << "Failed to save changes to file: " << it->second << "\n";
+                        std::cerr << "nuscenes json writer:" << "Failed to save changes to file: " << it->second << "\n";
                     }
                 } else {
-                    std::cerr << "File name for '" << json_name << "' not found.\n";
+                    std::cerr << "nuscenes json writer:" << "File name for '" << json_name << "' not found.\n";
                 }
             }
         }
@@ -159,7 +159,7 @@ public:
     bool saveJsonToFile(const std::string& file_path, const std::string& json_key) {
         auto target_json = getJson(json_key);
         if (!target_json) {
-            std::cerr << "No JSON data found for key '" << json_key << "'\n";
+            std::cerr << "nuscenes json writer:" << "No JSON data found for key '" << json_key << "'\n";
             return false;
         }
 
@@ -168,10 +168,10 @@ public:
         if (out.is_open()) {
             out << target_json->dump(4);  // 格式化输出 JSON 数据
             out.close();
-            //std::cout << "Saved JSON data to " << file_path << "\n";
+            //std::cout << "nuscenes json writer:" << "Saved JSON data to " << file_path << "\n";
             return true;
         } else {
-            std::cerr << "Failed to open file for writing: " << file_path << "\n";
+            std::cerr << "nuscenes json writer:" << "Failed to open file for writing: " << file_path << "\n";
             return false;
         }
     }
@@ -184,7 +184,7 @@ public:
             // 返回 JSON 数组的最后一项
             return &(*target_json)[target_json->size() - 1];
         } else {
-            std::cerr << "JSON with json_name '" << json_name << "' is empty or not found.\n";
+            std::cerr << "nuscenes json writer:" << "JSON with json_name '" << json_name << "' is empty or not found.\n";
             return nullptr;
         }
     }
@@ -202,7 +202,7 @@ private:
         if (it != json_map.end()) {
             return &(it->second);  // 返回 JSON 数组的引用
         } else {
-            std::cerr << "JSON with json_name '" << json_name << "' not found.\n";
+            std::cerr << "nuscenes json writer:" << "JSON with json_name '" << json_name << "' not found.\n";
             return nullptr;
         }
     }
@@ -228,3 +228,4 @@ private:
 };
 
 #endif // NUSCENES_WRITER_HPP
+

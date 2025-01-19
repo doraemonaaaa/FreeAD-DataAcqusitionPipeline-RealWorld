@@ -41,23 +41,8 @@
 #include "nuscenes_data_collector/utils.hpp"
 #include "nuscenes_data_collector/nuscenes_json_writer.hpp"
 #include "nuscenes_data_collector/token_rule.hpp"
+#include "nuscenes_data_collector/camera_bridge.hpp"
 
-using json = nlohmann::json;
-
-// 定义同步策略，仅包含两个消息类型
-// using ImgBbox3dSyncPolicy = message_filters::sync_policies::ExactTime<
-//     sensor_msgs::msg::Image,
-//     vision_msgs::msg::Detection3DArray
-// >;
-// 定义同步策略，仅包含六个摄像头的 Image 消息，且采用 ApproximateTime 策略
-using ImgSyncPolicy = message_filters::sync_policies::ApproximateTime<
-    sensor_msgs::msg::Image,   // 第一个摄像头
-    sensor_msgs::msg::Image,   // 第二个摄像头
-    sensor_msgs::msg::Image,   // 第三个摄像头
-    sensor_msgs::msg::Image,   // 第四个摄像头
-    sensor_msgs::msg::Image,   // 第五个摄像头
-    sensor_msgs::msg::Image    // 第六个摄像头
->;
 
 class NuScenesDataCollector : public rclcpp::Node {
 public:
@@ -105,7 +90,7 @@ public:
         this->declare_parameter<std::string>("scene_mode_", "train");
         this->declare_parameter<std::string>("robot_model_", "diff_bot");
         this->declare_parameter<std::string>("map_name_", "office_issac");
-        this->declare_parameter<float>("sample_frequency_", 0.5);
+        this->declare_parameter<float>("sample_duration_", 0.5);
         this->declare_parameter<std::vector<std::string>>("sample_sensors_", {
             "CAM_FRONT", "CAM_BACK", "CAM_BACK_LEFT",
             "CAM_FRONT_LEFT", "CAM_FRONT_RIGHT", "CAM_BACK_RIGHT", "LIDAR_TOP"
@@ -116,7 +101,7 @@ public:
         this->get_parameter("robot_model_", robot_model_);
         this->get_parameter("map_name_", map_name_);
         this->get_parameter("root_path_", root_path_);
-        this->get_parameter("sample_frequency_", sample_frequency_);
+        this->get_parameter("sample_duration_", sample_duration_);
         this->get_parameter("sample_sensors_", sample_sensors_);
 
         // Retrieve JSON string parameters
@@ -146,32 +131,39 @@ public:
         this->get_parameter("scene_frame_", scene_frame_);
         this->get_parameter("sample_scene_recoder_name_", sample_scene_recoder_name_);
 
-        // Log retrieved parameters for verification
-        RCLCPP_INFO(this->get_logger(), "Scene Mode: %s", scene_mode_.c_str());
-        RCLCPP_INFO(this->get_logger(), "Robot Model: %s", robot_model_.c_str());
-        RCLCPP_INFO(this->get_logger(), "Map Name: %s", map_name_.c_str());
-        RCLCPP_INFO(this->get_logger(), "Root Path: %s", root_path_.c_str());
-        RCLCPP_INFO(this->get_logger(), "Sample Frequency: %.2f", sample_frequency_);
-        RCLCPP_INFO(this->get_logger(), "target_sample_frame_: %ld", target_sample_frame_);
-        RCLCPP_INFO(this->get_logger(), "scene_frame_: %d", scene_frame_);
-        RCLCPP_INFO(this->get_logger(), "sample_scene_recoder_name_:%s", sample_scene_recoder_name_.c_str());
-
-        RCLCPP_INFO(this->get_logger(), "Sample Sensors:");
+        // 创建一个大日志，包含所有相关信息，并加入清晰的分隔符
+        std::stringstream log_message;
+        log_message << "\n----------------------------------------------------------\n";
+        log_message << "                     [Scene Info]                        \n";
+        log_message << "----------------------------------------------------------\n";
+        log_message << "Scene Mode: " << scene_mode_ << std::endl;
+        log_message << "Robot Model: " << robot_model_ << std::endl;
+        log_message << "Map Name: " << map_name_ << std::endl;
+        log_message << "Root Path: " << root_path_ << std::endl;
+        log_message << "Sample Frequency: " << sample_duration_ << std::endl;
+        log_message << "Target Sample Frame: " << target_sample_frame_ << std::endl;
+        log_message << "Scene Frame: " << scene_frame_ << std::endl;
+        log_message << "Sample Scene Recorder Name: " << sample_scene_recoder_name_ << std::endl;
+        log_message << "\n----------------------------------------------------------\n";
+        log_message << "                   [Sample Sensors]                      \n";
+        log_message << "----------------------------------------------------------\n";
         for (const auto& sensor : sample_sensors_) {
-            RCLCPP_INFO(this->get_logger(), "  %s", sensor.c_str());
+            log_message << "  - " << sensor << std::endl;
         }
-
-        // Log sensor_token_map_
-        RCLCPP_INFO(this->get_logger(), "Sensor Token Map:");
+        log_message << "\n----------------------------------------------------------\n";
+        log_message << "                [Sensor Token Map]                        \n";
+        log_message << "----------------------------------------------------------\n";
         for (const auto& [key, value] : sensor_token_map_) {
-            RCLCPP_INFO(this->get_logger(), "  %s: %s", key.c_str(), value.c_str());
+            log_message << "  - " << key << ": " << value << std::endl;
         }
-
-        // Log calibrated_sensor_token_map_
-        RCLCPP_INFO(this->get_logger(), "Calibrated Sensor Token Map:");
+        log_message << "\n----------------------------------------------------------\n";
+        log_message << "     [Calibrated Sensor Token Map]                        \n";
+        log_message << "----------------------------------------------------------\n";
         for (const auto& [key, value] : calibrated_sensor_token_map_) {
-            RCLCPP_INFO(this->get_logger(), "  %s: %s", key.c_str(), value.c_str());
+            log_message << "  - " << key << ": " << value << std::endl;
         }
+        // 输出到日志
+        RCLCPP_INFO(this->get_logger(), "%s", log_message.str().c_str());
 
 
         // 检查 JSON 加载是否有错误
@@ -184,30 +176,34 @@ public:
         // 初始化其他参数和订阅
         declare_parameters();
 
-        //initialize_sync_camera_subscriptions();
+        // 创建一个 UsbCameraBridge 实例
+        usb_cameras_ = std::make_shared<UsbCameraBridge>();
+        image_for_driving_pub_ = this->create_publisher<sensor_msgs::msg::Image>("/dev/CAM_FRONT", 10);
 
-        rclcpp::QoS qos_profile(100);
+        rclcpp::QoS qos_profile(1);  // 队列大小为1，确保只处理最新的消息
         qos_profile.reliable();  // 设置可靠传输
+        qos_profile.durability_volatile();  // 设置为volatile，防止缓存消息
         // Odometry 订阅
         odom_subscription_ = this->create_subscription<nav_msgs::msg::Odometry>(
             odom_topic_, qos_profile, [this](const nav_msgs::msg::Odometry::SharedPtr msg) {
                 this->odom_callback(msg, "odom");
             }
         );
-
-        // lidar 订阅
-        lidar_subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
-            lidar_topic_, qos_profile, [this](const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
-                this->lidar_callback(msg, "LIDAR_TOP");
-            }
-        );
-
         // IMU 订阅
         imu_subscription_ = this->create_subscription<sensor_msgs::msg::Imu>(
             imu_topic_,        // 替换为您的 IMU 主题名称，例如 "/sensor/imu"
             qos_profile,       // 使用之前定义的 QoS 配置
             [this](const sensor_msgs::msg::Imu::SharedPtr msg) {
                 this->imu_callback(msg, "imu");  // 定义 IMU 回调函数以处理接收到的消息
+            }
+        );
+
+        rclcpp::QoS lidar_qos_profile(5);
+        qos_profile.reliable();  // 设置可靠传输
+        // lidar 订阅
+        lidar_subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
+            lidar_topic_, lidar_qos_profile, [this](const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
+                this->lidar_callback(msg, "LIDAR_TOP");
             }
         );
         
@@ -222,7 +218,6 @@ public:
         start_system_time_token_ = get_cur_system_time();
         scene_sample_frame_count_ = 0;
         std::string cur_system_time_string = get_cur_system_time();
-        last_sample_time_ = rclcpp::Time(0);
         sample_frame_ = 0;
         cur_scene_num_ = 0;
 
@@ -238,12 +233,23 @@ public:
         // write to map
         map_write(log_json, root_path_+"/map.json", map_name_);
 
-        // 创建定时器，周期为0.5秒，调用clock_callback
+        last_sample_time_ = this->now();
+        uint64_t timestamp_ns = static_cast<uint64_t>(last_sample_time_.nanoseconds());
+        std::string sample_token = generate_sample_token(sample_frame_, start_system_time_token_);
+        sample_recorder_cache_.first = timestamp_ns;
+        sample_recorder_cache_.second = sample_token;
+        // 创建定时器，调用clock_callback to sample
+        float time_duration = sample_duration_ * 1000;
         clock_timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(500), // 每500毫秒触发一次
+            std::chrono::milliseconds(static_cast<int>(time_duration)), // 每500毫秒触发一次
             std::bind(&NuScenesDataCollector::clock_callback, this)
         );
-        last_sample_time_ = this->now();
+
+        // Create timer for image capture
+        capture_image_timer_ = this->create_wall_timer(
+            std::chrono::milliseconds(100), 
+            std::bind(&NuScenesDataCollector::capture_image_callback, this)
+        );
     }
 
 private:
@@ -256,10 +262,6 @@ private:
     void declare_parameters() {
         // Initialize camera names and declare related parameters
         camera_names_ = {"CAM_FRONT", "CAM_FRONT_RIGHT", "CAM_FRONT_LEFT", "CAM_BACK", "CAM_BACK_LEFT", "CAM_BACK_RIGHT"};
-        for (const auto &camera : camera_names_) {
-            camera_topics_[camera] = "/dev/" + camera;
-            RCLCPP_INFO(this->get_logger(), "Declared camera topic parameter for %s: %s", camera.c_str(), camera_topics_[camera].c_str());
-        }
         // Get odom_topic and lidar_topic parameter
         odom_topic_ = "/diffbot_base_controller/odom";
         RCLCPP_INFO(this->get_logger(), "Retrieved odom_topic: %s", odom_topic_.c_str());
@@ -269,82 +271,142 @@ private:
         RCLCPP_INFO(this->get_logger(), "Retrieved imu_topic: %s", imu_topic_.c_str());
     }
 
-    // 初始化六个摄像头的同步订阅
-    void initialize_sync_camera_subscriptions() {
-        // 创建订阅者的容器
-        std::vector<std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image>>> image_subs;
-
-        // 为每个摄像头创建订阅者
-        for (const auto &camera : camera_names_) {
-            // 创建订阅器并检查是否成功
-            auto image_sub = std::make_shared<message_filters::Subscriber<sensor_msgs::msg::Image>>(
-                this, camera_topics_[camera], rmw_qos_profile_sensor_data);
-
-            // 输出日志，确认是否成功订阅
-            RCLCPP_INFO(this->get_logger(), "Subscribing to camera: %s, Topic: %s", 
-                        camera.c_str(), camera_topics_[camera].c_str());
-
-            // 将订阅器加入到容器中
-            image_subs.push_back(image_sub);
-        }
-
-        // 创建同步器并存储到成员变量中
-        auto sync = std::make_shared<message_filters::Synchronizer<ImgSyncPolicy>>(
-            ImgSyncPolicy(100),  // 队列大小
-            *image_subs[0],
-            *image_subs[1],
-            *image_subs[2],
-            *image_subs[3],
-            *image_subs[4],
-            *image_subs[5]
-        );
-
-        // 设置最大同步误差时间为0.1秒
-        sync->setMaxIntervalDuration(std::chrono::milliseconds(200));
-
-        // 注册回调函数，并传递摄像头名称
-        sync->registerCallback(std::bind(&NuScenesDataCollector::synced_camera_callback, 
-                                        this, std::placeholders::_1, "CAM_FRONT"));
-        sync->registerCallback(std::bind(&NuScenesDataCollector::synced_camera_callback, 
-                                        this, std::placeholders::_2, "CAM_FRONT_RIGHT"));
-        sync->registerCallback(std::bind(&NuScenesDataCollector::synced_camera_callback, 
-                                        this, std::placeholders::_3, "CAM_FRONT_LEFT"));
-        sync->registerCallback(std::bind(&NuScenesDataCollector::synced_camera_callback, 
-                                        this, std::placeholders::_4, "CAM_BACK"));
-        sync->registerCallback(std::bind(&NuScenesDataCollector::synced_camera_callback, 
-                                        this, std::placeholders::_5, "CAM_BACK_LEFT"));
-        sync->registerCallback(std::bind(&NuScenesDataCollector::synced_camera_callback, 
-                                        this, std::placeholders::_6, "CAM_BACK_RIGHT"));
-
-        // 输出日志，确认同步器回调注册成功
-        RCLCPP_INFO(this->get_logger(), "Synchronizer callback registered for 6 camera topics.");
-
-        // 将同步器加入到容器中
-        synchronizers_.push_back(sync);
-
-        // 输出日志，确认同步器已成功保存
-        RCLCPP_INFO(this->get_logger(), "Synchronizer added to synchronizers_ container.");
-    }
-
-    // 同步回调函数，处理六个摄像头的图像数据
-    void synced_camera_callback(
-        const sensor_msgs::msg::Image::ConstSharedPtr& image_msg, 
-        const std::string& camera_name  // 通过传递的 camera_name 来区分摄像头
-    )
+    // Callback to capture an image from the camera
+    void capture_image_callback()
     {
-        // 处理同步数据的回调函数
-        RCLCPP_INFO(this->get_logger(), "Received synced data for %s", camera_name.c_str());
+        if ((!latest_ego_pose_.empty()) && (!latest_imu_.empty())) {
+            // Loop through each camera name in camera_names_
+            for (const auto &camera_name : camera_names_)
+            {
+                std::pair<cv::Mat, rclcpp::Time> frame_data;
+                
+                // Capture the image and timestamp
+                bool success = usb_cameras_->capture_frame(camera_name, frame_data);
 
-        try {
-            // 保存图像数据
-            save_image_data(image_msg, camera_name);
+                if (success)
+                {
+                    // Handle the captured image and timestamp
+                    cv::Mat image = frame_data.first;
+                    rclcpp::Time timestamp = frame_data.second;
 
-            // 标记样本处理状态
-            sample_triggers_[camera_name] = false;
-            sample_done_sign_[camera_name] = true;
+                    // Determine the data type ('samples' or 'sweeps')
+                    std::string data_type = (sample_triggers_[camera_name] == true) ? "samples" : "sweeps";
+                    bool is_save = (data_type == "samples") ? false : true; // Cache for 'samples', save for 'sweeps'
 
-        } catch (const std::exception &e) {
-            RCLCPP_ERROR(this->get_logger(), "Exception occurred in img save_data: %s", e.what());
+                    // Generate directory path and ensure it exists
+                    std::string folder_path = root_path_ + "/" + data_type + "/" + camera_name;
+                    ensure_directory_exists(folder_path);
+
+                    // Generate file path for saving images
+                    std::stringstream ss;
+                    ss << folder_path << '/' << start_system_time_token_ << "__" 
+                       << camera_name << "__" 
+                       << std::to_string(timestamp.seconds()) // Ensure no scientific notation
+                       << ".jpg";
+                    std::string image_save_file = ss.str();
+
+                    // Encode the image to JPEG
+                    std::vector<uchar> encoded_img;
+                    bool encode_success = cv::imencode(".jpg", image, encoded_img);
+                    if (!encode_success)
+                    {
+                        RCLCPP_ERROR(this->get_logger(), "Failed to encode image to JPEG.");
+                        continue; // Skip this image and move to the next one
+                    }
+
+                    // Save or cache the image
+                    if (is_save)
+                    {
+                        // Save to disk as JPEG
+                        std::ofstream ofs(image_save_file, std::ios::binary);
+                        if (ofs.is_open())
+                        {
+                            ofs.write(reinterpret_cast<const char*>(encoded_img.data()), encoded_img.size());
+                            ofs.close();
+                        }
+                        else
+                        {
+                            RCLCPP_ERROR(this->get_logger(), "Failed to open image file for writing: %s", image_save_file.c_str());
+                        }
+                    }
+                    else
+                    {
+                        // Cache image data (for 'samples')
+                        sample_imgs_cache_[camera_name] = {image_save_file, encoded_img};
+                    }
+
+                    // Now, prepare the JSON data based on the format you provided
+                    nlohmann::json sample_data_json;
+                    // formula: sample_data_token = harsh(frame, "samples_data_" + device_name, start_system_time_token_)
+                    std::string sample_data_token_tmp = "samples_data_" + camera_name;
+                    std::string sample_data_token = generate_unique_token(devices_frame_count_[camera_name], camera_name, start_system_time_token_);
+                    // write ego_pose
+                    latest_ego_pose_["token"] = sample_data_token;  // set as sample_data_token
+                    json_writer_.addKeyValuePairToJson("ego_pose", latest_ego_pose_, true);
+                    bool is_key_frame = data_type == "samples" ? true : false;
+                    // record the sample scene and log
+                    std::string sample_token = generate_sample_token(sample_frame_, start_system_time_token_);
+                    // write can_bus, 检查 latest_scene_ 是否包含 "name" 键，并且其值是否非空
+                    if (latest_scene_.contains("name") && !latest_scene_["name"].get<std::string>().empty()) {
+                        std::string scene_name = latest_scene_["name"];
+                        json_writer_.addDataUnderKey("can_bus", scene_name, latest_imu_, true);
+                    } 
+                    // Extract the path from the image path, keeping only the part after 'sweeps' or 'samples'
+                    std::string relative_path = extractRelativePath(image_save_file);
+                    // get calibrated sensor token 
+                    std::string calibrated_sensor_token = get_calibration_token(calibrated_sensor_token_map_ ,camera_name);
+                    if(calibrated_sensor_token == "")
+                        RCLCPP_ERROR(this->get_logger(), "Device name not found in calibrated_sensor_token_map_: %s", camera_name.c_str());
+                    // Prepare the JSON fields
+                    sample_data_json["token"] = sample_data_token;
+                    sample_data_json["sample_token"] = sample_token;  // 指向sample_data所关联的sample
+                    sample_data_json["ego_pose_token"] = sample_data_token;
+                    sample_data_json["calibrated_sensor_token"] = calibrated_sensor_token;  
+                    // 将秒数转换为纳秒
+                    int64_t seconds_in_nanoseconds = timestamp.seconds() * 1e9;
+                    // 获取纳秒部分
+                    int32_t nanoseconds_part = timestamp.nanoseconds();
+                    sample_data_json["timestamp"] = seconds_in_nanoseconds + nanoseconds_part; 
+                    sample_data_json["fileformat"] = "jpg";  // File format is JPEG
+                    sample_data_json["is_key_frame"] = is_key_frame;  // Example, this could be dynamic based on your application
+                    sample_data_json["height"] = image.rows;
+                    sample_data_json["width"] = image.cols;
+                    sample_data_json["filename"] = relative_path;
+                    sample_data_json["prev"] = "";  // Example, replace with actual previous token if needed
+                    sample_data_json["next"] = "";  // Example, replace with actual next token if needed
+                    // generate sample_data's prev and next
+                    generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
+                    sample_data_json, 
+                    "sample_data_" + camera_name, 
+                    json_writer_, 
+                    "sample_data");
+                    
+                    devices_frame_count_[camera_name]++;
+
+                    // Publish image for "CAM_FRONT" camera
+                    if (camera_name == "CAM_FRONT")
+                    {
+                        // Create a ROS image message
+                        sensor_msgs::msg::Image::SharedPtr image_msg = cv_bridge::CvImage(
+                            std_msgs::msg::Header(), "bgr8", image).toImageMsg();
+                        // Set the timestamp for the message
+                        image_msg->header.stamp = timestamp;
+                        // Publish the image
+                        image_for_driving_pub_->publish(*image_msg);
+                        //RCLCPP_INFO(this->get_logger(), "Published image from %s at timestamp %f", camera_name.c_str(), timestamp.seconds());
+                    }
+
+                    // set the sign that camera sample done in this epoch
+                    sample_triggers_[camera_name] = false;
+                    sample_done_sign_[camera_name] = true;
+
+                    RCLCPP_INFO(this->get_logger(), "Captured image from %s", camera_name.c_str());
+                }
+                else
+                {
+                    RCLCPP_WARN(this->get_logger(), "Failed to capture image from %s", camera_name.c_str());
+                }
+            }
         }
     }
 
@@ -366,39 +428,50 @@ private:
         auto cur_time = this->now();
         // 计算时间差
         rclcpp::Duration time_diff = cur_time - last_sample_time_;
+
         // 检查是否达到采样帧
         if (sample_frame_ >= target_sample_frame_) {
             node_shutdown_callback();
             return;
         }
-        // 检查时间间隔是否达到0.5秒且上一个采样已完成
-        if (time_diff.seconds() >= 0.5 && check_sample_done()) {
-            sample_frame_++;
 
-            // 达到目标采样帧数时，关闭节点
-            if (sample_frame_ > target_sample_frame_) {
-                node_shutdown_callback();
-                return;
+        // Check whether the sample time has been reached and the last sample is done
+        if (time_diff.seconds() >= sample_duration_) {
+            bool is_sample_done = check_sample_done();
+            if(is_sample_done){
+                if (sample_frame_ + 1 > target_sample_frame_) {
+                    node_shutdown_callback();
+                    return;
+                }
+                else{
+                    sample_frame_++;
+                }
+                // Set all triggers
+                for (auto& trigger : sample_triggers_) {
+                    trigger.second = true;
+                }
+                last_sample_time_ = cur_time;
             }
+            else last_sample_time_ = cur_time;
 
-            // 设置所有触发器
-            for (auto& trigger : sample_triggers_) {
-                trigger.second = true;
-            }
-            // 更新上次采样时间
-            last_sample_time_ = cur_time;
+            // a new sample should be take
+            // Calculate timestamp (in nanoseconds)
+            uint64_t timestamp_ns = static_cast<uint64_t>(cur_time.nanoseconds());
+            std::string sample_token = generate_sample_token(sample_frame_, start_system_time_token_);
+            sample_recorder_cache_.first = timestamp_ns;
+            sample_recorder_cache_.second = sample_token;
         }
     }
 
     // Odometry data callback
     void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg, const std::string &device_name) {
-        RCLCPP_INFO(this->get_logger(), "received Odometry data");
+        //RCLCPP_INFO(this->get_logger(), "received Odometry data");
         save_data(msg, device_name);
     }
 
     // Odometry data callback
     void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg, const std::string &device_name) {
-        RCLCPP_INFO(this->get_logger(), "received IMU data");
+        //RCLCPP_INFO(this->get_logger(), "received IMU data");
         save_data(msg, device_name);
     }
     
@@ -418,16 +491,8 @@ private:
             }
             // Ensure we must have an ego pose and imu before processing other types
             if ((!latest_ego_pose_.empty()) && (!latest_imu_.empty())) {
-                // Handle Image messages
-                if constexpr (std::is_same_v<T, std::shared_ptr<sensor_msgs::msg::Image>>) {
-                    save_image_data(msg, device_name);
-                }
-                // Handle Detection3DArray messages
-                else if constexpr (std::is_same_v<T, std::shared_ptr<vision_msgs::msg::Detection3DArray>>) {
-                    save_bbox3d_data(msg, device_name);
-                }
                 // Handle PointCloud2 (Lidar) messages
-                else if constexpr (std::is_same_v<T, std::shared_ptr<sensor_msgs::msg::PointCloud2>>) {
+                if constexpr (std::is_same_v<T, std::shared_ptr<sensor_msgs::msg::PointCloud2>>) {
                     save_lidar_data(msg, device_name);
                 }
             }
@@ -483,109 +548,6 @@ private:
         latest_imu_["utime"] = timestamp;  // 保存计算的utime
     }
 
-    // Save Image data as JPEG and write it to sampe_data.json in the nuscenes sample_data format
-    void save_image_data(const std::shared_ptr<const sensor_msgs::msg::Image> &msg, 
-                              const std::string &device_name) {
-        // Determine whether to save to 'sweeps' or 'samples'
-        std::string data_type = (sample_triggers_[device_name] == true) ? "samples" : "sweeps";
-        // Create the directory path for saving images
-        std::string folder_path = root_path_ + "/" + data_type + "/" + device_name;
-        ensure_directory_exists(folder_path);
-        // Generate a file path with timestamp for the image
-        std::stringstream ss;
-        ss << folder_path << '/' << start_system_time_token_ << "__" << device_name << "__" << msg->header.stamp.sec << "_" << msg->header.stamp.nanosec << ".jpg";
-        std::string image_save_file = ss.str();
-        // Convert encoding to lowercase for consistent comparison
-        std::string encoding = msg->encoding;
-        std::transform(encoding.begin(), encoding.end(), encoding.begin(), [](unsigned char c) { return std::tolower(c); });
-        cv::Mat img;
-        if (encoding == sensor_msgs::image_encodings::BGR8 ||
-            encoding == sensor_msgs::image_encodings::RGB8) {
-            // Directly use image data if encoding is compatible
-            img = cv_bridge::toCvShare(msg, encoding)->image;
-        }
-        else if (encoding == "jpeg" || encoding == "jpg") {
-            // Decode JPEG image
-            std::vector<uchar> img_data(msg->data.begin(), msg->data.end());
-            img = cv::imdecode(img_data, cv::IMREAD_COLOR);
-        } 
-        else {
-            RCLCPP_WARN(this->get_logger(), "Unsupported image encoding: %s", msg->encoding.c_str());
-            return;
-        }
-
-        if (img.empty()) {
-            RCLCPP_WARN(this->get_logger(), "Failed to decode image");
-            return;
-        }
-        // Encode image as JPEG
-        std::vector<uchar> encoded_img;
-        bool success = cv::imencode(".jpg", img, encoded_img);
-        if (!success) {
-            RCLCPP_ERROR(this->get_logger(), "Failed to encode image to JPEG");
-            return;
-        }
-        // Save the image file
-        std::ofstream ofs(image_save_file, std::ios::binary);
-        if (ofs.is_open()) {
-            ofs.write(reinterpret_cast<const char*>(encoded_img.data()), encoded_img.size());
-            ofs.close();
-            RCLCPP_INFO(this->get_logger(), "Image saved as JPEG: %s", image_save_file.c_str());
-        } else {
-            RCLCPP_ERROR(this->get_logger(), "Failed to open image file for writing: %s", image_save_file.c_str());
-            return;
-        }
-
-        // Now, prepare the JSON data based on the format you provided
-        nlohmann::json sample_data_json;
-        // formula: sample_data_token = harsh(frame, "samples_data_" + device_name, start_system_time_token_)
-        std::string sample_data_token_tmp = "samples_data_" + device_name;
-        std::string sample_data_token = generate_unique_token(devices_frame_count_[device_name], device_name, start_system_time_token_);
-        // write ego_pose
-        latest_ego_pose_["token"] = sample_data_token;  // set as sample_data_token
-        json_writer_.addKeyValuePairToJson("ego_pose", latest_ego_pose_, true);
-        // get time_stamp and key_frame sign
-        uint64_t timestamp = msg->header.stamp.sec * 1e9 + msg->header.stamp.nanosec;
-        bool is_key_frame = data_type == "samples" ? true : false;
-        // record the sample scene and log
-        std::string sample_token = generate_sample_token(sample_frame_, start_system_time_token_);
-        if(is_key_frame && sample_triggers_[device_name]){
-            sample_recorder(device_name, timestamp, sample_token);
-        }
-        // write can_bus, 检查 latest_scene_ 是否包含 "name" 键，并且其值是否非空
-        if (latest_scene_.contains("name") && !latest_scene_["name"].get<std::string>().empty()) {
-            std::string scene_name = latest_scene_["name"];
-            json_writer_.addDataUnderKey("can_bus", scene_name, latest_imu_, true);
-        } 
-        // Extract the path from the image path, keeping only the part after 'sweeps' or 'samples'
-        std::string relative_path = extractRelativePath(image_save_file);
-        // get calibrated sensor token 
-        std::string calibrated_sensor_token = get_calibration_token(calibrated_sensor_token_map_ ,device_name);
-        if(calibrated_sensor_token == "")
-            RCLCPP_ERROR(this->get_logger(), "Device name not found in calibrated_sensor_token_map_: %s", device_name.c_str());
-        // Prepare the JSON fields
-        sample_data_json["token"] = sample_data_token;
-        sample_data_json["sample_token"] = sample_token;  // 指向sample_data所关联的sample
-        sample_data_json["ego_pose_token"] = sample_data_token;
-        sample_data_json["calibrated_sensor_token"] = calibrated_sensor_token;  
-        sample_data_json["timestamp"] = timestamp;  // Full timestamp
-        sample_data_json["fileformat"] = "jpg";  // File format is JPEG
-        sample_data_json["is_key_frame"] = is_key_frame;  // Example, this could be dynamic based on your application
-        sample_data_json["height"] = img.rows;
-        sample_data_json["width"] = img.cols;
-        sample_data_json["filename"] = relative_path;
-        sample_data_json["prev"] = "";  // Example, replace with actual previous token if needed
-        sample_data_json["next"] = "";  // Example, replace with actual next token if needed
-        // generate sample_data's prev and next
-        generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
-        sample_data_json, 
-        "sample_data_" + device_name, 
-        json_writer_, 
-        "sample_data");
-        
-        devices_frame_count_[device_name]++;
-        //RCLCPP_ERROR(this->get_logger(), "*************************");
-    }
 
     /// @brief this contain the real intensity from data
     /// @param msg 
@@ -593,7 +555,7 @@ private:
     void save_lidar_data(const std::shared_ptr<sensor_msgs::msg::PointCloud2> &msg, const std::string &device_name) {
         // Determine whether to save to 'sweeps' or 'samples'
         std::string data_type = (sample_triggers_[device_name] == true) ? "samples" : "sweeps";
-        
+        bool is_save = data_type == "samples" ? false : true; // samples save to the tmp at first
         // Create the directory path for saving point cloud
         std::string folder_path = root_path_ + "/" + data_type + "/" + device_name;
         ensure_directory_exists(folder_path);
@@ -621,19 +583,35 @@ private:
         }
 
         // Save point cloud to binary file in NuScenes format
-        std::ofstream ofs(cloud_save_file, std::ios::binary);
-        if (ofs.is_open()) {
-            // Write the point cloud data to file in [x, y, z, intensity] format
-            for (const auto &point : cloud.points) {
-                ofs.write(reinterpret_cast<const char*>(&point.x), sizeof(float)); // x
-                ofs.write(reinterpret_cast<const char*>(&point.y), sizeof(float)); // y
-                ofs.write(reinterpret_cast<const char*>(&point.z), sizeof(float)); // z
-                ofs.write(reinterpret_cast<const char*>(&point.intensity), sizeof(float)); // intensity
+        if(is_save){
+            std::ofstream ofs(cloud_save_file, std::ios::binary);
+            if (ofs.is_open()) {
+                // Write the point cloud data to file in [x, y, z, intensity] format
+                for (const auto &point : cloud.points) {
+                    ofs.write(reinterpret_cast<const char*>(&point.x), sizeof(float)); // x
+                    ofs.write(reinterpret_cast<const char*>(&point.y), sizeof(float)); // y
+                    ofs.write(reinterpret_cast<const char*>(&point.z), sizeof(float)); // z
+                    ofs.write(reinterpret_cast<const char*>(&point.intensity), sizeof(float)); // intensity
+                }
+                ofs.close();
+                //RCLCPP_INFO(this->get_logger(), "PointCloud2 saved as BIN: %s", cloud_save_file.c_str());
+            } else {
+                RCLCPP_ERROR(this->get_logger(), "Failed to open file for saving point cloud: %s", cloud_save_file.c_str());
             }
-            ofs.close();
-            RCLCPP_INFO(this->get_logger(), "PointCloud2 saved as BIN: %s", cloud_save_file.c_str());
-        } else {
-            RCLCPP_ERROR(this->get_logger(), "Failed to open file for saving point cloud: %s", cloud_save_file.c_str());
+        }
+        else{
+            // cache the lidar sample
+            std::vector<uint8_t> point_cloud_data;
+            for (const auto &point : cloud.points) {
+                point_cloud_data.insert(point_cloud_data.end(), reinterpret_cast<const uint8_t*>(&point.x), reinterpret_cast<const uint8_t*>(&point.x) + sizeof(float));
+                point_cloud_data.insert(point_cloud_data.end(), reinterpret_cast<const uint8_t*>(&point.y), reinterpret_cast<const uint8_t*>(&point.y) + sizeof(float));
+                point_cloud_data.insert(point_cloud_data.end(), reinterpret_cast<const uint8_t*>(&point.z), reinterpret_cast<const uint8_t*>(&point.z) + sizeof(float));
+                point_cloud_data.insert(point_cloud_data.end(), reinterpret_cast<const uint8_t*>(&point.intensity), reinterpret_cast<const uint8_t*>(&point.intensity) + sizeof(float));
+            }
+
+            // Overwrite the existing cache
+            sample_lidar_cache_ = {cloud_save_file, point_cloud_data};
+            RCLCPP_INFO(this->get_logger(), "Point cloud data cached: %s", cloud_save_file.c_str());
         }
         
         // Prepare the JSON data for sample_data
@@ -645,10 +623,6 @@ private:
         // write ego_pose
         latest_ego_pose_["token"] = sample_data_token;  // set as sample_data_token
         json_writer_.addKeyValuePairToJson("ego_pose", latest_ego_pose_, true);
-
-        if(is_key_frame && sample_triggers_[device_name]){
-            sample_recorder(device_name, timestamp, sample_token);
-        }
 
         // write can_bus, 检查 latest_scene_ 是否包含 "name" 键，并且其值是否非空
         if (latest_scene_.contains("name") && !latest_scene_["name"].get<std::string>().empty()) {
@@ -685,45 +659,43 @@ private:
         devices_frame_count_[device_name]++;
     }
 
-    void sample_recorder(std::string sample_scene_recoder_name, uint64_t timestamp, std::string sample_token){
-        if(sample_scene_recoder_name == sample_scene_recoder_name_){
-            // ********************generate sample_token, and write to sample.json and scene.json********************
-            // adding samples to scene, wont be full
-            if(scene_sample_frame_count_ < scene_frame_ - 1)
-            {
-                scene_processing(sample_token);
+    void sample_recorder(uint64_t timestamp, std::string sample_token){
+        // ********************generate sample_token, and write to sample.json and scene.json********************
+        // adding samples to scene, wont be full
+        if(scene_sample_frame_count_ < scene_frame_ - 1)
+        {
+            scene_processing(sample_token);
 
-                json sample_json;
-                sample_json["token"] = sample_token;
-                sample_json["timestamp"] = timestamp;
-                sample_json["prev"] = "";
-                sample_json["next"] = "";
-                sample_json["scene_token"] = cur_scene_token_;
-                // generate sample's prev and next
-                generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
-                sample_json, 
-                "sample_" + sample_scene_recoder_name, 
-                json_writer_, 
-                "sample");
-                // scene 
-            }
-            // the scene will be full, start a new scene
-            else{
-                json sample_json;
-                sample_json["token"] = sample_token;
-                sample_json["timestamp"] = timestamp;
-                sample_json["prev"] = "";
-                sample_json["next"] = "";
-                sample_json["scene_token"] = cur_scene_token_;
-                // generate sample's prev and next
-                generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
-                sample_json, 
-                "sample_" + sample_scene_recoder_name, 
-                json_writer_, 
-                "sample");
-                // scene
-                scene_done(sample_token);
-            }
+            json sample_json;
+            sample_json["token"] = sample_token;
+            sample_json["timestamp"] = timestamp;
+            sample_json["prev"] = "";
+            sample_json["next"] = "";
+            sample_json["scene_token"] = cur_scene_token_;
+            // generate sample's prev and next
+            generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
+            sample_json, 
+            "sample_", 
+            json_writer_, 
+            "sample");
+            // scene 
+        }
+        // the scene will be full, start a new scene
+        else{
+            json sample_json;
+            sample_json["token"] = sample_token;
+            sample_json["timestamp"] = timestamp;
+            sample_json["prev"] = "";
+            sample_json["next"] = "";
+            sample_json["scene_token"] = cur_scene_token_;
+            // generate sample's prev and next
+            generate_prev_next_and_write_json_dynamically(prev_next_sliders_, 
+            sample_json, 
+            "sample_", 
+            json_writer_, 
+            "sample");
+            // scene
+            scene_done(sample_token);
         }
     }
 
@@ -775,102 +747,181 @@ private:
 
     void map_write(const json& log_json, const std::string& map_path, const std::string& map_name) {
         auto logger = this->get_logger();
-        try {
-            // 检查 map.json 是否存在
-            if (!std::filesystem::exists(map_path)) {
-                RCLCPP_ERROR(logger, "map.json does not exist at path: %s", map_path.c_str());
-                return;
-            }
+        bool error_occurred = false; // 标记是否发生了错误
 
+        try {
             // 打开并读取现有的 map.json 文件
             std::ifstream file(map_path);
             if (!file.is_open()) {
                 RCLCPP_ERROR(logger, "Failed to open %s for reading.", map_path.c_str());
-                return;
-            }
-
-            json map_data;
-            try {
-                file >> map_data;
-            } catch (const json::parse_error& e) {
-                RCLCPP_ERROR(logger, "JSON parse error in %s: %s", map_path.c_str(), e.what());
+                error_occurred = true;
+            } else {
+                json map_data;
+                try {
+                    file >> map_data;
+                } catch (const json::parse_error& e) {
+                    RCLCPP_ERROR(logger, "JSON parse error in %s: %s", map_path.c_str(), e.what());
+                    error_occurred = true;
+                }
                 file.close();
-                return;
-            }
-            file.close();
-            RCLCPP_INFO(logger, "Successfully read map.json");
+                RCLCPP_INFO(logger, "Successfully read map.json");
 
-            // 检查 map_data 是否为数组
-            if (!map_data.is_array()) {
-                RCLCPP_ERROR(logger, "map.json is not an array.");
-                return;
-            }
-
-            // 检查 log_json 是否包含 "token" 字段
-            if (!log_json.contains("token") || log_json["token"].is_null() || log_json["token"].get<std::string>().empty()) {
-                RCLCPP_ERROR(logger, "Provided log_json does not contain a valid 'token' field.");
-                return;
-            }
-
-            // 获取要添加的 token
-            std::string new_log_token = log_json["token"].get<std::string>();
-
-            // 查找正确的 map token
-            bool token_found = false;
-            for (auto& item : map_data) {
-                if (item.contains("token") && item["token"] == map_name) {
-                    // 确保 "log_tokens" 是一个数组
-                    if (!item.contains("log_tokens") || !item["log_tokens"].is_array()) {
-                        item["log_tokens"] = json::array();
+                if (!error_occurred) {
+                    // 检查 map_data 是否为数组
+                    if (!map_data.is_array()) {
+                        RCLCPP_ERROR(logger, "map.json is not an array.");
+                        error_occurred = true;
                     }
+                }
 
-                    // 检查是否已经存在该 token，避免重复
-                    bool already_exists = false;
-                    for (const auto& existing_log_token : item["log_tokens"]) {
-                        if (existing_log_token == new_log_token) {
-                            already_exists = true;
+                if (!error_occurred) {
+                    // 检查 log_json 是否包含 "token" 字段
+                    if (!log_json.contains("token") || log_json["token"].is_null() || log_json["token"].get<std::string>().empty()) {
+                        RCLCPP_ERROR(logger, "Provided log_json does not contain a valid 'token' field.");
+                        error_occurred = true;
+                    }
+                }
+
+                if (!error_occurred) {
+                    // 获取要添加的 token
+                    std::string new_log_token = log_json["token"].get<std::string>();
+
+                    // 查找正确的 map token
+                    bool token_found = false;
+                    for (auto& item : map_data) {
+                        if (item.contains("token") && item["token"] == map_name) {
+                            // 确保 "log_tokens" 是一个数组
+                            if (!item.contains("log_tokens") || !item["log_tokens"].is_array()) {
+                                item["log_tokens"] = json::array();
+                            }
+
+                            // 检查是否已经存在该 token，避免重复
+                            bool already_exists = false;
+                            for (const auto& existing_log_token : item["log_tokens"]) {
+                                if (existing_log_token == new_log_token) {
+                                    already_exists = true;
+                                    break;
+                                }
+                            }
+
+                            if (!already_exists) {
+                                item["log_tokens"].push_back(new_log_token);
+                                RCLCPP_INFO(logger, "Added log token '%s' to map token '%s'.", new_log_token.c_str(), map_name.c_str());
+                            } else {
+                                RCLCPP_INFO(logger, "Log token '%s' already exists for map token '%s'.", new_log_token.c_str(), map_name.c_str());
+                            }
+
+                            token_found = true;
                             break;
                         }
                     }
 
-                    if (!already_exists) {
-                        item["log_tokens"].push_back(new_log_token);
-                        RCLCPP_INFO(logger, "Added log token '%s' to map token '%s'.", new_log_token.c_str(), map_name.c_str());
-                    } else {
-                        RCLCPP_INFO(logger, "Log token '%s' already exists for map token '%s'.", new_log_token.c_str(), map_name.c_str());
+                    if (!token_found) {
+                        RCLCPP_ERROR(logger, "Token '%s' not found in %s.", map_name.c_str(), map_path.c_str());
+                        error_occurred = true;
                     }
 
-                    token_found = true;
-                    break;
+                    if (!error_occurred) {
+                        // 写回 map.json 文件
+                        std::ofstream out_file(map_path, std::ios::trunc); // 使用 trunc 模式覆盖文件
+                        if (!out_file.is_open()) {
+                            RCLCPP_ERROR(logger, "Failed to open %s for writing.", map_path.c_str());
+                            error_occurred = true;
+                        } else {
+                            out_file << map_data.dump(4); // 美化输出
+                            out_file.close();
+                            RCLCPP_INFO(logger, "Log token added successfully to %s.", map_path.c_str());
+                        }
+                    }
                 }
-            }
-
-            if (token_found) {
-                // 写回 map.json 文件
-                std::ofstream out_file(map_path, std::ios::trunc); // 使用 trunc 模式覆盖文件
-                if (!out_file.is_open()) {
-                    RCLCPP_ERROR(logger, "Failed to open %s for writing.", map_path.c_str());
-                    return;
-                }
-                out_file << map_data.dump(4); // 美化输出
-                out_file.close();
-                RCLCPP_INFO(logger, "Log token added successfully to %s.", map_path.c_str());
-            } else {
-                RCLCPP_ERROR(logger, "Token '%s' not found in %s.", map_name.c_str(), map_path.c_str());
             }
         }
         catch (const std::exception& e) {
             RCLCPP_ERROR(logger, "Exception occurred: %s", e.what());
+            error_occurred = true;
+        }
+
+        // 如果发生了错误，调用 shutdown 回调
+        if (error_occurred) {
+            this->node_shutdown_callback();
         }
     }
 
     bool check_sample_done(){
-        // get sample done and clear sign
+        // check sample done
         for(auto& sign_pair : sample_done_sign_){
             if(sign_pair.second == false){
+                // clear sign, restart a epoch of sample
+                for(auto& sign_pair : sample_done_sign_){
+                    sign_pair.second = false;
+                }
+                RCLCPP_INFO(this->get_logger(), "Failed this sample epoch");
                 return false;
             }
         }
+
+        // check every sample is not null, if there is a null, return false
+        bool all_samples_done = true;
+        // Check image data cache
+        for (auto& sample_img_cache : sample_imgs_cache_) {
+            if (sample_img_cache.second.second.empty()) {
+                all_samples_done = false; // Image data is null
+                RCLCPP_ERROR(this->get_logger(), "Image data for device %s is empty", sample_img_cache.first.c_str());
+            }
+        }
+        // Check lidar data cache
+        if (sample_lidar_cache_.second.empty()) {
+            all_samples_done = false; // Lidar data is null
+            RCLCPP_ERROR(this->get_logger(), "Lidar data is empty");
+        }
+        // If any sample data is null, abort and return false
+        if (!all_samples_done) {
+            RCLCPP_ERROR(this->get_logger(), "Some sample data is missing, aborting this epoch.");
+            return false;
+        }
+
+        // save sample
+        for (auto& sample_img_cache : sample_imgs_cache_) {
+            // 只在图像数据非空时进行保存
+            if (!sample_img_cache.second.second.empty()) {
+                std::string save_path = sample_img_cache.second.first;  // 获取图像文件保存路径
+                std::vector<uint8_t> data = sample_img_cache.second.second;  // 获取缓存的图像数据
+                // 保存缓存的图像数据
+                std::ofstream ofs(save_path, std::ios::binary);
+                if (ofs.is_open()) {
+                    ofs.write(reinterpret_cast<const char*>(data.data()), data.size());  // 写入缓存数据到文件
+                    ofs.close();
+                    RCLCPP_INFO(this->get_logger(), "Image data saved from cache: %s", save_path.c_str());
+                } else {
+                    RCLCPP_ERROR(this->get_logger(), "Failed to open file for saving cached image: %s", save_path.c_str());
+                }
+                // 清空图像数据缓存（second 部分）
+                sample_img_cache.second.second.clear();  // 清空图像数据部分
+                RCLCPP_INFO(this->get_logger(), "Cache cleared after saving.");
+            }
+        }
+        if (!sample_lidar_cache_.second.empty()) {
+             // Retrieve cached data
+            std::string save_path = sample_lidar_cache_.first;    // File path to save the point cloud
+            std::vector<uint8_t> data = sample_lidar_cache_.second; // Cached lidar data
+            // Save cached data to the file
+            std::ofstream ofs(save_path, std::ios::binary);
+            if (ofs.is_open()) {
+                ofs.write(reinterpret_cast<const char*>(data.data()), data.size());  // Write cached data
+                ofs.close();
+                RCLCPP_INFO(this->get_logger(), "Point cloud data saved from cache: %s", save_path.c_str());
+            } else {
+                RCLCPP_ERROR(this->get_logger(), "Failed to open file for saving cached point cloud: %s", save_path.c_str());
+            }
+            // Clear the cache after saving
+            sample_lidar_cache_.first.clear();
+            sample_lidar_cache_.second.clear();
+            RCLCPP_INFO(this->get_logger(), "Cache cleared after saving.");
+        }
+        
+        sample_recorder(sample_recorder_cache_.first, sample_recorder_cache_.second);
+
+        // clear sign
         for(auto& sign_pair : sample_done_sign_){
             sign_pair.second = false;
         }
@@ -943,7 +994,7 @@ private:
     std::string scene_mode_;
     std::string robot_model_; // specify the robot used for capturing data
     std::string map_name_;
-    float sample_frequency_; // sample every 0.5s
+    float sample_duration_; // sample every 0.5s
     std::unordered_map<std::string, std::string> sensor_token_map_;  // Initialize the unordered_map with device name (channel) -> token mapping
 
     std::unordered_map<std::string, std::string> calibrated_sensor_token_map_;
@@ -970,22 +1021,23 @@ private:
 
     NuscenesJsonWriter json_writer_;
 
-    std::unordered_map<std::string, std::string> camera_topics_;
     std::string odom_topic_;
     std::string lidar_topic_;
     std::string imu_topic_;
 
+    // samples全局缓存
+    std::pair<std::string, std::vector<uint8_t>> sample_lidar_cache_;
+    std::unordered_map<std::string, std::pair<std::string, std::vector<uint8_t>>> sample_imgs_cache_;
+    std::pair<uint64_t, std::string> sample_recorder_cache_;
+
 
     rclcpp::TimerBase::SharedPtr clock_timer_;
-    std::unordered_map<std::string, rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr> camera_subscriptions_;
+    rclcpp::TimerBase::SharedPtr capture_image_timer_;
+    std::shared_ptr<UsbCameraBridge> usb_cameras_;
+    rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr image_for_driving_pub_;  // pub the CAM_FRONT for Driving
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_subscription_;
     rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr lidar_subscription_;
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_subscription_;
-    // Store synchronizers to keep them alive
-    std::vector<std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image>>> image_subs_;
-    std::vector<std::shared_ptr<void>> synchronizers_;
-
-
 };
 
 #endif  // NUSCENES_DATA_COLLECTOR_HPP
