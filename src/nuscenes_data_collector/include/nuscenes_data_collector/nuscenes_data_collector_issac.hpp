@@ -179,6 +179,44 @@ public:
 
         // 初始化其他成员变量
         declare_parameters();
+
+        // 传感器集初始化
+        for(auto c: camera_names_) add_sample_sensors(c);
+        add_sample_sensors("LIDAR_TOP");
+        for(auto device : sample_sensors_){
+            devices_frame_count_[device] = 0;
+            sample_triggers_[device] = true;
+            sample_done_sign_[device] = false;
+        }
+        start_system_time_token_ = get_cur_system_time();
+        scene_sample_frame_count_ = 0;
+        std::string cur_system_time_string = get_cur_system_time();
+        last_sample_time_ = rclcpp::Time(0);
+        sample_frame_ = 0;
+        cur_scene_num_ = 0;
+
+        // write log
+        log_token_ = map_name_ + start_system_time_token_;
+        json log_json;
+        log_json["token"] = log_token_;
+        log_json["logfile"] = "None";  // TODO: waitting for log method
+        log_json["vehicle"] = robot_model_;
+        log_json["date_captured"] = start_system_time_token_.substr(0, 10);  // 从字符串中提取前10个字符，即 YYYY-MM-DD
+        log_json["location"] = map_name_;
+        json_writer_.addKeyValuePairToJson("log", log_json, true); 
+        // write to map
+        map_write(log_json, root_path_+"/map.json", map_name_);
+
+        uint64_t timestamp_ns = static_cast<uint64_t>(last_sample_time_.nanoseconds());
+        std::string sample_token = generate_sample_token(sample_frame_, start_system_time_token_);
+        std::string next_sample_token = generate_sample_token(sample_frame_, start_system_time_token_);
+        sample_recorder_cache_.first = timestamp_ns;
+        sample_recorder_cache_.second.first = sample_token;
+        sample_recorder_cache_.second.second = next_sample_token;
+        // init the scene
+        scene_init(sample_token);
+
+        // init the sensor workflow
         initialize_sync_camera_bbox3d_subscriptions();
 
         rclcpp::QoS qos_profile(1);  // 队列大小为1，确保只处理最新的消息
@@ -215,33 +253,6 @@ public:
                 this->lidar_callback(msg, "LIDAR_TOP");
             }
         );
-
-        // 传感器集初始化
-        for(auto c: camera_names_) add_sample_sensors(c);
-        add_sample_sensors("LIDAR_TOP");
-        for(auto device : sample_sensors_){
-            devices_frame_count_[device] = 0;
-            sample_triggers_[device] = true;
-            sample_done_sign_[device] = false;
-        }
-        start_system_time_token_ = get_cur_system_time();
-        scene_sample_frame_count_ = 0;
-        std::string cur_system_time_string = get_cur_system_time();
-        last_sample_time_ = rclcpp::Time(0);
-        sample_frame_ = 0;
-        cur_scene_num_ = 0;
-
-        // write log
-        log_token_ = map_name_ + start_system_time_token_;
-        json log_json;
-        log_json["token"] = log_token_;
-        log_json["logfile"] = "None";  // TODO: waitting for log method
-        log_json["vehicle"] = robot_model_;
-        log_json["date_captured"] = start_system_time_token_.substr(0, 10);  // 从字符串中提取前10个字符，即 YYYY-MM-DD
-        log_json["location"] = map_name_;
-        json_writer_.addKeyValuePairToJson("log", log_json, true); 
-        // write to map
-        map_write(log_json, root_path_+"/map.json", map_name_);
     }
 
 private:
@@ -338,8 +349,6 @@ private:
         try {
             save_image_data(image_msg, camera_name);
             save_bbox3d_data(bbox3d_msg, camera_name);
-            sample_triggers_[camera_name] = false;
-            sample_done_sign_[camera_name] = true;
         } catch (const std::exception &e) {
             RCLCPP_ERROR(this->get_logger(), "Exception occurred in img save_data: %s", e.what());
         }
@@ -350,8 +359,6 @@ private:
         try {
             RCLCPP_INFO(this->get_logger(), "Received lidar_top data");
             save_data(msg, device_name);
-            sample_triggers_[device_name] = false;
-            sample_done_sign_[device_name] = true;
         } catch (const std::exception &e) {
             RCLCPP_ERROR(this->get_logger(), "Exception occurred in lidar save_data: %s", e.what());
         }
@@ -372,29 +379,17 @@ private:
 
         // Check whether the sample time has been reached and the last sample is done
         if (time_diff.seconds() >= sample_duration_) {
-            bool is_sample_done = check_sample_done();
-            if(is_sample_done){
-                if (sample_frame_ + 1 > target_sample_frame_) {
-                    node_shutdown_callback();
-                    return;
-                }
-                else{
-                    sample_frame_++;
-                }
-                // Set all triggers
-                for (auto& trigger : sample_triggers_) {
-                    trigger.second = true;
-                }
-                last_sample_time_ = cur_time;
-            }
-            else last_sample_time_ = cur_time;
+            check_sample_done();
+            last_sample_time_ = cur_time;
 
             // a new sample should be take
             // Calculate timestamp (in nanoseconds)
-            uint64_t timestamp = static_cast<uint64_t>(msg->clock.sec) * 1e9 + msg->clock.nanosec;
+            uint64_t timestamp_ns = static_cast<uint64_t>(cur_time.nanoseconds());
             std::string sample_token = generate_sample_token(sample_frame_, start_system_time_token_);
-            sample_recorder_cache_.first = timestamp;
-            sample_recorder_cache_.second = sample_token;
+            std::string next_sample_token = generate_sample_token(sample_frame_, start_system_time_token_);
+            sample_recorder_cache_.first = timestamp_ns;
+            sample_recorder_cache_.second.first = sample_token;
+            sample_recorder_cache_.second.second = next_sample_token;
         }
     }
 
@@ -549,6 +544,8 @@ private:
         else{
             // 如果 is_save 为 false，将图像数据缓存到全局变量
             sample_imgs_cache_[device_name] = {image_save_file, encoded_img};
+            sample_triggers_[device_name] = false;
+            sample_done_sign_[device_name] = true;
             RCLCPP_INFO(this->get_logger(), "Image data cached: %s", image_save_file.c_str());
         }
 
@@ -711,6 +708,8 @@ private:
 
             // Overwrite the existing cache
             sample_lidar_cache_ = {cloud_save_file, point_cloud_data};
+            sample_triggers_[device_name] = false;
+            sample_done_sign_[device_name] = true;
             RCLCPP_INFO(this->get_logger(), "Point cloud data cached: %s", cloud_save_file.c_str());
         }
         
@@ -758,7 +757,7 @@ private:
         devices_frame_count_[device_name]++;
     }
 
-    void sample_recorder(uint64_t timestamp, std::string sample_token){
+    void sample_recorder(uint64_t timestamp, std::string sample_token, std::string next_sample_token){
         // ********************generate sample_token, and write to sample.json and scene.json********************
         // adding samples to scene, wont be full
         if(scene_sample_frame_count_ < scene_frame_ - 1)
@@ -794,18 +793,16 @@ private:
             json_writer_, 
             "sample");
             // scene
-            scene_done(sample_token);
+            scene_done(sample_token, next_sample_token);
         }
     }
 
-    void scene_processing(std::string sample_token){
-        // update count
-        scene_sample_frame_count_++;
-        if(scene_sample_frame_count_ == 1){  // the first sample to generate a scene_token
+    void scene_init(std::string sample_token){
+        if(scene_sample_frame_count_ == 0){
             // update_scene_token and reset scene_frame__count
             std::string cur_system_time_string = get_cur_system_time();
             cur_scene_token_ = "scene_" + map_name_ + "_" + cur_system_time_string; 
-            std::string scene_name = scene_mode_ + "_" + map_name_ + "_" + std::to_string(cur_scene_num_) + "_" + start_system_time_token_; // TODO: nuscenes对每个场景有严格的划分nuscnes.splits函数可以划分那些事train、val还是test
+            std::string scene_name = scene_mode_ + "_" + map_name_ + "_" + std::to_string(cur_scene_num_) + "_" + start_system_time_token_; // Attention: nuscenes对每个场景有严格的划分nuscnes.splits函数可以划分那些事train、val还是test
             std::string description = "";
             latest_scene_["token"] = cur_scene_token_;
             latest_scene_["log_token"] = log_token_;
@@ -814,30 +811,34 @@ private:
             latest_scene_["last_sample_token"] = sample_token;
             latest_scene_["name"] = scene_name;
             latest_scene_["description"] = description;
-            
-        }
-        else{
-            latest_scene_["last_sample_token"] = sample_token;
-            latest_scene_["nbr_samples"] = scene_sample_frame_count_;
         }
     }
 
-    void scene_done(std::string sample_token){
+    void scene_processing(std::string sample_token){
+        // update count
+        scene_sample_frame_count_++;
+
+        latest_scene_["last_sample_token"] = sample_token;
+        latest_scene_["nbr_samples"] = scene_sample_frame_count_;
+    }
+
+    void scene_done(std::string sample_token, std::string next_sample_token){
         // update count
         scene_sample_frame_count_++;
         // the scene is full, so write it
         latest_scene_["last_sample_token"] = sample_token;
         latest_scene_["nbr_samples"] = scene_sample_frame_count_;
         json_writer_.addKeyValuePairToJson("scene", latest_scene_, true); 
-
+    
         latest_scene_.clear(); // clear cache
         scene_sample_frame_count_ = 0;
         cur_scene_num_++;
+        scene_init(next_sample_token);
     }
 
     void scene_cache_write(){
         // 检查 latest_scene_ 是否为空
-        if (!latest_scene_.empty()) {
+        if (!latest_scene_.empty() && latest_scene_["nbr_samples"] != 0) {
             json_writer_.addKeyValuePairToJson("scene", latest_scene_, true); 
             latest_scene_.clear(); // 清空缓存
         }
@@ -1062,8 +1063,19 @@ private:
             }
         }
         
-        sample_recorder(sample_recorder_cache_.first, sample_recorder_cache_.second);
+        sample_recorder(sample_recorder_cache_.first, sample_recorder_cache_.second.first, sample_recorder_cache_.second.second);
 
+        if (sample_frame_ + 1 > target_sample_frame_) {
+            node_shutdown_callback();
+            return false;
+        }
+        else{
+            sample_frame_++;
+        }
+        // Set all triggers
+        for (auto& trigger : sample_triggers_) {
+            trigger.second = true;
+        }
         // clear sign
         for(auto& sign_pair : sample_done_sign_){
             sign_pair.second = false;
@@ -1176,7 +1188,7 @@ private:
     std::pair<std::string, std::vector<uint8_t>> sample_lidar_cache_;
     std::unordered_map<std::string, std::pair<std::string, std::vector<uint8_t>>> sample_imgs_cache_;
     std::unordered_map<std::string, std::vector<nlohmann::json>> sample_bbox3d_json_cache_;
-    std::pair<uint64_t, std::string> sample_recorder_cache_;
+    std::pair<uint64_t, std::pair<std::string, std::string>> sample_recorder_cache_;
 
     rclcpp::Subscription<rosgraph_msgs::msg::Clock>::SharedPtr clock_subscription_;
     std::unordered_map<std::string, rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr> camera_subscriptions_;

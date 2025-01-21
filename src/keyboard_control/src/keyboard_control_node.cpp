@@ -22,7 +22,7 @@ char get_key()
 class KeyboardControl : public rclcpp::Node
 {
 public:
-    KeyboardControl() : Node("keyboard_control")
+    KeyboardControl() : Node("keyboard_control"), current_speed_(0.2)
     {
         // 创建发布者，发布 Twist 消息到 /cmd_vel 话题
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
@@ -33,6 +33,7 @@ public:
         
         // 打印控制信息
         RCLCPP_INFO(this->get_logger(), "Use 'w' to move forward, 's' to move backward, 'a' to turn left, 'd' to turn right.");
+        RCLCPP_INFO(this->get_logger(), "'+' to accelerate, '-' to decelerate.");
     }
 
 private:
@@ -45,20 +46,28 @@ private:
         // 检查键盘输入并设置线速度
         char key = get_key();
         if (key == 's') {  // 按 's' 键时往后退
-            twist_.linear.x = -0.2;  // 负值表示往后退
-            RCLCPP_INFO(this->get_logger(), "Moving backward");
+            twist_.linear.x = -current_speed_;  // 负值表示往后退
+            RCLCPP_INFO(this->get_logger(), "Moving backward with speed %.1f", current_speed_);
         }
         else if (key == 'w') {  // 按 'w' 键时往前进
-            twist_.linear.x = 0.2;
-            RCLCPP_INFO(this->get_logger(), "Moving forward");
+            twist_.linear.x = current_speed_;
+            RCLCPP_INFO(this->get_logger(), "Moving forward with speed %.1f", current_speed_);
         }
         else if (key == 'a') {  // 按 'a' 键时向左转
-            twist_.angular.z = 0.2;
-            RCLCPP_INFO(this->get_logger(), "Turning left");
+            twist_.angular.z = 0.2;  // 转向速度保持不变
+            RCLCPP_INFO(this->get_logger(), "Turning left with angular speed %.1f", twist_.angular.z);
         }
         else if (key == 'd') {  // 按 'd' 键时向右转
-            twist_.angular.z = -0.2;
-            RCLCPP_INFO(this->get_logger(), "Turning right");
+            twist_.angular.z = -0.2;  // 转向速度保持不变
+            RCLCPP_INFO(this->get_logger(), "Turning right with angular speed %.1f", twist_.angular.z);
+        }
+        else if (key == '+') {  // 按 '+' 键加速
+            current_speed_ = std::min(current_speed_ + 0.1, 1.0);  // 最大速度为 1.0
+            RCLCPP_INFO(this->get_logger(), "Accelerating. Current linear speed: %.1f", current_speed_);
+        }
+        else if (key == '-') {  // 按 '-' 键减速
+            current_speed_ = std::max(current_speed_ - 0.1, 0.1);  // 最小速度为 0.1
+            RCLCPP_INFO(this->get_logger(), "Decelerating. Current linear speed: %.1f", current_speed_);
         }
 
         // 发布 Twist 消息
@@ -68,6 +77,7 @@ private:
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer_;
     geometry_msgs::msg::Twist twist_;
+    float current_speed_;  // 当前的线速度
 };
 
 int main(int argc, char **argv)

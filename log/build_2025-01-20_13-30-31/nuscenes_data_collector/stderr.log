@@ -1,0 +1,11 @@
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector_issac.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector_issac.hpp:[m[K In member function ‘[01m[Kbool NuScenesDataCollectorIssac::check_sample_done()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector_issac.hpp:1053:85:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::__cxx11::basic_string<char>[m[K’ has no member named ‘[01m[Kfirst[m[K’
+ 1053 |         sample_recorder(sample_recorder_cache_.first, sample_recorder_cache_.second.[01;31m[Kfirst[m[K, sample_recorder_cache_.second.second);
+      |                                                                                     [01;31m[K^~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector_issac.hpp:1053:122:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::__cxx11::basic_string<char>[m[K’ has no member named ‘[01m[Ksecond[m[K’
+ 1053 |         sample_recorder(sample_recorder_cache_.first, sample_recorder_cache_.second.first, sample_recorder_cache_.second.[01;31m[Ksecond[m[K);
+      |                                                                                                                          [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/nuscenes_data_collector_issac_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_issac_node.dir/src/nuscenes_data_collector_issac.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/nuscenes_data_collector_issac_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

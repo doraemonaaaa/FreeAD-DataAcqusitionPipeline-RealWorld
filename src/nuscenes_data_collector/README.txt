@@ -65,6 +65,8 @@
         capture data, write into json -> sample and write new json
 
         token formulas:  // this is for a unique token in simulation env which is predictable only in this run
+            calibration_token = harsh(0, device_name, start_system_time_token_)  // cameras and lidar
+
             sample_data_token = harsh(device_frame_count, "samples_data_" + device_name, start_system_time_token_)  // frame help to record next token
             
             ego_pose_token = sample_data_token // every sample_data_token has its newest ego_pose
@@ -147,4 +149,8 @@
 
     -- set up Real-Time Publish-Subscribe, Fast RTPS, used for RT communication
     sudo apt-get install ros-humble-rmw-cyclonedds-cpp
-    export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+    export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp  # this use network communication, not shared memory
+
+
+## 4. attention
+    -- be sure that your sample_frame is big enough,then you won't got the different instance_token in one epoch of data capturing

@@ -1,0 +1,131 @@
+In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::capture_image_callback()[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:284:67:[m[K [01;31m[Kerror: [m[Klvalue required as unary ‘[01m[K&[m[K’ operand
+  284 | ::async(std::launch::async, &[01;31m[Kthis[m[K::process_camera_image, this, camera_name));
+      |                              [01;31m[K^~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In member function ‘[01m[Kvoid NuScenesDataCollector::process_camera_image(const string&)[m[K’:
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:354:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kdevice_name[m[K’ was not declared in this scope
+  354 | oken_tmp = "samples_data_" + [01;31m[Kdevice_name[m[K;
+      |                              [01;31m[K^~~~~~~~~~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:360:22:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kuint64_t timestamp[m[K’
+  360 |             uint64_t [01;31m[Ktimestamp[m[K = msg->header.stamp.sec * 1e9 + msg->header.stamp.nanosec;
+      |                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:305:26:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Krclcpp::Time timestamp[m[K’
+  305 |             rclcpp::Time [01;36m[Ktimestamp[m[K = frame_data.second;
+      |                          [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:360:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+  360 |         uint64_t timestamp = [01;31m[Kmsg[m[K->header.stamp.sec * 1e9 + msg->header.stamp.nanosec;
+      |                              [01;31m[K^~~[m[K
+
+[01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:360:34:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:45[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:4[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:16[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:16[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:19[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:19[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Knav_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/object_hypothesis_with_pose__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/detection3_d__struct.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/detection3_d_array__struct.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detection3_d_array.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:21[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/vision_msgs/vision_msgs/msg/detail/object_hypothesis__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kvision_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rosgraph_msgs/rosgraph_msgs/msg/clock.hpp:7[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:24[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rosgraph_msgs/rosgraph_msgs/msg/detail/clock__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krosgraph_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/pcl_msgs/pcl_msgs/msg/point_indices.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h:62[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:32[m[K,
+                 from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/pcl_msgs/pcl_msgs/msg/detail/point_indices__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/nuscenes_data_collector_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/nuscenes_data_collector_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,965 @@
+[0.084s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.084s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=24, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x758e89cdfee0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x758e89e8d5d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x758e89e8d5d0>>, mixin_verb=('build',))
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.219s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/pengyh/documents/ros2_ws/RobotAD'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extensions ['ignore', 'ignore_ament_install']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extension 'ignore'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extension 'ignore_ament_install'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extensions ['colcon_pkg']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extension 'colcon_pkg'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extensions ['colcon_meta']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extension 'colcon_meta'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extensions ['ros']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extension 'ros'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extensions ['cmake', 'python']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extension 'cmake'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extension 'python'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extensions ['python_setup_py']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy) by extension 'python_setup_py'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extensions ['ignore', 'ignore_ament_install']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extension 'ignore'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extension 'ignore_ament_install'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extensions ['colcon_pkg']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extension 'colcon_pkg'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extensions ['colcon_meta']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extension 'colcon_meta'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extensions ['ros']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extension 'ros'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extensions ['cmake', 'python']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extension 'cmake'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extension 'python'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extensions ['python_setup_py']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes) by extension 'python_setup_py'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extensions ['ignore', 'ignore_ament_install']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extension 'ignore'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extension 'ignore_ament_install'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extensions ['colcon_pkg']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extension 'colcon_pkg'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extensions ['colcon_meta']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extension 'colcon_meta'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extensions ['ros']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extension 'ros'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extensions ['cmake', 'python']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extension 'cmake'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extension 'python'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extensions ['python_setup_py']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/My_Nuscenes/definition_json(backup)) by extension 'python_setup_py'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extensions ['ignore', 'ignore_ament_install']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extension 'ignore'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extension 'ignore_ament_install'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extensions ['colcon_pkg']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extension 'colcon_pkg'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extensions ['colcon_meta']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extension 'colcon_meta'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extensions ['ros']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extension 'ros'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extensions ['cmake', 'python']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extension 'cmake'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extension 'python'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extensions ['python_setup_py']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/can_bus) by extension 'python_setup_py'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extension 'ignore_ament_install'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extensions ['colcon_pkg']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extension 'colcon_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extensions ['colcon_meta']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extension 'colcon_meta'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extensions ['ros']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extension 'ros'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extensions ['cmake', 'python']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extension 'cmake'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extension 'python'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extensions ['python_setup_py']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps) by extension 'python_setup_py'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extension 'ignore_ament_install'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extensions ['colcon_pkg']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extension 'colcon_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extensions ['colcon_meta']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extension 'colcon_meta'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extensions ['ros']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extension 'ros'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extensions ['cmake', 'python']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extension 'cmake'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extension 'python'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extensions ['python_setup_py']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/basemap) by extension 'python_setup_py'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extension 'ignore_ament_install'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extensions ['colcon_pkg']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extension 'colcon_pkg'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extensions ['colcon_meta']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extension 'colcon_meta'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extensions ['ros']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extension 'ros'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extensions ['cmake', 'python']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extension 'cmake'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extension 'python'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extensions ['python_setup_py']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/maps/expansion) by extension 'python_setup_py'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extension 'ignore_ament_install'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extensions ['colcon_pkg']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extension 'colcon_pkg'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extensions ['colcon_meta']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extension 'colcon_meta'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extensions ['ros']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extension 'ros'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extensions ['cmake', 'python']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extension 'cmake'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extension 'python'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extensions ['python_setup_py']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(NuscenesData copy/template) by extension 'python_setup_py'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'ros'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['cmake', 'python']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'cmake'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extensions ['python_setup_py']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch) by extension 'python_setup_py'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'ros'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['cmake', 'python']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'cmake'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'python'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extensions ['python_setup_py']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(launch/__pycache__) by extension 'python_setup_py'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/diff_control) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/diff_control) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/diff_control) by extension 'ignore_ament_install'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/diff_control) by extensions ['colcon_pkg']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/diff_control) by extension 'colcon_pkg'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/diff_control) by extensions ['colcon_meta']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/diff_control) by extension 'colcon_meta'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/diff_control) by extensions ['ros']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/diff_control) by extension 'ros'
+[0.238s] DEBUG:colcon.colcon_core.package_identification:Package 'src/diff_control' with type 'ros.ament_cmake' and name 'diff_control'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_control) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_control) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_control) by extension 'ignore_ament_install'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_control) by extensions ['colcon_pkg']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_control) by extension 'colcon_pkg'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_control) by extensions ['colcon_meta']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_control) by extension 'colcon_meta'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_control) by extensions ['ros']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/keyboard_control) by extension 'ros'
+[0.239s] DEBUG:colcon.colcon_core.package_identification:Package 'src/keyboard_control' with type 'ros.ament_cmake' and name 'keyboard_control'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/miiboo_imu) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/miiboo_imu) by extension 'ignore'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/miiboo_imu) by extension 'ignore_ament_install'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/miiboo_imu) by extensions ['colcon_pkg']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/miiboo_imu) by extension 'colcon_pkg'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/miiboo_imu) by extensions ['colcon_meta']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/miiboo_imu) by extension 'colcon_meta'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/miiboo_imu) by extensions ['ros']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/miiboo_imu) by extension 'ros'
+[0.240s] DEBUG:colcon.colcon_core.package_identification:Package 'src/miiboo_imu' with type 'ros.ament_cmake' and name 'miiboo_imu'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/nuscenes_data_collector) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/nuscenes_data_collector) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/nuscenes_data_collector) by extension 'ignore_ament_install'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/nuscenes_data_collector) by extensions ['colcon_pkg']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/nuscenes_data_collector) by extension 'colcon_pkg'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/nuscenes_data_collector) by extensions ['colcon_meta']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/nuscenes_data_collector) by extension 'colcon_meta'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/nuscenes_data_collector) by extensions ['ros']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/nuscenes_data_collector) by extension 'ros'
+[0.242s] DEBUG:colcon.colcon_core.package_identification:Package 'src/nuscenes_data_collector' with type 'ros.ament_cmake' and name 'nuscenes_data_collector'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ignore_ament_install'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_pkg']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['colcon_meta']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'colcon_meta'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extensions ['ros']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/pointcloud_to_laserscan) by extension 'ros'
+[0.244s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pointcloud_to_laserscan' with type 'ros.ament_cmake' and name 'pointcloud_to_laserscan'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_hardware) by extension 'ros'
+[0.245s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_hardware' with type 'ros.ament_cmake' and name 'robot_hardware'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_locate) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_locate) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_locate) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_locate) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_locate) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_locate) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_locate) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_locate) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_locate) by extension 'ros'
+[0.246s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_locate' with type 'ros.ament_cmake' and name 'robot_locate'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_msg) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_msg) by extension 'ignore'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_msg) by extension 'ignore_ament_install'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_msg) by extensions ['colcon_pkg']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_msg) by extension 'colcon_pkg'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_msg) by extensions ['colcon_meta']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_msg) by extension 'colcon_meta'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_msg) by extensions ['ros']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_msg) by extension 'ros'
+[0.254s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rslidar_msg' with type 'ros.ament_cmake' and name 'rslidar_msg'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_sdk) by extensions ['ignore', 'ignore_ament_install']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_sdk) by extension 'ignore'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_sdk) by extension 'ignore_ament_install'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_sdk) by extensions ['colcon_pkg']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_sdk) by extension 'colcon_pkg'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_sdk) by extensions ['colcon_meta']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_sdk) by extension 'colcon_meta'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_sdk) by extensions ['ros']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/rslidar_sdk) by extension 'ros'
+[0.255s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rslidar_sdk' with type 'ros.ament_cmake' and name 'rslidar_sdk'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_comm) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_comm) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_comm) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_comm) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_comm) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_comm) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_comm) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_comm) by extensions ['ros']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_comm) by extension 'ros'
+[0.256s] DEBUG:colcon.colcon_core.package_identification:Package 'src/serial_comm' with type 'ros.ament_cmake' and name 'serial_comm'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_camera) by extension 'ignore'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_camera) by extension 'ignore_ament_install'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_camera) by extensions ['colcon_pkg']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_camera) by extension 'colcon_pkg'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_camera) by extensions ['colcon_meta']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_camera) by extension 'colcon_meta'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_camera) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_camera) by extension 'ros'
+[0.257s] DEBUG:colcon.colcon_core.package_identification:Package 'src/usb_camera' with type 'ros.ament_cmake' and name 'usb_camera'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['ignore', 'ignore_ament_install']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ignore'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ignore_ament_install'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['colcon_pkg']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'colcon_pkg'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['colcon_meta']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'colcon_meta'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['ros']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'ros'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['cmake', 'python']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'cmake'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'python'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extensions ['python_setup_py']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(tools) by extension 'python_setup_py'
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.277s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 11 installed packages in /home/pengyh/documents/ros2_ws/RobotAD/install
+[0.278s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 342 installed packages in /opt/ros/humble
+[0.280s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.313s] Level 5:colcon.colcon_core.verb:set package 'diff_control' build argument 'cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'diff_control' build argument 'cmake_target' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'diff_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'diff_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'diff_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'diff_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'diff_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'diff_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'diff_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.314s] DEBUG:colcon.colcon_core.verb:Building package 'diff_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control', 'merge_install': False, 'path': '/home/pengyh/documents/ros2_ws/RobotAD/src/diff_control', 'symlink_install': True, 'test_result_base': None}
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'miiboo_imu' build argument 'cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'miiboo_imu' build argument 'cmake_target' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'miiboo_imu' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'miiboo_imu' build argument 'cmake_clean_cache' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'miiboo_imu' build argument 'cmake_clean_first' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'miiboo_imu' build argument 'cmake_force_configure' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'miiboo_imu' build argument 'ament_cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'miiboo_imu' build argument 'catkin_cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'miiboo_imu' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.314s] DEBUG:colcon.colcon_core.verb:Building package 'miiboo_imu' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu', 'merge_install': False, 'path': '/home/pengyh/documents/ros2_ws/RobotAD/src/miiboo_imu', 'symlink_install': True, 'test_result_base': None}
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'nuscenes_data_collector' build argument 'cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'nuscenes_data_collector' build argument 'cmake_target' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'nuscenes_data_collector' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'nuscenes_data_collector' build argument 'cmake_clean_cache' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'nuscenes_data_collector' build argument 'cmake_clean_first' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'nuscenes_data_collector' build argument 'cmake_force_configure' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'nuscenes_data_collector' build argument 'ament_cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'nuscenes_data_collector' build argument 'catkin_cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'nuscenes_data_collector' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.315s] DEBUG:colcon.colcon_core.verb:Building package 'nuscenes_data_collector' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector', 'merge_install': False, 'path': '/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector', 'symlink_install': True, 'test_result_base': None}
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_cache' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_first' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_force_configure' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'ament_cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.315s] DEBUG:colcon.colcon_core.verb:Building package 'pointcloud_to_laserscan' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan', 'merge_install': False, 'path': '/home/pengyh/documents/ros2_ws/RobotAD/src/pointcloud_to_laserscan', 'symlink_install': True, 'test_result_base': None}
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_target' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'robot_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.315s] DEBUG:colcon.colcon_core.verb:Building package 'robot_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware', 'merge_install': False, 'path': '/home/pengyh/documents/ros2_ws/RobotAD/src/robot_hardware', 'symlink_install': True, 'test_result_base': None}
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'robot_locate' build argument 'cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'robot_locate' build argument 'cmake_target' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'robot_locate' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'robot_locate' build argument 'cmake_clean_cache' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'robot_locate' build argument 'cmake_clean_first' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'robot_locate' build argument 'cmake_force_configure' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'robot_locate' build argument 'ament_cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'robot_locate' build argument 'catkin_cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'robot_locate' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.316s] DEBUG:colcon.colcon_core.verb:Building package 'robot_locate' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate', 'merge_install': False, 'path': '/home/pengyh/documents/ros2_ws/RobotAD/src/robot_locate', 'symlink_install': True, 'test_result_base': None}
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'rslidar_msg' build argument 'cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'rslidar_msg' build argument 'cmake_target' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'rslidar_msg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'rslidar_msg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'rslidar_msg' build argument 'cmake_clean_first' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'rslidar_msg' build argument 'cmake_force_configure' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'rslidar_msg' build argument 'ament_cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'rslidar_msg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'rslidar_msg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.316s] DEBUG:colcon.colcon_core.verb:Building package 'rslidar_msg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg', 'merge_install': False, 'path': '/home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_msg', 'symlink_install': True, 'test_result_base': None}
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'usb_camera' build argument 'cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'usb_camera' build argument 'cmake_target' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'usb_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'usb_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'usb_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'usb_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'usb_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'usb_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'usb_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.317s] DEBUG:colcon.colcon_core.verb:Building package 'usb_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera', 'merge_install': False, 'path': '/home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera', 'symlink_install': True, 'test_result_base': None}
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'keyboard_control' build argument 'cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'keyboard_control' build argument 'cmake_target' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'keyboard_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'keyboard_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'keyboard_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'keyboard_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'keyboard_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'keyboard_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'keyboard_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.317s] DEBUG:colcon.colcon_core.verb:Building package 'keyboard_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control', 'merge_install': False, 'path': '/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control', 'symlink_install': True, 'test_result_base': None}
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'rslidar_sdk' build argument 'cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'rslidar_sdk' build argument 'cmake_target' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'rslidar_sdk' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'rslidar_sdk' build argument 'cmake_clean_cache' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'rslidar_sdk' build argument 'cmake_clean_first' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'rslidar_sdk' build argument 'cmake_force_configure' from command line to 'False'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'rslidar_sdk' build argument 'ament_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'rslidar_sdk' build argument 'catkin_cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'rslidar_sdk' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.317s] DEBUG:colcon.colcon_core.verb:Building package 'rslidar_sdk' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_sdk', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk', 'merge_install': False, 'path': '/home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_sdk', 'symlink_install': True, 'test_result_base': None}
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'serial_comm' build argument 'cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'serial_comm' build argument 'cmake_target' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'serial_comm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'serial_comm' build argument 'cmake_clean_cache' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'serial_comm' build argument 'cmake_clean_first' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'serial_comm' build argument 'cmake_force_configure' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'serial_comm' build argument 'ament_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'serial_comm' build argument 'catkin_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'serial_comm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.318s] DEBUG:colcon.colcon_core.verb:Building package 'serial_comm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm', 'merge_install': False, 'path': '/home/pengyh/documents/ros2_ws/RobotAD/src/serial_comm', 'symlink_install': True, 'test_result_base': None}
+[0.318s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.319s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.319s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pengyh/documents/ros2_ws/RobotAD/src/robot_hardware' with build type 'ament_cmake'
+[0.319s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pengyh/documents/ros2_ws/RobotAD/src/robot_hardware'
+[0.321s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.322s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.322s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.326s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_msg' with build type 'ament_cmake'
+[0.326s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_msg'
+[0.326s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.326s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.329s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pengyh/documents/ros2_ws/RobotAD/src/diff_control' with build type 'ament_cmake'
+[0.329s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pengyh/documents/ros2_ws/RobotAD/src/diff_control'
+[0.330s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.330s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.332s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pengyh/documents/ros2_ws/RobotAD/src/miiboo_imu' with build type 'ament_cmake'
+[0.332s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pengyh/documents/ros2_ws/RobotAD/src/miiboo_imu'
+[0.333s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.333s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.335s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector' with build type 'ament_cmake'
+[0.335s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector'
+[0.336s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.336s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.338s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pengyh/documents/ros2_ws/RobotAD/src/pointcloud_to_laserscan' with build type 'ament_cmake'
+[0.339s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pengyh/documents/ros2_ws/RobotAD/src/pointcloud_to_laserscan'
+[0.339s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.339s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.342s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pengyh/documents/ros2_ws/RobotAD/src/robot_locate' with build type 'ament_cmake'
+[0.342s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pengyh/documents/ros2_ws/RobotAD/src/robot_locate'
+[0.342s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.342s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.345s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera' with build type 'ament_cmake'
+[0.345s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pengyh/documents/ros2_ws/RobotAD/src/usb_camera'
+[0.345s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.345s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.355s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware -- -j24 -l24
+[0.359s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg -- -j24 -l24
+[0.364s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/diff_control -- -j24 -l24
+[0.367s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu -- -j24 -l24
+[0.370s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[0.373s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan -- -j24 -l24
+[0.377s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate -- -j24 -l24
+[0.385s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera -- -j24 -l24
+[0.418s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate -- -j24 -l24
+[0.433s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate
+[0.454s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu -- -j24 -l24
+[0.460s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu
+[0.465s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/diff_control -- -j24 -l24
+[0.466s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/diff_control
+[0.478s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_locate)
+[0.482s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate
+[0.489s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate' for CMake module files
+[0.492s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate' for CMake config files
+[0.494s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_locate', 'cmake_prefix_path')
+[0.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/hook/cmake_prefix_path.ps1'
+[0.496s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/hook/cmake_prefix_path.dsv'
+[0.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/hook/cmake_prefix_path.sh'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/bin'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/lib/pkgconfig/robot_locate.pc'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/lib/python3.10/site-packages'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/bin'
+[0.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.ps1'
+[0.500s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.dsv'
+[0.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.sh'
+[0.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.bash'
+[0.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.zsh'
+[0.502s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/colcon-core/packages/robot_locate)
+[0.503s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_locate)
+[0.503s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate' for CMake module files
+[0.505s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate' for CMake config files
+[0.505s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_locate', 'cmake_prefix_path')
+[0.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/hook/cmake_prefix_path.ps1'
+[0.506s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/hook/cmake_prefix_path.dsv'
+[0.507s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/hook/cmake_prefix_path.sh'
+[0.508s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/bin'
+[0.508s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/lib/pkgconfig/robot_locate.pc'
+[0.509s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/lib/python3.10/site-packages'
+[0.509s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/bin'
+[0.509s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.ps1'
+[0.510s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.dsv'
+[0.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.sh'
+[0.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.bash'
+[0.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.zsh'
+[0.512s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/colcon-core/packages/robot_locate)
+[0.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera -- -j24 -l24
+[0.519s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(miiboo_imu)
+[0.519s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu' for CMake module files
+[0.522s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu
+[0.522s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu' for CMake config files
+[0.523s] Level 1:colcon.colcon_core.shell:create_environment_hook('miiboo_imu', 'cmake_prefix_path')
+[0.524s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/hook/cmake_prefix_path.ps1'
+[0.526s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/hook/cmake_prefix_path.dsv'
+[0.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/hook/cmake_prefix_path.sh'
+[0.533s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/lib'
+[0.533s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/bin'
+[0.533s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/lib/pkgconfig/miiboo_imu.pc'
+[0.534s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/lib/python3.10/site-packages'
+[0.534s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/bin'
+[0.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.ps1'
+[0.535s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.dsv'
+[0.535s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.sh'
+[0.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.bash'
+[0.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.zsh'
+[0.536s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/colcon-core/packages/miiboo_imu)
+[0.537s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(miiboo_imu)
+[0.538s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu' for CMake module files
+[0.539s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu' for CMake config files
+[0.540s] Level 1:colcon.colcon_core.shell:create_environment_hook('miiboo_imu', 'cmake_prefix_path')
+[0.540s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/hook/cmake_prefix_path.ps1'
+[0.542s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/hook/cmake_prefix_path.dsv'
+[0.542s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/hook/cmake_prefix_path.sh'
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/lib'
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/bin'
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/lib/pkgconfig/miiboo_imu.pc'
+[0.545s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/lib/python3.10/site-packages'
+[0.546s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/bin'
+[0.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.ps1'
+[0.548s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.dsv'
+[0.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.sh'
+[0.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.bash'
+[0.552s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.zsh'
+[0.553s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/colcon-core/packages/miiboo_imu)
+[0.553s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diff_control)
+[0.553s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control' for CMake module files
+[0.556s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control' for CMake config files
+[0.556s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/diff_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/diff_control
+[0.558s] Level 1:colcon.colcon_core.shell:create_environment_hook('diff_control', 'cmake_prefix_path')
+[0.558s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/cmake_prefix_path.ps1'
+[0.560s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/cmake_prefix_path.dsv'
+[0.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/cmake_prefix_path.sh'
+[0.562s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib'
+[0.562s] Level 1:colcon.colcon_core.shell:create_environment_hook('diff_control', 'ld_library_path_lib')
+[0.563s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/ld_library_path_lib.ps1'
+[0.563s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/ld_library_path_lib.dsv'
+[0.563s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/ld_library_path_lib.sh'
+[0.564s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/bin'
+[0.564s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib/pkgconfig/diff_control.pc'
+[0.564s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib/python3.10/site-packages'
+[0.564s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/bin'
+[0.565s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/package.ps1'
+[0.567s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/package.dsv'
+[0.569s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/package.sh'
+[0.569s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/package.bash'
+[0.569s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/package.zsh'
+[0.570s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/colcon-core/packages/diff_control)
+[0.571s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diff_control)
+[0.572s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control' for CMake module files
+[0.573s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control' for CMake config files
+[0.574s] Level 1:colcon.colcon_core.shell:create_environment_hook('diff_control', 'cmake_prefix_path')
+[0.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/cmake_prefix_path.ps1'
+[0.575s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/cmake_prefix_path.dsv'
+[0.575s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/cmake_prefix_path.sh'
+[0.577s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib'
+[0.577s] Level 1:colcon.colcon_core.shell:create_environment_hook('diff_control', 'ld_library_path_lib')
+[0.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/ld_library_path_lib.ps1'
+[0.578s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/ld_library_path_lib.dsv'
+[0.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/hook/ld_library_path_lib.sh'
+[0.578s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/bin'
+[0.579s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib/pkgconfig/diff_control.pc'
+[0.579s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib/python3.10/site-packages'
+[0.579s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/bin'
+[0.579s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/package.ps1'
+[0.580s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/package.dsv'
+[0.580s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/package.sh'
+[0.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/package.bash'
+[0.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/diff_control/package.zsh'
+[0.582s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/share/colcon-core/packages/diff_control)
+[0.585s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan -- -j24 -l24
+[0.587s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan
+[0.587s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(usb_camera)
+[0.588s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera' for CMake module files
+[0.589s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera
+[0.589s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera' for CMake config files
+[0.590s] Level 1:colcon.colcon_core.shell:create_environment_hook('usb_camera', 'cmake_prefix_path')
+[0.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/hook/cmake_prefix_path.ps1'
+[0.592s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/hook/cmake_prefix_path.dsv'
+[0.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/hook/cmake_prefix_path.sh'
+[0.598s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/lib'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/bin'
+[0.601s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/lib/pkgconfig/usb_camera.pc'
+[0.601s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/lib/python3.10/site-packages'
+[0.602s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/bin'
+[0.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.ps1'
+[0.605s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.dsv'
+[0.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.sh'
+[0.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.bash'
+[0.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.zsh'
+[0.609s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/colcon-core/packages/usb_camera)
+[0.610s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(usb_camera)
+[0.610s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera' for CMake module files
+[0.610s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera' for CMake config files
+[0.611s] Level 1:colcon.colcon_core.shell:create_environment_hook('usb_camera', 'cmake_prefix_path')
+[0.611s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/hook/cmake_prefix_path.ps1'
+[0.612s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/hook/cmake_prefix_path.dsv'
+[0.613s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/hook/cmake_prefix_path.sh'
+[0.614s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/lib'
+[0.614s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/bin'
+[0.615s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/lib/pkgconfig/usb_camera.pc'
+[0.615s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/lib/python3.10/site-packages'
+[0.615s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/bin'
+[0.615s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.ps1'
+[0.616s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.dsv'
+[0.616s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.sh'
+[0.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.bash'
+[0.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.zsh'
+[0.618s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/colcon-core/packages/usb_camera)
+[0.620s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pointcloud_to_laserscan)
+[0.621s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan' for CMake module files
+[0.622s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan
+[0.623s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan' for CMake config files
+[0.625s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'cmake_prefix_path')
+[0.626s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.ps1'
+[0.627s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.dsv'
+[0.628s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.sh'
+[0.630s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib'
+[0.630s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'ld_library_path_lib')
+[0.631s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.ps1'
+[0.631s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.dsv'
+[0.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.sh'
+[0.632s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/bin'
+[0.632s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib/pkgconfig/pointcloud_to_laserscan.pc'
+[0.633s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib/python3.10/site-packages'
+[0.633s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/bin'
+[0.633s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.ps1'
+[0.634s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv'
+[0.634s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.sh'
+[0.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.bash'
+[0.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.zsh'
+[0.635s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/colcon-core/packages/pointcloud_to_laserscan)
+[0.636s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pointcloud_to_laserscan)
+[0.636s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan' for CMake module files
+[0.637s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan' for CMake config files
+[0.637s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'cmake_prefix_path')
+[0.637s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.ps1'
+[0.638s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.dsv'
+[0.638s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/cmake_prefix_path.sh'
+[0.639s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib'
+[0.639s] Level 1:colcon.colcon_core.shell:create_environment_hook('pointcloud_to_laserscan', 'ld_library_path_lib')
+[0.639s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.ps1'
+[0.639s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.dsv'
+[0.640s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/hook/ld_library_path_lib.sh'
+[0.640s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/bin'
+[0.640s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib/pkgconfig/pointcloud_to_laserscan.pc'
+[0.640s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib/python3.10/site-packages'
+[0.641s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/bin'
+[0.641s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.ps1'
+[0.642s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv'
+[0.642s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.sh'
+[0.642s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.bash'
+[0.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.zsh'
+[0.643s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/colcon-core/packages/pointcloud_to_laserscan)
+[0.791s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware -- -j24 -l24
+[0.795s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware
+[0.813s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg -- -j24 -l24
+[0.814s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg
+[0.885s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_hardware)
+[0.885s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware' for CMake module files
+[0.886s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/robot_hardware
+[0.887s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware' for CMake config files
+[0.887s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_hardware', 'cmake_prefix_path')
+[0.888s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.ps1'
+[0.888s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.dsv'
+[0.889s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.sh'
+[0.889s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib'
+[0.889s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_hardware', 'ld_library_path_lib')
+[0.890s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.ps1'
+[0.890s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.dsv'
+[0.890s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.sh'
+[0.891s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/bin'
+[0.891s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/pkgconfig/robot_hardware.pc'
+[0.891s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/python3.10/site-packages'
+[0.891s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/bin'
+[0.892s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.ps1'
+[0.894s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.dsv'
+[0.896s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.sh'
+[0.897s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.bash'
+[0.898s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.zsh'
+[0.899s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/colcon-core/packages/robot_hardware)
+[0.900s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_hardware)
+[0.900s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware' for CMake module files
+[0.901s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware' for CMake config files
+[0.904s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_hardware', 'cmake_prefix_path')
+[0.905s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.ps1'
+[0.906s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.dsv'
+[0.906s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/cmake_prefix_path.sh'
+[0.907s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib'
+[0.907s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_hardware', 'ld_library_path_lib')
+[0.907s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.ps1'
+[0.908s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.dsv'
+[0.908s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/hook/ld_library_path_lib.sh'
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/bin'
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/pkgconfig/robot_hardware.pc'
+[0.909s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib/python3.10/site-packages'
+[0.909s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/bin'
+[0.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.ps1'
+[0.910s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.dsv'
+[0.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.sh'
+[0.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.bash'
+[0.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/robot_hardware/package.zsh'
+[0.912s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/share/colcon-core/packages/robot_hardware)
+[0.912s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control' with build type 'ament_cmake'
+[0.912s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pengyh/documents/ros2_ws/RobotAD/src/keyboard_control'
+[0.912s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.913s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.919s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pengyh/documents/ros2_ws/RobotAD/src/serial_comm' with build type 'ament_cmake'
+[0.919s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pengyh/documents/ros2_ws/RobotAD/src/serial_comm'
+[0.919s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.919s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.925s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rslidar_msg)
+[0.925s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg' for CMake module files
+[0.926s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_msg
+[0.927s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg' for CMake config files
+[0.929s] Level 1:colcon.colcon_core.shell:create_environment_hook('rslidar_msg', 'cmake_prefix_path')
+[0.930s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/cmake_prefix_path.ps1'
+[0.935s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/cmake_prefix_path.dsv'
+[0.935s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/cmake_prefix_path.sh'
+[0.936s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib'
+[0.936s] Level 1:colcon.colcon_core.shell:create_environment_hook('rslidar_msg', 'ld_library_path_lib')
+[0.936s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/ld_library_path_lib.ps1'
+[0.937s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/ld_library_path_lib.dsv'
+[0.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/ld_library_path_lib.sh'
+[0.938s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/bin'
+[0.938s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib/pkgconfig/rslidar_msg.pc'
+[0.938s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib/python3.10/site-packages'
+[0.938s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/bin'
+[0.939s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/package.ps1'
+[0.939s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/package.dsv'
+[0.940s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/package.sh'
+[0.940s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/package.bash'
+[0.941s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/package.zsh'
+[0.941s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/colcon-core/packages/rslidar_msg)
+[0.942s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rslidar_msg)
+[0.942s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg' for CMake module files
+[0.943s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg' for CMake config files
+[0.943s] Level 1:colcon.colcon_core.shell:create_environment_hook('rslidar_msg', 'cmake_prefix_path')
+[0.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/cmake_prefix_path.ps1'
+[0.944s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/cmake_prefix_path.dsv'
+[0.944s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/cmake_prefix_path.sh'
+[0.945s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib'
+[0.945s] Level 1:colcon.colcon_core.shell:create_environment_hook('rslidar_msg', 'ld_library_path_lib')
+[0.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/ld_library_path_lib.ps1'
+[0.946s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/ld_library_path_lib.dsv'
+[0.946s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/hook/ld_library_path_lib.sh'
+[0.947s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/bin'
+[0.947s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib/pkgconfig/rslidar_msg.pc'
+[0.947s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib/python3.10/site-packages'
+[0.947s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/bin'
+[0.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/package.ps1'
+[0.949s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/package.dsv'
+[0.949s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/package.sh'
+[0.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/package.bash'
+[0.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/rslidar_msg/package.zsh'
+[0.950s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/share/colcon-core/packages/rslidar_msg)
+[0.951s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_sdk' with build type 'ament_cmake'
+[0.952s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pengyh/documents/ros2_ws/RobotAD/src/rslidar_sdk'
+[0.953s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.954s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.977s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble LD_LIBRARY_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control -- -j24 -l24
+[0.982s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble LD_LIBRARY_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm -- -j24 -l24
+[0.990s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_sdk': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_sdk -- -j24 -l24
+[1.080s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control' returned '0': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble LD_LIBRARY_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control -- -j24 -l24
+[1.083s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble LD_LIBRARY_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control
+[1.087s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm' returned '0': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble LD_LIBRARY_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm -- -j24 -l24
+[1.089s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble LD_LIBRARY_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm
+[1.089s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_sdk' returned '0': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_sdk -- -j24 -l24
+[1.093s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_sdk': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_sdk
+[1.104s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(keyboard_control)
+[1.104s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control' for CMake module files
+[1.106s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control' returned '0': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble LD_LIBRARY_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/keyboard_control
+[1.107s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control' for CMake config files
+[1.108s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_control', 'cmake_prefix_path')
+[1.109s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/hook/cmake_prefix_path.ps1'
+[1.110s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/hook/cmake_prefix_path.dsv'
+[1.111s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/hook/cmake_prefix_path.sh'
+[1.114s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/lib'
+[1.114s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/bin'
+[1.114s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/lib/pkgconfig/keyboard_control.pc'
+[1.115s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/lib/python3.10/site-packages'
+[1.115s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/bin'
+[1.115s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.ps1'
+[1.116s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.dsv'
+[1.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.sh'
+[1.117s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.bash'
+[1.117s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.zsh'
+[1.117s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/colcon-core/packages/keyboard_control)
+[1.118s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(keyboard_control)
+[1.118s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control' for CMake module files
+[1.118s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control' for CMake config files
+[1.119s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_control', 'cmake_prefix_path')
+[1.119s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/hook/cmake_prefix_path.ps1'
+[1.119s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/hook/cmake_prefix_path.dsv'
+[1.120s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/hook/cmake_prefix_path.sh'
+[1.121s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/lib'
+[1.121s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/bin'
+[1.121s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/lib/pkgconfig/keyboard_control.pc'
+[1.121s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/lib/python3.10/site-packages'
+[1.121s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/bin'
+[1.122s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.ps1'
+[1.122s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.dsv'
+[1.123s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.sh'
+[1.123s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.bash'
+[1.124s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/keyboard_control/package.zsh'
+[1.124s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control/share/colcon-core/packages/keyboard_control)
+[1.126s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rslidar_sdk)
+[1.126s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk' for CMake module files
+[1.127s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_sdk' returned '0': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/rslidar_sdk
+[1.127s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk' for CMake config files
+[1.128s] Level 1:colcon.colcon_core.shell:create_environment_hook('rslidar_sdk', 'cmake_prefix_path')
+[1.128s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/hook/cmake_prefix_path.ps1'
+[1.128s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/hook/cmake_prefix_path.dsv'
+[1.129s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/hook/cmake_prefix_path.sh'
+[1.129s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/lib'
+[1.129s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/bin'
+[1.129s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/lib/pkgconfig/rslidar_sdk.pc'
+[1.130s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/lib/python3.10/site-packages'
+[1.130s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/bin'
+[1.130s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/package.ps1'
+[1.131s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/package.dsv'
+[1.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/package.sh'
+[1.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/package.bash'
+[1.132s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/package.zsh'
+[1.132s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/colcon-core/packages/rslidar_sdk)
+[1.133s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rslidar_sdk)
+[1.133s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk' for CMake module files
+[1.133s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk' for CMake config files
+[1.134s] Level 1:colcon.colcon_core.shell:create_environment_hook('rslidar_sdk', 'cmake_prefix_path')
+[1.134s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/hook/cmake_prefix_path.ps1'
+[1.134s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/hook/cmake_prefix_path.dsv'
+[1.135s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/hook/cmake_prefix_path.sh'
+[1.135s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/lib'
+[1.135s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/bin'
+[1.135s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/lib/pkgconfig/rslidar_sdk.pc'
+[1.135s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/lib/python3.10/site-packages'
+[1.136s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/bin'
+[1.136s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/package.ps1'
+[1.136s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/package.dsv'
+[1.137s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/package.sh'
+[1.137s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/package.bash'
+[1.138s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/rslidar_sdk/package.zsh'
+[1.138s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk/share/colcon-core/packages/rslidar_sdk)
+[1.138s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial_comm)
+[1.139s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm' for CMake module files
+[1.140s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm' returned '0': CMAKE_PREFIX_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware:/home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera:/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_sdk:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg:/home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan:/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector:/home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu:/home/pengyh/documents/ros2_ws/RobotAD/install/keyboard_control:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control:/opt/ros/humble LD_LIBRARY_PATH=/home/pengyh/documents/ros2_ws/RobotAD/install/robot_hardware/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/rslidar_msg/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib:/home/pengyh/documents/ros2_ws/RobotAD/install/diff_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/serial_comm
+[1.140s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm' for CMake config files
+[1.141s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_comm', 'cmake_prefix_path')
+[1.141s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/hook/cmake_prefix_path.ps1'
+[1.141s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/hook/cmake_prefix_path.dsv'
+[1.142s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/hook/cmake_prefix_path.sh'
+[1.143s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/lib'
+[1.144s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/bin'
+[1.144s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/lib/pkgconfig/serial_comm.pc'
+[1.144s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/lib/python3.10/site-packages'
+[1.144s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/bin'
+[1.145s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.ps1'
+[1.145s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.dsv'
+[1.146s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.sh'
+[1.147s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.bash'
+[1.147s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.zsh'
+[1.148s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/colcon-core/packages/serial_comm)
+[1.148s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial_comm)
+[1.148s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm' for CMake module files
+[1.149s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm' for CMake config files
+[1.149s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_comm', 'cmake_prefix_path')
+[1.150s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/hook/cmake_prefix_path.ps1'
+[1.150s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/hook/cmake_prefix_path.dsv'
+[1.150s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/hook/cmake_prefix_path.sh'
+[1.151s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/lib'
+[1.151s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/bin'
+[1.151s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/lib/pkgconfig/serial_comm.pc'
+[1.151s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/lib/python3.10/site-packages'
+[1.152s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/bin'
+[1.152s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.ps1'
+[1.153s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.dsv'
+[1.153s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.sh'
+[1.154s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.bash'
+[1.154s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/serial_comm/package.zsh'
+[1.154s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/serial_comm/share/colcon-core/packages/serial_comm)
+[28.661s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[28.663s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector
+[28.681s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nuscenes_data_collector)
+[28.682s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector' for CMake module files
+[28.682s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector
+[28.682s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector' for CMake config files
+[28.683s] Level 1:colcon.colcon_core.shell:create_environment_hook('nuscenes_data_collector', 'cmake_prefix_path')
+[28.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/hook/cmake_prefix_path.ps1'
+[28.683s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/hook/cmake_prefix_path.dsv'
+[28.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/hook/cmake_prefix_path.sh'
+[28.684s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/lib'
+[28.684s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/bin'
+[28.684s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/lib/pkgconfig/nuscenes_data_collector.pc'
+[28.684s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/lib/python3.10/site-packages'
+[28.684s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/bin'
+[28.685s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.ps1'
+[28.685s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.dsv'
+[28.685s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.sh'
+[28.685s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.bash'
+[28.686s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.zsh'
+[28.686s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/colcon-core/packages/nuscenes_data_collector)
+[28.687s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nuscenes_data_collector)
+[28.687s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector' for CMake module files
+[28.687s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector' for CMake config files
+[28.687s] Level 1:colcon.colcon_core.shell:create_environment_hook('nuscenes_data_collector', 'cmake_prefix_path')
+[28.687s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/hook/cmake_prefix_path.ps1'
+[28.688s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/hook/cmake_prefix_path.dsv'
+[28.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/hook/cmake_prefix_path.sh'
+[28.688s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/lib'
+[28.688s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/bin'
+[28.688s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/lib/pkgconfig/nuscenes_data_collector.pc'
+[28.689s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/lib/python3.10/site-packages'
+[28.689s] Level 1:colcon.colcon_core.environment:checking '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/bin'
+[28.689s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.ps1'
+[28.690s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.dsv'
+[28.690s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.sh'
+[28.690s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.bash'
+[28.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.zsh'
+[28.691s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/colcon-core/packages/nuscenes_data_collector)
+[28.691s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[28.691s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[28.692s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[28.692s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[28.696s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[28.696s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[28.696s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[28.707s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[28.708s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pengyh/documents/ros2_ws/RobotAD/install/local_setup.ps1'
+[28.709s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pengyh/documents/ros2_ws/RobotAD/install/_local_setup_util_ps1.py'
+[28.710s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pengyh/documents/ros2_ws/RobotAD/install/setup.ps1'
+[28.711s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pengyh/documents/ros2_ws/RobotAD/install/local_setup.sh'
+[28.712s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pengyh/documents/ros2_ws/RobotAD/install/_local_setup_util_sh.py'
+[28.712s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pengyh/documents/ros2_ws/RobotAD/install/setup.sh'
+[28.713s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pengyh/documents/ros2_ws/RobotAD/install/local_setup.bash'
+[28.713s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pengyh/documents/ros2_ws/RobotAD/install/setup.bash'
+[28.714s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pengyh/documents/ros2_ws/RobotAD/install/local_setup.zsh'
+[28.715s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pengyh/documents/ros2_ws/RobotAD/install/setup.zsh'

@@ -1,0 +1,17 @@
+[
+    {
+        "category": "semantic_prior",
+        "filename": "maps/office_occupancy_map_semantic_prior.png",
+        "log_tokens": [],
+        "token": "office_issac"
+    },
+    {
+        "category": "semantic_prior",
+        "filename": "maps/office_occupancy_map_semantic_prior.png",
+        "log_tokens": [
+            "AIR_F112025-01-22 00:12:37",
+            "AIR_F112025-01-22 01:24:32"
+        ],
+        "token": "AIR_F11"
+    }
+]

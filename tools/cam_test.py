@@ -3,7 +3,7 @@ import cv2
 # 设置你连接的多个摄像头的索引
 # 摄像头的索引通常是从0开始的
 # 如果你有多个USB摄像头，可能需要尝试更高的索引号（比如1, 2, 3等）
-camera_indices = [2, 4]  # 假设你有两个摄像头
+camera_indices = [0]  # 假设你有两个摄像头
 
 # 创建视频捕捉对象的列表
 cameras = [cv2.VideoCapture(index) for index in camera_indices]
@@ -21,8 +21,8 @@ while True:
             ret, frame = cam.read()
             if ret:
                 # 翻转图像（例如按水平翻转）
-                frame = cv2.flip(frame, 1)  # 水平翻转
-                frame = cv2.flip(frame, 0)  # 水平翻转
+                # frame = cv2.flip(frame, 1)  # 水平翻转
+                # frame = cv2.flip(frame, 0)  # 水平翻转
 
                 # 在每个视频框中显示摄像头编号
                 cv2.putText(frame, f"Camera {camera_indices[i]}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)

@@ -1,0 +1,32 @@
+[0.021s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[0.054s] [35m[1mConsolidate compiler generated dependencies of target nuscenes_data_collector_node[0m
+[0.056s] [35m[1mConsolidate compiler generated dependencies of target nuscenes_data_collector_issac_node[0m
+[0.081s] [ 50%] Built target nuscenes_data_collector_node
+[0.086s] [ 75%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_issac_node.dir/src/nuscenes_data_collector_issac.cpp.o[0m
+[16.451s] [100%] [32m[1mLinking CXX executable nuscenes_data_collector_issac_node[0m
+[17.878s] [100%] Built target nuscenes_data_collector_issac_node
+[17.889s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[17.890s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector
+[17.895s] -- Install configuration: ""
+[17.896s] -- Execute custom install script
+[17.896s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/config/nuscenes_data_collector_params.yaml
+[17.896s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/config/rviz_config.rviz
+[17.896s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/config/rviz_config_backup_six_cam.rviz
+[17.896s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/lib/nuscenes_data_collector/nuscenes_data_collector_node
+[17.896s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/lib/nuscenes_data_collector/nuscenes_data_collector_issac_node
+[17.896s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/ament_index/resource_index/package_run_dependencies/nuscenes_data_collector
+[17.897s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/ament_index/resource_index/parent_prefix_path/nuscenes_data_collector
+[17.897s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/environment/ament_prefix_path.sh
+[17.897s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/environment/ament_prefix_path.dsv
+[17.897s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/environment/path.sh
+[17.897s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/environment/path.dsv
+[17.897s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/local_setup.bash
+[17.897s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/local_setup.sh
+[17.897s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/local_setup.zsh
+[17.898s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/local_setup.dsv
+[17.898s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.dsv
+[17.903s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/ament_index/resource_index/packages/nuscenes_data_collector
+[17.903s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/cmake/nuscenes_data_collectorConfig.cmake
+[17.903s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/cmake/nuscenes_data_collectorConfig-version.cmake
+[17.903s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/nuscenes_data_collector/share/nuscenes_data_collector/package.xml
+[17.905s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector

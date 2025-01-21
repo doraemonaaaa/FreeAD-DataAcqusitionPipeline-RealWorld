@@ -1,0 +1,17 @@
+[0.022s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24
+[0.067s] [35m[1mConsolidate compiler generated dependencies of target nuscenes_data_collector_node[0m
+[0.073s] [ 50%] Built target nuscenes_data_collector_issac_node
+[0.089s] [ 75%] [32mBuilding CXX object CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o[0m
+[4.122s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/src/nuscenes_data_collector.cpp:1[m[K:
+[4.122s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:[m[K In constructor ‘[01m[KNuScenesDataCollector::NuScenesDataCollector()[m[K’:
+[4.122s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:240:19:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KNuScenesDataCollector::scene_init()[m[K’
+[4.122s]   240 |         [01;31m[Kscene_init()[m[K;
+[4.122s]       |         [01;31m[K~~~~~~~~~~^~[m[K
+[4.122s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:706:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid NuScenesDataCollector::scene_init(std::string)[m[K’
+[4.122s]   706 |     void [01;36m[Kscene_init[m[K(std::string sample_token){
+[4.122s]       |          [01;36m[K^~~~~~~~~~[m[K
+[4.122s] [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/nuscenes_data_collector/include/nuscenes_data_collector/nuscenes_data_collector.hpp:706:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[7.656s] gmake[2]: *** [CMakeFiles/nuscenes_data_collector_node.dir/build.make:76: CMakeFiles/nuscenes_data_collector_node.dir/src/nuscenes_data_collector.cpp.o] Error 1
+[7.656s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/nuscenes_data_collector_node.dir/all] Error 2
+[7.656s] gmake: *** [Makefile:146: all] Error 2
+[7.658s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/nuscenes_data_collector -- -j24 -l24

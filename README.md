@@ -46,8 +46,20 @@ rosdep install --from-paths src --ignore-src -r -y
 https://www.ncnynl.com/archives/202209/5470.html
 
 -- set up Real-Time Publish-Subscribe, Fast RTPS, used for RT communication
-sudo apt-get install ros-humble-rmw-cyclonedds-cpp
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+    https://blog.csdn.net/m0_73800387/article/details/144001925
+
+    option 1: shared memory
+    sudo apt-get install ros-humble-rmw-fastrtps-cpp
+    export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+    export RMW_FASTRTPS_USE_SHM=1
+    export RMW_FASTRTPS_SHM_MAX_SIZE=100000000  # 设置共享内存的最大大小为 100MB
+    export RMW_FASTRTPS_SHM_ID="ros2_shared_memory"  # 设置共享内存的ID
+    ros2 doctor --report # this can check which RMW MIDDLEWARE we use
+
+    option 2: network communication, will slow down when subscriber more
+    sudo apt-get install ros-humble-rmw-cyclonedds-cpp
+    export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+    ros2 doctor --report # this can check which RMW MIDDLEWARE we use
 
 -- hardware setup
     1. plugin stm32 USB
