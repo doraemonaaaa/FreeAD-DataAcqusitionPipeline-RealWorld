@@ -1,0 +1,77 @@
+[0.020s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/pengyh/documents/ros2_ws/RobotAD/src/pointcloud_to_laserscan -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan
+[0.029s] -- Found ament_cmake_auto: 1.3.11 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.104s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.181s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.184s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.189s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.195s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.204s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.230s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.231s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.244s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.380s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.389s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.390s] -- Configured cppcheck include dirs: /home/pengyh/documents/ros2_ws/RobotAD/src/pointcloud_to_laserscan/include
+[0.390s] -- Configured cppcheck exclude dirs and/or files: 
+[0.390s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.390s] -- Configured cpplint exclude dirs and/or files: 
+[0.391s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.391s] -- Added test 'lint_cmake' to check CMake code style
+[0.392s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.393s] -- Added test 'uncrustify' to check C / C++ code style
+[0.393s] -- Configured uncrustify additional arguments: 
+[0.393s] -- Added test 'xmllint' to check XML markup files
+[0.397s] -- Configuring done
+[0.433s] -- Generating done
+[0.441s] -- Build files have been written to: /home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan
+[0.447s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/pengyh/documents/ros2_ws/RobotAD/src/pointcloud_to_laserscan -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan
+[0.448s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan -- -j24 -l24
+[0.476s] [35m[1mConsolidate compiler generated dependencies of target laserscan_to_pointcloud_node[0m
+[0.479s] [35m[1mConsolidate compiler generated dependencies of target pointcloud_to_laserscan_node[0m
+[0.480s] [35m[1mConsolidate compiler generated dependencies of target laserscan_to_pointcloud[0m
+[0.489s] [ 16%] Built target laserscan_to_pointcloud_node
+[0.493s] [ 50%] Built target laserscan_to_pointcloud
+[0.493s] [ 50%] Built target pointcloud_to_laserscan_node
+[0.501s] [35m[1mConsolidate compiler generated dependencies of target pointcloud_to_laserscan[0m
+[0.514s] [ 66%] Built target pointcloud_to_laserscan
+[0.523s] [35m[1mConsolidate compiler generated dependencies of target sub_laser_node[0m
+[0.523s] [35m[1mConsolidate compiler generated dependencies of target dummy_pointcloud_publisher[0m
+[0.534s] [ 83%] Built target dummy_pointcloud_publisher
+[0.536s] [100%] Built target sub_laser_node
+[0.543s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan -- -j24 -l24
+[0.545s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan
+[0.549s] -- Install configuration: ""
+[0.550s] -- Execute custom install script
+[0.550s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node
+[0.550s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node
+[0.550s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/laserscan_to_pointcloud_node.hpp
+[0.550s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/pointcloud_to_laserscan_node.hpp
+[0.550s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/visibility_control.h
+[0.551s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/library_path.sh
+[0.551s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/library_path.dsv
+[0.551s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib/liblaserscan_to_pointcloud.so
+[0.551s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so
+[0.551s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher
+[0.551s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/sub_laser_node
+[0.551s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_laserscan_to_pointcloud_launch.py
+[0.551s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_pointcloud_to_laserscan_launch.py
+[0.551s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/ament_index/resource_index/package_run_dependencies/pointcloud_to_laserscan
+[0.551s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/ament_index/resource_index/parent_prefix_path/pointcloud_to_laserscan
+[0.552s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.sh
+[0.552s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.dsv
+[0.552s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.sh
+[0.552s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.dsv
+[0.552s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.bash
+[0.552s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.sh
+[0.552s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.zsh
+[0.552s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.dsv
+[0.552s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv
+[0.558s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/ament_index/resource_index/packages/pointcloud_to_laserscan
+[0.559s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/ament_index/resource_index/rclcpp_components/pointcloud_to_laserscan
+[0.559s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.559s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.559s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_libraries-extras.cmake
+[0.559s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig.cmake
+[0.559s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig-version.cmake
+[0.559s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.xml
+[0.561s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/pointcloud_to_laserscan

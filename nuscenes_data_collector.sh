@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sh /home/pengyh/documents/ros2_ws/RobotAD/prepare_for_next_data_capturing.sh
+
 # 参数：选择要运行的版本，默认为 'issac'（即 'nuscenes_data_collector'）
 collector_type=${1:-defalut}
 # default : real world

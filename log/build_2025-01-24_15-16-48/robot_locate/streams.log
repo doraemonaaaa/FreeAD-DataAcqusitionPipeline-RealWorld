@@ -1,0 +1,42 @@
+[0.024s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate -- -j24 -l24
+[0.051s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate -- -j24 -l24
+[0.059s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate
+[0.064s] -- Install configuration: ""
+[0.065s] -- Execute custom install script
+[0.065s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/launch/__pycache__/localization_launch.cpython-310.pyc
+[0.065s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/launch/__pycache__/robot_locater.launch.cpython-310.pyc
+[0.065s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/launch/localization_launch.py
+[0.065s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/launch/navigation_launch.py
+[0.066s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/launch/online_async_launch.py
+[0.066s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/launch/robot_locate.launch.py
+[0.066s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/launch/robot_locater.launch.py
+[0.066s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/launch/robot_test.launch.py
+[0.066s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/rviz/urdf_config.rviz
+[0.066s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/rviz/urdf_config.rviz.bak
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/config/beifen.yaml
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/config/ekf.yaml
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/config/mapper_params_online_async.yaml
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/config/nav2_params.yaml
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/config/old/ekf.yaml.bak
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/config/old/nav2_params (copy).yaml
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/config/old/nav2_params_origal.yaml
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/config/old/nav2_params_q.yaml
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/config/old/new.yaml
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/config/twist_mux.yaml
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/world/my_world.sdf
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/ament_index/resource_index/package_run_dependencies/robot_locate
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/ament_index/resource_index/parent_prefix_path/robot_locate
+[0.067s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/environment/ament_prefix_path.sh
+[0.068s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/environment/ament_prefix_path.dsv
+[0.068s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/environment/path.sh
+[0.068s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/environment/path.dsv
+[0.069s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/local_setup.bash
+[0.069s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/local_setup.sh
+[0.069s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/local_setup.zsh
+[0.069s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/local_setup.dsv
+[0.069s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.dsv
+[0.077s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/ament_index/resource_index/packages/robot_locate
+[0.078s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/cmake/robot_locateConfig.cmake
+[0.078s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/cmake/robot_locateConfig-version.cmake
+[0.078s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/robot_locate/share/robot_locate/package.xml
+[0.082s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate

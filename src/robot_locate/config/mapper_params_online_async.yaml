@@ -1,3 +1,6 @@
+# https://blog.csdn.net/karmueo46/article/details/134032853
+# see this tutorial
+
 slam_toolbox:
   ros__parameters:
 
@@ -14,7 +17,7 @@ slam_toolbox:
     map_frame: map
     base_frame: base_footprint
     scan_topic: /scan
-    scan_queue_size: 1
+    scan_queue_size: 10
     use_map_saver: true
     mode: mapping
     #mode: localization
@@ -29,20 +32,23 @@ slam_toolbox:
     debug_logging: false
     throttle_scans: 10
     transform_publish_period: 0.01 #if 0 never publishes odometry
-    map_update_interval: 5.0
+    map_update_interval: 3.0
     resolution: 0.05
-    max_laser_range: 20.0 #for rastering images
+    max_laser_range: 10.0  # for rastering images
     minimum_time_interval: 0.5
     transform_timeout: 1.0
-    tf_buffer_duration: 30.
-    stack_size_to_use: 40000000 #// program needs a larger stack size to serialize large maps
+    tf_buffer_duration: 60.
+    stack_size_to_use: 40000000 # program needs a larger stack size to serialize large maps
     enable_interactive_mode: true
 
     # General Parameters
-    use_scan_matching: true
-    use_scan_barycenter: true
-    minimum_travel_distance: 0.05
-    minimum_travel_heading: 0.05
+    #######################Scan  matching ######################
+    # 将当前时刻的激光扫描（或其他传感器数据）与之前的扫描数据进行比对，从而估算机器人相对于之前扫描的位移
+    use_scan_matching: false  # 是否使用扫描匹配来优化里程位姿
+    use_scan_barycenter: true  # 是否使用重心或扫描位姿
+    #######################Scan  matching######################
+    minimum_travel_distance: 0.02
+    minimum_travel_heading: 0.02
     scan_buffer_size: 30
     scan_buffer_maximum_scan_distance: 10.0
     link_match_minimum_response_fine: 0.1  
@@ -55,7 +61,7 @@ slam_toolbox:
     loop_match_minimum_response_fine: 0.45
 
     # Correlation Parameters - Correlation Parameters
-    correlation_search_space_dimension: 0.5
+    correlation_search_space_dimension: 0.3
     correlation_search_space_resolution: 0.01
     correlation_search_space_smear_deviation: 0.1 
 

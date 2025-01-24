@@ -219,7 +219,7 @@ public:
 
         // Create timer for image capture
         capture_image_timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(120), 
+            std::chrono::milliseconds(133), 
             std::bind(&NuScenesDataCollector::capture_image_callback, this)
         );
 
@@ -285,7 +285,7 @@ private:
     // Callback to capture an image from the camera
     void capture_image_callback()
     {
-        //if ((!latest_ego_pose_.empty()) && (!latest_imu_.empty())) {
+        if ((!latest_ego_pose_.empty()) && (!latest_imu_.empty())) {
             
             std::vector<std::future<bool>> futures;  // 用于存储每个摄像头的捕获结果
             std::unordered_map<std::string, std::pair<cv::Mat, rclcpp::Time>> captured_data;  // 存储每个摄像头的图像和时间戳
@@ -441,7 +441,7 @@ private:
                     RCLCPP_WARN(this->get_logger(), "Failed to capture image from %s", camera_name.c_str());
                 }
             }
-        //}
+        }
     }
 
     // lidar data callback

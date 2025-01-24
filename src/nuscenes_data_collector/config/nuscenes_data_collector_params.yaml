@@ -73,6 +73,6 @@ nuscenes_data_collector:
       CAM_FRONT_RIGHT: "CALIBRATION_RW1_CAM_FRONT_RIGHT"
       CAM_BACK_RIGHT: "CALIBRATION_RW1_CAM_BACK_RIGHT"
       LIDAR_TOP: "CALIBRATION_RW1_LIDAR_TOP"
-    target_sample_frame_: 40
-    scene_frame_: 20
+    target_sample_frame_: 80 # 15 scenes  0.6s/smaple  totoal seconds = 24 * 15 = 360
+    scene_frame_: 40
     sample_scene_recoder_name_: "LIDAR_TOP"

@@ -1,6 +1,6 @@
 usb_camera_node:
   ros__parameters:
-    frame_rate: 10
+    frame_rate: 60
     image_width: 1920
     image_height: 1080
     img_type: PNG
