@@ -1,0 +1,22 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/imu_read.dir/src/imu_read.cpp.o[0m
+[100%] [32m[1mLinking CXX executable imu_read[0m
+[100%] Built target imu_read
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/lib/miiboo_imu/imu_read
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu//launch/imu.launch.py
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/package_run_dependencies/miiboo_imu
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/parent_prefix_path/miiboo_imu
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/path.sh
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/path.dsv
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.bash
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.sh
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.zsh
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.dsv
+-- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.dsv
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/packages/miiboo_imu
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/cmake/miiboo_imuConfig.cmake
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/cmake/miiboo_imuConfig-version.cmake
+-- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.xml

@@ -1,0 +1,28 @@
+[0.020s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera -- -j24 -l24
+[0.065s] [ 50%] [32mBuilding CXX object CMakeFiles/usb_camera_node.dir/src/usb_camera_node.cpp.o[0m
+[4.743s] [100%] [32m[1mLinking CXX executable usb_camera_node[0m
+[5.168s] [100%] Built target usb_camera_node
+[5.178s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera -- -j24 -l24
+[5.180s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera
+[5.187s] -- Install configuration: ""
+[5.187s] -- Execute custom install script
+[5.187s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/config/camera_params.yaml
+[5.187s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/launch/__pycache__/launch.cpython-310.pyc
+[5.187s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/launch/launch.py
+[5.187s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/lib/usb_camera/usb_camera_node
+[5.187s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/ament_index/resource_index/package_run_dependencies/usb_camera
+[5.187s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/ament_index/resource_index/parent_prefix_path/usb_camera
+[5.188s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/environment/ament_prefix_path.sh
+[5.188s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/environment/ament_prefix_path.dsv
+[5.188s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/environment/path.sh
+[5.188s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/environment/path.dsv
+[5.188s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/local_setup.bash
+[5.188s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/local_setup.sh
+[5.188s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/local_setup.zsh
+[5.188s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/local_setup.dsv
+[5.188s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.dsv
+[5.194s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/ament_index/resource_index/packages/usb_camera
+[5.194s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/cmake/usb_cameraConfig.cmake
+[5.194s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/cmake/usb_cameraConfig-version.cmake
+[5.195s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/usb_camera/share/usb_camera/package.xml
+[5.196s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/usb_camera

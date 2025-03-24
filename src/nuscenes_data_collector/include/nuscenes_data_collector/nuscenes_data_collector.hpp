@@ -334,9 +334,11 @@ private:
 
                     // Generate file path for saving images
                     std::stringstream ss;
+                    std::string timestamp_str = std::to_string(timestamp.seconds());  // 将时间戳转换为字符串
+                    std::replace(timestamp_str.begin(), timestamp_str.end(), '.', '_');  // 将小数点（.）替换为下划线（_）
                     ss << folder_path << '/' << start_system_time_token_ << "__" 
                        << camera_name << "__" 
-                       << std::to_string(timestamp.seconds()) // Ensure no scientific notation
+                       << timestamp_str // Ensure no scientific notation
                        << ".jpg";
                     std::string image_save_file = ss.str();
 
@@ -501,6 +503,11 @@ private:
     /// Template function to save data to sweeps directory
     template <typename T>
         void save_data(const T &msg, const std::string &device_name) {
+        if (sample_frame_ >= target_sample_frame_) {
+            node_shutdown_callback();
+            return;
+        }
+        
         try {
             // Check if the message type is Odometry
             if constexpr (std::is_same_v<T, std::shared_ptr<nav_msgs::msg::Odometry>>) {
@@ -532,10 +539,10 @@ private:
         uint64_t timestamp = msg->header.stamp.sec * 1e9 + msg->header.stamp.nanosec;
         ego_pose_data["timestamp"] = timestamp;
         ego_pose_data["rotation"] = {
+            msg->pose.pose.orientation.w,
             msg->pose.pose.orientation.x,
             msg->pose.pose.orientation.y,
-            msg->pose.pose.orientation.z,
-            msg->pose.pose.orientation.w
+            msg->pose.pose.orientation.z
         };
         ego_pose_data["translation"] = {
             msg->pose.pose.position.x,
@@ -567,7 +574,7 @@ private:
         latest_imu_["linear_accel"] = linear_accel_json;  // 线性加速度
         latest_imu_["q"] = orientation_json;              // 四元数
         latest_imu_["rotation_rate"] = angular_velocity_json;  // 角速度
-        latest_imu_["pos"] = latest_ego_pose_["translation"];  // 位置
+        latest_imu_["pos"] = latest_ego_pose_["translation"];  // 位置 
         latest_imu_["utime"] = timestamp;  // 保存计算的utime
     }
 
@@ -720,7 +727,6 @@ private:
             "sample_", 
             json_writer_, 
             "sample");
-            // scene
             scene_done(sample_token, next_sample_token);
         }
     }
@@ -913,16 +919,13 @@ private:
         for (auto& sample_img_cache : sample_imgs_cache_) {
             // 只在图像数据非空时进行保存
             if (!sample_img_cache.second.second.empty()) {
-                std::string save_path = sample_img_cache.second.first;  // 获取图像文件保存路径
+                // 如果缓存的图像已经是 JPEG 编码格式，你可以直接用 cv::imwrite 来保存
+                std::string save_path = sample_img_cache.second.first;
                 std::vector<uint8_t> data = sample_img_cache.second.second;  // 获取缓存的图像数据
-                // 保存缓存的图像数据
-                std::ofstream ofs(save_path, std::ios::binary);
-                if (ofs.is_open()) {
-                    ofs.write(reinterpret_cast<const char*>(data.data()), data.size());  // 写入缓存数据到文件
-                    ofs.close();
+                cv::Mat cached_img = cv::imdecode(data, cv::IMREAD_COLOR);
+                if (!cached_img.empty()) {
+                    cv::imwrite(save_path, cached_img);
                     RCLCPP_INFO(this->get_logger(), "Image data saved from cache: %s", save_path.c_str());
-                } else {
-                    RCLCPP_ERROR(this->get_logger(), "Failed to open file for saving cached image: %s", save_path.c_str());
                 }
                 // 清空图像数据缓存（second 部分）
                 sample_img_cache.second.second.clear();  // 清空图像数据部分
@@ -1016,9 +1019,10 @@ private:
         auto now = std::chrono::system_clock::now();
         auto now_time_t = std::chrono::system_clock::to_time_t(now);
         std::stringstream ss;
-        ss << std::put_time(std::localtime(&now_time_t), "%Y-%m-%d %H:%M:%S");
+        // 格式化时间，去掉空格和冒号
+        ss << std::put_time(std::localtime(&now_time_t), "%Y%m%d%H%M%S");
         return ss.str();
-    }
+    }    
 
     // Ensure a specific directory exists
     void ensure_directory_exists(const std::string &path) {
@@ -1081,5 +1085,3 @@ private:
 };
 
 #endif  // NUSCENES_DATA_COLLECTOR_HPP
-
-

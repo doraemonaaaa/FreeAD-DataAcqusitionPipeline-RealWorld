@@ -1,5 +1,7 @@
 # https://blog.csdn.net/karmueo46/article/details/134032853
-# see this tutorial
+# see this tutorial(Chinese)
+# https://gitee.com/futurelei/slam_toolbox
+# English
 
 slam_toolbox:
   ros__parameters:
@@ -45,7 +47,7 @@ slam_toolbox:
     #######################Scan  matching ######################
     # 将当前时刻的激光扫描（或其他传感器数据）与之前的扫描数据进行比对，从而估算机器人相对于之前扫描的位移
     use_scan_matching: false  # 是否使用扫描匹配来优化里程位姿
-    use_scan_barycenter: true  # 是否使用重心或扫描位姿
+    use_scan_barycenter: false  # 是否使用重心或扫描位姿
     #######################Scan  matching######################
     minimum_travel_distance: 0.02
     minimum_travel_heading: 0.02

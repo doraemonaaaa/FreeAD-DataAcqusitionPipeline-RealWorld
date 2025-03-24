@@ -1,0 +1,48 @@
+[0.018s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu -- -j24 -l24
+[0.064s] [ 50%] [32mBuilding CXX object CMakeFiles/imu_read.dir/src/imu_read.cpp.o[0m
+[0.965s] In file included from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/miiboo_imu/src/imu_read.cpp:15[m[K:
+[0.965s] [01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+[0.966s]    35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+[0.966s]       |  [01;35m[K^~~~~~~[m[K
+[2.849s] In file included from [01m[K/usr/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22[m[K,
+[2.849s]                  from [01m[K/usr/include/boost/smart_ptr/detail/yield_k.hpp:23[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/smart_ptr/detail/spinlock.hpp:42[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/smart_ptr/detail/spinlock_pool.hpp:25[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:29[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/date_time/time_clock.hpp:17[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/date_time/posix_time/posix_time_types.hpp:10[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/asio/time_traits.hpp:23[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/asio/detail/timer_queue_ptime.hpp:22[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/asio/detail/deadline_timer_service.hpp:29[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/asio/basic_deadline_timer.hpp:25[m[K,
+[2.850s]                  from [01m[K/usr/include/boost/asio.hpp:25[m[K,
+[2.850s]                  from [01m[K/home/pengyh/documents/ros2_ws/RobotAD/src/miiboo_imu/src/imu_read.cpp:8[m[K:
+[2.850s] [01m[K/usr/include/boost/bind.hpp:36:1:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.[m[K’
+[2.850s]    36 | [01;36m[KBOOST_PRAGMA_MESSAGE[m[K(
+[2.850s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.941s] [100%] [32m[1mLinking CXX executable imu_read[0m
+[5.108s] [100%] Built target imu_read
+[5.117s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu -- -j24 -l24
+[5.119s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu
+[5.125s] -- Install configuration: ""
+[5.125s] -- Execute custom install script
+[5.125s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/lib/miiboo_imu/imu_read
+[5.126s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu//launch/imu.launch.py
+[5.126s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/package_run_dependencies/miiboo_imu
+[5.126s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/parent_prefix_path/miiboo_imu
+[5.126s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/ament_prefix_path.sh
+[5.126s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/ament_prefix_path.dsv
+[5.126s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/path.sh
+[5.126s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/environment/path.dsv
+[5.126s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.bash
+[5.126s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.sh
+[5.126s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.zsh
+[5.126s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/local_setup.dsv
+[5.127s] -- Symlinking: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.dsv
+[5.133s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/ament_index/resource_index/packages/miiboo_imu
+[5.133s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/cmake/miiboo_imuConfig.cmake
+[5.133s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/cmake/miiboo_imuConfig-version.cmake
+[5.133s] -- Up-to-date symlink: /home/pengyh/documents/ros2_ws/RobotAD/install/miiboo_imu/share/miiboo_imu/package.xml
+[5.135s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pengyh/documents/ros2_ws/RobotAD/build/miiboo_imu

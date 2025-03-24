@@ -1,0 +1,22 @@
+[0.034s] Invoking command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate -- -j24 -l24
+[0.059s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.331s] Traceback (most recent call last):
+[0.331s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[0.331s]     from ament_package.templates import get_environment_hook_template_path
+[0.332s] ModuleNotFoundError: No module named 'ament_package'
+[0.353s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[0.353s]   execute_process(/usr/bin/python3
+[0.353s]   /opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[0.353s]   /home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate/ament_cmake_package_templates/templates.cmake)
+[0.353s]   returned error code 1
+[0.353s] Call Stack (most recent call first):
+[0.353s]   /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.354s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.354s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.354s]   CMakeLists.txt:9 (find_package)
+[0.354s] 
+[0.354s] [0m
+[0.355s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.357s] -- Configuring incomplete, errors occurred!
+[0.357s] See also "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate/CMakeFiles/CMakeOutput.log".
+[0.363s] Invoked command in '/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate -- -j24 -l24

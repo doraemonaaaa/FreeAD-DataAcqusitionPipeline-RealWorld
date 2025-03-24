@@ -3,7 +3,7 @@ project(nuscenes_data_collector)
 
 # 设置 CMake 策略
 cmake_policy(SET CMP0074 NEW)
-set(PCL_ROOT "/home/pengyh/documents/dataset")
+set(PCL_ROOT "/home/pyh/Documents/DataSet")
 
 # 如果是 GCC 或 Clang 编译器，添加一些编译选项
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -25,6 +25,9 @@ find_package(OpenCV REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(message_filters REQUIRED)  # 添加 message_filters 依赖
+find_package(tf2_msgs REQUIRED)
+find_package(rosidl_typesupport_cpp REQUIRED)
+
 
 # 定义公共头文件目录
 set(INCLUDE_DIRS
@@ -39,6 +42,10 @@ add_executable(nuscenes_data_collector_issac_node src/nuscenes_data_collector_is
 # 设置公共的头文件目录
 target_include_directories(nuscenes_data_collector_node PRIVATE ${INCLUDE_DIRS})
 target_include_directories(nuscenes_data_collector_issac_node PRIVATE ${INCLUDE_DIRS})
+
+include_directories(
+  ${tf2_msgs_INCLUDE_DIRS}
+)
 
 # 连接所需的库
 ament_target_dependencies(nuscenes_data_collector_node
@@ -55,6 +62,8 @@ ament_target_dependencies(nuscenes_data_collector_node
   cv_bridge
   OpenSSL
   message_filters
+  tf2_msgs
+  rosidl_typesupport_cpp  
 )
 
 ament_target_dependencies(nuscenes_data_collector_issac_node
@@ -71,6 +80,8 @@ ament_target_dependencies(nuscenes_data_collector_issac_node
   cv_bridge
   OpenSSL
   message_filters
+  tf2_msgs
+  rosidl_typesupport_cpp  
 )
 
 # 确保链接 OpenSSL 的加密库（libcrypto）

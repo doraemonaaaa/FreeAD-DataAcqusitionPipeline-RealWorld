@@ -1,0 +1,34 @@
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found tf2: 0.25.9 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_ros: 0.25.9 (/opt/ros/humble/share/tf2_ros/cmake)
+[31mCMake Error at CMakeLists.txt:14 (find_package):
+  By not providing "Findturtlesim.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "turtlesim", but CMake did not find one.
+
+  Could not find a package configuration file provided by "turtlesim" with
+  any of the following names:
+
+    turtlesimConfig.cmake
+    turtlesim-config.cmake
+
+  Add the installation prefix of "turtlesim" to CMAKE_PREFIX_PATH or set
+  "turtlesim_DIR" to a directory containing one of the above files.  If
+  "turtlesim" provides a separate development package or SDK, be sure it has
+  been installed.
+
+[0m
+-- Configuring incomplete, errors occurred!
+See also "/home/pengyh/documents/ros2_ws/RobotAD/build/robot_locate/CMakeFiles/CMakeOutput.log".
+gmake: *** [Makefile:226: cmake_check_build_system] Error 1

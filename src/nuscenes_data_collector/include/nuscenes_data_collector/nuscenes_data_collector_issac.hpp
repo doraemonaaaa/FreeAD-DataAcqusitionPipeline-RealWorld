@@ -34,6 +34,8 @@
 #include <message_filters/subscriber.h>
 #include <message_filters/synchronizer.h>
 #include <message_filters/sync_policies/exact_time.h>
+#include <tf2_msgs/msg/tf_message.hpp>
+#include <geometry_msgs/msg/transform_stamped.hpp>
 #include <future>
 
 #include "nuscenes_data_collector/utils.hpp"
@@ -231,19 +233,27 @@ public:
             }
         );
         // Odometry 订阅
-        odom_subscription_ = this->create_subscription<nav_msgs::msg::Odometry>(
-            odom_topic_, qos_profile, [this](const nav_msgs::msg::Odometry::SharedPtr msg) {
-                this->odom_callback(msg, "odom");
-            }
-        );
+        // odom_subscription_ = this->create_subscription<nav_msgs::msg::Odometry>(
+        //     odom_topic_, qos_profile, [this](const nav_msgs::msg::Odometry::SharedPtr msg) {
+        //         this->odom_callback(msg, "odom");
+        //     }
+        // );
         // IMU 订阅
-        imu_subscription_ = this->create_subscription<sensor_msgs::msg::Imu>(
-            imu_topic_,        // 替换为您的 IMU 主题名称，例如 "/sensor/imu"
-            qos_profile,       // 使用之前定义的 QoS 配置
-            [this](const sensor_msgs::msg::Imu::SharedPtr msg) {
-                this->imu_callback(msg, "imu");  // 定义 IMU 回调函数以处理接收到的消息
+        // imu_subscription_ = this->create_subscription<sensor_msgs::msg::Imu>(
+        //     imu_topic_,        // 替换为您的 IMU 主题名称，例如 "/sensor/imu"
+        //     qos_profile,       // 使用之前定义的 QoS 配置
+        //     [this](const sensor_msgs::msg::Imu::SharedPtr msg) {
+        //         this->imu_callback(msg, "imu");  // 定义 IMU 回调函数以处理接收到的消息
+        //     }
+        // );
+
+        // main character tf 订阅
+        main_character_tf_subscriber_ = this->create_subscription<tf2_msgs::msg::TFMessage>(
+            "/issac/nuscenes/main_character", 10, [this](const tf2_msgs::msg::TFMessage::SharedPtr msg) {
+                this->main_character_tf_callback(msg, "main_character_tf");  // 这里使用 Lambda 传递设备名称
             }
         );
+
 
         rclcpp::QoS lidar_qos_profile(50);
         qos_profile.reliable();  // 设置可靠传输
@@ -277,12 +287,13 @@ private:
             RCLCPP_INFO(this->get_logger(), "Declared bbox3d topic parameter for %s: %s", camera.c_str(), bbox3d_topics_[camera].c_str());
         }
         // Get odom_topic and lidar_topic parameter
-        odom_topic_ = "/issac/nuscenes/odom";
+        //odom_topic_ = "/issac/nuscenes/odom";
+        odom_topic_ = "/issac/nuscenes/main_character";
         RCLCPP_INFO(this->get_logger(), "Retrieved odom_topic: %s", odom_topic_.c_str());
         lidar_topic_ = "/issac/nuscenes/point_cloud";
         RCLCPP_INFO(this->get_logger(), "Retrieved lidar_topic: %s", lidar_topic_.c_str());
-        imu_topic_ = "/issac/nuscenes/imu";
-        RCLCPP_INFO(this->get_logger(), "Retrieved imu_topic: %s", imu_topic_.c_str());
+        //imu_topic_ = "/issac/nuscenes/imu";
+        //RCLCPP_INFO(this->get_logger(), "Retrieved imu_topic: %s", imu_topic_.c_str());
     }
 
     // Initialize camera subscriptions dynamically
@@ -328,7 +339,7 @@ private:
                 *bbox3d_sub
             );
 
-            // Lambda error, can't adapt the template
+            // Error: Lambda error, can't adapt the template
             // sync->registerCallback(
             //     [this, camera](const sensor_msgs::msg::Image::ConstSharedPtr& image_msg,
             //                    const vision_msgs::msg::Detection3DArray::ConstSharedPtr& bbox3d_msg) {
@@ -347,8 +358,11 @@ private:
     ) {
         RCLCPP_INFO(this->get_logger(), "Received synced data for camera: %s", camera_name.c_str());
         try {
-            save_image_data(image_msg, camera_name);
-            save_bbox3d_data(bbox3d_msg, camera_name);
+            if ((!latest_ego_pose_.empty()) && (!latest_imu_.empty())) {
+                bool is_sample_trigger = sample_triggers_[camera_name];
+                save_image_data(image_msg, camera_name);
+                save_bbox3d_data(bbox3d_msg, camera_name, is_sample_trigger);
+            }
         } catch (const std::exception &e) {
             RCLCPP_ERROR(this->get_logger(), "Exception occurred in img save_data: %s", e.what());
         }
@@ -394,30 +408,44 @@ private:
     }
 
     // Odometry data callback
-    void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg, const std::string &device_name) {
-        RCLCPP_INFO(this->get_logger(), "Received odometry data");
-        save_data(msg, device_name);
-    }
+    // void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg, const std::string &device_name) {
+    //     RCLCPP_INFO(this->get_logger(), "Received odometry data");
+    //     save_data(msg, device_name);
+    // }
 
-    void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg, const std::string &device_name)
-    {
+    // void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg, const std::string &device_name)
+    // {
+    //     save_data(msg, device_name);
+    // }
+
+    void main_character_tf_callback(const tf2_msgs::msg::TFMessage::SharedPtr msg,  const std::string &device_name){
+        RCLCPP_INFO(this->get_logger(), "Received ego pose data");
         save_data(msg, device_name);
     }
 
     /// Template function to save data to sweeps directory
     template <typename T>
     void save_data(const T &msg, const std::string &device_name) {
+        if (sample_frame_ >= target_sample_frame_) {
+            node_shutdown_callback();
+            return;
+        }
+
         try {
             // Check if the message type is Odometry
-            if constexpr (std::is_same_v<T, std::shared_ptr<nav_msgs::msg::Odometry>>) {
-                save_odom_data(msg);
-            }
+            // if constexpr (std::is_same_v<T, std::shared_ptr<nav_msgs::msg::Odometry>>) {
+            //     save_odom_data(msg);
+            // }
+            if constexpr (std::is_same_v<T, std::shared_ptr<tf2_msgs::msg::TFMessage>>) {
+                save_main_character_tf(msg);
+                cal_imu_data();
+            }            
             // Check if the message type is IMU and we have valid ego_pose
-            else if constexpr (std::is_same_v<T, std::shared_ptr<sensor_msgs::msg::Imu>>) {
-                if (!latest_ego_pose_.empty()) {
-                    save_imu_data(msg);
-                }
-            }
+            // else if constexpr (std::is_same_v<T, std::shared_ptr<sensor_msgs::msg::Imu>>) {
+            //     if (!latest_ego_pose_.empty()) {
+            //         save_imu_data(msg);
+            //     }
+            // }
             // Ensure we must have an ego pose and imu before processing other types
             if ((!latest_ego_pose_.empty()) && (!latest_imu_.empty())) {
                 // Handle Image messages
@@ -440,51 +468,191 @@ private:
     }
 
     // write odom data in nuscenes ego_pose format and save to ego_pose.json
-    void save_odom_data(const std::shared_ptr<nav_msgs::msg::Odometry> msg) {
+    // void save_odom_data(const std::shared_ptr<tf2_msgs::msg::TFMessage> msg) {
+    //     json ego_pose_data;
+    //     // The timestamp can be a combination of seconds and nanoseconds
+    //     uint64_t timestamp = msg->header.stamp.sec * 1e9 + msg->header.stamp.nanosec;
+    //     ego_pose_data["timestamp"] = timestamp;
+    //     ego_pose_data["rotation"] = {
+    //         msg->pose.pose.orientation.x,
+    //         msg->pose.pose.orientation.y,
+    //         msg->pose.pose.orientation.z,
+    //         msg->pose.pose.orientation.w
+    //     };
+    //     ego_pose_data["translation"] = {
+    //         msg->pose.pose.position.x,
+    //         msg->pose.pose.position.y,
+    //         msg->pose.pose.position.z
+    //     };
+    //     latest_ego_pose_ = ego_pose_data;
+    // }
+
+    void save_main_character_tf(const std::shared_ptr<tf2_msgs::msg::TFMessage> msg) {
+        if (msg->transforms.empty()) {
+            return;
+        }
+        
+        // Get the first TransformStamped from the TFMessage
+        const auto& transform = msg->transforms.front();
+        
+        // Access the timestamp from the transform header
+        uint64_t timestamp = transform.header.stamp.sec * 1e9 + transform.header.stamp.nanosec;
+        
+        // Create JSON to store pose data
         json ego_pose_data;
-        // The timestamp can be a combination of seconds and nanoseconds
-        uint64_t timestamp = msg->header.stamp.sec * 1e9 + msg->header.stamp.nanosec;
         ego_pose_data["timestamp"] = timestamp;
-        ego_pose_data["rotation"] = {
-            msg->pose.pose.orientation.x,
-            msg->pose.pose.orientation.y,
-            msg->pose.pose.orientation.z,
-            msg->pose.pose.orientation.w
-        };
-        ego_pose_data["translation"] = {
-            msg->pose.pose.position.x,
-            msg->pose.pose.position.y,
-            msg->pose.pose.position.z
-        };
+        
+        // Access rotation (Quaternion) data
+        ego_pose_data["rotation"] = json::array({
+            transform.transform.rotation.w,  // w放在第一位
+            transform.transform.rotation.x,  // x放在第二位
+            transform.transform.rotation.y,  // y放在第三位
+            transform.transform.rotation.z   // z放在第四位
+        });
+        
+        // Access translation (Position) data
+        ego_pose_data["translation"] = json::array({
+            transform.transform.translation.x,
+            transform.transform.translation.y,
+            transform.transform.translation.z
+        });
+    
+        // If previous ego pose exists, save it
+        if (!latest_ego_pose_.empty()) {
+            previous_ego_pose_ = latest_ego_pose_;
+        }
         latest_ego_pose_ = ego_pose_data;
+    }    
+    
+    
+    /// this is for Imu Sensor
+    // void save_imu_data(const std::shared_ptr<sensor_msgs::msg::Imu> msg) {
+    //     // 提取线性加速度（linear_accel）
+    //     auto linear_accel = msg->linear_acceleration;
+    //     // 提取四元数（q）
+    //     auto orientation = msg->orientation;
+    //     // 提取角速度（rotation_rate）
+    //     auto angular_velocity = msg->angular_velocity;
+    //     // 获取消息的时间戳并转换为微秒（utime）
+    //     uint64_t timestamp = msg->header.stamp.sec * 1e9 + msg->header.stamp.nanosec;
+    //     // 将geometry_msgs::msg::Quaternion转为JSON数组
+    //     nlohmann::json orientation_json = {orientation.x, orientation.y, orientation.z, orientation.w};
+    //     // 将geometry_msgs::msg::Vector3转为JSON数组
+    //     nlohmann::json angular_velocity_json = {angular_velocity.x, angular_velocity.y, angular_velocity.z};
+    //     nlohmann::json linear_accel_json = {linear_accel.x, linear_accel.y, linear_accel.z};
+    //     // 保存数据到latest_imu_字典
+    //     latest_imu_["linear_accel"] = linear_accel_json;  // 线性加速度
+    //     latest_imu_["q"] = orientation_json;              // 四元数
+    //     latest_imu_["rotation_rate"] = angular_velocity_json;  // 角速度
+    //     latest_imu_["pos"] = latest_ego_pose_["translation"];  // 位置
+    //     latest_imu_["utime"] = timestamp;  // 保存计算的utime
+    // }
+
+    /// @brief 使用插值法计算加速度、角速度
+    void cal_imu_data() {
+        // 1. 确保有足够的数据
+        if (latest_ego_pose_.empty() || previous_ego_pose_.empty()) {
+            return;  // 如果没有足够的历史数据，无法计算
+        }
+    
+        // 获取当前位置和上一个位置的差值，计算速度
+        auto current_position = latest_ego_pose_["translation"];
+        auto previous_position = previous_ego_pose_["translation"];
+        
+        // 计算位置差值（单位：米）
+        double delta_x = current_position[0].get<double>() - previous_position[0].get<double>();
+        double delta_y = current_position[1].get<double>() - previous_position[1].get<double>();
+        double delta_z = current_position[2].get<double>() - previous_position[2].get<double>();
+    
+        // 通过时间戳计算
+        double time_interval = (latest_ego_pose_["timestamp"].get<uint64_t>() - previous_ego_pose_["timestamp"].get<uint64_t>()) * 1e-9;  // 时间间隔以秒为单位
+        if (time_interval <= 0) {
+            return; // 如果时间间隔无效，返回
+        }
+    
+        // 计算速度（单位：米/秒）
+        double velocity_x = delta_x / time_interval;
+        double velocity_y = delta_y / time_interval;
+        double velocity_z = delta_z / time_interval;
+    
+        // 2. 计算线性加速度（速度的变化率）
+        static double last_velocity_x = velocity_x;
+        static double last_velocity_y = velocity_y;
+        static double last_velocity_z = velocity_z;
+    
+        // 计算加速度（单位：米/秒^2）
+        double accel_x = (velocity_x - last_velocity_x) / time_interval;
+        double accel_y = (velocity_y - last_velocity_y) / time_interval;
+        double accel_z = (velocity_z - last_velocity_z) / time_interval;
+    
+        // 更新上一时刻的速度
+        last_velocity_x = velocity_x;
+        last_velocity_y = velocity_y;
+        last_velocity_z = velocity_z;
+    
+        // 3. 计算角速度 - 使用四元数正确的方法
+        auto current_rotation = latest_ego_pose_["rotation"];
+        auto previous_rotation = previous_ego_pose_["rotation"];
+        
+        // 四元数的顺序是 wxyz
+        double q1w = previous_rotation[0].get<double>();
+        double q1x = previous_rotation[1].get<double>();
+        double q1y = previous_rotation[2].get<double>();
+        double q1z = previous_rotation[3].get<double>();
+        
+        double q2w = current_rotation[0].get<double>();
+        double q2x = current_rotation[1].get<double>();
+        double q2y = current_rotation[2].get<double>();
+        double q2z = current_rotation[3].get<double>();
+        
+        // 计算四元数的差值四元数: q_diff = q2 * q1^(-1)
+        // 计算q1的共轭（逆）
+        double q1w_inv = q1w;
+        double q1x_inv = -q1x;
+        double q1y_inv = -q1y;
+        double q1z_inv = -q1z;
+        
+        // 归一化以确保是单位四元数
+        double norm = std::sqrt(q1w_inv*q1w_inv + q1x_inv*q1x_inv + q1y_inv*q1y_inv + q1z_inv*q1z_inv);
+        q1w_inv /= norm;
+        q1x_inv /= norm;
+        q1y_inv /= norm;
+        q1z_inv /= norm;
+        
+        // 四元数乘法：q_diff = q2 * q1^(-1)
+        double diff_w = q2w * q1w_inv - q2x * q1x_inv - q2y * q1y_inv - q2z * q1z_inv;
+        double diff_x = q2w * q1x_inv + q2x * q1w_inv + q2y * q1z_inv - q2z * q1y_inv;
+        double diff_y = q2w * q1y_inv - q2x * q1z_inv + q2y * q1w_inv + q2z * q1x_inv;
+        double diff_z = q2w * q1z_inv + q2x * q1y_inv - q2y * q1x_inv + q2z * q1w_inv;
+        
+        // 从四元数提取角轴和角度
+        // 如果四元数表示小旋转，diff_w 接近 1，角度接近 0
+        double angle = 2.0 * std::acos(std::max(-1.0, std::min(1.0, diff_w))); // 限制在[-1,1]范围内
+        
+        // 避免除以零
+        double s = std::sqrt(1.0 - diff_w * diff_w);
+        double angular_velocity_x, angular_velocity_y, angular_velocity_z;
+        
+        if (s < 1e-6) {
+            // 如果旋转很小，使用近似值
+            angular_velocity_x = 2.0 * diff_x / time_interval;
+            angular_velocity_y = 2.0 * diff_y / time_interval;
+            angular_velocity_z = 2.0 * diff_z / time_interval;
+        } else {
+            // 正常情况，计算角速度矢量
+            angular_velocity_x = (angle * diff_x / s) / time_interval;
+            angular_velocity_y = (angle * diff_y / s) / time_interval;
+            angular_velocity_z = (angle * diff_z / s) / time_interval;
+        }
+    
+        // 4. 更新 IMU 数据
+        latest_imu_["linear_accel"] = {accel_x, accel_y, accel_z};  // 线性加速度
+        latest_imu_["rotation_rate"] = {angular_velocity_x, angular_velocity_y, angular_velocity_z};  // 角速度
+        latest_imu_["q"] = current_rotation;  // 四元数
+        latest_imu_["pos"] = current_position;  // 位置
+        latest_imu_["utime"] = latest_ego_pose_["timestamp"];  // 使用最新的时间戳
     }
-
-    void save_imu_data(const std::shared_ptr<sensor_msgs::msg::Imu> msg) {
-        // 提取线性加速度（linear_accel）
-        auto linear_accel = msg->linear_acceleration;
-        // 提取四元数（q）
-        auto orientation = msg->orientation;
-        // 提取角速度（rotation_rate）
-        auto angular_velocity = msg->angular_velocity;
-
-        // 获取消息的时间戳并转换为微秒（utime）
-        uint64_t timestamp = msg->header.stamp.sec * 1e9 + msg->header.stamp.nanosec;
-
-        // 将geometry_msgs::msg::Quaternion转为JSON数组
-        nlohmann::json orientation_json = {orientation.x, orientation.y, orientation.z, orientation.w};
-
-        // 将geometry_msgs::msg::Vector3转为JSON数组
-        nlohmann::json angular_velocity_json = {angular_velocity.x, angular_velocity.y, angular_velocity.z};
-        nlohmann::json linear_accel_json = {linear_accel.x, linear_accel.y, linear_accel.z};
-
-        // 保存数据到latest_imu_字典
-        latest_imu_["linear_accel"] = linear_accel_json;  // 线性加速度
-        latest_imu_["q"] = orientation_json;              // 四元数
-        latest_imu_["rotation_rate"] = angular_velocity_json;  // 角速度
-        latest_imu_["pos"] = latest_ego_pose_["translation"];  // 位置
-        latest_imu_["utime"] = timestamp;  // 保存计算的utime
-    }
-
+    
 
     // Save Image data as JPEG and write it to sampe_data.json in the nuscenes sample_data format
     void save_image_data(const std::shared_ptr<const sensor_msgs::msg::Image> &msg, 
@@ -492,28 +660,36 @@ private:
         // Determine whether to save to 'sweeps' or 'samples'
         std::string data_type = (sample_triggers_[device_name] == true) ? "samples" : "sweeps";
         bool is_save = data_type == "samples" ? false : true; // samples save to the tmp at first
+
         // Create the directory path for saving images
         std::string folder_path = root_path_ + "/" + data_type + "/" + device_name;
         ensure_directory_exists(folder_path);
+
         // Generate a file path with timestamp for the image
         std::stringstream ss;
         ss << folder_path << '/' << start_system_time_token_ << "__" << device_name << "__" << msg->header.stamp.sec << "_" << msg->header.stamp.nanosec << ".jpg";
         std::string image_save_file = ss.str();
+
         // Convert encoding to lowercase for consistent comparison
         std::string encoding = msg->encoding;
         std::transform(encoding.begin(), encoding.end(), encoding.begin(), [](unsigned char c) { return std::tolower(c); });
+
         cv::Mat img;
+
         if (encoding == sensor_msgs::image_encodings::BGR8 ||
             encoding == sensor_msgs::image_encodings::RGB8) {
             // Directly use image data if encoding is compatible
             img = cv_bridge::toCvShare(msg, encoding)->image;
-        }
-        else if (encoding == "jpeg" || encoding == "jpg") {
+
+            // If the image encoding is RGB, convert it to BGR
+            if (encoding == sensor_msgs::image_encodings::RGB8) {
+                cv::cvtColor(img, img, cv::COLOR_RGB2BGR);
+            }
+        } else if (encoding == "jpeg" || encoding == "jpg") {
             // Decode JPEG image
             std::vector<uchar> img_data(msg->data.begin(), msg->data.end());
             img = cv::imdecode(img_data, cv::IMREAD_COLOR);
-        } 
-        else {
+        } else {
             RCLCPP_WARN(this->get_logger(), "Unsupported image encoding: %s", msg->encoding.c_str());
             return;
         }
@@ -542,11 +718,11 @@ private:
             }
         }
         else{
-            // 如果 is_save 为 false，将图像数据缓存到全局变量
+            // Cache image data (for 'samples')
             sample_imgs_cache_[device_name] = {image_save_file, encoded_img};
+            // set the sign that camera sample done in this epoch
             sample_triggers_[device_name] = false;
             sample_done_sign_[device_name] = true;
-            RCLCPP_INFO(this->get_logger(), "Image data cached: %s", image_save_file.c_str());
         }
 
         // Now, prepare the JSON data based on the format you provided
@@ -598,8 +774,8 @@ private:
     }
 
     void save_bbox3d_data(const std::shared_ptr<const vision_msgs::msg::Detection3DArray> &msg, 
-                            const std::string &device_name) {
-        std::string data_type = (sample_triggers_[device_name] == true) ? "samples" : "sweeps";
+                            const std::string &device_name, bool is_sample_trigger) {
+        std::string data_type = (is_sample_trigger == true) ? "samples" : "sweeps";
         if(data_type == "samples"){
             // 用于保存所有结果的JSON对象
             std::vector<nlohmann::json> sample_annotation_jsons;
@@ -610,11 +786,17 @@ private:
                 nlohmann::json sample_annotation_json;
                 // 获取class_id
                 std::string class_id = detection.results[0].hypothesis.class_id;
+                // filter the bbox3d from different view
+                if (is_class_annotated_.find(class_id) != is_class_annotated_.end() && is_class_annotated_[class_id]) {
+                    continue;
+                }
+                is_class_annotated_[class_id] = true;
+                instance_annotated_count_[class_id]++;  // If class_id exists, it increments by 1, if not, it creates with value 1.                
                 // 生成 instance_token
                 std::string instance_token = generate_unique_token(0, class_id, start_system_time_token_);
                 // 生成 sample_annotation_token
-                std::string sample_annotation_token_tmp = "3dbox_" + device_name + instance_token;
-                std::string sample_annotation_token = generate_unique_token(devices_frame_count_[device_name], sample_annotation_token_tmp, start_system_time_token_);
+                std::string sample_annotation_token_tmp = "3dbox_" + instance_token;
+                std::string sample_annotation_token = generate_unique_token(instance_annotated_count_[class_id], sample_annotation_token_tmp, start_system_time_token_);
                 // 生成 visibility_token
                 double score = detection.results[0].hypothesis.score;
                 std::string visibility_token = generate_visibility_token(score);
@@ -623,20 +805,25 @@ private:
                 sample_annotation_json["sample_token"] = sample_token;
                 sample_annotation_json["instance_token"] = instance_token;
                 sample_annotation_json["visibility_token"] = visibility_token;
-                sample_annotation_json["attribute_tokens"] = nlohmann::json::array();  // 如果有属性 tokens，可以填充这个字段
+                sample_annotation_json["attribute_tokens"] = nlohmann::json::array({"ab83627ff28b465b85c427162dec722f"}); // pedestrain.moving
                 // translation：从 bbox 中获取位置
                 const auto &bbox = detection.bbox;
-                sample_annotation_json["translation"] = {bbox.center.position.x, bbox.center.position.y, bbox.center.position.z};
+                // z坐标减去物体高度的一半, 作为isaac数据的补偿
+                sample_annotation_json["translation"] = {
+                    bbox.center.position.x, 
+                    bbox.center.position.y, 
+                    bbox.center.position.z - (bbox.size.z / 2.0)  // 减去物体高度的一半
+                };
                 // rotation：从 bbox 中获取方向（四元数）
-                sample_annotation_json["rotation"] = {bbox.center.orientation.x, bbox.center.orientation.y, bbox.center.orientation.z, bbox.center.orientation.w};
+                sample_annotation_json["rotation"] = {bbox.center.orientation.w, bbox.center.orientation.x, bbox.center.orientation.y, bbox.center.orientation.z};
                 // size：从 bbox 数据获取
                 sample_annotation_json["size"] = {bbox.size.x, bbox.size.y, bbox.size.z};
                 // 填充 prev 和 next
                 sample_annotation_json["prev"] = "";
                 sample_annotation_json["next"] = "";  // this will resolve in slider
                 // 填充 num_lidar_pts 和 num_radar_pts
-                sample_annotation_json["num_lidar_pts"] = 99;  // TODO: waiting for the definition
-                sample_annotation_json["num_radar_pts"] = 99;  // TODO: waiting for the definition
+                sample_annotation_json["num_lidar_pts"] = 99999;  
+                sample_annotation_json["num_radar_pts"] = 99999;  
                 
                 sample_annotation_jsons.emplace_back(sample_annotation_json);
             }
@@ -663,14 +850,15 @@ private:
         std::string cloud_save_file = ss.str();
 
         // Convert PointCloud2 to pcl::PointCloud and save to binary file
-        pcl::PointCloud<pcl::PointXYZ> cloud;  // 使用 PointXYZ 处理没有强度值的点云
+        pcl::PointCloud<pcl::PointXYZ> cloud;  // 使用 PointXYZ
         
         // Step 1: Convert sensor_msgs::msg::PointCloud2 to pcl::PCLPointCloud2
         pcl::PCLPointCloud2 pcl_cloud2;
         pcl_conversions::toPCL(*msg, pcl_cloud2);  // 使用 pcl_conversions::toPCL
         
-        // Step 2: Convert pcl::PCLPointCloud2 to pcl::PointCloud<pcl::PointXYZ>
+        // Step 2: Convert pcl::PCLPointCloud2 to pcl::PointCloud<pcl::PointXYZI>
         pcl::fromPCLPointCloud2(pcl_cloud2, cloud);  // 使用 pcl::fromPCLPointCloud2
+
 
         // Ensure the cloud is not empty
         if (cloud.points.empty()) {
@@ -708,6 +896,7 @@ private:
 
             // Overwrite the existing cache
             sample_lidar_cache_ = {cloud_save_file, point_cloud_data};
+            // set the sign shows this epoch sample is done
             sample_triggers_[device_name] = false;
             sample_done_sign_[device_name] = true;
             RCLCPP_INFO(this->get_logger(), "Point cloud data cached: %s", cloud_save_file.c_str());
@@ -776,7 +965,6 @@ private:
             "sample_", 
             json_writer_, 
             "sample");
-            // scene 
         }
         // the scene will be full, start a new scene
         else{
@@ -985,16 +1173,13 @@ private:
         for (auto& sample_img_cache : sample_imgs_cache_) {
             // 只在图像数据非空时进行保存
             if (!sample_img_cache.second.second.empty()) {
-                std::string save_path = sample_img_cache.second.first;  // 获取图像文件保存路径
+                // 如果缓存的图像已经是 JPEG 编码格式，你可以直接用 cv::imwrite 来保存
+                std::string save_path = sample_img_cache.second.first;
                 std::vector<uint8_t> data = sample_img_cache.second.second;  // 获取缓存的图像数据
-                // 保存缓存的图像数据
-                std::ofstream ofs(save_path, std::ios::binary);
-                if (ofs.is_open()) {
-                    ofs.write(reinterpret_cast<const char*>(data.data()), data.size());  // 写入缓存数据到文件
-                    ofs.close();
+                cv::Mat cached_img = cv::imdecode(data, cv::IMREAD_COLOR);
+                if (!cached_img.empty()) {
+                    cv::imwrite(save_path, cached_img);
                     RCLCPP_INFO(this->get_logger(), "Image data saved from cache: %s", save_path.c_str());
-                } else {
-                    RCLCPP_ERROR(this->get_logger(), "Failed to open file for saving cached image: %s", save_path.c_str());
                 }
                 // 清空图像数据缓存（second 部分）
                 sample_img_cache.second.second.clear();  // 清空图像数据部分
@@ -1034,7 +1219,7 @@ private:
                     if (val.empty()) {
                         // 如果 vector 为空，初始化一个新的 JSON 对象
                         instance_json["token"] = instance_token;
-                        instance_json["category_token"] = "1fa93b757fc74fb197cdd60001ad8abf";  // TODO:waitting for category_token
+                        instance_json["category_token"] = "1fa93b757fc74fb197cdd60001ad8abf";  // only human.pedestrian.adult, 
                         instance_json["nbr_annotations"] = 1;
                         instance_json["first_annotation_token"] = sample_annotation_token;
                         instance_json["last_annotation_token"] = sample_annotation_token;
@@ -1062,6 +1247,7 @@ private:
                 RCLCPP_INFO(this->get_logger(), "bbox3d saved.");
             }
         }
+        is_class_annotated_.clear();
         
         sample_recorder(sample_recorder_cache_.first, sample_recorder_cache_.second.first, sample_recorder_cache_.second.second);
 
@@ -1127,14 +1313,14 @@ private:
         // 如果都没有找到，返回空字符串
         return "";
     }
-
-
+    
     std::string get_cur_system_time() {
         // 获取当前的系统时间
         auto now = std::chrono::system_clock::now();
         auto now_time_t = std::chrono::system_clock::to_time_t(now);
         std::stringstream ss;
-        ss << std::put_time(std::localtime(&now_time_t), "%Y-%m-%d %H:%M:%S");
+        // 格式化时间，去掉空格和冒号
+        ss << std::put_time(std::localtime(&now_time_t), "%Y%m%d%H%M%S");
         return ss.str();
     }
 
@@ -1171,6 +1357,7 @@ private:
     std::vector<std::string> camera_names_;
     std::vector<std::string> sample_sensors_;
     json latest_ego_pose_;
+    json previous_ego_pose_;
     json latest_imu_;
     std::string start_system_time_token_;
     std::unordered_map<std::string, std::vector<json>> prev_next_sliders_;  // this is for all prev next 
@@ -1188,6 +1375,8 @@ private:
     std::pair<std::string, std::vector<uint8_t>> sample_lidar_cache_;
     std::unordered_map<std::string, std::pair<std::string, std::vector<uint8_t>>> sample_imgs_cache_;
     std::unordered_map<std::string, std::vector<nlohmann::json>> sample_bbox3d_json_cache_;
+    std::unordered_map<std::string, bool>is_class_annotated_;  // whether this bbox3d is annotated in this sample
+    std::unordered_map<std::string, unsigned long long> instance_annotated_count_;
     std::pair<uint64_t, std::pair<std::string, std::string>> sample_recorder_cache_;
 
     rclcpp::Subscription<rosgraph_msgs::msg::Clock>::SharedPtr clock_subscription_;
@@ -1196,6 +1385,7 @@ private:
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_subscription_;
     rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr lidar_subscription_;
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_subscription_;
+    rclcpp::Subscription<tf2_msgs::msg::TFMessage>::SharedPtr main_character_tf_subscriber_;
     // Store synchronizers to keep them alive
     std::vector<std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::Image>>> image_subs_;
     std::vector<std::shared_ptr<message_filters::Subscriber<vision_msgs::msg::Detection3DArray>>> bbox3d_subs_;
